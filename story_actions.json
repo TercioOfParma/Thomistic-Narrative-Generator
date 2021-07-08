@@ -2,6 +2,7 @@
 	"VIRTUE_PRUDENCE_SUBVIRTUE_MEMORY_READ_SCRIPTURE":
 	{
 		"id" : "READ_SCRIPTURE",
+		"TYPE": "ACTUAL_GRACE",
 		"QUOTES_SCRIPTURE": true, 
 		"PRECONDITIONS":
 		{
@@ -33,6 +34,7 @@
 	"UNDERSTAND_LAW":
 	{
 		"id" : "UNDERSTAND_MORAL_LAW",
+		"TYPE": "ACTUAL_GRACE",
 		"PRECONDITIONS":
 		{
 			"VIRTUE_PRUDENCE_SUBVIRTUE_MEMORY" : 50
@@ -53,6 +55,7 @@
 	"BEATEN_UP":
 	{
 		"id" : "BEATEN_UP",
+		"TYPE": "TEMPTATION",
 		"PRECONDITIONS":
 		{
 		},
@@ -72,6 +75,7 @@
 	"ESCAPING_A_PIT":
 	{
 		"id" : "ESCAPING_A_PIT",
+		"TYPE": "TEMPTATION",
 		"PRECONDITIONS":
 		{
 		},
@@ -91,6 +95,7 @@
 	"DEFUSING_A_FIGHT":
 	{
 		"id" : "DEFUSING_A_FIGHT",
+		"TYPE": "ACTUAL_GRACE",
 		"PRECONDITIONS":
 		{
 	
@@ -112,6 +117,7 @@
 	"AVOIDING_STUMBLINGBLOCK":
 	{
 		"id" : "AVOIDING_STUMBLINGBLOCK",
+		"TYPE": "ACTUAL_GRACE",
 		"PRECONDITIONS":
 		{
 			"VIRTUE_PRUDENCE_SUBVIRTUE_FORESIGHT" : 10
@@ -133,6 +139,7 @@
 	"CIRCUMSPECTION":
 	{
 		"id" : "CIRCUMSPECTION",
+		"TYPE": "ACTUAL_GRACE",
 		"PRECONDITIONS":
 		{
 		},
@@ -150,6 +157,7 @@
 	"AVOIDING_STUMBLINGBLOCK_CAUTION":
 	{
 		"id" : "AVOIDING_STUMBLINGBLOCK_CAUTION",
+		"TYPE": "ACTUAL_GRACE",
 		"PRECONDITIONS":
 		{
 			"VIRTUE_PRUDENCE_SUBVIRTUE_CAUTION" : 1
@@ -171,6 +179,7 @@
 	"BAD_WORK":
 	{
 		"id" : "BAD_WORK",
+		"TYPE": "TEMPTATION",
 		"PRECONDITIONS":
 		{
 
@@ -192,6 +201,7 @@
 	"FAIL_EXERCISES":
 	{
 		"id" : "FAIL_EXERCISES",
+		"TYPE": "TEMPTATION",
 		"PRECONDITIONS":
 		{
 
@@ -218,6 +228,7 @@
 	"NEGLIGENT_WORK":
 	{
 		"id" : "NEGLIGENT_WORK",
+		"TYPE": "TEMPTATION",
 		"PRECONDITIONS":
 		{
 
@@ -249,6 +260,7 @@
 	"SEDUCE:
 	{
 		"id" : "SEDUCE",
+		"TYPE": "TEMPTATION",
 		"SECOND_PERSON": true,
 		"PRECONDITIONS":
 		{
@@ -276,6 +288,7 @@
 	"DEFRAUD":
 	{
 		"id" : "DEFRAUD",
+		"TYPE": "TEMPTATION",
 		"SECOND_PERSON" : true,
 		"PRECONDITIONS":
 		{
@@ -303,6 +316,7 @@
 	"OSTRACISE":
 	{
 		"id" : "OSTRACISE",
+		"TYPE": "TEMPTATION",
 		"SECOND_PERSON": true,
 		"PRECONDITIONS":
 		{
@@ -328,6 +342,7 @@
 	"LIE":
 	{
 		"id" : "LIE",
+		"TYPE": "TEMPTATION",
 		"SECOND_PERSON" : true,
 		"PRECONDITIONS":
 		{
@@ -350,6 +365,7 @@
 	"SOLVE_DISPUTE":
 	{
 		"id" : "SOLVE_DISPUTE",
+		"TYPE": "ACTUAL_GRACE",
 		"SECOND_PERSON": true,
 		"THIRD_PERSON": true,
 		"PRECONDITIONS":
@@ -379,6 +395,7 @@
 	"ACTIVISM_COMMON_GOOD":
 	{
 		"id" : "ACTIVISM_COMMON_GOOD",
+		"TYPE": "ACTUAL_GRACE",
 		"PRECONDITIONS":
 		{
 
@@ -399,6 +416,7 @@
 	"PRAY_PSALM":
 	{
 		"id" : "PRAY_PSALM",
+		"TYPE": "ACTUAL_GRACE",
 		"QUOTES_SCRIPTURE": true,
 		"PRECONDITIONS":
 		{
@@ -430,6 +448,7 @@
 	"PRAY_ROSARY":
 	{
 		"id" : "PRAY_ROSARY",
+		"TYPE": "ACTUAL_GRACE",
 		"PRECONDITIONS":
 		{
 
@@ -456,6 +475,7 @@
 	"PRAY_MENTAL":
 	{
 		"id" : "PRAY_MENTAL",
+		"TYPE": "ACTUAL_GRACE",
 		"PRECONDITIONS":
 		{
 
@@ -481,6 +501,7 @@
 	"PRAY_HATED_PERSON":
 	{
 		"id" : "PRAY_HATED_PERSON",
+		"TYPE": "ACTUAL_GRACE",
 		"SECOND_PERSON" : true,
 		"PRECONDITIONS":
 		{
@@ -513,6 +534,7 @@
 	"OBEY_SUPERIOR":
 	{
 		"id" : "OBEY_SUPERIOR",
+		"TYPE": "ACTUAL_GRACE",
 		"SECOND_PERSON": true,
 		"PRECONDITIONS":
 		{
@@ -536,6 +558,7 @@
 	"ARMY_JOIN":
 	{
 		"id" : "ARMY_JOIN",
+		"TYPE": "ACTUAL_GRACE",
 		"PRECONDITIONS":
 		{
 
@@ -557,6 +580,7 @@
 	"MASS":
 	{
 		"id" : "MASS",
+		"TYPE": "ACTUAL_GRACE",
 		"PRECONDITIONS":
 		{
 
@@ -586,6 +610,7 @@
 	"RECEIVE_COMMUNION_GRACE":
 	{
 		"id" : "RECEIVE_COMMUNION_GRACE",
+		"TYPE": "ACTUAL_GRACE",
 		"PRECONDITIONS":
 		{
 			"STATE_OF_GRACE": true
@@ -612,6 +637,7 @@
 	"RECEIVE_COMMUNION_MS":
 	{
 		"id" : "RECEIVE_COMMUNION_MS",
+		"TYPE": "TEMPTATION",
 		"PRECONDITIONS":
 		{
 			STATE_OF_GRACE: false
@@ -633,6 +659,7 @@
 	"MAKE_FRIENDS":
 	{
 		"id" : "MAKE_FRIENDS",
+		"TYPE": "ACTUAL_GRACE",
 		"SECOND_PERSON": true
 		"PRECONDITIONS":
 		{
@@ -657,6 +684,7 @@
 	"APOLOGISE":
 	{
 		"id" : "APOLOGISE",
+		"TYPE": "ACTUAL_GRACE",
 		"SECOND_PERSON": true,
 		"PRECONDITIONS":
 		{
@@ -676,7 +704,7 @@
 			"VIRTUE_FORTITUDE_SUBVIRTUE_MORTIFICATION": 1,
 			"VIRTUE_TEMPERANCE_SUBVIRTUE_HONESTIA": 1,
 			"VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY": 1,
-			"VIRTUE_TEMPERANCE_SUBVIRTUE_MEEKNESS": 1,
+			"VIRTUE_TEMPERANCE_SUBVIRTUE_MEEKNESS": 1
 			
 			
 			
@@ -700,6 +728,7 @@
 	"ALMS":
 	{
 		"id" : "ALMS",
+		"TYPE": "ACTUAL_GRACE",
 		"PRECONDITIONS":
 		{
 
@@ -727,6 +756,7 @@
 	"READ_LAW_EPIEIKEIA":
 	{
 		"id" : "READ_LAW_EPIEIKEIA",
+		"TYPE": "ACTUAL_GRACE",
 		"PRECONDITIONS":
 		{
 
@@ -749,6 +779,7 @@
 	"MURDER":
 	{
 		"id" : "MURDER",
+		"TYPE": "TEMPTATION",
 		"SECOND_PERSON": true,
 		"PRECONDITIONS":
 		{
@@ -778,6 +809,7 @@
 	"MUTILATE":
 	{
 		"id" : "MUTILATE",
+		"TYPE": "TEMPTATION",
 		"SECOND_PERSON": true,
 		"PRECONDITIONS":
 		{
@@ -806,6 +838,7 @@
 	"STEAL_SMALL":
 	{
 		"id" : "STEAL_SMALL",
+		"TYPE": "TEMPTATION",
 		"SECOND_PERSON": true,
 		"PRECONDITIONS":
 		{
@@ -830,6 +863,7 @@
 	"STEAL_BIG":
 	{
 		"id" : "STEAL_BIG",
+		"TYPE": "TEMPTATION",
 		"SECOND_PERSON": true,
 		"PRECONDITIONS":
 		{
@@ -856,6 +890,7 @@
 	"ROBBERY":
 	{
 		"id" : "ROBBERY",
+		"TYPE": "TEMPTATION",
 		"SECOND_PERSON": true,
 		"PRECONDITIONS":
 		{
@@ -882,6 +917,7 @@
 	"SMUG_SUPERIORITY":
 	{
 		"id" : "SMUG_SUPERIORITY",
+		"TYPE": "TEMPTATION",
 		"SECOND_PERSON": true,
 		"PRECONDITIONS":
 		{
@@ -907,6 +943,7 @@
 	"EXHAULT_IN_OWN_STRENGTH":
 	{
 		"id" : "EXHAULT_IN_OWN_STRENGTH",
+		"TYPE": "TEMPTATION",
 		"PRECONDITIONS":
 		{
 
@@ -930,6 +967,7 @@
 	"ATTRIBUTE_UNPOSSESSED_GOOD":
 	{
 		"id" : "ATTRIBUTE_UNPOSSESSED_GOOD",
+		"TYPE": "TEMPTATION",
 		"PRECONDITIONS":
 		{
 
@@ -937,20 +975,25 @@
 		
 		"POSTCONDITIONS_ACCEPT":
 		{
-			"OUTPUT":"<1> develops in self knowledge"
+			"OUTPUT":"<1> develops in self knowledge",
+			"VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":2,
+			"VIRTUE_PRUDENCE_SUBVIRTUE_DOCILITY": 1,
+			"VIRTUE_PRUDENCE_SUBVIRTUE_CIRCUMSPECTION": 2
 
 		},
 		"POSTCONDITIONS_REJECT":
 		{
 			"OUTPUT":"<1> rejoices in a good that they know they don't possess",
 			"STATE_OF_GRACE": false,
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 2
+			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 2,
+			"VIRTUE_PRUDENCE_SUBVICE_NEGLIGENCE": 2
 
 		}
 	},
 	"CALUMNY":
 	{
 		"id" : "CALUMNY",
+		"TYPE": "TEMPTATION",
 		"SECOND_PERSON": true,
 		"THIRD_PERSON": true,
 		"PRECONDITIONS":
@@ -960,20 +1003,24 @@
 		
 		"POSTCONDITIONS_ACCEPT":
 		{
-			"OUTPUT":"<1> refuses to calmuniate <2>"
+			"OUTPUT":"<1> refuses to calmuniate <2>",
+			"VIRTUE_TEMPERANCE_SUBVIRTUE_MEEKNESS": 1,
+			"VIRTUE_TEMPERANCE_SUBVIRTUE_SILENCE": 2
 
 		},
 		"POSTCONDITIONS_REJECT":
 		{
 			"OUTPUT":"<1> lies about <2> behind their back to <3> to destroy their reputation",
 			"STATE_OF_GRACE": false,
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 2
+			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 2,
+			"VIRTUE_CHARITY_SUBVICE_DISCORD": 2
 
 		}
 	},
 	"DETRACTION":
 	{
 		"id" : "DETRACTION",
+		"TYPE": "TEMPTATION",
 		"SECOND_PERSON": true,
 		"THIRD_PERSON": true,
 		"PRECONDITIONS":
@@ -983,20 +1030,24 @@
 		
 		"POSTCONDITIONS_ACCEPT":
 		{
-			"OUTPUT":"<1> refuses to detract <2> to <3>"
+			"OUTPUT":"<1> refuses to detract <2> to <3>",
+			"VIRTUE_TEMPERANCE_SUBVIRTUE_MEEKNESS": 1,
+			"VIRTUE_TEMPERANCE_SUBVIRTUE_SILENCE": 2
 
 		},
 		"POSTCONDITIONS_REJECT":
 		{
 			"OUTPUT":"<1> spreads secret sins <2> has committed to <3> without <2> knowing to destroy their reputation",
 			"STATE_OF_GRACE": false,
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 2
+			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 2,
+			"VIRTUE_CHARITY_SUBVICE_DISCORD": 2
 
 		}
 	},	
 	"RASH_JUDGEMENT":
 	{
 		"id" : "RASH_JUDGEMENT",
+		"TYPE": "TEMPTATION",
 		"SECOND_PERSON": true,
 		"PRECONDITIONS":
 		{
@@ -1018,6 +1069,7 @@
 	"GOSSIP":
 	{
 		"id" : "GOSSIP",
+		"TYPE": "TEMPTATION",
 		"SECOND_PERSON": true,
 		"THIRD_PERSON": true,
 		"PRECONDITIONS":
@@ -1040,6 +1092,7 @@
 	"LOANSHARK":
 	{
 		"id" : "LOANSHARK",
+		"TYPE": "TEMPTATION",
 		"SECOND_PERSON": true,
 		"PRECONDITIONS":
 		{
@@ -1063,6 +1116,7 @@
 	{
 		"id" : "MOCKERY",
 		"SECOND_PERSON": true,
+		"TYPE": "TEMPTATION",
 		"PRECONDITIONS":
 		{
 
@@ -1084,6 +1138,7 @@
 	"RASH_OATH":
 	{
 		"id" : "RASH_OATH",
+		"TYPE": "TEMPTATION",
 		"PRECONDITIONS":
 		{
 
@@ -1104,6 +1159,7 @@
 	"IDOLATRY":
 	{
 		"id" : "IDOLATRY",
+		"TYPE": "TEMPTATION",
 		"PRECONDITIONS":
 		{
 
@@ -1111,7 +1167,8 @@
 		
 		"POSTCONDITIONS_ACCEPT":
 		{
-			"OUTPUT":"<1> renders worship to God"
+			"OUTPUT":"<1> renders worship to God",
+			"VIRTUE_JUSTICE_SUBVIRTUE_RELIGION": 2
 
 		},
 		"POSTCONDITIONS_REJECT":
@@ -1125,6 +1182,7 @@
 	"CAST_SPELL":
 	{
 		"id" : "CAST_SPELL",
+		"TYPE": "TEMPTATION",
 		"PRECONDITIONS":
 		{
 
@@ -1146,6 +1204,7 @@
 	"TEMPT_GOD":
 	{
 		"id" : "TEMPT_GOD",
+		"TYPE": "TEMPTATION",
 		"PRECONDITIONS":
 		{
 
@@ -1167,6 +1226,7 @@
 	"SACRILEGE_EUCHARIST":
 	{
 		"id" : "SACRILEGE_EUCHARIST",
+		"TYPE": "TEMPTATION",
 		"PRECONDITIONS":
 		{
 
@@ -1174,7 +1234,8 @@
 		
 		"POSTCONDITIONS_ACCEPT":
 		{
-			"OUTPUT":"<1> treats the Most Holy Eucharist with the respect owed to God."
+			"OUTPUT":"<1> treats the Most Holy Eucharist with the respect owed to God.",
+			"VIRTUE_JUSTICE_SUBVIRTUE_RELIGION": 2
 
 		},
 		"POSTCONDITIONS_REJECT":
@@ -1188,6 +1249,7 @@
 	"SACRILEGE_STATUE":
 	{
 		"id" : "SACRILEGE_STATUE",
+		"TYPE": "TEMPTATION",
 		"PRECONDITIONS":
 		{
 
@@ -1195,7 +1257,8 @@
 		
 		"POSTCONDITIONS_ACCEPT":
 		{
-			"OUTPUT":"<1> venerates a sacred statue"
+			"OUTPUT":"<1> venerates a sacred statue",
+			"VIRTUE_JUSTICE_SUBVIRTUE_RELIGION": 2
 
 		},
 		"POSTCONDITIONS_REJECT":
@@ -1209,6 +1272,7 @@
 	"SIMONY":
 	{
 		"id" : "SIMONY",
+		"TYPE": "TEMPTATION",
 		"PRECONDITIONS":
 		{
 
@@ -1216,7 +1280,8 @@
 		
 		"POSTCONDITIONS_ACCEPT":
 		{
-			"OUTPUT":"<1> venerates a relic"
+			"OUTPUT":"<1> venerates a relic",
+			"VIRTUE_JUSTICE_SUBVIRTUE_RELIGION": 2
 
 		},
 		"POSTCONDITIONS_REJECT":
@@ -1230,6 +1295,7 @@
 	"VENGEANCE":
 	{
 		"id" : "VENGEANCE",
+		"TYPE": "TEMPTATION",
 		"SECOND_PERSON": true,
 		"PRECONDITIONS":
 		{
@@ -1252,6 +1318,7 @@
 	"BOAST":
 	{
 		"id" : "BOAST",
+		"TYPE": "TEMPTATION",
 		"PRECONDITIONS":
 		{
 
@@ -1272,6 +1339,7 @@
 	"IGNORE_GOOD_ACTION":
 	{
 		"id" : "IGNORE_GOOD_ACTION",
+		"TYPE": "TEMPTATION",
 		"SECOND_PERSON": true,
 		"PRECONDITIONS":
 		{
@@ -1293,6 +1361,7 @@
 	"FLATTER":
 	{
 		"id" : "FLATTER",
+		"TYPE": "TEMPTATION",
 		"PRECONDITIONS":
 		{
 
@@ -1313,6 +1382,7 @@
 	"CHASE_MONEY":
 	{
 		"id" : "CHASE_MONEY",
+		"TYPE": "TEMPTATION",
 		"PRECONDITIONS":
 		{
 
@@ -1334,6 +1404,7 @@
 	{
 		"id" : "INSULTING_SARCASM",
 		"SECOND_PERSON": true,
+		"TYPE": "TEMPTATION",
 		"PRECONDITIONS":
 		{
 
@@ -1354,6 +1425,7 @@
 	"SUING_EXCESSIVELY":
 	{
 		"id" : "SUING_EXCESSIVELY",
+		"TYPE": "TEMPTATION",
 		"PRECONDITIONS":
 		{
 
@@ -1374,6 +1446,7 @@
 	"PLANNING_GREAT_THINGS":
 	{
 		"id" : "PLANNING_GREAT_THINGS",
+		"TYPE": "ACTUAL_GRACE",
 		"PRECONDITIONS":
 		{
 
@@ -1394,6 +1467,7 @@
 	"ILLNESS":
 	{
 		"id" : "ILLNESS",
+		"TYPE": "ACTUAL_GRACE",
 		"PRECONDITIONS":
 		{
 
@@ -1414,6 +1488,7 @@
 	"VISION":
 	{
 		"id" : "VISION",
+		"TYPE": "ACTUAL_GRACE",
 		"QUOTES_SCRIPTURE": true,
 		"PRECONDITIONS":
 		{
@@ -1438,6 +1513,7 @@
 	"INNERLOCUTION":
 	{
 		"id" : "INNERLOCUTION",
+		"TYPE": "ACTUAL_GRACE",
 		"QUOTES_SCRIPTURE": true,
 		"PRECONDITIONS":
 		{
@@ -1462,6 +1538,7 @@
 	"FAST":
 	{
 		"id" : "FAST",
+		"TYPE": "ACTUAL_GRACE",
 		"PRECONDITIONS":
 		{
 
@@ -1469,7 +1546,8 @@
 		
 		"POSTCONDITIONS_ACCEPT":
 		{
-			"OUTPUT":"<1> fasts"
+			"OUTPUT":"<1> fasts",
+			"VIRTUE_JUSTICE_SUBVIRTUE_RELIGION": 2
 
 		},
 		"POSTCONDITIONS_REJECT":
@@ -1482,6 +1560,7 @@
 	"VIGIL":
 	{
 		"id" : "VIGIL",
+		"TYPE": "ACTUAL_GRACE",
 		"PRECONDITIONS":
 		{
 
@@ -1489,7 +1568,8 @@
 		
 		"POSTCONDITIONS_ACCEPT":
 		{
-			"OUTPUT":"<1> spends the night praying to mortify his senses and to obtain union with God"
+			"OUTPUT":"<1> spends the night praying to mortify his senses and to obtain union with God",
+			"VIRTUE_JUSTICE_SUBVIRTUE_RELIGION": 2
 
 		},
 		"POSTCONDITIONS_REJECT":
@@ -1502,6 +1582,7 @@
 	"AMBITION":
 	{
 		"id" : "AMBITION",
+		"TYPE": "TEMPTATION",
 		"PRECONDITIONS":
 		{
 
@@ -1524,6 +1605,7 @@
 	{
 		"id" : "SCHADENFREUDE",
 		"SECOND_PERSON": true,
+		"TYPE": "TEMPTATION",
 		"PRECONDITIONS":
 		{
 
@@ -1545,6 +1627,7 @@
 	"REJOICE_IN_EVIL":
 	{
 		"id" : "REJOICE_IN_EVIL",
+		"TYPE": "TEMPTATION",
 		"PRECONDITIONS":
 		{
 
@@ -1553,7 +1636,8 @@
 		"POSTCONDITIONS_ACCEPT":
 		{
 			"OUTPUT":"<1> repents of his evil to a priest",
-			"STATE_OF_GRACE": true
+			"STATE_OF_GRACE": true,
+			"VIRTUE_JUSTICE_SUBVIRTUE_RELIGION": 2
 
 		},
 		"POSTCONDITIONS_REJECT":
@@ -1567,6 +1651,7 @@
 	"COMPLASCENT":
 	{
 		"id" : "COMPLASCENT",
+		"TYPE": "TEMPTATION",
 		"PRECONDITIONS":
 		{
 
@@ -1587,6 +1672,7 @@
 	"REALISE_LOWLINESS":
 	{
 		"id" : "REALISE_LOWLINESS",
+		"TYPE": "ACTUAL_GRACE",
 		"PRECONDITIONS":
 		{
 
@@ -1608,6 +1694,7 @@
 	"MASTURBATE":
 	{
 		"id" : "MASTURBATE",
+		"TYPE": "TEMPTATION",
 		"PRECONDITIONS":
 		{
 
@@ -1629,6 +1716,7 @@
 	"FORNICATE":
 	{
 		"id" : "FORNICATE",
+		"TYPE": "TEMPTATION",
 		"SECOND_PERSON": true,
 		"PRECONDITIONS":
 		{
@@ -1651,6 +1739,7 @@
 	"BOAST":
 	{
 		"id" : "BOAST",
+		"TYPE": "TEMPTATION",
 		"SECOND_PERSON": true,
 		"PRECONDITIONS":
 		{
@@ -1672,6 +1761,7 @@
 	"STUDY":
 	{
 		"id" : "STUDY",
+		"TYPE": "ACTUAL_GRACE",
 		"PRECONDITIONS":
 		{
 
@@ -1679,7 +1769,8 @@
 		
 		"POSTCONDITIONS_ACCEPT":
 		{
-			"OUTPUT":"<1> studies that he may be able to greater love God and Neighbour"
+			"OUTPUT":"<1> studies that he may be able to greater love God and Neighbour",
+			"VIRTUE_JUSTICE_SUBVIRTUE_RELIGION": 2
 
 		},
 		"POSTCONDITIONS_REJECT":
@@ -1692,6 +1783,7 @@
 	"FORGIVE":
 	{
 		"id" : "FORGIVE",
+		"TYPE": "ACTUAL_GRACE",
 		"SECOND_PERSON": true,
 		"PRECONDITIONS":
 		{
@@ -1700,7 +1792,8 @@
 		
 		"POSTCONDITIONS_ACCEPT":
 		{
-			"OUTPUT":"<1> forgives <2>"
+			"OUTPUT":"<1> forgives <2>",
+			"VIRTUE_JUSTICE_SUBVIRTUE_RELIGION": 2
 
 		},
 		"POSTCONDITIONS_REJECT":
@@ -1714,6 +1807,7 @@
 	"BETTER_DECORUM":
 	{
 		"id" : "BETTER_DECORUM",
+		"TYPE": "ACTUAL_GRACE",
 		"PRECONDITIONS":
 		{
 
@@ -1735,6 +1829,7 @@
 	"SELL_POSSESSIONS":
 	{
 		"id" : "SELL_POSSESSIONS",
+		"TYPE": "ACTUAL_GRACE",
 		"PRECONDITIONS":
 		{
 
@@ -1755,6 +1850,7 @@
 	"BULLY":
 	{
 		"id" : "BULLY",
+		"TYPE": "TEMPTATION",
 		"SECOND_PERSON": true,
 		"PRECONDITIONS":
 		{
@@ -1763,7 +1859,8 @@
 		
 		"POSTCONDITIONS_ACCEPT":
 		{
-			"OUTPUT":"<1> takes care of <2> in their weakness"
+			"OUTPUT":"<1> takes care of <2> in their weakness",
+			"VIRTUE_JUSTICE_SUBVIRTUE_RELIGION": 2
 
 		},
 		"POSTCONDITIONS_REJECT":
@@ -1777,6 +1874,7 @@
 	"BEAT_UP":
 	{
 		"id" : "BEAT_UP",
+		"TYPE": "TEMPTATION",
 		"SECOND_PERSON": true,
 		"PRECONDITIONS":
 		{
@@ -1798,6 +1896,7 @@
 	"CRUDE_JOKE":
 	{
 		"id" : "CRUDE_JOKE",
+		"TYPE": "TEMPTATION",
 		"PRECONDITIONS":
 		{
 
@@ -1818,6 +1917,7 @@
 	"REPENTENCE":
 	{
 		"id" : "REPENTENCE",
+		"TYPE": "ACTUAL_GRACE",
 		"PRECONDITIONS":
 		{
 
@@ -1825,7 +1925,8 @@
 		
 		"POSTCONDITIONS_ACCEPT":
 		{
-			"OUTPUT":"<1> repents"
+			"OUTPUT":"<1> repents",
+			"VIRTUE_JUSTICE_SUBVIRTUE_RELIGION": 2
 
 		},
 		"POSTCONDITIONS_REJECT":
@@ -1838,6 +1939,7 @@
 	"HERESY":
 	{
 		"id" : "HERESY",
+		"TYPE": "TEMPTATION",
 		"PRECONDITIONS":
 		{
 
@@ -1845,7 +1947,8 @@
 		
 		"POSTCONDITIONS_ACCEPT":
 		{
-			"OUTPUT":"<1> insists on the teaching of Christ's church in the face of temptation"
+			"OUTPUT":"<1> insists on the teaching of Christ's church in the face of temptation",
+			"VIRTUE_JUSTICE_SUBVIRTUE_RELIGION": 2
 
 		},
 		"POSTCONDITIONS_REJECT":
@@ -1859,6 +1962,7 @@
 	"APOSTASY":
 	{
 		"id" : "APOSTASY",
+		"TYPE": "TEMPTATION",
 		"PRECONDITIONS":
 		{
 
@@ -1866,7 +1970,8 @@
 		
 		"POSTCONDITIONS_ACCEPT":
 		{
-			"OUTPUT":"<1>"
+			"OUTPUT":"<1> resists the temptation to leave the faith, and keeps going",
+			"VIRTUE_JUSTICE_SUBVIRTUE_RELIGION": 2
 
 		},
 		"POSTCONDITIONS_REJECT":
@@ -1880,6 +1985,7 @@
 	"BLASPHEMY":
 	{
 		"id" : "BLASPHEMY",
+		"TYPE": "TEMPTATION",
 		"PRECONDITIONS":
 		{
 
@@ -1887,7 +1993,8 @@
 		
 		"POSTCONDITIONS_ACCEPT":
 		{
-			"OUTPUT":"<1> refuses to curse God"
+			"OUTPUT":"<1> refuses to curse God and instead blesses God",
+			"VIRTUE_JUSTICE_SUBVIRTUE_RELIGION": 2
 
 		},
 		"POSTCONDITIONS_REJECT":
@@ -1901,6 +2008,7 @@
 	"HATRED_OF_GOD":
 	{
 		"id" : "HATRED_OF_GOD",
+		"TYPE": "TEMPTATION",
 		"PRECONDITIONS":
 		{
 
@@ -1908,7 +2016,8 @@
 		
 		"POSTCONDITIONS_ACCEPT":
 		{
-			"OUTPUT":"<1> resists the urge to hate God for the frustration of his will"
+			"OUTPUT":"<1> resists the urge to hate God for the frustration of his will and instead blesses God",
+			"VIRTUE_JUSTICE_SUBVIRTUE_RELIGION": 2
 
 		},
 		"POSTCONDITIONS_REJECT":
@@ -1922,6 +2031,7 @@
 	"ARGUE":
 	{
 		"id" : "ARGUE",
+		"TYPE": "TEMPTATION",
 		"SECOND_PERSON": true,
 		"PRECONDITIONS":
 		{
@@ -1943,6 +2053,7 @@
 	"SCHISM":
 	{
 		"id" : "SCHISM",
+		"TYPE": "TEMPTATION",
 		"PRECONDITIONS":
 		{
 
@@ -1950,7 +2061,8 @@
 		
 		"POSTCONDITIONS_ACCEPT":
 		{
-			"OUTPUT":"<1> accepts the church despite the failing that they perceive in it"
+			"OUTPUT":"<1> remains under the church despite the failing that they perceive in it",
+			"VIRTUE_JUSTICE_SUBVIRTUE_RELIGION": 2
 
 		},
 		"POSTCONDITIONS_REJECT":
@@ -1964,6 +2076,7 @@
 	"SCANDALISE":
 	{
 		"id" : "SCANDALISE",
+		"TYPE": "TEMPTATION",
 		"SECOND_PERSON": true,
 		"PRECONDITIONS":
 		{
