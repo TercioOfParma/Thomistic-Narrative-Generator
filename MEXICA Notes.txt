@@ -1,0 +1,45 @@
+Mexica Notes:
+	- Plots of stories about Mexica people, who lived in Mexico City 
+	- Two processes, Engagement and Reflection
+	- Engagement generates actions 
+	- Reflection breaks, evaluates and modifies until it makes sense
+	- This repeats until it's done 
+	- Based on Knowledge Structures and then this cycle 
+	- There are two text files: Story actions (which can be done by a character) and their preconditions and post conditions
+	- All of these are tensions and emotional conditions as the preconditions
+	- The second is previous stories 
+	
+	Story Actions:
+		- Need emotional and tensional links to be triggered 
+		- All actions have a verb, they're strings between A and B objects
+		- It can have up to 3 characters, or at least 1 
+		- All emotions are on a sliding scale from -3 to +3 
+		- These links can be one way or between two characters 
+		- Tensions and emotions are modified in the post conditions of an action 
+		- Other tensions and such can develop out of post conditions from an action, and with relation to other characters 
+		- The story is ranked well when the tension has a high amount of variation 
+		- System is bilingual 
+		- Post conditions can be linking of characters and change of position 
+		- (Lagrange talks about passions so we can make this much more complex) 
+		- Stories are coherent, interesting and novel 
+	Building Knowledge Structures:
+		- It might be worth finding Rievaulx's work
+		- It's a set of contextual story actions which go over the course of a story 
+		- I think the virtues are going to be KEY here 
+		- The system can choose the action based on post conditions 
+	
+	Generation of Narratives: 
+		- Matches a structure to the previous context 
+		- It has the same problem as the others. The characters are boring 
+		- I also don't think it helps that the stories are too short to really give a reader investment in the characters 
+		
+Overhalling this system:
+	- Add the 11 passions to govern relationships
+	- Evaluate their results in the context of the virtues the person has 
+	- Add actions out of pure malice 
+	- Expand out the sliding scales
+	- Make the actions far more detailed and varied (kinda necessary based on the number of virtues and sub virtues) 
+	- Don't do the engagement and reflection thing, but do this with genetic algorithms instead 
+	- There must be something teachable in the story
+	- There could be a very blunt relationship between preferred goods and the behaviours (The 7 goods proposed by St Thomas Aquinas) 
+	- There should be tens of thousands of story actions and then have them culled maybe? 

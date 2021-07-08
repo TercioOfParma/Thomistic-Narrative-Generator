@@ -1,0 +1,78 @@
+List of actions to write out in JSON:
+	- Fails to keep up schedule of spiritual exercises x
+	- Neglects work out of negligence x
+	- Seduces another character X
+	- Defrauds another character X
+	- Ostracises another character x
+	- Lies to another character, leading to a fall X
+	- Settles a dispute between two other characters X
+	- Openly fights for the common good of the community through activism X
+	- Prays a Psalm X
+	- Prays a Rosary X
+	- Engages in Mental Prayer X
+	- Prays for those they hate X
+	- Obeys a superior X
+	- Serves a term in the army X
+	- Goes to mass X
+	- Receives communion X
+	- Makes friends with a character X
+	- Apologises to another character X
+	- Gives Alms X
+	- Reads the Law in order to know the mind of the lawmaker X
+	- Murder X
+	- Mutilates X
+	- Steals something small X
+	- Steals something great X
+	- Beats and robs a person X
+	- Smug superiority over another character X
+	- Exhaults in own strength X
+	- Assumes a good they do not possess X
+	- Calumny X
+	- Detraction X
+	- Rash Judgement X
+	- Gossip X
+	- Loansharks X
+	- Mockery X
+	- Swears a rash oath X
+	- Worships a DemonX
+	- Worships a person X
+	- Cast Spell X
+	- Tempting God X
+	- Commit Sacrilege with Eucharist X
+	- Commit Sacrilege with Statue X
+	- Sells a relic X
+	- Disobey superior X
+	- Commits to Vengeance to a character X 
+	- Boasts to X
+	- Ignore good deed X
+	- Flatters X
+	- Chasing Money X
+	- Painful Sarcasm to another person X
+	- Sues another in court X
+	- Plans Great things X
+	- Illness X
+	- Vision X
+	- Innerlocution X
+	- Fast X
+	- Vigil X
+	- Seek station above self X
+	- Rejoice in Evil X
+	- Complacence X
+	- Realises Lowliness X
+	- Masturbates X
+	- Fornicates X
+	- Studies X
+	- Forgives X
+	- Improves Decorum X
+	- Sells all possessions X
+	- Bully X
+	- Beating Up X
+	- Crude Joke  X
+	- Repentence X
+	- Heresy X
+	- Apostasy X
+	- Blasphemy X
+	- Hatred of God X
+	- Argue  X
+	- Schism X
+	- Scandalise X

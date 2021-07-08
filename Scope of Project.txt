@@ -1,0 +1,44 @@
+Scope for Narrative Generation:
+Will is impacted by the following:
+	- All of the Sub virtues and virtues covered inherently (I.E without other factors)
+	- Dispositions from the Holy Spirit
+	- Emotional Relationships between each character in relationships 
+Characters can impact each other:
+	- Killing
+	- Producing Children
+	- Emotional Relationships 
+	- Basically, MEXICA but with more passions 
+- Structures of life are entirely random, and then scored by the particular virtue selected (NOT subvirtue) 
+- Arbitrary distinctions between the Three Ages of the Interior Life, which are triggered by charity specifically
+- All virtues and subvirtues are hardcoded 
+
+Structure: 
+	Relationship:
+		- Passions to person 
+	Subvirtue:
+		- Overarching Virtue
+		- Particular Story Events Triggered by it 
+		
+		
+8th-15th July:
+	- Draft a document containing all of the different classes, variables and such in LaTeX, how they are implemented
+	- Design the algorithm that governs what the will does
+	- Add more story_actions from the Secunda Secundae Partis 
+	- Read and analyse that study that's 38 pages 
+15th-22nd July:
+	- Implement the JSON loading classes for the classes 
+	- Integrate Scripture loading into the project
+	- Basic action list generation
+22nd July- 29th July: 
+	- Implement will mechanic on the action list 
+	- Multi Objective Algorithm Implementation
+29th July-5th August:
+	- Adding additional actions 
+	- Multi Objective Algorithm Implementation
+5th August-12th August:
+	- Finish MOEA 
+
+12th August-19th August:
+	- Draft questions for the study 
+19th August-26th August: 
+	- Begin to gather people to read the stories and get information out of them 

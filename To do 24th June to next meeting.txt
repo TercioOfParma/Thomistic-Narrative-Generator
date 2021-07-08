@@ -1,0 +1,3 @@
+- Look at MEXICA
+- Design a system on the virtues and temptations in JSON
+- Write a GUI which can automate this process and make it easier <-- Main thing 

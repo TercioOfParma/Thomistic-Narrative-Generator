@@ -1,0 +1,1725 @@
+{
+	"VIRTUE_PRUDENCE_SUBVIRTUE_MEMORY_READ_SCRIPTURE":
+	{
+		"id" : "READ_SCRIPTURE",
+		"quotes_scripture": true, 
+		"PRECONDITIONS":
+		{
+			
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1> picks up the scriptures, and reads: ",
+			"VIRTUE_PRUDENCE_SUBVIRTUE_MEMORY" : 1,
+			"VIRTUE_JUSTICE_SUBVIRTUE_RELIGION": 1,
+			"VIRTUE_JUSTICE_SUBVIRTUE_DEVOTION": 1,
+			"VIRTUE_JUSTICE_SUBVIRTUE_EPIEIKEIA": 1,
+			"VIRTUE_FORTITUDE_SUBVIRTUE_PATIENCE":1,
+			"VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":1,
+			"VIRTUE_TEMPERANCE_SUBVIRTUE_STUDIOUSITY":1,
+			"VIRTUE_HOPE" : 1
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			
+		},
+		
+		"SCRIPTURE_BANK":
+		{
+			"VERSES": ["Test"]
+		}
+	}, 
+	"UNDERSTAND_LAW":
+	{
+		"id" : "UNDERSTAND_MORAL_LAW",
+		"PRECONDITIONS":
+		{
+			"VIRTUE_PRUDENCE_SUBVIRTUE_MEMORY" : 50
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1> meditates, and finally begins to understand God's law ",
+			"VIRTUE_PRUDENCE_SUBVIRTUE_UNDERSTANDING" : 1,
+			"VIRTUE_PRUDENCE_SUBVIRTUE_DOCILITY" : 1,
+			"VIRTUE_PRUDENCE_SUBVIRTUE_SHREWDNESS" : 1
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT": "<1> struggles and fails to understand the moral law"
+		}
+	}, 
+	"BEATEN_UP":
+	{
+		"id" : "BEATEN_UP",
+		"PRECONDITIONS":
+		{
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"While meditating in a quiet place, <1> has a good thought regarding dealing with his passions and vices. He meditates on it and accepts this counsel into their life.",
+			"VIRTUE_PRUDENCE_SUBVIRTUE_DOCILITY" : 2
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT": "While praying in a quiet place, <1> receives advice in prayer on his predominant fault. <1> takes this personally. Temper lost, <1> begins to cry.",
+			"VIRTUE_PRUDENCE_SUBVIRTUE_DOCILITY" : -2
+		}
+	}, 
+	"ESCAPING_A_PIT":
+	{
+		"id" : "ESCAPING_A_PIT",
+		"PRECONDITIONS":
+		{
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"As <1> is walking in the <ENVIRONMENT>, <1> falls into a pit. Scrambling around and looking for a way out, <1> finds a rope hidden behind some branches, and uses this to climb out of the hole.",
+			"VIRTUE_PRUDENCE_SUBVIRTUE_SHREWDNESS" : 2
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT": "<1> falls into a pit. Unable to find any means of getting out, despite this being in <1>'s means, he calls for help. It begins to rain heavily. Eventually, the hole floods, allowing him to float to the top.",
+			"VIRTUE_PRUDENCE_SUBVIRTUE_SHREWDNESS" : -2
+		}
+	},	
+	"DEFUSING_A_FIGHT":
+	{
+		"id" : "DEFUSING_A_FIGHT",
+		"PRECONDITIONS":
+		{
+	
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1> stumbles across a fight. Remembering that the Peacemakers are blessed, he breaks up the fight by drawing the attention of the persons' away from each other. ",
+			"VIRTUE_PRUDENCE_SUBVIRTUE_REASON" : 2
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT": "<1> walks into a fight. Being unreasonable, he joins in on one side, and this leads to <1> and this person beating the other person to a pulp",
+			"VIRTUE_PRUDENCE_SUBVIRTUE_REASON" : -2,
+			"STATE_OF_GRACE": false
+		}
+	},	
+	"AVOIDING_STUMBLINGBLOCK":
+	{
+		"id" : "AVOIDING_STUMBLINGBLOCK",
+		"PRECONDITIONS":
+		{
+			"VIRTUE_PRUDENCE_SUBVIRTUE_FORESIGHT" : 10
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1> finds themselves facing an occasion to indulge their <PREDOMINANT_FAULT>. Recognising this, they avoid this deftly. ",
+			"VIRTUE_PRUDENCE_SUBVIRTUE_FORESIGHT" : 2
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1> finds themselves facing an occasion to indulge their <PREDOMINANT_FAULT>. Being unaware of the danger, they indulge in this and fall",
+			"VIRTUE_PRUDENCE_SUBVIRTUE_FORESIGHT" : -2,
+			"STATE_OF_GRACE": false
+		}
+	},
+	"CIRCUMSPECTION":
+	{
+		"id" : "CIRCUMSPECTION",
+		"PRECONDITIONS":
+		{
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1> looks back on their life, realises their current mistakes, and then takes action to correct them. ",
+			"VIRTUE_PRUDENCE_SUBVIRTUE_CIRCUMSPECTION" : 2
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			
+		}
+	},
+	"AVOIDING_STUMBLINGBLOCK_CAUTION":
+	{
+		"id" : "AVOIDING_STUMBLINGBLOCK_CAUTION",
+		"PRECONDITIONS":
+		{
+			"VIRTUE_PRUDENCE_SUBVIRTUE_CAUTION" : 1
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1> finds themselves facing an occasion to indulge their <PREDOMINANT_FAULT>. Recognising this, they avoid this out of caution. ",
+			"VIRTUE_PRUDENCE_SUBVIRTUE_CAUTION" : 2
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1> finds themselves facing an occasion to indulge their <PREDOMINANT_FAULT>. Being rashly go into this occasion and fall.",
+			"VIRTUE_PRUDENCE_SUBVIRTUE_CAUTION" : -2,
+			"STATE_OF_GRACE": false
+		}
+	},
+	"BAD_WORK":
+	{
+		"id" : "BAD_WORK",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1> resists the pull of laziness which would lead them to fail their work.",
+			"VIRTUE_PRUDENCE_FORTITUDE_DILIGENCE" : 2
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1> acts too quickly in work, leading to them ruining their action.",
+			"VIRTUE_PRUDENCE_SUBVICE_PRECIPITATION" : 2,
+			"STATE_OF_GRACE": false
+		}
+	},
+	"FAIL_EXERCISES":
+	{
+		"id" : "FAIL_EXERCISES",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1> resists, through fortitude, the pull of sloth when doing his spiritual exercises.",
+			"VIRTUE_TEMPERANCE_SUBVIRTUE_CONTINENCE" : 2,
+			"VIRTUE_FORTITUDE_SUBVIRTUE_PERSERVERENCE": 2,
+			"VIRTUE_JUSTICE_SUBVIRTUE_RELIGION": 2
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1> falls into sloth and neglects his spiritual exercises",
+			"VIRTUE_FORTITUDE_SUBVICE_PUSILANIMITY" : 2,
+			"VIRTUE_FORTITUDE_SUBVICE_EFFEMINACY" : 2,
+			"VIRTUE_TEMPERANCE_SUBVICE_INCONTINENCE": 2,
+			"VIRTUE_CHARITY_SUBVICE_SLOTH": 2
+		}
+	},
+	"NEGLIGENT_WORK":
+	{
+		"id" : "NEGLIGENT_WORK",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1> resists the pull of rejecting his work out of negligence.",
+			"VIRTUE_TEMPERANCE_SUBVIRTUE_CONTINENCE" : 2,
+			"VIRTUE_FORTITUDE_SUBVIRTUE_PERSERVERENCE": 2,
+			"VIRTUE_JUSTICE_SUBVIRTUE_RESTITUTION": 2,
+			"VIRTUE_JUSTICE_SUBVIRTUE_OBEDIENCE": 2,
+			"VIRTUE_JUSTICE_SUBVIRTUE_DILIGENCE": 2,
+			"VIRTUE_FORTITUDE_SUBVIRTUE_MORTIFICATION": 1
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1> neglects his work",
+			"VIRTUE_FORTITUDE_SUBVICE_PUSILANIMITY" : 2,
+			"VIRTUE_FORTITUDE_SUBVICE_EFFEMINACY" : 2,
+			"VIRTUE_TEMPERANCE_SUBVICE_INCONTINENCE": 2,
+			"VIRTUE_PRUDENCE_SUBVICE_NEGLIGENCE": 2,
+			"VIRTUE_CHARITY_SUBVICE_SLOTH": 2
+
+		}
+	},
+	"SEDUCE:
+	{
+		"id" : "SEDUCE",
+		"SECOND_PERSON": true,
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1> refuses to seduce <2> when tempted",
+			"VIRTUE_TEMPERANCE_SUBVIRTUE_CHASTITY": 3,
+			"VIRTUE_TEMPERANCE_SUBVIRTUE_CONTINENCE": 2,
+			"VIRTUE_TEMPERANCE_SUBVIRTUE_VIRGINITY": 2,
+			
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1> seduces <2>",
+			"VIRTUE_PRUDENCE_SUBVICE_INCONSIDERATION": 2,
+			"VIRTUE_TEMPERANCE_SUBVICE_FORNICATION": 5,
+			"VIRTUE_TEMPERANCE_SUBVICE_INCONTINENCE": 2
+
+		}
+	},
+	"DEFRAUD":
+	{
+		"id" : "DEFRAUD",
+		"SECOND_PERSON" : true,
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1> resists temptation to defraud <2>",
+			"VIRTUE_JUSTICE_SUBVIRTUE_LEGAL" : 2,
+			
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1> defrauds <2>",
+			"VIRTUE_JUSTICE_SUBVICE_THEFT": 2,
+			"VIRTUE_JUSTICE_SUBVICE_AVARICE": 2,
+			"VIRTUE_JUSTICE_SUBVICE_LYING": 2,
+			"VIRTUE_PRUDENCE_SUBVICE_FRAUD": 2
+
+		}
+	},	
+	"OSTRACISE":
+	{
+		"id" : "OSTRACISE",
+		"SECOND_PERSON": true,
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1> refuses to ostracise <2>",
+			"VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY": 2
+			
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1> ostracises <2>",
+			"VIRTUE_PRUDENCE_SUBVICE_INCONSIDERATION": 2
+			
+		}
+	},
+	"LIE":
+	{
+		"id" : "LIE",
+		"SECOND_PERSON" : true,
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1> refuses to lie to <2>"
+			
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1> lies to <2>",
+			"VIRTUE_JUSTICE_SUBVICE_LYING": 2,
+
+		}
+	},
+	"SOLVE_DISPUTE":
+	{
+		"id" : "SOLVE_DISPUTE",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},
+	"ACTIVISM_COMMON_GOOD":
+	{
+		"id" : "ACTIVISM_COMMON_GOOD",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},	
+	"PRAY_PSALM":
+	{
+		"id" : "PRAY_PSALM",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},	
+	"PRAY_ROSARY":
+	{
+		"id" : "PRAY_ROSARY",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},
+	"PRAY_MENTAL":
+	{
+		"id" : "PRAY_MENTAL",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},
+	"PRAY_HATED_PERSON":
+	{
+		"id" : "PRAY_HATED_PERSON",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},
+	"OBEY_SUPERIOR":
+	{
+		"id" : "OBEY_SUPERIOR",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},
+	"ARMY_JOIN":
+	{
+		"id" : "ARMY_JOIN",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},
+	"MASS":
+	{
+		"id" : "MASS",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},	
+	"RECEIVE_COMMUNION_GRACE":
+	{
+		"id" : "RECEIVE_COMMUNION_GRACE",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},
+	"RECEIVE_COMMUNION_MS":
+	{
+		"id" : "RECEIVE_COMMUNION_MS",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},
+	"RECEIVE_COMMUNION_GRACE":
+	{
+		"id" : "RECEIVE_COMMUNION_GRACE",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},
+	"MAKE_FRIENDS":
+	{
+		"id" : "MAKE_FRIENDS",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},
+	"APOLOGISE":
+	{
+		"id" : "APOLOGISE",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},
+	"ALMS":
+	{
+		"id" : "ALMS",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},
+	"READ_LAW_EPIEIKEIA":
+	{
+		"id" : "READ_LAW_EPIEIKEIA",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},
+	"MURDER":
+	{
+		"id" : "MURDER",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},
+	"MUTILATE":
+	{
+		"id" : "MUTILATE",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},
+	"STEAL_SMALL":
+	{
+		"id" : "STEAL_SMALL",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},	
+	"STEAL_BIG":
+	{
+		"id" : "STEAL_BIG",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},
+	"ROBBERY":
+	{
+		"id" : "ROBBERY",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},
+	"SMUG_SUPERIORITY":
+	{
+		"id" : "SMUG_SUPERIORITY",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},
+	"EXHAULT_IN_OWN_STRENGTH":
+	{
+		"id" : "EXHAULT_IN_OWN_STRENGTH",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},
+	"ATTRIBUTE_UNPOSSESSED_GOOD":
+	{
+		"id" : "ATTRIBUTE_UNPOSSESSED_GOOD",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},
+	"CALUMNY":
+	{
+		"id" : "CALUMNY",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},
+	"DETRACTION":
+	{
+		"id" : "DETRACTION",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},	
+	"RASH_JUDGEMENT":
+	{
+		"id" : "RASH_JUDGEMENT",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},
+	"GOSSIP":
+	{
+		"id" : "GOSSIP",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},
+	"LOANSHARK":
+	{
+		"id" : "LOANSHARK",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},
+	"MOCKERY":
+	{
+		"id" : "MOCKERY",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},
+	"RASH_OATH":
+	{
+		"id" : "RASH_OATH",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},
+	"IDOLATRY":
+	{
+		"id" : "IDOLATRY",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},
+	"CAST_SPELL":
+	{
+		"id" : "CAST_SPELL",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},
+	"TEMPT_GOD":
+	{
+		"id" : "TEMPT_GOD",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},
+	"SACRILEGE_EUCHARIST":
+	{
+		"id" : "SACRILEGE_EUCHARIST",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},
+	"SACRILEGE_STATUE":
+	{
+		"id" : "SACRILEGE_STATUE",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},
+	"SIMONY":
+	{
+		"id" : "SIMONY",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},
+	"VENGEANCE":
+	{
+		"id" : "VENGEANCE",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},
+	"BOAST":
+	{
+		"id" : "BOAST",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},
+	"IGNORE_GOOD_ACTION":
+	{
+		"id" : "IGNORE_GOOD_ACTION",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},
+	"FLATTER":
+	{
+		"id" : "FLATTER",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},
+	"CHASE_MONEY":
+	{
+		"id" : "CHASE_MONEY",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},
+	"INSULTING_SARCASM":
+	{
+		"id" : "INSULTING_SARCASM",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},
+	"SUING_EXCESSIVELY":
+	{
+		"id" : "SUING_EXCESSIVELY",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},
+	"PLANNING_GREAT_THINGS":
+	{
+		"id" : "PLANNING_GREAT_THINGS",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},
+	"ILLNESS":
+	{
+		"id" : "ILLNESS",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},
+	"VISION":
+	{
+		"id" : "VISION",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},
+	"INNERLOCUTION":
+	{
+		"id" : "INNERLOCUTION",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},
+	"FAST":
+	{
+		"id" : "FAST",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},
+	"VIGIL":
+	{
+		"id" : "VIGIL",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},
+	"AMBITION":
+	{
+		"id" : "AMBITION",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},
+	"SCHADENFREUDE":
+	{
+		"id" : "SCHADENFREUDE",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},
+	"REJOICE_IN_EVIL":
+	{
+		"id" : "REJOICE_IN_EVIL",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},
+	"COMPLASCENT":
+	{
+		"id" : "COMPLASCENT",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},
+	"REALISE_LOWLINESS":
+	{
+		"id" : "REALISE_LOWLINESS",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},
+	"MASTURBATE":
+	{
+		"id" : "MASTURBATE",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},
+	"FORNICATE":
+	{
+		"id" : "FORNICATE",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},
+	"BOAST":
+	{
+		"id" : "BOAST",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},
+	"STUDY":
+	{
+		"id" : "STUDY",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},
+	"FORGIVE":
+	{
+		"id" : "FORGIVE",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},
+	"BETTER_DECORUM":
+	{
+		"id" : "BETTER_DECORUM",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},
+	"SELL_POSSESSIONS":
+	{
+		"id" : "SELL_POSSESSIONS",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},
+	"BULLY":
+	{
+		"id" : "BULLY",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},
+	"BEAT_UP":
+	{
+		"id" : "BEAT_UP",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},
+	"CRUDE_JOKE":
+	{
+		"id" : "CRUDE_JOKE",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},
+	"REPENTENCE":
+	{
+		"id" : "REPENTENCE",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},
+	"HERESY":
+	{
+		"id" : "HERESY",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},
+	"APOSTASY":
+	{
+		"id" : "APOSTASY",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},
+	"BLASPHEMY":
+	{
+		"id" : "BLASPHEMY",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},
+	"HATRED_OF_GOD":
+	{
+		"id" : "HATRED_OF_GOD",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},	
+	"ARGUE":
+	{
+		"id" : "ARGUE",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},
+	"SCHISM":
+	{
+		"id" : "SCHISM",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},
+	"SCANDALISE":
+	{
+		"id" : "SCANDALISE",
+		"PRECONDITIONS":
+		{
+
+		},
+		
+		"POSTCONDITIONS_ACCEPT":
+		{
+			"OUTPUT":"<1>"
+
+		},
+		"POSTCONDITIONS_REJECT":
+		{
+			"OUTPUT":"<1>"
+
+		}
+	},
+}
