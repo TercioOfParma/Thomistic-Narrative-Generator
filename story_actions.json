@@ -1,2123 +1,1580 @@
 {
-	"VIRTUE_PRUDENCE_SUBVIRTUE_MEMORY_READ_SCRIPTURE":
-	{
-		"id" : "READ_SCRIPTURE",
-		"TYPE": "ACTUAL_GRACE",
-		"QUOTES_SCRIPTURE": true, 
-		"PRECONDITIONS":
-		{
-			
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> picks up the scriptures, and reads: ",
-			"VIRTUE_PRUDENCE_SUBVIRTUE_MEMORY" : 1,
-			"VIRTUE_JUSTICE_SUBVIRTUE_RELIGION": 1,
-			"VIRTUE_JUSTICE_SUBVIRTUE_DEVOTION": 1,
-			"VIRTUE_JUSTICE_SUBVIRTUE_EPIEIKEIA": 1,
-			"VIRTUE_FORTITUDE_SUBVIRTUE_PATIENCE":1,
-			"VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":1,
-			"VIRTUE_TEMPERANCE_SUBVIRTUE_STUDIOUSITY":1,
-			"VIRTUE_HOPE" : 1
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			
-		},
-		
-		"SCRIPTURE_BANK":
-		{
-			"VERSES": ["Test"]
-		}
-	}, 
-	"UNDERSTAND_LAW":
-	{
-		"id" : "UNDERSTAND_MORAL_LAW",
-		"TYPE": "ACTUAL_GRACE",
-		"PRECONDITIONS":
-		{
-			"VIRTUE_PRUDENCE_SUBVIRTUE_MEMORY" : 50
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> meditates, and finally begins to understand God's law ",
-			"VIRTUE_PRUDENCE_SUBVIRTUE_UNDERSTANDING" : 1,
-			"VIRTUE_PRUDENCE_SUBVIRTUE_DOCILITY" : 1,
-			"VIRTUE_PRUDENCE_SUBVIRTUE_SHREWDNESS" : 1
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT": "<1> struggles and fails to understand the moral law"
-		}
-	}, 
-	"BEATEN_UP":
-	{
-		"id" : "BEATEN_UP",
-		"TYPE": "TEMPTATION",
-		"PRECONDITIONS":
-		{
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"While meditating in a quiet place, <1> has a good thought regarding dealing with his passions and vices. He meditates on it and accepts this counsel into their life.",
-			"VIRTUE_PRUDENCE_SUBVIRTUE_DOCILITY" : 2
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT": "While praying in a quiet place, <1> receives advice in prayer on his predominant fault. <1> takes this personally. Temper lost, <1> begins to cry.",
-			"VIRTUE_PRUDENCE_SUBVIRTUE_DOCILITY" : -2,
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 1
-		}
-	}, 
-	"ESCAPING_A_PIT":
-	{
-		"id" : "ESCAPING_A_PIT",
-		"TYPE": "TEMPTATION",
-		"PRECONDITIONS":
-		{
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"As <1> is walking in the <ENVIRONMENT>, <1> falls into a pit. Scrambling around and looking for a way out, <1> finds a rope hidden behind some branches, and uses this to climb out of the hole.",
-			"VIRTUE_PRUDENCE_SUBVIRTUE_SHREWDNESS" : 2
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT": "<1> falls into a pit. Unable to find any means of getting out, despite this being in <1>'s means, he calls for help. It begins to rain heavily. Eventually, the hole floods, allowing him to float to the top.",
-			"VIRTUE_PRUDENCE_SUBVIRTUE_SHREWDNESS" : -2,
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 1
-		}
-	},	
-	"DEFUSING_A_FIGHT":
-	{
-		"id" : "DEFUSING_A_FIGHT",
-		"TYPE": "ACTUAL_GRACE",
-		"PRECONDITIONS":
-		{
-	
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> stumbles across a fight. Remembering that the Peacemakers are blessed, he breaks up the fight by drawing the attention of the persons' away from each other. ",
-			"VIRTUE_PRUDENCE_SUBVIRTUE_REASON" : 2
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT": "<1> walks into a fight. Being unreasonable, he joins in on one side, and this leads to <1> and this person beating the other person to a pulp",
-			"VIRTUE_PRUDENCE_SUBVIRTUE_REASON" : -2,
-			"STATE_OF_GRACE": false,
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 2
-		}
-	},	
-	"AVOIDING_STUMBLINGBLOCK":
-	{
-		"id" : "AVOIDING_STUMBLINGBLOCK",
-		"TYPE": "ACTUAL_GRACE",
-		"PRECONDITIONS":
-		{
-			"VIRTUE_PRUDENCE_SUBVIRTUE_FORESIGHT" : 10
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> finds themselves facing an occasion to indulge their <PREDOMINANT_FAULT>. Recognising this, they avoid this deftly. ",
-			"VIRTUE_PRUDENCE_SUBVIRTUE_FORESIGHT" : 2
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> finds themselves facing an occasion to indulge their <PREDOMINANT_FAULT>. Being unaware of the danger, they indulge in this and fall",
-			"VIRTUE_PRUDENCE_SUBVIRTUE_FORESIGHT" : -2,
-			"STATE_OF_GRACE": false,
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 1
-		}
-	},
-	"CIRCUMSPECTION":
-	{
-		"id" : "CIRCUMSPECTION",
-		"TYPE": "ACTUAL_GRACE",
-		"PRECONDITIONS":
-		{
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> looks back on their life, realises their current mistakes, and then takes action to correct them. ",
-			"VIRTUE_PRUDENCE_SUBVIRTUE_CIRCUMSPECTION" : 2
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			
-		}
-	},
-	"AVOIDING_STUMBLINGBLOCK_CAUTION":
-	{
-		"id" : "AVOIDING_STUMBLINGBLOCK_CAUTION",
-		"TYPE": "ACTUAL_GRACE",
-		"PRECONDITIONS":
-		{
-			"VIRTUE_PRUDENCE_SUBVIRTUE_CAUTION" : 1
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> finds themselves facing an occasion to indulge their <PREDOMINANT_FAULT>. Recognising this, they avoid this out of caution. ",
-			"VIRTUE_PRUDENCE_SUBVIRTUE_CAUTION" : 2
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> finds themselves facing an occasion to indulge their <PREDOMINANT_FAULT>. Being rashly go into this occasion and fall.",
-			"VIRTUE_PRUDENCE_SUBVIRTUE_CAUTION" : -2,
-			"STATE_OF_GRACE": false,
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 1
-		}
-	},
-	"BAD_WORK":
-	{
-		"id" : "BAD_WORK",
-		"TYPE": "TEMPTATION",
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> resists the pull of laziness which would lead them to fail their work.",
-			"VIRTUE_FORTITUDE_SUBVIRTUE_DILIGENCE" : 2
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> acts too quickly in work, leading to them ruining their action.",
-			"VIRTUE_PRUDENCE_SUBVICE_PRECIPITATION" : 2,
-			"STATE_OF_GRACE": false,
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 1
-		}
-	},
-	"FAIL_EXERCISES":
-	{
-		"id" : "FAIL_EXERCISES",
-		"TYPE": "TEMPTATION",
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> resists, through fortitude, the pull of sloth when doing his spiritual exercises.",
-			"VIRTUE_TEMPERANCE_SUBVIRTUE_CONTINENCE" : 2,
-			"VIRTUE_FORTITUDE_SUBVIRTUE_PERSERVERENCE": 2,
-			"VIRTUE_JUSTICE_SUBVIRTUE_RELIGION": 2
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> falls into sloth and neglects his spiritual exercises",
-			"VIRTUE_FORTITUDE_SUBVICE_PUSILANIMITY" : 2,
-			"VIRTUE_FORTITUDE_SUBVICE_EFFEMINACY" : 2,
-			"VIRTUE_TEMPERANCE_SUBVICE_INCONTINENCE": 2,
-			"VIRTUE_CHARITY_SUBVICE_SLOTH": 2,
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 1
-		}
-	},
-	"NEGLIGENT_WORK":
-	{
-		"id" : "NEGLIGENT_WORK",
-		"TYPE": "TEMPTATION",
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> resists the pull of rejecting his work out of negligence.",
-			"VIRTUE_TEMPERANCE_SUBVIRTUE_CONTINENCE" : 2,
-			"VIRTUE_FORTITUDE_SUBVIRTUE_PERSERVERENCE": 2,
-			"VIRTUE_JUSTICE_SUBVIRTUE_RESTITUTION": 2,
-			"VIRTUE_JUSTICE_SUBVIRTUE_OBEDIENCE": 2,
-			"VIRTUE_JUSTICE_SUBVIRTUE_DILIGENCE": 2,
-			"VIRTUE_FORTITUDE_SUBVIRTUE_MORTIFICATION": 1
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> neglects his work",
-			"VIRTUE_FORTITUDE_SUBVICE_PUSILANIMITY" : 2,
-			"VIRTUE_FORTITUDE_SUBVICE_EFFEMINACY" : 2,
-			"VIRTUE_TEMPERANCE_SUBVICE_INCONTINENCE": 2,
-			"VIRTUE_PRUDENCE_SUBVICE_NEGLIGENCE": 2,
-			"VIRTUE_CHARITY_SUBVICE_SLOTH": 2,
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 1
-
-		}
-	},
-	"SEDUCE:
-	{
-		"id" : "SEDUCE",
-		"TYPE": "TEMPTATION",
-		"SECOND_PERSON": true,
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> refuses to seduce <2> when tempted",
-			"VIRTUE_TEMPERANCE_SUBVIRTUE_CHASTITY": 3,
-			"VIRTUE_TEMPERANCE_SUBVIRTUE_CONTINENCE": 2,
-			"VIRTUE_TEMPERANCE_SUBVIRTUE_VIRGINITY": 2,
-			
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> seduces <2>",
-			"VIRTUE_TEMPERANCE_SUBVICE_FORNICATION": 5,
-			"VIRTUE_TEMPERANCE_SUBVICE_INCONTINENCE": 2,
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 1
-
-		}
-	},
-	"DEFRAUD":
-	{
-		"id" : "DEFRAUD",
-		"TYPE": "TEMPTATION",
-		"SECOND_PERSON" : true,
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> resists temptation to defraud <2>",
-			"VIRTUE_JUSTICE_SUBVIRTUE_LEGAL" : 2,
-			
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> defrauds <2>",
-			"VIRTUE_JUSTICE_SUBVICE_THEFT": 2,
-			"VIRTUE_JUSTICE_SUBVICE_AVARICE": 2,
-			"VIRTUE_JUSTICE_SUBVICE_LYING": 2,
-			"VIRTUE_PRUDENCE_SUBVICE_FRAUD": 2,
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 1
-
-		}
-	},	
-	"OSTRACISE":
-	{
-		"id" : "OSTRACISE",
-		"TYPE": "TEMPTATION",
-		"SECOND_PERSON": true,
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> refuses to ostracise <2>",
-			"VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY": 2
-			
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> ostracises <2>",
-			"VIRTUE_CHARITY_SUBVICE_DISCORD": 2,
-			"VIRTUE_CHARITY_SUBVICE_QUARRELLING": 2,
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 1
-			
-		}
-	},
-	"LIE":
-	{
-		"id" : "LIE",
-		"TYPE": "TEMPTATION",
-		"SECOND_PERSON" : true,
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> refuses to lie to <2>"
-			
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> lies to <2>",
-			"VIRTUE_JUSTICE_SUBVICE_LYING": 2,
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 1
-
-		}
-	},
-	"SOLVE_DISPUTE":
-	{
-		"id" : "SOLVE_DISPUTE",
-		"TYPE": "ACTUAL_GRACE",
-		"SECOND_PERSON": true,
-		"THIRD_PERSON": true,
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> solves a dispute between <2> and <3>.",
-			"VIRTUE_PRUDENCE_SUBVIRTUE_UNDERSTANDING": 2,
-			"VIRTUE_PRUDENCE_SUBVIRTUE_REASON": 2,
-			"VIRTUE_JUSTICE_SUBVIRTUE_COMMUTATIVE": 2,
-			
-			
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> lets <2> and <3> argue.",
-			"VIRTUE_PRUDENCE_SUBVICE_NEGLIGENCE": 2,
-			"VIRTUE_FORTITUDE_SUBVICE_EFFEMINACY": 2,
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 1
-
-		}
-	},
-	"ACTIVISM_COMMON_GOOD":
-	{
-		"id" : "ACTIVISM_COMMON_GOOD",
-		"TYPE": "ACTUAL_GRACE",
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> protests the perversion of justice away from the common good",
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> refuses to protest injustice that is contrary to the common good",
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 1
-
-		}
-	},	
-	"PRAY_PSALM":
-	{
-		"id" : "PRAY_PSALM",
-		"TYPE": "ACTUAL_GRACE",
-		"QUOTES_SCRIPTURE": true,
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> prays a Psalm for the Love of God: ",
-			"VIRTUE_JUSTICE_SUBVIRTUE_RELIGION": 2,
-			"VIRTUE_CHARITY" : 1,
-			"VIRTUE_JUSTICE_SUBVIRTUE_OBSERVANCES":2,
-			"VIRTUE_CHARITY_SUBVICE_SLOTH": -1
-			
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> refuses to pray",
-			"VIRTUE_JUSTICE_SUBVIRTUE_RELIGION": -2,
-			"VIRTUE_CHARITY_SUBVICE_SLOTH": 1,
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 1
-		}
-		"SCRIPTURE_BANK":
-		{
-			"VERSES": ["Test"]
-		}
-	},	
-	"PRAY_ROSARY":
-	{
-		"id" : "PRAY_ROSARY",
-		"TYPE": "ACTUAL_GRACE",
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> prays a rosary for the Love of God.",
-			"VIRTUE_JUSTICE_SUBVIRTUE_RELIGION": 2,
-			"VIRTUE_CHARITY" : 1,
-			"VIRTUE_JUSTICE_SUBVIRTUE_OBSERVANCES":2,
-			VIRTUE_CHARITY_SUBVICE_SLOTH": -1
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> refuses to pray a rosary.",
-			"VIRTUE_JUSTICE_SUBVIRTUE_RELIGION": -2,
-			"VIRTUE_CHARITY_SUBVICE_SLOTH": 1,
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 1
-
-		}
-	},
-	"PRAY_MENTAL":
-	{
-		"id" : "PRAY_MENTAL",
-		"TYPE": "ACTUAL_GRACE",
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> engages in mental prayer on the Passion of Christ.",
-			"VIRTUE_JUSTICE_SUBVIRTUE_RELIGION": 2,
-			"VIRTUE_CHARITY" : 1,
-			"VIRTUE_JUSTICE_SUBVIRTUE_OBSERVANCES":2,
-			"VIRTUE_CHARITY_SUBVICE_SLOTH": -1
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> refuses to engage in mental prayer.",
-			"VIRTUE_JUSTICE_SUBVIRTUE_RELIGION": -2,
-			"VIRTUE_CHARITY_SUBVICE_SLOTH": -1,
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 1
-		}
-	},
-	"PRAY_HATED_PERSON":
-	{
-		"id" : "PRAY_HATED_PERSON",
-		"TYPE": "ACTUAL_GRACE",
-		"SECOND_PERSON" : true,
-		"PRECONDITIONS":
-		{
-			"_comment" : "Add passion stuff later as needed"
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> prays for <2>, whom they hate.",
-			"VIRTUE_CHARITY": 1,
-			"VIRTUE_JUSTICE_SUBVIRTUE_RELIGION": 2,
-			"VIRTUE_JUSTICE_SUBVIRTUE_DEVOTION": 2,
-			"VIRTUE_FORTITUDE_SUBVIRTUE_PATIENCE": 2,
-			"VIRTUE_TEMPERANCE_SUBVIRTUE_MEEKNESS": 2,
-			"VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY": 2
-			
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> refuses to pray for <2>",
-			"VIRTUE_CHARITY_SUBVICE_DISCORD" : 2,
-			"VIRTUE_FORTITUDE_SUBVICE_PUSILANIMITY": 2,
-			"VIRTUE_TEMPERANCE_SUBVICE_ANGER": 2,
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 2
-
-		}
-	},
-	"OBEY_SUPERIOR":
-	{
-		"id" : "OBEY_SUPERIOR",
-		"TYPE": "ACTUAL_GRACE",
-		"SECOND_PERSON": true,
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> obeys <2>",
-			"VIRTUE_JUSTICE_SUBVIRTUE_OBEDIENCE": 2,
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> refuses to obey <2>",
-			"VIRTUE_JUSTICE_SUBVICE_DISOBEDIENCE": 2,
-			
-
-		}
-	},
-	"ARMY_JOIN":
-	{
-		"id" : "ARMY_JOIN",
-		"TYPE": "ACTUAL_GRACE",
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> serves a term in the army out of a sense of patriotism",
-			VIRTUE_JUSTICE_SUBVIRTUE_PATRIOTISM: 2
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> neglects his nation",
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 1
-
-		}
-	},
-	"MASS":
-	{
-		"id" : "MASS",
-		"TYPE": "ACTUAL_GRACE",
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> goes to mass devoutly and arduous for charity",
-			"VIRTUE_JUSTICE_SUBVIRTUE_RELIGION": 2,
-			"VIRTUE_JUSTICE_SUBVIRTUE_DEVOTION": 2,
-			"VIRTUE_CHARITY": 1,
-			"VIRTUE_JUSTICE_SUBVIRTUE_OBSERVANCES": 2
-			
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> refuses to go to mass at the required time",
-			"STATE_OF_GRACE" : false,
-			"VIRTUE_JUSTICE_SUBVICE_TEMPTING_GOD": 2,
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 2,
-			"VIRTUE_CHARITY_SUBVICE_SLOTH": 2,
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 2
-
-		}
-	},	
-	"RECEIVE_COMMUNION_GRACE":
-	{
-		"id" : "RECEIVE_COMMUNION_GRACE",
-		"TYPE": "ACTUAL_GRACE",
-		"PRECONDITIONS":
-		{
-			"STATE_OF_GRACE": true
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> receives communion in a state of grace reverently",
-			"VIRTUE_CHARITY": 3,
-			"VIRTUE_FORTITUDE_SUBVIRTUE_MORTIFICATION": 2,
-			"VIRTUE_FAITH": 3,
-			"VIRTUE_HOPE": 3
-			
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> refuses to receive communion despite state of grace",
-			"VIRTUE_JUSTICE_SUBVICE_DISOBEDIENCE": 1,
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 1
-
-		}
-	},
-	"RECEIVE_COMMUNION_MS":
-	{
-		"id" : "RECEIVE_COMMUNION_MS",
-		"TYPE": "TEMPTATION",
-		"PRECONDITIONS":
-		{
-			STATE_OF_GRACE: false
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> rightly refuses to receive communion in state of mortal sin."
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> receives communion in a state of mortal sin.",
-			"VIRTUE_JUSTICE_SUBVICE_SACRILEGE": 4,
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 4
-
-		}
-	},
-	"MAKE_FRIENDS":
-	{
-		"id" : "MAKE_FRIENDS",
-		"TYPE": "ACTUAL_GRACE",
-		"SECOND_PERSON": true
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> makes friends with <2> out of charity.",
-			"VIRTUE_CHARITY": 1,
-			"VIRTUE_JUSTICE_SUBVIRTUE_FRIENDSHIP": 2
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> refuses to make friends with <2>.",
-			"VIRTUE_CHARITY_SUBVICE_DISCORD": 1,
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 2
-
-		}
-	},
-	"APOLOGISE":
-	{
-		"id" : "APOLOGISE",
-		"TYPE": "ACTUAL_GRACE",
-		"SECOND_PERSON": true,
-		"PRECONDITIONS":
-		{
-			"_comment" : "Add some sort of previous contention between the two here"
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> apologises to <2> for previous wrongs.",
-			"VIRTUE_JUSTICE_SUBVIRTUE_RELIGION": 2,
-			"VIRTUE_PRUDENCE_SUBVIRTUE_MEMORY": 1,
-			"VIRTUE_JUSTICE_SUBVIRTUE_COMMUTATIVE": 1,
-			"VIRTUE_JUSTICE_SUBVIRTUE_RESTITUTION": 1,
-			"VIRTUE_JUSTICE_SUBVIRTUE_DILIGENCE": 1,
-			"VIRTUE_JUSTICE_SUBVIRTUE_FRIENDSHIP": 1,
-			"VIRTUE_FORTITUDE_SUBVIRTUE_MAGANIMITY": 1,
-			"VIRTUE_FORTITUDE_SUBVIRTUE_MORTIFICATION": 1,
-			"VIRTUE_TEMPERANCE_SUBVIRTUE_HONESTIA": 1,
-			"VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY": 1,
-			"VIRTUE_TEMPERANCE_SUBVIRTUE_MEEKNESS": 1
-			
-			
-			
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> refuses to apologise to <2> when given the opportunity.",
-			"VIRTUE_PRUDENCE_SUBVICE_INCONSIDERATION": 2,
-			"VIRTUE_JUSTICE_SUBVIRTUE_JUDGEMENT": 2,
-			"STATE_OF_GRACE": false,
-			"VIRTUE_FORTITUDE_SUBVICE_FEAR": 2,
-			"VIRTUE_FORTITUDE_SUBVICE_PUSILANIMITY": 2,
-			"VIRTUE_FORTITUDE_SUBVICE_EFFEMINACY": 2,
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 2
-			
-			
-
-		}
-	},
-	"ALMS":
-	{
-		"id" : "ALMS",
-		"TYPE": "ACTUAL_GRACE",
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> gives small alms to the poor for the Love of God.",
-			"VIRTUE_CHARITY": 1,
-			"VIRTUE_JUSTICE_SUBVIRTUE_RELIGION": 2,
-			"VIRTUE_JUSTICE_SUBVIRTUE_RESTITUTION": 2,
-			"VIRTUE_FORTITUDE_SUBVIRTUE_MAGNIFICENCE": 2,
-			"VIRTUE_JUSTICE_SUBVIRTUE_LIBERALITY: 2
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> refuses to give alms to the poor",
-			"VIRTUE_JUSTICE_SUBVICE_AVARICE": 2,
-			"VIRTUE_JUSTICE_SUBVICE_STINGINESS": 2,
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 1
-			
-
-		}
-	},
-	"READ_LAW_EPIEIKEIA":
-	{
-		"id" : "READ_LAW_EPIEIKEIA",
-		"TYPE": "ACTUAL_GRACE",
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> reads the law to gain the mind of the lawmaker",
-			"VIRTUE_JUSTICE_SUBVIRTUE_EPIEIKEIA": 2
-			
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> refuses to learn the mind of the lawmaker",
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 1
-
-		}
-	},
-	"MURDER":
-	{
-		"id" : "MURDER",
-		"TYPE": "TEMPTATION",
-		"SECOND_PERSON": true,
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> refuses to murder <2> when the thought crosses his mind",
-			"VIRTUE_JUSTICE_SUBVIRTUE_COMMUTATIVE": 1,
-			"VIRTUE_JUSTICE_SUBVIRTUE_OBEDIENCE": 1
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> murders <2>.",
-			"STATE_OF_GRACE": false,
-			"VIRTUE_JUSTICE_SUBVICE_MURDER": 4,
-			"VIRTUE_FORTITUDE_SUBVICE_FEARLESSNESS": 4,
-			"VIRTUE_CHARITY_SUBVICE_DISCORD": 4,
-			"VIRTUE_CHARITY_SUBVICE_QUARRELLING": 4,
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 4
-			
-
-		}
-	},
-	"MUTILATE":
-	{
-		"id" : "MUTILATE",
-		"TYPE": "TEMPTATION",
-		"SECOND_PERSON": true,
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> refuses to attack <2>",
-			"VIRTUE_JUSTICE_SUBVIRTUE_COMMUTATIVE": 1,
-			"VIRTUE_JUSTICE_SUBVIRTUE_OBEDIENCE": 1
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> mutiliates <2> in callous violence",
-			"STATE_OF_GRACE": false,
-			"VIRTUE_JUSTICE_SUBVICE_MUTILATION": 4,
-			"VIRTUE_FORTITUDE_SUBVICE_FEARLESSNESS": 3,
-			"VIRTUE_CHARITY_SUBVICE_DISCORD": 3,
-			"VIRTUE_CHARITY_SUBVICE_QUARRELLING": 3,
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 2
-
-		}
-	},
-	"STEAL_SMALL":
-	{
-		"id" : "STEAL_SMALL",
-		"TYPE": "TEMPTATION",
-		"SECOND_PERSON": true,
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> refuses to steal something small from <2>",
-			"VIRTUE_JUSTICE_SUBVIRTUE_COMMUTATIVE": 1,
-			"VIRTUE_JUSTICE_SUBVIRTUE_OBEDIENCE": 1
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> steals something small from <2>",
-			"VIRTUE_JUSTICE_SUBVICE_THEFT": 1,
-			"VIRTUE_PRUDENCE_SUBVICE_CARNAL_PRUDENCE": 2,
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 1
-
-		}
-	},	
-	"STEAL_BIG":
-	{
-		"id" : "STEAL_BIG",
-		"TYPE": "TEMPTATION",
-		"SECOND_PERSON": true,
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> refuses to steal something big from <2>",
-			"VIRTUE_JUSTICE_SUBVIRTUE_COMMUTATIVE": 1,
-			"VIRTUE_JUSTICE_SUBVIRTUE_OBEDIENCE": 1
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> steals something big from <2> knowing it is wrong",
-			"STATE_OF_GRACE": false,
-			"VIRTUE_JUSTICE_SUBVICE_THEFT": 2,
-			"VIRTUE_PRUDENCE_SUBVICE_CARNAL_PRUDENCE": 2,
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 2
-
-		}
-	},
-	"ROBBERY":
-	{
-		"id" : "ROBBERY",
-		"TYPE": "TEMPTATION",
-		"SECOND_PERSON": true,
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> refuses to rob <2>",
-			"VIRTUE_JUSTICE_SUBVIRTUE_COMMUTATIVE": 1,
-			"VIRTUE_JUSTICE_SUBVIRTUE_OBEDIENCE": 1
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> beats and robs <2> knowing it is wrong",
-			"STATE_OF_GRACE": false,
-			"VIRTUE_JUSTICE_SUBVICE_ROBBERY": 2,
-			"VIRTUE_PRUDENCE_SUBVICE_CARNAL_PRUDENCE": 2,
-			"VIRTUE_CHARITY_SUBVICE_DISCORD": 3,
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 2
-		}
-	},
-	"SMUG_SUPERIORITY":
-	{
-		"id" : "SMUG_SUPERIORITY",
-		"TYPE": "TEMPTATION",
-		"SECOND_PERSON": true,
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> judges themselves not to be superior to <2>",
-			"VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY": 2
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> smugly judges themselves superior to <2> willfully contrary to the New Law",
-			"STATE_OF_GRACE": false,
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 2,
-			"VIRTUE_JUSTICE_SUBVICE_JUDGEMENT": 3,
-			"VIRTUE_JUSTICE_SUBVICE_DISOBEDIENCE": 3
-
-		}
-	},
-	"EXHAULT_IN_OWN_STRENGTH":
-	{
-		"id" : "EXHAULT_IN_OWN_STRENGTH",
-		"TYPE": "TEMPTATION",
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> praises God for his strength, and God rewards them with Love for Him",
-			"VIRTUE_CHARITY": 1,
-			"VIRTUE_JUSTICE_SUBVIRTUE_RELIGION": 2
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> exhaults in their own strength forgetting God",
-			"STATE_OF_GRACE": false,
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 2
-
-		}
-	},
-	"ATTRIBUTE_UNPOSSESSED_GOOD":
-	{
-		"id" : "ATTRIBUTE_UNPOSSESSED_GOOD",
-		"TYPE": "TEMPTATION",
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> develops in self knowledge",
-			"VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":2,
-			"VIRTUE_PRUDENCE_SUBVIRTUE_DOCILITY": 1,
-			"VIRTUE_PRUDENCE_SUBVIRTUE_CIRCUMSPECTION": 2
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> rejoices in a good that they know they don't possess",
-			"STATE_OF_GRACE": false,
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 2,
-			"VIRTUE_PRUDENCE_SUBVICE_NEGLIGENCE": 2
-
-		}
-	},
-	"CALUMNY":
-	{
-		"id" : "CALUMNY",
-		"TYPE": "TEMPTATION",
-		"SECOND_PERSON": true,
-		"THIRD_PERSON": true,
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> refuses to calmuniate <2>",
-			"VIRTUE_TEMPERANCE_SUBVIRTUE_MEEKNESS": 1,
-			"VIRTUE_TEMPERANCE_SUBVIRTUE_SILENCE": 2
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> lies about <2> behind their back to <3> to destroy their reputation",
-			"STATE_OF_GRACE": false,
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 2,
-			"VIRTUE_CHARITY_SUBVICE_DISCORD": 2,
-			"VIRTUE_JUSTICE_SUBVICE_FALSE_ACCUSATION": 2
-
-		}
-	},
-	"DETRACTION":
-	{
-		"id" : "DETRACTION",
-		"TYPE": "TEMPTATION",
-		"SECOND_PERSON": true,
-		"THIRD_PERSON": true,
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> refuses to detract <2> to <3>",
-			"VIRTUE_TEMPERANCE_SUBVIRTUE_MEEKNESS": 1,
-			"VIRTUE_TEMPERANCE_SUBVIRTUE_SILENCE": 2
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> spreads secret sins <2> has committed to <3> without <2> knowing to destroy their reputation",
-			"STATE_OF_GRACE": false,
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 2,
-			"VIRTUE_CHARITY_SUBVICE_DISCORD": 2
-
-		}
-	},	
-	"RASH_JUDGEMENT":
-	{
-		"id" : "RASH_JUDGEMENT",
-		"TYPE": "TEMPTATION",
-		"SECOND_PERSON": true,
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> retains equanimity of mind with respect to <2>",
-			"VIRTUE_TEMPERANCE_SUBVIRTUE_CONTINENCE": 2
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> rashly judges <2>",
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 1,
-			"VIRTUE_PRUDENCE_SUBVICE_PRECIPITATION": 1,
-			"VIRTUE_JUSTICE_SUBVICE_JUDGEMENT: 1
-
-		}
-	},
-	"GOSSIP":
-	{
-		"id" : "GOSSIP",
-		"TYPE": "TEMPTATION",
-		"SECOND_PERSON": true,
-		"THIRD_PERSON": true,
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> refuses to gossip about <2>"
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> gossips about <2> to <3>",
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 1
-
-		}
-	},
-	"LOANSHARK":
-	{
-		"id" : "LOANSHARK",
-		"TYPE": "TEMPTATION",
-		"SECOND_PERSON": true,
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> refuses to loanshark <2>"
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> loansharks <2>",
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 2,
-			"STATE_OF_GRACE": false
-
-		}
-	},
-	"MOCKERY":
-	{
-		"id" : "MOCKERY",
-		"SECOND_PERSON": true,
-		"TYPE": "TEMPTATION",
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> refuses to mock <2>"
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> mocks <2> for who they are",
-			"STATE_OF_GRACE": false,
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 2,
-			"VIRTUE_JUSTICE_SUBVICE_DERISION": 2
-
-		}
-	},
-	"RASH_OATH":
-	{
-		"id" : "RASH_OATH",
-		"TYPE": "TEMPTATION",
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> retains presence of mind and doesn't rashly swear despite temptation.",
-			"VIRTUE_JUSTICE_SUBVIRTUE_RELIGION": 2
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> takes a rash oath",
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 1,
-			"VIRTUE_PRUDENCE_SUBVICE_PRECIPITATION": 1,
-			"VIRTUE_JUSTICE_SUBVICE_ILLICIT_ADJURATION": 2
-
-		}
-	},
-	"IDOLATRY":
-	{
-		"id" : "IDOLATRY",
-		"TYPE": "TEMPTATION",
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> renders worship to God",
-			"VIRTUE_JUSTICE_SUBVIRTUE_RELIGION": 2
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> worships an idol knowing it spites God",
-			"STATE_OF_GRACE": false,
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 4,
-			"VIRTUE_JUSTICE_SUBVICE_IDOLATRY": 2,
-			"VIRTUE_TEMPERANCE_SUBVICE_EFFEMINACY": 2
-
-		}
-	},
-	"CAST_SPELL":
-	{
-		"id" : "CAST_SPELL",
-		"TYPE": "TEMPTATION",
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> rebukes a thought to engage in magic"
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> engages in Divination knowing it is wrong",
-			"STATE_OF_GRACE": false,
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 3,
-			"VIRTUE_JUSTICE_SUBVICE_DIVINATION": 2,
-			"VIRTUE_TEMPERANCE_SUBVICE_EFFEMINACY": 2
-
-		}
-	},
-	"TEMPT_GOD":
-	{
-		"id" : "TEMPT_GOD",
-		"TYPE": "TEMPTATION",
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> remembers humility and refuses to tempt God"
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> intentionally tempts God by their thoughts",
-			"STATE_OF_GRACE": false,
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 4,
-			"VIRTUE_JUSTICE_SUBVIRTUE_TEMPTING_GOD": 3
-
-		}
-	},
-	"SACRILEGE_EUCHARIST":
-	{
-		"id" : "SACRILEGE_EUCHARIST",
-		"TYPE": "TEMPTATION",
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> treats the Most Holy Eucharist with the respect owed to God.",
-			"VIRTUE_JUSTICE_SUBVIRTUE_RELIGION": 2
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> commits sacrilege with the Most Holy Eucharist intentionally",
-			"STATE_OF_GRACE": false,
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 5,
-			"VIRTUE_JUSTICE_SUBVIRTUE_TEMPTING_GOD": 5
-
-		}
-	},
-	"SACRILEGE_STATUE":
-	{
-		"id" : "SACRILEGE_STATUE",
-		"TYPE": "TEMPTATION",
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> venerates a sacred statue",
-			"VIRTUE_JUSTICE_SUBVIRTUE_RELIGION": 2
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> destroys a sacred statue intentionally. ",
-			"STATE_OF_GRACE": false,
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 4,
-			"VIRTUE_JUSTICE_SUBVIRTUE_TEMPTING_GOD": 4
-
-		}
-	},
-	"SIMONY":
-	{
-		"id" : "SIMONY",
-		"TYPE": "TEMPTATION",
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> venerates a relic",
-			"VIRTUE_JUSTICE_SUBVIRTUE_RELIGION": 2
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> sells a relic knowing it is wrong",
-			"STATE_OF_GRACE": false,
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 3,
-			"VIRTUE_JUSTICE_SUBVIRTUE_TEMPTING_GOD": 3
-
-		}
-	},
-	"VENGEANCE":
-	{
-		"id" : "VENGEANCE",
-		"TYPE": "TEMPTATION",
-		"SECOND_PERSON": true,
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> refuses to dwell on vengeance against <2>"
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> meditates on vengeance against <2> ",
-			"STATE_OF_GRACE": false,
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 2,
-			"VIRTUE_TEMPERANCE_SUBVICE_ANGER": 2,
-			"VIRTUE_FORTITUDE_SUBVICE_FEARLESSNESS": 2
-
-		}
-	},
-	"BOAST":
-	{
-		"id" : "BOAST",
-		"TYPE": "TEMPTATION",
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> remembers how small they are and refuses to boast of themselves",
-			"VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY": 1
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> boasts of themselves to <2>",
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 2,
-			"VIRTUE_JUSTICE_SUBVICE_BOASTING": 2
-
-		}
-	},
-	"IGNORE_GOOD_ACTION":
-	{
-		"id" : "IGNORE_GOOD_ACTION",
-		"TYPE": "TEMPTATION",
-		"SECOND_PERSON": true,
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> rejoices in the good action of <2>",
-			"VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY": 2
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> refuses to acknowledge <2>'s good action",
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 2
-
-		}
-	},
-	"FLATTER":
-	{
-		"id" : "FLATTER",
-		"TYPE": "TEMPTATION",
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> treats <2> with due respect, defeating the temptation to flatter them"
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> flatters <2>",
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 1,
-			"VIRTUE_JUSTICE_SUBVICE_ADULATION": 2
-
-		}
-	},
-	"CHASE_MONEY":
-	{
-		"id" : "CHASE_MONEY",
-		"TYPE": "TEMPTATION",
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> remembers that virtue consists in not being possessed by any thing, and so continues to strive after virtuous poverty of spirit and body",
-			"VIRTUE_FORTITUDE_SUBVIRTUE_MORTIFICATION": 2
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> decides to pursue money immoderately",
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 1,
-			"VIRTUE_JUSTICE_SUBVICE_AVARICE": 2
-
-		}
-	},
-	"INSULTING_SARCASM":
-	{
-		"id" : "INSULTING_SARCASM",
-		"SECOND_PERSON": true,
-		"TYPE": "TEMPTATION",
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> treats <2> with due respect"
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> derides <2> with caustic sarcasm.",
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 1
-
-		}
-	},
-	"SUING_EXCESSIVELY":
-	{
-		"id" : "SUING_EXCESSIVELY",
-		"TYPE": "TEMPTATION",
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> sues <2> for his crime, but does so moderately and mercifully"
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> sues <2> excessively in order to destroy <2>.",
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 2
-
-		}
-	},
-	"PLANNING_GREAT_THINGS":
-	{
-		"id" : "PLANNING_GREAT_THINGS",
-		"TYPE": "ACTUAL_GRACE",
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> plans to obtain great virtues"
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> sinks into his own sloth and avoids the arduous good which he recognises",
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 1
-
-		}
-	},
-	"ILLNESS":
-	{
-		"id" : "ILLNESS",
-		"TYPE": "ACTUAL_GRACE",
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> suffers an illness well"
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> becomes ill and complains",
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 1
-
-		}
-	},
-	"VISION":
-	{
-		"id" : "VISION",
-		"TYPE": "ACTUAL_GRACE",
-		"QUOTES_SCRIPTURE": true,
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> has a vision"
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":""
-
-		}
-		"SCRIPTURE_BANK":
-		{
-			
-		}
-	},
-	"INNERLOCUTION":
-	{
-		"id" : "INNERLOCUTION",
-		"TYPE": "ACTUAL_GRACE",
-		"QUOTES_SCRIPTURE": true,
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> hears the voice of God in his mind"
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":""
-
-		}
-		"SCRIPTURE_BANK":
-		{
-			
-		}
-	},
-	"FAST":
-	{
-		"id" : "FAST",
-		"TYPE": "ACTUAL_GRACE",
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> fasts",
-			"VIRTUE_JUSTICE_SUBVIRTUE_RELIGION": 2
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> indulges his appetites in food",
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 1
-
-		}
-	},
-	"VIGIL":
-	{
-		"id" : "VIGIL",
-		"TYPE": "ACTUAL_GRACE",
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> spends the night praying to mortify his senses and to obtain union with God",
-			"VIRTUE_JUSTICE_SUBVIRTUE_RELIGION": 2
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> sleeps despite the call to pray",
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 1
-
-		}
-	},
-	"AMBITION":
-	{
-		"id" : "AMBITION",
-		"TYPE": "TEMPTATION",
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> resists his ambition and pursues that which is his station in life"
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> falls into ambition and pursues those things above him wilfully",
-			"STATE_OF_GRACE": false,
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 2
-
-		}
-	},
-	"SCHADENFREUDE":
-	{
-		"id" : "SCHADENFREUDE",
-		"SECOND_PERSON": true,
-		"TYPE": "TEMPTATION",
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> comforts <2> in his failings"
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> laughs at <2>'s misfortune",
-			"STATE_OF_GRACE": false,
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 2
-
-		}
-	},
-	"REJOICE_IN_EVIL":
-	{
-		"id" : "REJOICE_IN_EVIL",
-		"TYPE": "TEMPTATION",
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> repents of his evil to a priest",
-			"STATE_OF_GRACE": true,
-			"VIRTUE_JUSTICE_SUBVIRTUE_RELIGION": 2
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> rejoices in the grave evils they have committed",
-			"STATE_OF_GRACE": false,
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 4
-
-		}
-	},
-	"COMPLASCENT":
-	{
-		"id" : "COMPLASCENT",
-		"TYPE": "TEMPTATION",
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> realises they aren't perfect, and redoubles their efforts to obtain virtue"
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> becomes complascent",
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 1
-
-		}
-	},
-	"REALISE_LOWLINESS":
-	{
-		"id" : "REALISE_LOWLINESS",
-		"TYPE": "ACTUAL_GRACE",
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> realises their lowliness"
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> rejoices in their own glory",
-			"STATE_OF_GRACE": false,
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 3
-
-		}
-	},
-	"MASTURBATE":
-	{
-		"id" : "MASTURBATE",
-		"TYPE": "TEMPTATION",
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> resists the urge to masturbate"
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> masturbates",
-			"STATE_OF_GRACE": false,
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 2
-
-		}
-	},
-	"FORNICATE":
-	{
-		"id" : "FORNICATE",
-		"TYPE": "TEMPTATION",
-		"SECOND_PERSON": true,
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> resists the urge to sleep with <2>"
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> fornicates with <2>",
-			"STATE_OF_GRACE": false,
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 2
-
-		}
-	},
-	"BOAST":
-	{
-		"id" : "BOAST",
-		"TYPE": "TEMPTATION",
-		"SECOND_PERSON": true,
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> resists the urge to boast"
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> boasts to <2>",
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 2
-
-		}
-	},
-	"STUDY":
-	{
-		"id" : "STUDY",
-		"TYPE": "ACTUAL_GRACE",
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> studies that he may be able to greater love God and Neighbour",
-			"VIRTUE_JUSTICE_SUBVIRTUE_RELIGION": 2
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> indulges their curiousity and wastes his time in fruitless endeavours",
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 1
-
-		}
-	},
-	"FORGIVE":
-	{
-		"id" : "FORGIVE",
-		"TYPE": "ACTUAL_GRACE",
-		"SECOND_PERSON": true,
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> forgives <2>",
-			"VIRTUE_JUSTICE_SUBVIRTUE_RELIGION": 2
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> refuses to forgive <2> in their heart",
-			"STATE_OF_GRACE": false,
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 3
-
-		}
-	},
-	"BETTER_DECORUM":
-	{
-		"id" : "BETTER_DECORUM",
-		"TYPE": "ACTUAL_GRACE",
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> takes care to moderate their dress and actions with other people"
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> dresses in an immodest way intentionally",
-			"STATE_OF_GRACE": false,
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 2
-
-		}
-	},
-	"SELL_POSSESSIONS":
-	{
-		"id" : "SELL_POSSESSIONS",
-		"TYPE": "ACTUAL_GRACE",
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> sells all of their possessions to follow God"
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> refuses to sell all of their possessions when presented with the opportunity to follow God more completely",
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 1
-
-		}
-	},
-	"BULLY":
-	{
-		"id" : "BULLY",
-		"TYPE": "TEMPTATION",
-		"SECOND_PERSON": true,
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> takes care of <2> in their weakness",
-			"VIRTUE_JUSTICE_SUBVIRTUE_RELIGION": 2
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> bullies and reviles <2> for who they are",
-			"STATE_OF_GRACE": false,
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 2
-
-		}
-	},
-	"BEAT_UP":
-	{
-		"id" : "BEAT_UP",
-		"TYPE": "TEMPTATION",
-		"SECOND_PERSON": true,
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> resists the urge to beat up <2>"
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> beats up <2> for no good reason",
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 2
-
-		}
-	},
-	"CRUDE_JOKE":
-	{
-		"id" : "CRUDE_JOKE",
-		"TYPE": "TEMPTATION",
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> controls their desire to crack a crass joke"
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> cracks a crass joke",
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 1
-
-		}
-	},
-	"REPENTENCE":
-	{
-		"id" : "REPENTENCE",
-		"TYPE": "ACTUAL_GRACE",
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> repents",
-			"VIRTUE_JUSTICE_SUBVIRTUE_RELIGION": 2
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> refuses to repent for their sin",
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 4
-
-		}
-	},
-	"HERESY":
-	{
-		"id" : "HERESY",
-		"TYPE": "TEMPTATION",
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> insists on the teaching of Christ's church in the face of temptation",
-			"VIRTUE_JUSTICE_SUBVIRTUE_RELIGION": 2
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> decides that they know better than the church on a teaching",
-			"STATE_OF_GRACE": false,
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 4
-
-		}
-	},
-	"APOSTASY":
-	{
-		"id" : "APOSTASY",
-		"TYPE": "TEMPTATION",
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> resists the temptation to leave the faith, and keeps going",
-			"VIRTUE_JUSTICE_SUBVIRTUE_RELIGION": 2
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> leaves the faith",
-			"STATE_OF_GRACE": false,
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 4
-
-		}
-	},
-	"BLASPHEMY":
-	{
-		"id" : "BLASPHEMY",
-		"TYPE": "TEMPTATION",
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> refuses to curse God and instead blesses God",
-			"VIRTUE_JUSTICE_SUBVIRTUE_RELIGION": 2
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> blasphemes God",
-			"STATE_OF_GRACE": false,
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 4
-
-		}
-	},
-	"HATRED_OF_GOD":
-	{
-		"id" : "HATRED_OF_GOD",
-		"TYPE": "TEMPTATION",
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> resists the urge to hate God for the frustration of his will and instead blesses God",
-			"VIRTUE_JUSTICE_SUBVIRTUE_RELIGION": 2
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> decides to hate God",
-			"STATE_OF_GRACE": false,
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 4
-
-		}
-	},	
-	"ARGUE":
-	{
-		"id" : "ARGUE",
-		"TYPE": "TEMPTATION",
-		"SECOND_PERSON": true,
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> refuses to argue with <2>"
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> has a quarrel with <2>",
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 2
-
-		}
-	},
-	"SCHISM":
-	{
-		"id" : "SCHISM",
-		"TYPE": "TEMPTATION",
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> remains under the church despite the failing that they perceive in it",
-			"VIRTUE_JUSTICE_SUBVIRTUE_RELIGION": 2
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> schisms from the Church",
-			"STATE_OF_GRACE": false,
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 4
-
-		}
-	},
-	"SCANDALISE":
-	{
-		"id" : "SCANDALISE",
-		"TYPE": "TEMPTATION",
-		"SECOND_PERSON": true,
-		"PRECONDITIONS":
-		{
-
-		},
-		
-		"POSTCONDITIONS_ACCEPT":
-		{
-			"OUTPUT":"<1> refuses to sin in front of <2> to avoid scandal"
-
-		},
-		"POSTCONDITIONS_REJECT":
-		{
-			"OUTPUT":"<1> sins in front of <2> deliberately.",
-			"VIRTUE_TEMPERANCE_SUBVICE_PRIDE": 2
-
-		}
-	},
+   "VIRTUE_PRUDENCE_SUBVIRTUE_MEMORY_READ_SCRIPTURE":{
+      "id":"READ_SCRIPTURE",
+      "TYPE":"ACTUAL_GRACE",
+      "QUOTES_SCRIPTURE":true,
+      "PRECONDITIONS":{
+         
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> picks up the scriptures, and reads: ",
+         "VIRTUE_PRUDENCE_SUBVIRTUE_MEMORY":1,
+         "VIRTUE_JUSTICE_SUBVIRTUE_RELIGION":1,
+         "VIRTUE_JUSTICE_SUBVIRTUE_DEVOTION":1,
+         "VIRTUE_JUSTICE_SUBVIRTUE_EPIEIKEIA":1,
+         "VIRTUE_FORTITUDE_SUBVIRTUE_PATIENCE":1,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":1,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_STUDIOUSITY":1,
+         "VIRTUE_HOPE":1
+      },
+      "POSTCONDITIONS_REJECT":{
+         
+      },
+      "SCRIPTURE_BANK":{
+         "VERSES":[
+            "Test"
+         ]
+      }
+   },
+   "UNDERSTAND_LAW":{
+      "id":"UNDERSTAND_MORAL_LAW",
+      "TYPE":"ACTUAL_GRACE",
+      "PRECONDITIONS":{
+         "VIRTUE_PRUDENCE_SUBVIRTUE_MEMORY_ABOVE":30
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> meditates, and finally begins to understand God's law ",
+         "VIRTUE_PRUDENCE_SUBVIRTUE_UNDERSTANDING":1,
+         "VIRTUE_PRUDENCE_SUBVIRTUE_DOCILITY":1,
+         "VIRTUE_PRUDENCE_SUBVIRTUE_SHREWDNESS":1
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> struggles and fails to understand the moral law"
+      }
+   },
+   "BEATEN_UP":{
+      "id":"BEATEN_UP",
+      "TYPE":"TEMPTATION",
+      "PRECONDITIONS":{
+         
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"While meditating in a quiet place, <1> has a good thought regarding dealing with his passions and vices. He meditates on it and accepts this counsel into their life.",
+         "VIRTUE_PRUDENCE_SUBVIRTUE_DOCILITY":2
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"While praying in a quiet place, <1> receives advice in prayer on his predominant fault. <1> takes this personally. Temper lost, <1> begins to cry.",
+         "VIRTUE_PRUDENCE_SUBVIRTUE_DOCILITY":-2,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-1
+      }
+   },
+   "ESCAPING_A_PIT":{
+      "id":"ESCAPING_A_PIT",
+      "TYPE":"TEMPTATION",
+      "PRECONDITIONS":{
+         
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"As <1> is walking in the <ENVIRONMENT>, <1> falls into a pit. Scrambling around and looking for a way out, <1> finds a rope hidden behind some branches, and uses this to climb out of the hole.",
+         "VIRTUE_PRUDENCE_SUBVIRTUE_SHREWDNESS":2
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> falls into a pit. Unable to find any means of getting out, despite this being in <1>'s means, he calls for help. It begins to rain heavily. Eventually, the hole floods, allowing him to float to the top.",
+         "VIRTUE_PRUDENCE_SUBVIRTUE_SHREWDNESS":-2,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-1
+      }
+   },
+   "DEFUSING_A_FIGHT":{
+      "id":"DEFUSING_A_FIGHT",
+      "TYPE":"ACTUAL_GRACE",
+      "PRECONDITIONS":{
+         
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> stumbles across a fight. Remembering that the Peacemakers are blessed, he breaks up the fight by drawing the attention of the persons' away from each other. ",
+         "VIRTUE_PRUDENCE_SUBVIRTUE_REASON":2
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> walks into a fight. Being unreasonable, he joins in on one side, and this leads to <1> and this person beating the other person to a pulp",
+         "VIRTUE_PRUDENCE_SUBVIRTUE_REASON":-2,
+         "STATE_OF_GRACE":false,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-2
+      }
+   },
+   "AVOIDING_STUMBLINGBLOCK":{
+      "id":"AVOIDING_STUMBLINGBLOCK",
+      "TYPE":"ACTUAL_GRACE",
+      "PRECONDITIONS":{
+         "VIRTUE_PRUDENCE_SUBVIRTUE_FORESIGHT_ABOVE":10
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> finds themselves facing an occasion to indulge their <PREDOMINANT_FAULT>. Recognising this, they avoid this deftly. ",
+         "VIRTUE_PRUDENCE_SUBVIRTUE_FORESIGHT":2
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> finds themselves facing an occasion to indulge their <PREDOMINANT_FAULT>. Being unaware of the danger, they indulge in this and fall",
+         "VIRTUE_PRUDENCE_SUBVIRTUE_FORESIGHT":-2,
+         "STATE_OF_GRACE":false,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-1
+      }
+   },
+   "CIRCUMSPECTION":{
+      "id":"CIRCUMSPECTION",
+      "TYPE":"ACTUAL_GRACE",
+      "PRECONDITIONS":{
+         
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> looks back on their life, realises their current mistakes, and then takes action to correct them. ",
+         "VIRTUE_PRUDENCE_SUBVIRTUE_CIRCUMSPECTION":2
+      },
+      "POSTCONDITIONS_REJECT":{
+         
+      }
+   },
+   "AVOIDING_STUMBLINGBLOCK_CAUTION":{
+      "id":"AVOIDING_STUMBLINGBLOCK_CAUTION",
+      "TYPE":"ACTUAL_GRACE",
+      "PRECONDITIONS":{
+         "VIRTUE_PRUDENCE_SUBVIRTUE_CAUTION_ABOVE":10
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> finds themselves facing an occasion to indulge their <PREDOMINANT_FAULT>. Recognising this, they avoid this out of caution. ",
+         "VIRTUE_PRUDENCE_SUBVIRTUE_CAUTION":2
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> finds themselves facing an occasion to indulge their <PREDOMINANT_FAULT>. Being rashly go into this occasion and fall.",
+         "VIRTUE_PRUDENCE_SUBVIRTUE_CAUTION":-2,
+         "STATE_OF_GRACE":false,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-1
+      }
+   },
+   "BAD_WORK":{
+      "id":"BAD_WORK",
+      "TYPE":"TEMPTATION",
+      "PRECONDITIONS":{
+         
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> resists the pull of laziness which would lead them to fail their work.",
+         "VIRTUE_FORTITUDE_SUBVIRTUE_DILIGENCE":2
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> acts too quickly in work, leading to them ruining their action.",
+         "VIRTUE_PRUDENCE_SUBVICE_PRECIPITATION":2,
+         "STATE_OF_GRACE":false,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-1
+      }
+   },
+   "FAIL_EXERCISES":{
+      "id":"FAIL_EXERCISES",
+      "TYPE":"TEMPTATION",
+      "PRECONDITIONS":{
+         
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> resists, through fortitude, the pull of sloth when doing his spiritual exercises.",
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_CONTINENCE":2,
+         "VIRTUE_FORTITUDE_SUBVIRTUE_PERSERVERENCE":2,
+         "VIRTUE_JUSTICE_SUBVIRTUE_RELIGION":2
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> falls into sloth and neglects his spiritual exercises",
+         "VIRTUE_FORTITUDE_SUBVIRTUE_MAGNANIMITY":-2,
+         "VIRTUE_FORTITUDE_SUBVICE_EFFEMINACY":2,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_CONTINENCE":-2,
+         "VIRTUE_CHARITY_SUBVICE_SLOTH":2,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-1
+      }
+   },
+   "NEGLIGENT_WORK":{
+      "id":"NEGLIGENT_WORK",
+      "TYPE":"TEMPTATION",
+      "PRECONDITIONS":{
+         
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> resists the pull of rejecting his work out of negligence.",
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_CONTINENCE":2,
+         "VIRTUE_FORTITUDE_SUBVIRTUE_PERSERVERENCE":2,
+         "VIRTUE_JUSTICE_SUBVIRTUE_RESTITUTION":2,
+         "VIRTUE_JUSTICE_SUBVIRTUE_OBEDIENCE":2,
+         "VIRTUE_JUSTICE_SUBVIRTUE_DILIGENCE":2,
+         "VIRTUE_FORTITUDE_SUBVIRTUE_MORTIFICATION":1
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> neglects his work",
+         "VIRTUE_FORTITUDE_SUBVIRTUE_MAGNANIMITY":-2,
+         "VIRTUE_FORTITUDE_SUBVICE_EFFEMINACY":2,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_CONTINENCE":-2,
+         "VIRTUE_PRUDENCE_SUBVICE_NEGLIGENCE":2,
+         "VIRTUE_CHARITY_SUBVICE_SLOTH":2,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-1
+      }
+   },
+   "SEDUCE":{
+      "id":"SEDUCE",
+      "TYPE":"TEMPTATION",
+      "SECOND_PERSON":true,
+      "PRECONDITIONS":{
+         
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> refuses to seduce <2> when tempted",
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_CHASTITY":3,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_CONTINENCE":2,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_VIRGINITY":2
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> seduces <2>",
+         "VIRTUE_TEMPERANCE_SUBVICE_FORNICATION":5,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_CONTINENCE":-2,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-1
+      }
+   },
+   "DEFRAUD":{
+      "id":"DEFRAUD",
+      "TYPE":"TEMPTATION",
+      "SECOND_PERSON":true,
+      "PRECONDITIONS":{
+         
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> resists temptation to defraud <2>",
+         "VIRTUE_JUSTICE_SUBVIRTUE_LEGAL":2
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> defrauds <2>",
+         "VIRTUE_JUSTICE_SUBVICE_THEFT":2,
+         "VIRTUE_JUSTICE_SUBVICE_AVARICE":2,
+         "VIRTUE_JUSTICE_SUBVIRTUE_TRUTHFULNESS":-2,
+         "VIRTUE_PRUDENCE_SUBVICE_FRAUD":2,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-1
+      }
+   },
+   "OSTRACISE":{
+      "id":"OSTRACISE",
+      "TYPE":"TEMPTATION",
+      "SECOND_PERSON":true,
+      "PRECONDITIONS":{
+         
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> refuses to ostracise <2>",
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":2
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> ostracises <2>",
+         "VIRTUE_CHARITY_SUBVICE_DISCORD":2,
+         "VIRTUE_CHARITY_SUBVICE_QUARRELLING":2,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-1
+      }
+   },
+   "LIE":{
+      "id":"LIE",
+      "TYPE":"TEMPTATION",
+      "SECOND_PERSON":true,
+      "PRECONDITIONS":{
+         
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> refuses to lie to <2>"
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> lies to <2>",
+         "VIRTUE_JUSTICE_SUBVIRTUE_TRUTHFULNESS":-2,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-1
+      }
+   },
+   "SOLVE_DISPUTE":{
+      "id":"SOLVE_DISPUTE",
+      "TYPE":"ACTUAL_GRACE",
+      "SECOND_PERSON":true,
+      "THIRD_PERSON":true,
+      "PRECONDITIONS":{
+         
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> solves a dispute between <2> and <3>.",
+         "VIRTUE_PRUDENCE_SUBVIRTUE_UNDERSTANDING":2,
+         "VIRTUE_PRUDENCE_SUBVIRTUE_REASON":2,
+         "VIRTUE_JUSTICE_SUBVIRTUE_COMMUTATIVE":2
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> lets <2> and <3> argue.",
+         "VIRTUE_PRUDENCE_SUBVICE_NEGLIGENCE":2,
+         "VIRTUE_FORTITUDE_SUBVICE_EFFEMINACY":2,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-1
+      }
+   },
+   "ACTIVISM_COMMON_GOOD":{
+      "id":"ACTIVISM_COMMON_GOOD",
+      "TYPE":"ACTUAL_GRACE",
+      "PRECONDITIONS":{
+         
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> protests the perversion of justice away from the common good"
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> refuses to protest injustice that is contrary to the common good",
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-1
+      }
+   },
+   "PRAY_PSALM":{
+      "id":"PRAY_PSALM",
+      "TYPE":"ACTUAL_GRACE",
+      "QUOTES_SCRIPTURE":true,
+      "PRECONDITIONS":{
+         
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> prays a Psalm for the Love of God: ",
+         "VIRTUE_JUSTICE_SUBVIRTUE_RELIGION":2,
+         "VIRTUE_CHARITY":1,
+         "VIRTUE_JUSTICE_SUBVIRTUE_OBSERVANCES":2,
+         "VIRTUE_CHARITY_SUBVICE_SLOTH":-1
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> refuses to pray",
+         "VIRTUE_JUSTICE_SUBVIRTUE_RELIGION":-2,
+         "VIRTUE_CHARITY_SUBVICE_SLOTH":1,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-1
+      },
+      "SCRIPTURE_BANK":{
+         "VERSES":[
+            "Test"
+         ]
+      }
+   },
+   "PRAY_ROSARY":{
+      "id":"PRAY_ROSARY",
+      "TYPE":"ACTUAL_GRACE",
+      "PRECONDITIONS":{
+         
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> prays a rosary for the Love of God.",
+         "VIRTUE_JUSTICE_SUBVIRTUE_RELIGION":2,
+         "VIRTUE_CHARITY":1,
+         "VIRTUE_JUSTICE_SUBVIRTUE_OBSERVANCES":2,
+         "VIRTUE_CHARITY_SUBVICE_SLOTH":-1
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> refuses to pray a rosary.",
+         "VIRTUE_JUSTICE_SUBVIRTUE_RELIGION":-2,
+         "VIRTUE_CHARITY_SUBVICE_SLOTH":1,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-1
+      }
+   },
+   "PRAY_MENTAL":{
+      "id":"PRAY_MENTAL",
+      "TYPE":"ACTUAL_GRACE",
+      "PRECONDITIONS":{
+         
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> engages in mental prayer on the Passion of Christ.",
+         "VIRTUE_JUSTICE_SUBVIRTUE_RELIGION":2,
+         "VIRTUE_CHARITY":1,
+         "VIRTUE_JUSTICE_SUBVIRTUE_OBSERVANCES":2,
+         "VIRTUE_CHARITY_SUBVICE_SLOTH":-1
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> refuses to engage in mental prayer.",
+         "VIRTUE_JUSTICE_SUBVIRTUE_RELIGION":-2,
+         "VIRTUE_CHARITY_SUBVICE_SLOTH":-1,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-1
+      }
+   },
+   "PRAY_HATED_PERSON":{
+      "id":"PRAY_HATED_PERSON",
+      "TYPE":"ACTUAL_GRACE",
+      "SECOND_PERSON":true,
+      "PRECONDITIONS":{
+         "_comment":"Add passion stuff later as needed",
+         "LOVE_SECOND_PERSON_LOVE_BELOW":-10,
+         "VIRTUE_CHARITY_ABOVE":10
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> prays for <2>, whom they hate.",
+         "VIRTUE_CHARITY":1,
+         "VIRTUE_JUSTICE_SUBVIRTUE_RELIGION":2,
+         "VIRTUE_JUSTICE_SUBVIRTUE_DEVOTION":2,
+         "VIRTUE_FORTITUDE_SUBVIRTUE_PATIENCE":2,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_MEEKNESS":2,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":2,
+         "LOVE_SECOND_PERSON_LOVE":10
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> refuses to pray for <2>",
+         "VIRTUE_CHARITY_SUBVICE_DISCORD":2,
+         "VIRTUE_FORTITUDE_SUBVIRTUE_MAGNANIMITY":-2,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_MEEKNESS":-2,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-2
+      }
+   },
+   "OBEY_SUPERIOR":{
+      "id":"OBEY_SUPERIOR",
+      "TYPE":"ACTUAL_GRACE",
+      "SECOND_PERSON":true,
+      "PRECONDITIONS":{
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY_ABOVE":5
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> obeys <2>",
+         "VIRTUE_JUSTICE_SUBVIRTUE_OBEDIENCE":2
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> refuses to obey <2>",
+         "VIRTUE_JUSTICE_SUBVIRTUE_OBEDIENCE":-2
+      }
+   },
+   "ARMY_JOIN":{
+      "id":"ARMY_JOIN",
+      "TYPE":"ACTUAL_GRACE",
+      "PRECONDITIONS":{
+         "DARING_ABOVE":40,
+         "VIRTUE_JUSTICE_SUBVIRTUE_PATRIOTISM":5
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> serves a term in the army out of a sense of patriotism",
+         "VIRTUE_JUSTICE_SUBVIRTUE_PATRIOTISM":2
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> neglects his nation",
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-1
+      }
+   },
+   "MASS_STATE_OF_GRACE":{
+      "id":"MASS_STATE_OF_GRACE",
+      "TYPE":"ACTUAL_GRACE",
+      "PRECONDITIONS":{
+         "VIRTUE_JUSTICE_SUBVIRTUE_RELIGION_ABOVE":0
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> goes to mass devoutly and arduous for charity",
+         "VIRTUE_JUSTICE_SUBVIRTUE_RELIGION":2,
+         "VIRTUE_JUSTICE_SUBVIRTUE_DEVOTION":2,
+         "VIRTUE_CHARITY":1,
+         "VIRTUE_JUSTICE_SUBVIRTUE_OBSERVANCES":2,
+         "CONSEQUENTIAL_ACTIONS":[
+            "RECEIVE_COMMUNION_GRACE"
+         ]
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> refuses to go to mass at the required time",
+         "STATE_OF_GRACE":false,
+         "VIRTUE_JUSTICE_SUBVICE_TEMPTING_GOD":2,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-2,
+         "VIRTUE_CHARITY_SUBVICE_SLOTH":2
+      }
+   },
+   "MASS_MS":{
+      "id":"MASS_MS",
+      "TYPE":"ACTUAL_GRACE",
+      "PRECONDITIONS":{
+         "VIRTUE_JUSTICE_SUBVIRTUE_RELIGION_ABOVE":0,
+         "STATE_OF_GRACE":false
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> goes to mass in a state of mortal sin",
+         "VIRTUE_JUSTICE_SUBVIRTUE_RELIGION":2,
+         "VIRTUE_JUSTICE_SUBVIRTUE_DEVOTION":2,
+         "VIRTUE_CHARITY":1,
+         "VIRTUE_JUSTICE_SUBVIRTUE_OBSERVANCES":2,
+         "CONSEQUENTIAL_ACTIONS":[
+            "RECEIVE_COMMUNION_MS"
+         ]
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> refuses to go to mass at the required time",
+         "STATE_OF_GRACE":false,
+         "VIRTUE_JUSTICE_SUBVICE_TEMPTING_GOD":2,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-4,
+         "VIRTUE_CHARITY_SUBVICE_SLOTH":2
+      }
+   },
+   "RECEIVE_COMMUNION_GRACE":{
+      "id":"RECEIVE_COMMUNION_GRACE",
+      "TYPE":"ACTUAL_GRACE",
+      "PRECONDITIONS":{
+         "STATE_OF_GRACE":true,
+         "VIRTUE_JUSTICE_SUBVIRTUE_RELIGION_ABOVE":0
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> receives communion in a state of grace reverently",
+         "VIRTUE_CHARITY":3,
+         "VIRTUE_FORTITUDE_SUBVIRTUE_MORTIFICATION":2,
+         "VIRTUE_FAITH":3,
+         "VIRTUE_HOPE":3
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> refuses to receive communion despite state of grace",
+         "VIRTUE_JUSTICE_SUBVIRTUE_OBEDIENCE":-1,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-1
+      }
+   },
+   "RECEIVE_COMMUNION_MS":{
+      "id":"RECEIVE_COMMUNION_MS",
+      "TYPE":"TEMPTATION",
+      "PRECONDITIONS":{
+         "STATE_OF_GRACE":false
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> rightly refuses to receive communion in state of mortal sin."
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> receives communion in a state of mortal sin.",
+         "VIRTUE_JUSTICE_SUBVICE_SACRILEGE":4,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-4
+      }
+   },
+   "MAKE_FRIENDS":{
+      "id":"MAKE_FRIENDS",
+      "TYPE":"ACTUAL_GRACE",
+      "SECOND_PERSON":true,
+      "PRECONDITIONS":{
+         
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> makes friends with <2> out of charity.",
+         "VIRTUE_CHARITY":1,
+         "VIRTUE_JUSTICE_SUBVIRTUE_FRIENDSHIP":2
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> refuses to make friends with <2>.",
+         "VIRTUE_CHARITY_SUBVICE_DISCORD":1,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-2
+      }
+   },
+   "APOLOGISE":{
+      "id":"APOLOGISE",
+      "TYPE":"ACTUAL_GRACE",
+      "SECOND_PERSON":true,
+      "PRECONDITIONS":{
+         "_comment":"Add some sort of previous contention between the two here",
+         "PLEASURE_BELOW":-10,
+         "PLEASURE_SECOND_PERSON_BELOW":-20,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":5
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> apologises to <2> for previous wrongs.",
+         "VIRTUE_JUSTICE_SUBVIRTUE_RELIGION":2,
+         "VIRTUE_PRUDENCE_SUBVIRTUE_MEMORY":1,
+         "VIRTUE_JUSTICE_SUBVIRTUE_COMMUTATIVE":1,
+         "VIRTUE_JUSTICE_SUBVIRTUE_RESTITUTION":1,
+         "VIRTUE_JUSTICE_SUBVIRTUE_DILIGENCE":1,
+         "VIRTUE_JUSTICE_SUBVIRTUE_FRIENDSHIP":1,
+         "VIRTUE_FORTITUDE_SUBVIRTUE_MAGNAIMITY":1,
+         "VIRTUE_FORTITUDE_SUBVIRTUE_MORTIFICATION":1,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HONESTIA":1,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":1,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_MEEKNESS":1
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> refuses to apologise to <2> when given the opportunity.",
+         "VIRTUE_PRUDENCE_SUBVICE_INCONSIDERATION":2,
+         "VIRTUE_JUSTICE_SUBVIRTUE_JUDGEMENT":2,
+         "STATE_OF_GRACE":false,
+         "VIRTUE_FORTITUDE_SUBVICE_FEAR":2,
+         "VIRTUE_FORTITUDE_SUBVIRTUE_MAGNANIMITY":-2,
+         "VIRTUE_FORTITUDE_SUBVICE_EFFEMINACY":2,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-2
+      }
+   },
+   "ALMS":{
+      "id":"ALMS",
+      "TYPE":"ACTUAL_GRACE",
+      "PRECONDITIONS":{
+         "_comment":"This shouldn't be taken in a pelagian or a semi pelagian way, as if Natural Love leads to divine charity. Remember, this is an actual grace which may be felt as compassion",
+         "LOVE_ABOVE":5
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> gives small alms to the poor for the Love of God.",
+         "VIRTUE_CHARITY":1,
+         "VIRTUE_JUSTICE_SUBVIRTUE_RELIGION":2,
+         "VIRTUE_JUSTICE_SUBVIRTUE_RESTITUTION":2,
+         "VIRTUE_FORTITUDE_SUBVIRTUE_MAGNIFICENCE":2,
+         "VIRTUE_JUSTICE_SUBVIRTUE_LIBERALITY":2
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> refuses to give alms to the poor",
+         "VIRTUE_JUSTICE_SUBVICE_AVARICE":2,
+         "VIRTUE_JUSTICE_SUBVICE_STINGINESS":2,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-1
+      }
+   },
+   "READ_LAW_EPIEIKEIA":{
+      "id":"READ_LAW_EPIEIKEIA",
+      "TYPE":"ACTUAL_GRACE",
+      "PRECONDITIONS":{
+         
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> reads the law to gain the mind of the lawmaker",
+         "VIRTUE_JUSTICE_SUBVIRTUE_EPIEIKEIA":2
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> refuses to learn the mind of the lawmaker",
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-1
+      }
+   },
+   "MURDER":{
+      "id":"MURDER",
+      "TYPE":"TEMPTATION",
+      "SECOND_PERSON":true,
+      "PRECONDITIONS":{
+         "DARING_SECOND_PERSON_ABOVE":40,
+         "ANGER_SECOND_PERSON_BELOW":-50,
+         "LOVE_SECOND_PERSON_BELOW":-50,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_PRIDE_ABOVE":20
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> refuses to murder <2> when the thought crosses his mind",
+         "VIRTUE_JUSTICE_SUBVIRTUE_COMMUTATIVE":1,
+         "VIRTUE_JUSTICE_SUBVIRTUE_OBEDIENCE":1
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> murders <2>.",
+         "STATE_OF_GRACE":false,
+         "VIRTUE_JUSTICE_SUBVICE_MURDER":4,
+         "VIRTUE_FORTITUDE_SUBVICE_FEARLESSNESS":4,
+         "VIRTUE_CHARITY_SUBVICE_DISCORD":4,
+         "VIRTUE_CHARITY_SUBVICE_QUARRELLING":4,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-4
+      }
+   },
+   "MUTILATE":{
+      "id":"MUTILATE",
+      "TYPE":"TEMPTATION",
+      "SECOND_PERSON":true,
+      "PRECONDITIONS":{
+         "DARING_SECOND_PERSON_ABOVE":30,
+         "ANGER_SECOND_PERSON_BELOW":-50,
+         "LOVE_SECOND_PERSON_BELOW":-50,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_PRIDE_ABOVE":20
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> refuses to attack <2>",
+         "VIRTUE_JUSTICE_SUBVIRTUE_COMMUTATIVE":1,
+         "VIRTUE_JUSTICE_SUBVIRTUE_OBEDIENCE":1
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> mutiliates <2> in callous violence",
+         "STATE_OF_GRACE":false,
+         "VIRTUE_JUSTICE_SUBVICE_MUTILATION":4,
+         "VIRTUE_FORTITUDE_SUBVICE_FEARLESSNESS":3,
+         "VIRTUE_CHARITY_SUBVICE_DISCORD":3,
+         "VIRTUE_CHARITY_SUBVICE_QUARRELLING":3,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-2
+      }
+   },
+   "STEAL_SMALL":{
+      "id":"STEAL_SMALL",
+      "TYPE":"TEMPTATION",
+      "SECOND_PERSON":true,
+      "PRECONDITIONS":{
+         "DARING_ABOVE":10,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_PRIDE_ABOVE":20
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> refuses to steal something small from <2>",
+         "VIRTUE_JUSTICE_SUBVIRTUE_COMMUTATIVE":1,
+         "VIRTUE_JUSTICE_SUBVIRTUE_OBEDIENCE":1
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> steals something small from <2>",
+         "VIRTUE_JUSTICE_SUBVICE_THEFT":1,
+         "VIRTUE_PRUDENCE_SUBVICE_CARNAL_PRUDENCE":2,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-1
+      }
+   },
+   "STEAL_BIG":{
+      "id":"STEAL_BIG",
+      "TYPE":"TEMPTATION",
+      "SECOND_PERSON":true,
+      "PRECONDITIONS":{
+         "DARING_ABOVE":30,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_PRIDE_ABOVE":20
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> refuses to steal something big from <2>",
+         "VIRTUE_JUSTICE_SUBVIRTUE_COMMUTATIVE":1,
+         "VIRTUE_JUSTICE_SUBVIRTUE_OBEDIENCE":1
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> steals something big from <2> knowing it is wrong",
+         "STATE_OF_GRACE":false,
+         "VIRTUE_JUSTICE_SUBVICE_THEFT":2,
+         "VIRTUE_PRUDENCE_SUBVICE_CARNAL_PRUDENCE":2,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-2
+      }
+   },
+   "ROBBERY":{
+      "id":"ROBBERY",
+      "TYPE":"TEMPTATION",
+      "SECOND_PERSON":true,
+      "PRECONDITIONS":{
+         "DARING_ABOVE":50,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_PRIDE_ABOVE":20
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> refuses to rob <2>",
+         "VIRTUE_JUSTICE_SUBVIRTUE_COMMUTATIVE":1,
+         "VIRTUE_JUSTICE_SUBVIRTUE_OBEDIENCE":1
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> beats and robs <2> knowing it is wrong",
+         "STATE_OF_GRACE":false,
+         "VIRTUE_JUSTICE_SUBVICE_ROBBERY":2,
+         "VIRTUE_PRUDENCE_SUBVICE_CARNAL_PRUDENCE":2,
+         "VIRTUE_CHARITY_SUBVICE_DISCORD":3,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-2
+      }
+   },
+   "SMUG_SUPERIORITY":{
+      "id":"SMUG_SUPERIORITY",
+      "TYPE":"TEMPTATION",
+      "SECOND_PERSON":true,
+      "PRECONDITIONS":{
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_PRIDE_ABOVE":30
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> judges themselves not to be superior to <2>",
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":2
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> smugly judges themselves superior to <2> willfully contrary to the New Law",
+         "STATE_OF_GRACE":false,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-2,
+         "VIRTUE_JUSTICE_SUBVICE_JUDGEMENT":3,
+         "VIRTUE_JUSTICE_SUBVIRTUE_OBEDIENCE":-3
+      }
+   },
+   "EXHALT_IN_OWN_STRENGTH":{
+      "id":"EXHALT_IN_OWN_STRENGTH",
+      "TYPE":"TEMPTATION",
+      "PRECONDITIONS":{
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_PRIDE_ABOVE":30
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> praises God for his strength, and God rewards them with Love for Him",
+         "VIRTUE_CHARITY":1,
+         "VIRTUE_JUSTICE_SUBVIRTUE_RELIGION":2
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> exhaults in their own strength forgetting God",
+         "STATE_OF_GRACE":false,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-2
+      }
+   },
+   "ATTRIBUTE_UNPOSSESSED_GOOD":{
+      "id":"ATTRIBUTE_UNPOSSESSED_GOOD",
+      "TYPE":"TEMPTATION",
+      "PRECONDITIONS":{
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_PRIDE_ABOVE":30
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> develops in self knowledge",
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":2,
+         "VIRTUE_PRUDENCE_SUBVIRTUE_DOCILITY":1,
+         "VIRTUE_PRUDENCE_SUBVIRTUE_CIRCUMSPECTION":2
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> rejoices in a good that they know they don't possess",
+         "STATE_OF_GRACE":false,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-2,
+         "VIRTUE_PRUDENCE_SUBVICE_NEGLIGENCE":2
+      }
+   },
+   "CALUMNY":{
+      "id":"CALUMNY",
+      "TYPE":"TEMPTATION",
+      "SECOND_PERSON":true,
+      "THIRD_PERSON":true,
+      "PRECONDITIONS":{
+         "DARING_ABOVE":30,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_PRIDE_ABOVE":30,
+         "PLEASURE_SECOND_PERSON_BELOW":-50
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> refuses to calmuniate <2>",
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_MEEKNESS":1,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_SILENCE":2
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> lies about <2> behind their back to <3> to destroy their reputation",
+         "STATE_OF_GRACE":false,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-2,
+         "VIRTUE_CHARITY_SUBVICE_DISCORD":2,
+         "VIRTUE_JUSTICE_SUBVICE_FALSE_ACCUSATION":2
+      }
+   },
+   "DETRACTION":{
+      "id":"DETRACTION",
+      "TYPE":"TEMPTATION",
+      "SECOND_PERSON":true,
+      "THIRD_PERSON":true,
+      "PRECONDITIONS":{
+         "DARING_ABOVE":20,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_PRIDE_ABOVE":30,
+         "PLEASURE_SECOND_PERSON_BELOW":-30
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> refuses to detract <2> to <3>",
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_MEEKNESS":1,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_SILENCE":2
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> spreads secret sins <2> has committed to <3> without <2> knowing to destroy their reputation",
+         "STATE_OF_GRACE":false,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-2,
+         "VIRTUE_CHARITY_SUBVICE_DISCORD":2
+      }
+   },
+   "RASH_JUDGEMENT":{
+      "id":"RASH_JUDGEMENT",
+      "TYPE":"TEMPTATION",
+      "SECOND_PERSON":true,
+      "PRECONDITIONS":{
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_PRIDE_ABOVE":10,
+         "PLEASURE_SECOND_PERSON_BELOW":-10
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> retains equanimity of mind with respect to <2>",
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_CONTINENCE":2
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> rashly judges <2>",
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-1,
+         "VIRTUE_PRUDENCE_SUBVICE_PRECIPITATION":1,
+         "VIRTUE_JUSTICE_SUBVICE_JUDGEMENT":1
+      }
+   },
+   "GOSSIP":{
+      "id":"GOSSIP",
+      "TYPE":"TEMPTATION",
+      "SECOND_PERSON":true,
+      "THIRD_PERSON":true,
+      "PRECONDITIONS":{
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_PRIDE_ABOVE":10,
+         "PLEASURE_SECOND_PERSON_BELOW":-10
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> refuses to gossip about <2>"
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> gossips about <2> to <3>",
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-1
+      }
+   },
+   "LOANSHARK":{
+      "id":"LOANSHARK",
+      "TYPE":"TEMPTATION",
+      "SECOND_PERSON":true,
+      "PRECONDITIONS":{
+         
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> refuses to loanshark <2>"
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> loansharks <2>",
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-2,
+         "STATE_OF_GRACE":false
+      }
+   },
+   "MOCKERY":{
+      "id":"MOCKERY",
+      "SECOND_PERSON":true,
+      "TYPE":"TEMPTATION",
+      "PRECONDITIONS":{
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_PRIDE_ABOVE":10
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> refuses to mock <2>"
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> mocks <2> for who they are",
+         "STATE_OF_GRACE":false,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-2,
+         "VIRTUE_JUSTICE_SUBVICE_DERISION":2
+      }
+   },
+   "RASH_OATH":{
+      "id":"RASH_OATH",
+      "TYPE":"TEMPTATION",
+      "PRECONDITIONS":{
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_PRIDE_ABOVE":10,
+         "DARING_ABOVE":10
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> retains presence of mind and doesn't rashly swear despite temptation.",
+         "VIRTUE_JUSTICE_SUBVIRTUE_RELIGION":2
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> takes a rash oath",
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-1,
+         "VIRTUE_PRUDENCE_SUBVICE_PRECIPITATION":1,
+         "VIRTUE_JUSTICE_SUBVICE_ILLICIT_ADJURATION":2
+      }
+   },
+   "IDOLATRY":{
+      "id":"IDOLATRY",
+      "TYPE":"TEMPTATION",
+      "PRECONDITIONS":{
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_PRIDE_BELOW":10
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> renders worship to God",
+         "VIRTUE_JUSTICE_SUBVIRTUE_RELIGION":2
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> worships an idol knowing it spites God",
+         "STATE_OF_GRACE":false,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-4,
+         "VIRTUE_JUSTICE_SUBVICE_IDOLATRY":2,
+         "VIRTUE_TEMPERANCE_SUBVICE_EFFEMINACY":2
+      }
+   },
+   "CAST_SPELL":{
+      "id":"CAST_SPELL",
+      "TYPE":"TEMPTATION",
+      "PRECONDITIONS":{
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_PRIDE_BELOW":30
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> rebukes a thought to engage in magic"
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> engages in Divination knowing it is wrong",
+         "STATE_OF_GRACE":false,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-3,
+         "VIRTUE_JUSTICE_SUBVICE_DIVINATION":2,
+         "VIRTUE_TEMPERANCE_SUBVICE_EFFEMINACY":2
+      }
+   },
+   "TEMPT_GOD":{
+      "id":"TEMPT_GOD",
+      "TYPE":"TEMPTATION",
+      "PRECONDITIONS":{
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_PRIDE_BELOW":20
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> remembers humility and refuses to tempt God"
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> intentionally tempts God by their thoughts",
+         "STATE_OF_GRACE":false,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-4,
+         "VIRTUE_JUSTICE_SUBVIRTUE_TEMPTING_GOD":3
+      }
+   },
+   "SACRILEGE_EUCHARIST":{
+      "id":"SACRILEGE_EUCHARIST",
+      "TYPE":"TEMPTATION",
+      "PRECONDITIONS":{
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_PRIDE_BELOW":20
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> treats the Most Holy Eucharist with the respect owed to God.",
+         "VIRTUE_JUSTICE_SUBVIRTUE_RELIGION":2
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> commits sacrilege with the Most Holy Eucharist intentionally",
+         "STATE_OF_GRACE":false,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-5,
+         "VIRTUE_JUSTICE_SUBVIRTUE_TEMPTING_GOD":5
+      }
+   },
+   "SACRILEGE_STATUE":{
+      "id":"SACRILEGE_STATUE",
+      "TYPE":"TEMPTATION",
+      "PRECONDITIONS":{
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_PRIDE_BELOW":20
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> venerates a sacred statue",
+         "VIRTUE_JUSTICE_SUBVIRTUE_RELIGION":2
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> destroys a sacred statue intentionally. ",
+         "STATE_OF_GRACE":false,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-4,
+         "VIRTUE_JUSTICE_SUBVIRTUE_TEMPTING_GOD":4
+      }
+   },
+   "SIMONY":{
+      "id":"SIMONY",
+      "TYPE":"TEMPTATION",
+      "PRECONDITIONS":{
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_PRIDE_BELOW":20
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> venerates a relic",
+         "VIRTUE_JUSTICE_SUBVIRTUE_RELIGION":2
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> sells a relic knowing it is wrong",
+         "STATE_OF_GRACE":false,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-3,
+         "VIRTUE_JUSTICE_SUBVIRTUE_TEMPTING_GOD":3
+      }
+   },
+   "VENGEANCE":{
+      "id":"VENGEANCE",
+      "TYPE":"TEMPTATION",
+      "SECOND_PERSON":true,
+      "PRECONDITIONS":{
+         
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> refuses to dwell on vengeance against <2>"
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> meditates on vengeance against <2> ",
+         "STATE_OF_GRACE":false,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-2,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_MEEKNESS":-2,
+         "VIRTUE_FORTITUDE_SUBVICE_FEARLESSNESS":2
+      }
+   },
+   "BOAST":{
+      "id":"BOAST",
+      "TYPE":"TEMPTATION",
+      "PRECONDITIONS":{
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_PRIDE_ABOVE":0
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> remembers how small they are and refuses to boast of themselves",
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":1
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> boasts of themselves to <2>",
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-2,
+         "VIRTUE_JUSTICE_SUBVICE_BOASTING":2
+      }
+   },
+   "IGNORE_GOOD_ACTION":{
+      "id":"IGNORE_GOOD_ACTION",
+      "TYPE":"TEMPTATION",
+      "SECOND_PERSON":true,
+      "PRECONDITIONS":{
+         
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> rejoices in the good action of <2>",
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":2
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> refuses to acknowledge <2>'s good action",
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-2
+      }
+   },
+   "FLATTER":{
+      "id":"FLATTER",
+      "TYPE":"TEMPTATION",
+      "PRECONDITIONS":{
+         
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> treats <2> with due respect, defeating the temptation to flatter them"
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> flatters <2>",
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-1,
+         "VIRTUE_JUSTICE_SUBVICE_ADULATION":2
+      }
+   },
+   "CHASE_MONEY":{
+      "id":"CHASE_MONEY",
+      "TYPE":"TEMPTATION",
+      "PRECONDITIONS":{
+         
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> remembers that virtue consists in not being possessed by any thing, and so continues to strive after virtuous poverty of spirit and body",
+         "VIRTUE_FORTITUDE_SUBVIRTUE_MORTIFICATION":2
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> decides to pursue money immoderately",
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-1,
+         "VIRTUE_JUSTICE_SUBVICE_AVARICE":2
+      }
+   },
+   "INSULTING_SARCASM":{
+      "id":"INSULTING_SARCASM",
+      "SECOND_PERSON":true,
+      "TYPE":"TEMPTATION",
+      "PRECONDITIONS":{
+         
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> treats <2> with due respect"
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> derides <2> with caustic sarcasm.",
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-1
+      }
+   },
+   "SUING_EXCESSIVELY":{
+      "id":"SUING_EXCESSIVELY",
+      "TYPE":"TEMPTATION",
+      "PRECONDITIONS":{
+         
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> sues <2> for his crime, but does so moderately and mercifully"
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> sues <2> excessively in order to destroy <2>.",
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-2
+      }
+   },
+   "PLANNING_GREAT_THINGS":{
+      "id":"PLANNING_GREAT_THINGS",
+      "TYPE":"ACTUAL_GRACE",
+      "PRECONDITIONS":{
+         
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> plans to obtain great virtues"
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> sinks into his own sloth and avoids the arduous good which he recognises",
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-1
+      }
+   },
+   "ILLNESS":{
+      "id":"ILLNESS",
+      "TYPE":"ACTUAL_GRACE",
+      "PRECONDITIONS":{
+         
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> suffers an illness well"
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> becomes ill and complains",
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-1
+      }
+   },
+   "VISION":{
+      "id":"VISION",
+      "TYPE":"ACTUAL_GRACE",
+      "QUOTES_SCRIPTURE":true,
+      "PRECONDITIONS":{
+         
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> has a vision"
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":""
+      },
+      "SCRIPTURE_BANK":{
+         
+      }
+   },
+   "INNERLOCUTION":{
+      "id":"INNERLOCUTION",
+      "TYPE":"ACTUAL_GRACE",
+      "QUOTES_SCRIPTURE":true,
+      "PRECONDITIONS":{
+         
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> hears the voice of God in his mind"
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":""
+      },
+      "SCRIPTURE_BANK":{
+         
+      }
+   },
+   "FAST":{
+      "id":"FAST",
+      "TYPE":"ACTUAL_GRACE",
+      "PRECONDITIONS":{
+         
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> fasts",
+         "VIRTUE_JUSTICE_SUBVIRTUE_RELIGION":2
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> indulges his appetites in food",
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-1
+      }
+   },
+   "VIGIL":{
+      "id":"VIGIL",
+      "TYPE":"ACTUAL_GRACE",
+      "PRECONDITIONS":{
+         
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> spends the night praying to mortify his senses and to obtain union with God",
+         "VIRTUE_JUSTICE_SUBVIRTUE_RELIGION":2
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> sleeps despite the call to pray",
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-1
+      }
+   },
+   "AMBITION":{
+      "id":"AMBITION",
+      "TYPE":"TEMPTATION",
+      "PRECONDITIONS":{
+         
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> resists his ambition and pursues that which is his station in life"
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> falls into ambition and pursues those things above him wilfully",
+         "STATE_OF_GRACE":false,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-2
+      }
+   },
+   "SCHADENFREUDE":{
+      "id":"SCHADENFREUDE",
+      "SECOND_PERSON":true,
+      "TYPE":"TEMPTATION",
+      "PRECONDITIONS":{
+         
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> comforts <2> in his failings"
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> laughs at <2>'s misfortune",
+         "STATE_OF_GRACE":false,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-2
+      }
+   },
+   "REJOICE_IN_EVIL":{
+      "id":"REJOICE_IN_EVIL",
+      "TYPE":"TEMPTATION",
+      "PRECONDITIONS":{
+         
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> repents of his evil to a priest",
+         "STATE_OF_GRACE":true,
+         "VIRTUE_JUSTICE_SUBVIRTUE_RELIGION":2
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> rejoices in the grave evils they have committed",
+         "STATE_OF_GRACE":false,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-4
+      }
+   },
+   "COMPLASCENT":{
+      "id":"COMPLASCENT",
+      "TYPE":"TEMPTATION",
+      "PRECONDITIONS":{
+         
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> realises they aren't perfect, and redoubles their efforts to obtain virtue"
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> becomes complascent",
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-1
+      }
+   },
+   "REALISE_LOWLINESS":{
+      "id":"REALISE_LOWLINESS",
+      "TYPE":"ACTUAL_GRACE",
+      "PRECONDITIONS":{
+         "PLEASURE_BELOW":-10,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILIY_ABOVE":0,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_PRIDE_BELOW":0
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> realises their lowliness"
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> rejoices in their own glory",
+         "STATE_OF_GRACE":false,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-3
+      }
+   },
+   "MASTURBATE":{
+      "id":"MASTURBATE",
+      "TYPE":"TEMPTATION",
+      "PRECONDITIONS":{
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_CHASTITY_UNDER":0,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_VIRGINITY_UNDER":0,
+         "VIRTUE_TEMPERANCE_SUBVICE_MASTURBATION_ABOVE":-10
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> resists the urge to masturbate"
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> masturbates",
+         "STATE_OF_GRACE":false,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-2
+      }
+   },
+   "FORNICATE":{
+      "id":"FORNICATE",
+      "TYPE":"TEMPTATION",
+      "SECOND_PERSON":true,
+      "PRECONDITIONS":{
+         "PLEASURE_SECOND_PERSON_ABOVE":20,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_CHASTITY_UNDER":0,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_VIRGINITY_UNDER":0,
+         "VIRTUE_TEMPERANCE_SUBVICE_FORNICATION_ABOVE":-10
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> resists the urge to sleep with <2>"
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> fornicates with <2>",
+         "STATE_OF_GRACE":false,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-2
+      }
+   },
+   "STUDY":{
+      "id":"STUDY",
+      "TYPE":"ACTUAL_GRACE",
+      "PRECONDITIONS":{
+         
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> studies that he may be able to greater love God and Neighbour",
+         "VIRTUE_JUSTICE_SUBVIRTUE_RELIGION":2
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> indulges their curiousity and wastes his time in fruitless endeavours",
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-1
+      }
+   },
+   "FORGIVE":{
+      "id":"FORGIVE",
+      "TYPE":"ACTUAL_GRACE",
+      "SECOND_PERSON":true,
+      "PRECONDITIONS":{
+         "PLEASURE":-10
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> forgives <2>",
+         "VIRTUE_JUSTICE_SUBVIRTUE_RELIGION":2
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> refuses to forgive <2> in their heart",
+         "STATE_OF_GRACE":false,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-3
+      }
+   },
+   "BETTER_DECORUM":{
+      "id":"BETTER_DECORUM",
+      "TYPE":"ACTUAL_GRACE",
+      "PRECONDITIONS":{
+         
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> takes care to moderate their dress and actions with other people",
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_MODESTY":2
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> dresses in an immodest way intentionally",
+         "STATE_OF_GRACE":false,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-2
+      }
+   },
+   "SELL_POSSESSIONS":{
+      "id":"SELL_POSSESSIONS",
+      "TYPE":"ACTUAL_GRACE",
+      "PRECONDITIONS":{
+         "VIRTUE_CHARITY_OVER":70,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":50
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> sells all of their possessions to follow God"
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> refuses to sell all of their possessions when presented with the opportunity to follow God more completely",
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-1
+      }
+   },
+   "BULLY":{
+      "id":"BULLY",
+      "TYPE":"TEMPTATION",
+      "SECOND_PERSON":true,
+      "PRECONDITIONS":{
+         "VIRTUE_TEMPERANCE_SUBVICE_HUMILITY_UNDER":-30
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> takes care of <2> in their weakness",
+         "VIRTUE_JUSTICE_SUBVIRTUE_RELIGION":2
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> bullies and reviles <2> for who they are",
+         "STATE_OF_GRACE":false,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-2
+      }
+   },
+   "BEAT_UP":{
+      "id":"BEAT_UP",
+      "TYPE":"TEMPTATION",
+      "SECOND_PERSON":true,
+      "PRECONDITIONS":{
+         "ANGER_UNDER":-50
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> resists the urge to beat up <2>"
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> beats up <2> for no good reason",
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-2
+      }
+   },
+   "CRUDE_JOKE":{
+      "id":"CRUDE_JOKE",
+      "TYPE":"TEMPTATION",
+      "PRECONDITIONS":{
+         
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> controls their desire to crack a crass joke"
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> cracks a crass joke",
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-1
+      }
+   },
+   "REPENTENCE":{
+      "id":"REPENTENCE",
+      "TYPE":"ACTUAL_GRACE",
+      "PRECONDITIONS":{
+         "_comment":"I should probably think about this a bit more",
+         "PLEASURE_UNDER":-10
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> repents and confesses their sins",
+         "VIRTUE_JUSTICE_SUBVIRTUE_RELIGION":2,
+         "STATE_OF_GRACE":true
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> refuses to repent for their sin",
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-4
+      }
+   },
+   "HERESY":{
+      "id":"HERESY",
+      "TYPE":"TEMPTATION",
+      "PRECONDITIONS":{
+         "ANGER_UNDER":-40,
+         "VIRTUE_JUSTICE_SUBVIRTUE_RELIGION_UNDER":50,
+         "VIRTUE_CHARITY_UNDER":30
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> insists on the teaching of Christ's church in the face of temptation",
+         "VIRTUE_JUSTICE_SUBVIRTUE_RELIGION":2
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> decides that they know better than the church on a teaching",
+         "STATE_OF_GRACE":false,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-4
+      }
+   },
+   "APOSTASY":{
+      "id":"APOSTASY",
+      "TYPE":"TEMPTATION",
+      "PRECONDITIONS":{
+         "ANGER_UNDER":-50,
+         "PLEASURE_UNDER":-20,
+         "VIRTUE_JUSTICE_SUBVIRTUE_RELIGION_UNDER":30,
+         "VIRTUE_CHARITY_UNDER":10
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> resists the temptation to leave the faith, and keeps going",
+         "VIRTUE_JUSTICE_SUBVIRTUE_RELIGION":2
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> leaves the faith",
+         "STATE_OF_GRACE":false,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-10
+      }
+   },
+   "BLASPHEMY":{
+      "id":"BLASPHEMY",
+      "TYPE":"TEMPTATION",
+      "PRECONDITIONS":{
+         "ANGER_UNDER":-40,
+         "VIRTUE_JUSTICE_SUBVIRTUE_RELIGION_UNDER":50,
+         "VIRTUE_CHARITY_UNDER":30
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> refuses to curse God and instead blesses God",
+         "VIRTUE_JUSTICE_SUBVIRTUE_RELIGION":2
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> blasphemes God",
+         "STATE_OF_GRACE":false,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-4
+      }
+   },
+   "HATRED_OF_GOD":{
+      "id":"HATRED_OF_GOD",
+      "TYPE":"TEMPTATION",
+      "PRECONDITIONS":{
+         "ANGER_UNDER":-40,
+         "VIRTUE_JUSTICE_SUBVIRTUE_RELIGION_UNDER":50,
+         "VIRTUE_CHARITY_UNDER":30
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> resists the urge to hate God for the frustration of his will and instead blesses God",
+         "VIRTUE_JUSTICE_SUBVIRTUE_RELIGION":2
+      },
+      "POSTCONDITIONS_REJECT":{
+         "_comment":"Was going to create a variable to destroy charity but all mortal sin does this anyway, so I'm not sure how to approach this",
+         "OUTPUT":"<1> decides to hate God",
+         "STATE_OF_GRACE":false,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-4,
+         "ANGER":-40
+      }
+   },
+   "ARGUE":{
+      "id":"ARGUE",
+      "TYPE":"TEMPTATION",
+      "SECOND_PERSON":true,
+      "PRECONDITIONS":{
+         "ANGER_UNDER":-30
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> refuses to argue with <2>"
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> has a quarrel with <2>",
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-2
+      }
+   },
+   "SCHISM":{
+      "id":"SCHISM",
+      "TYPE":"TEMPTATION",
+      "PRECONDITIONS":{
+         "VIRTUE_FAITH_UNDER":40,
+         "VIRTUE_TEMPERANCE_SUBVICE_HUMILITY_UNDER":-55
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> remains under the church despite the failing that they perceive in it",
+         "VIRTUE_JUSTICE_SUBVIRTUE_RELIGION":2
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> schisms from the Church",
+         "STATE_OF_GRACE":false,
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-4
+      }
+   },
+   "SCANDALISE":{
+      "id":"SCANDALISE",
+      "TYPE":"TEMPTATION",
+      "SECOND_PERSON":true,
+      "PRECONDITIONS":{
+         "VIRTUE_TEMPERANCE_SUBVICE_HUMILITY_UNDER":-30
+      },
+      "POSTCONDITIONS_ACCEPT":{
+         "OUTPUT":"<1> refuses to sin in front of <2> to avoid scandal"
+      },
+      "POSTCONDITIONS_REJECT":{
+         "OUTPUT":"<1> sins in front of <2> deliberately.",
+         "VIRTUE_TEMPERANCE_SUBVIRTUE_HUMILITY":-2
+      }
+   }
 }
