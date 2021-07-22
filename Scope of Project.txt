@@ -11,25 +11,37 @@ Characters can impact each other:
 - Structures of life are entirely random, and then scored by the particular virtue selected (NOT subvirtue) 
 - Arbitrary distinctions between the Three Ages of the Interior Life, which are triggered by charity specifically
 - All virtues and subvirtues are hardcoded 
-
+- Lives are generated concurrently, and actions applied in "real time" to the lives
+- Mutations will be the primary means of evolving, and this'll be the changing of a decision and regenerating the tree after that point 
+- Chaining events together in the JSON
 Structure: 
 	Relationship:
 		- Passions to person 
 	Subvirtue:
 		- Overarching Virtue
 		- Particular Story Events Triggered by it 
-		
-		
+- Take Suarez's view of growth in charity as it's easier to implement in the given time 
+
+
+
 8th-15th July:
-	- Draft a document containing all of the different classes, variables and such in LaTeX, how they are implemented
-	- Design the algorithm that governs what the will does
+	- Draft a document containing all of the different classes, variables and such in LaTeX, how they are implemented X
+	- Design the algorithm that governs what the will does X
 	- Add more story_actions from the Secunda Secundae Partis 
-	- Read and analyse that study that's 38 pages 
+	- Read and analyse that study that's 38 pages X
+	- Finish off thinking about current story_actions 
+	- Port the AWK program for Bible Verses to Java X
 15th-22nd July:
-	- Implement the JSON loading classes for the classes 
+	- Look at the Contemporary Narrative Gen Literature X
+	- Redact down the variables from what they currently are X
+	- Implement the JSON loading classes for the classes <-- Began, converted over to SQLite 
 	- Integrate Scripture loading into the project
 	- Basic action list generation
 22nd July- 29th July: 
+	- Markov Chain Name Generator
+	- Look at Contemporary MOEA literature 
+	- Template characters? 
+	- Implement random emotion variation algorithm 
 	- Implement will mechanic on the action list 
 	- Multi Objective Algorithm Implementation
 29th July-5th August:

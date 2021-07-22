@@ -76,3 +76,11 @@ List of actions to write out in JSON:
 	- Argue  X
 	- Schism X
 	- Scandalise X
+	
+ADDITIONAL ACTIONS:
+	- Sees a person they have feelings towards (Which changes actual mood) 
+	- Sacriligeous confession 
+	- Unconscious or Emotional Acts of Pride (The 4 which St Gregory Describes)
+	- Acceptance of Apology 
+	- Rejection of Apology 
+	

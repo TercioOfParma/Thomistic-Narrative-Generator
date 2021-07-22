@@ -1,0 +1,7 @@
+What do I need to store?
+
+Linked:	
+	- Basic Information of a Story Action
+	- Table for Each Virtue, with information on whether or not it's a test, the direction of the test, which person it applies to, and the subvirtues
+	- Scriptural verses to cite 
+	

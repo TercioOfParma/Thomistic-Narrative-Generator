@@ -1,0 +1,408 @@
+\documentclass[10pt]{article}
+\usepackage{longtable}
+\usepackage{changepage}
+\usepackage{scalerel,amssymb}
+\usepackage[margin=0.75cm]{geometry}
+\def\msquare{\mathord{\scalerel*{\Box}{gX}}}
+\usepackage{hyperref}
+
+\begin{document}
+All Virtues, Subvirtues and Passions are between -100 and 100. 
+
+\begin{longtable}{| p{6cm} | p{3cm} | p{10cm} |}
+\caption{General Character Variables}
+\label{tab:General Character}\\
+\hline 
+\textbf{Name} & \textbf{Data Type} & \textbf{Purpose} \\
+\hline
+STATE\_OF\_GRACE & Boolean & Is the character in a State of Grace? \\
+\hline
+NAME & String & Character name \\
+\hline
+AGE & Integer & Character Age \\
+\hline
+MORTAL\_SINS\_REMAINING & Integer & What it says \\
+\hline
+
+\end{longtable}
+
+\begin{longtable}{| p{11cm} | p{3cm} | p{5cm} |}
+\caption{Virtues and Subvirtues}
+\label{tab:ViceAndVirtue}\\
+\hline 
+\textbf{Name} & \textbf{Data Type} & \textbf{Purpose} \\
+\hline
+\textbf{VIRTUE\_PRUDENCE\_SUBVIRTUE\_MEMORY} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_PRUDENCE\_SUBVIRTUE\_UNDERSTANDING} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_PRUDENCE\_SUBVIRTUE\_DOCILTY} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_PRUDENCE\_SUBVIRTUE\_SHREWDNESS} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_PRUDENCE\_SUBVIRTUE\_REASON} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_PRUDENCE\_SUBVIRTUE\_FORESIGHT} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_PRUDENCE\_SUBVIRTUE\_CICUMSPECTION} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_PRUDENCE\_SUBVIRTUE\_CAUTION} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_PRUDENCE\_SUBVIRTUE\_EUBULIA} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_PRUDENCE\_SUBVIRTUE\_SYNESIS} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_PRUDENCE\_SUBVIRTUE\_GNOME} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_PRUDENCE\_SUBVICE\_PRECIPITATION} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_PRUDENCE\_SUBVICE\_INCONSIDERATION} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_PRUDENCE\_SUBVICE\_INCONSTANCY} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_PRUDENCE\_SUBVICE\_NEGLIGENCE} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_PRUDENCE\_SUBVICE\_CARNAL\_PRUDENCE} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_PRUDENCE\_SUBVICE\_CRAFTINESS} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_PRUDENCE\_SUBVICE\_GUILE} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_PRUDENCE\_SUBVICE\_FRAUD} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_JUSTICE\_SUBVIRTUE\_COMMUTATIVE} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_JUSTICE\_SUBVIRTUE\_LEGAL} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_JUSTICE\_SUBVIRTUE\_DISTRIBUTIVE} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_JUSTICE\_SUBVIRTUE\_RESTITUTION} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_JUSTICE\_SUBVIRTUE\_RELIGION} & Integer & Represents the Sub Virtue, negative the sub vice of Superstition \\
+\hline
+\textbf{VIRTUE\_JUSTICE\_SUBVIRTUE\_DEVOTION} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_JUSTICE\_SUBVIRTUE\_ADJURATION} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_JUSTICE\_SUBVIRTUE\_PIETY} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_JUSTICE\_SUBVIRTUE\_PATRIOTISM} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_JUSTICE\_SUBVIRTUE\_OBSERVANCES} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_JUSTICE\_SUBVIRTUE\_DULIA} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_JUSTICE\_SUBVIRTUE\_OBEDIENCE} & Integer & Represents the Sub Virtue, negative being the Subvice of Disobedience \\
+\hline
+\textbf{VIRTUE\_JUSTICE\_SUBVIRTUE\_DILIGENCE} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_JUSTICE\_SUBVIRTUE\_GRATITUDE} & Integer & Represents the Sub Virtue, negative being the Sub Vice of Ingratitude \\
+\hline
+\textbf{VIRTUE\_JUSTICE\_SUBVIRTUE\_JUST\_VINDICATION} & Integer & Represents the Sub Virtue, with the negative being the subvice of Vengefulness \\
+\hline
+\textbf{VIRTUE\_JUSTICE\_SUBVIRTUE\_TRUTHFULNESS} & Integer & Represents the Sub Virtue, with the negative being the subvice of Lying \\
+\hline
+\textbf{VIRTUE\_JUSTICE\_SUBVIRTUE\_FRIENDSHIP} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_JUSTICE\_SUBVIRTUE\_LIBERALITY} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_JUSTICE\_SUBVIRTUE\_EPIEKEIA} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_JUSTICE\_SUBVICE\_HUMAN\_RESPECT} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_JUSTICE\_SUBVICE\_MURDER} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_JUSTICE\_SUBVICE\_MUTLIATION} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_JUSTICE\_SUBVICE\_THEFT} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_JUSTICE\_SUBVICE\_ROBBERY} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_JUSTICE\_SUBVICE\_JUDGMENT} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_JUSTICE\_SUBVICE\_FALSE\_ACCUSATION} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_JUSTICE\_SUBVICE\_PERJURY} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_JUSTICE\_SUBVICE\_CONTUMLEY} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_JUSTICE\_SUBVICE\_DETRACTION} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_JUSTICE\_SUBVICE\_MURMURING} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_JUSTICE\_SUBVICE\_DERISION} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_JUSTICE\_SUBVICE\_MALEDICTION} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_JUSTICE\_SUBVICE\_USURY} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_JUSTICE\_SUBVICE\_ILLICIT\_ADJURATION} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_JUSTICE\_SUBVICE\_IDOLATRY} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_JUSTICE\_SUBVICE\_DIVINATION} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_JUSTICE\_SUBVICE\_TEMPTING\_GOD} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_JUSTICE\_SUBVICE\_SACRILEGE} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_JUSTICE\_SUBVICE\_SIMONY} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_JUSTICE\_SUBVICE\_SIMULATION} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_JUSTICE\_SUBVICE\_BOASTING} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_JUSTICE\_SUBVICE\_IRONY} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_JUSTICE\_SUBVICE\_ADULATION} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_JUSTICE\_SUBVICE\_LITIGIOUS} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_JUSTICE\_SUBVICE\_AVARICE} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_JUSTICE\_SUBVICE\_PRODIGALITY} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_FORTITUDE\_SUBVIRTUE\_MAGNANIMITY} & Integer & Represents the Sub Virtue, negative portraying pusilanimity \\
+\hline
+\textbf{VIRTUE\_FORTITUDE\_SUBVIRTUE\_MAGNIFICENCE} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_FORTITUDE\_SUBVIRTUE\_PATIENCE} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_FORTITUDE\_SUBVIRTUE\_PERSEVERENCE} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_FORTITUDE\_SUBVIRTUE\_LONGANIMITY} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_FORTITUDE\_SUBVIRTUE\_MORTIFICATION} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_FORTITUDE\_SUBVICE\_FEAR} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_FORTITUDE\_SUBVICE\_FEARLESSNESS} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_FORTITUDE\_SUBVICE\_AUDACITY} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_FORTITUDE\_SUBVICE\_PRESUMPTION} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_FORTITUDE\_SUBVICE\_AMBITION} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_FORTITUDE\_SUBVICE\_INANE\_GLORY} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_FORTITUDE\_SUBVICE\_PARVIFICENCE} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_FORTITUDE\_SUBVICE\_EFFEMINACY} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_FORTITUDE\_SUBVICE\_PERTINACITY} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_TEMPERANCE\_SUBVIRTUE\_SHAME} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_TEMPERANCE\_SUBVIRTUE\_HONESTIA} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_TEMPERANCE\_SUBVIRTUE\_ABSTINENCE} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_TEMPERANCE\_SUBVIRTUE\_FASTING} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_TEMPERANCE\_SUBVIRTUE\_SOBRIETY} & Integer & Represents the Sub Virtue, negative representing Drunkenness \\
+\hline
+\textbf{VIRTUE\_TEMPERANCE\_SUBVIRTUE\_CONTINENCE} & Integer & Represents the Sub Virtue, negative representing the subvice of Incontinence \\
+\hline
+\textbf{VIRTUE\_TEMPERANCE\_SUBVIRTUE\_CHASTITY} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_TEMPERANCE\_SUBVIRTUE\_VIRGINITY} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_TEMPERANCE\_SUBVIRTUE\_MEEKNESS} & Integer & Represents the Sub Virtue, negative representing the subvice of Anger \\
+\hline
+\textbf{VIRTUE\_TEMPERANCE\_SUBVIRTUE\_MODESTY} & Integer & Represents the Sub Virtue, negative representing the subvice of Immodesty \\
+\hline
+\textbf{VIRTUE\_TEMPERANCE\_SUBVIRTUE\_HUMILITY} & Integer & Represents the Sub Virtue, negative representing the subvice of Pride \\
+\hline
+\textbf{VIRTUE\_TEMPERANCE\_SUBVIRTUE\_EUTRAPELIA} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_TEMPERANCE\_SUBVIRTUE\_SPORTSMANSHIP} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_TEMPERANCE\_SUBVIRTUE\_DECORUM} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_TEMPERANCE\_SUBVIRTUE\_SILENCE} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_TEMPERANCE\_SUBVIRTUE\_STUDIOUSITY} & Integer & Represents the Sub Virtue, negative representing the subvice of Curiousity  \\
+\hline
+\textbf{VIRTUE\_TEMPERANCE\_SUBVIRTUE\_SIMPLICTY} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_TEMPERANCE\_SUBVICE\_GLUTTONY} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_TEMPERANCE\_SUBVICE\_LUST} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_TEMPERANCE\_SUBVICE\_FORNICATION} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_TEMPERANCE\_SUBVICE\_CHEATING} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_TEMPERANCE\_SUBVICE\_RAPE} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_TEMPERANCE\_SUBVICE\_ADULTERY} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_TEMPERANCE\_SUBVICE\_INCEST} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_TEMPERANCE\_SUBVICE\_CRUELTY} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_TEMPERANCE\_SUBVICE\_CRUDITY} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_TEMPERANCE\_SUBVICE\_IMMODESTY} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_FAITH\_SUBVICE\_INFIDELITY} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_FAITH\_SUBVICE\_HERESY} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_FAITH\_SUBVICE\_APOSTASY} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_FAITH\_SUBVICE\_BLASPHEMY} & Integer & Represents 
+the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_FAITH} & Integer & Represents the Virtue \\
+\hline
+\textbf{VIRTUE\_HOPE\_SUBVICE} & Integer & Represents the Sub Vice, positive Presumption, negative Desperation \\
+\hline
+\textbf{VIRTUE\_HOPE} & Integer & Represents the Virtue \\
+\hline
+\textbf{VIRTUE\_CHARITY\_SUBVICE\_HATRED\_OF\_GOD} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_CHARITY\_SUBVICE\_SLOTH} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_CHARITY\_SUBVICE\_ENVY} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_CHARITY\_SUBVICE\_DISCORD} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_CHARITY\_SUBVICE\_CONTENTION} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_CHARITY\_SUBVICE\_SCHISM} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_CHARITY\_SUBVICE\_UNJUST\_WAR} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_CHARITY\_SUBVICE\_QUARRELLING} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_CHARITY\_SUBVICE\_SCANDAL} & Integer & Represents the Sub Virtue \\
+\hline
+\textbf{VIRTUE\_CHARITY} & Integer & Represents the Virtue \\
+\hline
+
+
+\end{longtable}
+
+\begin{longtable}{| p{6cm} | p{3cm} | p{10cm} |}
+\caption{General Passions from Thomistica.net}
+\label{tab:GeneralPassions}\\
+\hline 
+\textbf{Name} & \textbf{Data Type} & \textbf{Purpose} \\
+LOVE & Integer (Negative being hatred positive Love) & Governs Concupisible natural Love \\
+\hline
+PLEASURE & Integer (Negative being Sorrow Positive Pleasure) & Governs Concupisible Pleasure (as opposed to indulging the Irascible appetite) \\
+\hline
+HOPE & Integer (Negative being Despair Positive Hope) & Governs Irascible natural Hope \\
+\hline
+DARING & Integer (Negative being fear, Positive Daring) & Governs Irascible Courage \\
+\hline
+ANGER & Integer(Negative being anger and postive confidence) & Governs Anger\\
+\hline
+\end{longtable}
+
+\begin{longtable}{| p{6cm} | p{3cm} | p{10cm} |}
+\caption{Relationship Passions}
+\label{tab:RelationshipPassions}\\
+\hline 
+\textbf{Name} & \textbf{Data Type} & \textbf{Purpose} \\
+LOVE & Integer (Negative being hatred positive Love) & Governs Concupisible natural Love \\
+\hline
+PLEASURE & Integer (Negative being Sorrow Positive Pleasure) & Governs Concupisible Pleasure (as opposed to indulging the Irascible appetite) \\
+\hline
+HOPE & Integer (Negative being Despair Positive Hope) & Governs Irascible natural Hope \\
+\hline
+DARING & Integer (Negative being fear, Positive Daring) & Governs Irascible Courage \\
+\hline
+ANGER & Integer(Negative being anger and postive confidence) & Governs Anger\\
+\hline
+
+
+\end{longtable}
+
+\begin{longtable}{| p{6cm} | p{3cm} | p{10cm} |}
+\caption{Story Event Structure besides Character Variables}
+\label{tab:StoryEvent}\\
+\hline 
+\textbf{Name} & \textbf{Data Type} & \textbf{Purpose} \\
+\hline
+id & String & Identifier inside of a dictionary which selects the event  \\
+\hline
+TYPE & String & Actual Grace Or Temptation?\\
+\hline
+PRECONDITIONS & SubObject & Holds Minimal Preconditions of the Character\\
+\hline
+POSTCONDITIONS\_ACCEPT & SubObject & Holds Character results on acceptance of grace (Either to accept Actual Grace or to Reject a Temptation\\
+\hline
+POSTCONDITIONS\_REJECT & SubObject & Holds Character results on rejection of grace (Either to reject Actual Grace or to fall into a Temptation\\
+\hline
+QUOTES\_SCRIPTURE & Boolean & Is scripture quoted at the end of the event as flavour text?\\
+\hline
+STATE\_OF\_GRACE & Boolean & How does this impact the character's state of grace?  \\
+\hline
+OUTPUT & String & Output on Post Condition \\
+\hline
+SCRIPTURE\_BANK & SubObject & Contains all of the Scriptural variations \\
+\hline
+VERSES & Array Of Strings & Contains all of the Scriptural verse blocks \\
+\hline
+SECOND\_CHARACTER & Boolean & Is there a second character involved? Also, this as a prefix to the virtue and passion statements indicate this character is referred to \\
+\hline
+THIRD\_CHARACTER & Boolean & Is there a third character involved? Also, this as a prefix to the virtue and passion statements indicate this character is referred to \\
+\hline
+\_UNDER & Suffix to a Virtue & Indicates the bound of a virtue or vice \\
+\hline
+\_OVER & Suffix to a Virtue & Indicates the bound of a virtue or vice \\
+\hline
+\_SECOND\_PERSON & Suffix to a Passion prior to UNDER/OVER & Indicates the person which the passion is related \\
+\hline
+\_THIRD\_PERSON & Suffix to a Passion prior to UNDER/OVER & Indicates the person which the passion is related \\
+\hline
+CONSEQUENT\_ACTIONS & Array of story action ids & Provides a set of randomly selected subsequent actions to be carried out\\
+\hline
+\end{longtable}
+
+
+\begin{longtable}{| p{6cm} | p{3cm} | p{10cm} |}
+\caption{Scripture Loading Class}
+\label{tab:StoryEvent}\\
+\hline 
+\textbf{Name} & \textbf{Data Type} & \textbf{Purpose} \\
+\hline
+
+\end{longtable}
+\section{Will Algorithms}
+\subsection{Actual Grace}
+If the total is lower than 60, then the grace is rejected
+\begin{enumerate}
+	\item Generate a random integer 0 and 100
+	\item Add the summation of humility - pride
+	\item Add the summation of prudence (Subvirtues - Subvices) 
+	\item If it's against another person, add the passions of the relationship together
+	\item Do the same with general passions
+	\item Add the passions again if they're mentioned in the PRE\_CONDITIONS
+	\item Add the sub virtues in the PRE\_CONDITIONS multiplied by 4
+	\item Subtract the sub vices PRE\_CONDITIONS multiplied by 4
+\end{enumerate}
+
+\subsection{Temptation}
+If the total is lower than 60, then the grace is rejected
+\begin{enumerate}
+	\item Generate a random integer 0 and 100
+	\item Add the summation of humility - pride
+	\item Add the summation of prudence (Subvirtues - Subvices) 
+	\item If it's against another person, add the passions of the relationship together
+	\item Do the same with general passions
+	item Add the passions again if they're mentioned in the PRE\_CONDITIONS
+	\item Add the sub virtues in the PRE\_CONDITIONS multiplied by 4
+	\item Subtract the sub vices in the PRE\_CONDITIONS multiplied by 4
+\end{enumerate}
+
+\section{MOEA}
+
+\section{Markov Chain Name Generator}
+
+\section{LaTeX Output?}
+
+\end{document}
