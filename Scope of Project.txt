@@ -22,7 +22,10 @@ Structure:
 		- Particular Story Events Triggered by it 
 - Take Suarez's view of growth in charity as it's easier to implement in the given time 
 
-
+- MAKE CLEAR THE DIFFICULTIES IN THE PAPER EXPLICITLY
+	- JSON VS SQLite 
+	- SHOW how you can solve problems 
+	- Problem of emotional variations to abstract away 
 
 8th-15th July:
 	- Draft a document containing all of the different classes, variables and such in LaTeX, how they are implemented X
@@ -39,11 +42,10 @@ Structure:
 	- Basic action list generation
 22nd July- 29th July: 
 	- Markov Chain Name Generator
+	- Read plot evaluation literature 
 	- Look at Contemporary MOEA literature 
-	- Template characters? 
 	- Implement random emotion variation algorithm 
 	- Implement will mechanic on the action list 
-	- Multi Objective Algorithm Implementation
 29th July-5th August:
 	- Adding additional actions 
 	- Multi Objective Algorithm Implementation
