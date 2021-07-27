@@ -14,6 +14,14 @@ public class Main {
 		scripture.searchForVerse("John",1,1);
 	    System.out.println(scripture.quotePassage("Genesis", 1,1,3,15));
 
-	    ActionLoader Test = new ActionLoader("story_actions.json", "List Of All Virtues.txt");
+	    ActionLoader Test = new ActionLoader("story_actions.json", "List Of All Virtues.txt", bible);
+
+	    String [] nameFiles = {"ArabicNames.txt","BabylonianNames.txt","CopticNames.txt","GermanicNames.txt","GreekNames.txt","HebrewNames.txt", "RomanNames.txt"};
+	    NameGenerator names = new NameGenerator(nameFiles);
+
+	    for(int i = 0; i < 10; i++)
+		{
+			System.out.println(names.getRandomName());
+		}
     }
 }

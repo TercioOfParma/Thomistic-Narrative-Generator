@@ -48,6 +48,6 @@ public class BibleLoader
     }
     public String getVerse(String searchTerm)
     {
-        return "";
+        return "Test";
     }
 }

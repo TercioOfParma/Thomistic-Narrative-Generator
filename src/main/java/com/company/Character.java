@@ -35,16 +35,22 @@ public class Character
         listOfAllActions.getSubsequentAction().setPreviousAction(listOfAllActions);
         listOfAllActions = act;
     }
-    public void printStory()
+    public void printStory(BibleLoader bible)
     {
+        System.out.println("Test");
         while(listOfAllActions.getPreviousAction() != null)
         {
+            System.out.println("PreviousActions!");
             listOfAllActions = listOfAllActions.getPreviousAction();
         }
         while(listOfAllActions.getSubsequentAction() != null)
         {
             System.out.println(listOfAllActions.getPostConditionsAccept().getOtherEffects().get("POSTCONDITIONS_ACCEPT_OUTPUT"));
             listOfAllActions = listOfAllActions.getSubsequentAction();
+            if(listOfAllActions.getScriptures() != null)
+            {
+                System.out.println(bible.getVerse(listOfAllActions.getScriptures().get(0)));
+            }
         }
     }
 }

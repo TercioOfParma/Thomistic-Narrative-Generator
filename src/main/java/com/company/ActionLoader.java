@@ -11,8 +11,8 @@ public class ActionLoader {
     private LinkedList<String> virtuesString, dbColumnNames, actionIDs;
     private HashMap<String, Object> Preconditions, Postconditionsaccept, Postconditionsreject, basicConditions;
     private static Connection conn = null;
-
-    public ActionLoader(String jsonFile, String virtuesFile) {
+    private BibleLoader bible;
+    public ActionLoader(String jsonFile, String virtuesFile, BibleLoader bible) {
         this.jsonFile = jsonFile;
         this.virtuesFile = virtuesFile;
         Map<String, String> tempMap;
@@ -153,9 +153,11 @@ public class ActionLoader {
                             tempAction = new ActualGrace();
                             tempAction.setId(actionKey);
                         }
+                        System.out.println(columnKey);
                         if (columnKey.contains("SCRIPTURE_BANKVERSES")) {
                             String[] unsavedScripts = results.getString("SCRIPTURE_BANKVERSES").split(",");
                             scriptures = new LinkedList(Arrays.asList(unsavedScripts));
+                            System.out.println("Scriptures: " + unsavedScripts);
                         } else if (Preconditions.containsKey(columnKey)) {
                             precons.put(columnKey, results.getObject(columnKey));
                         } else if (Postconditionsaccept.containsKey(columnKey)) {
@@ -164,7 +166,7 @@ public class ActionLoader {
                             postconsreject.put(columnKey, results.getObject(columnKey));
                         }
                     } catch (Exception e) {
-                        System.out.println(e);
+                        System.out.println(e + "\n" + e.getStackTrace()[0].getLineNumber());
                     }
 
                 }
@@ -173,7 +175,7 @@ public class ActionLoader {
                 tempAction.setPostConditionsReject(new Conditions(postconsreject));
                 tempAction.getPostConditionsAccept().setScriptures(scriptures);
             } catch (Exception e) {
-                System.out.println(e);
+                System.out.println(e + "\n" + e.getStackTrace()[0].getLineNumber());
             }
 
 
@@ -181,11 +183,11 @@ public class ActionLoader {
                 System.out.println("Empty ActionList");
                 actionList = tempAction;
             } else {
+
                 actionList.setSubsequentAction(tempAction);
                 actionList.getSubsequentAction().setPreviousAction(actionList);
-                OldAction = actionList;
                 actionList = tempAction;
-                actionList.setPreviousAction(OldAction);
+                System.out.println("New One: " + actionList.getId() + " Old one: " + actionList.getPreviousAction().getId());
                 try {
                     System.out.println("New Action:" + actionList.getId() + " Previous: " + actionList.getPreviousAction().getId() + " Previous Previous: " + actionList.getPreviousAction().getPreviousAction().getId());
 
@@ -207,6 +209,7 @@ public class ActionLoader {
         Action toPrint;
         for (int i = 0; i < limit; i++) {
             randomId = actionIDs.get(rand.nextInt(actionIDs.size()));
+            System.out.println("Searching!");
             toPrint = (actionList.searchList(randomId));
             if (toPrint instanceof Temptation) {
                 toPrint = toPrint.copyTemptContents(toPrint);
@@ -215,11 +218,14 @@ public class ActionLoader {
             }
             //System.out.println(toPrint.getPostConditionsAccept().getOtherEffects().get("POSTCONDITIONS_ACCEPT_OUTPUT"));
             if (test == null) {
+                System.out.println("Story started!");
                 test = new Character(toPrint);
             } else {
+                System.out.println("Story action added!");
                 test.addAction(toPrint);
             }
         }
-        test.printStory();
+        System.out.println("Story Generated");
+        test.printStory(bible);
     }
 }

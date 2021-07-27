@@ -82,7 +82,7 @@ public abstract class Action
         while(currentPos.getPreviousAction() != null)
         {
             currentPos = currentPos.getPreviousAction();
-            //System.out.println("Test!" + currentPos.getId());
+            //System.out.println("Test!" + currentPos.getId() + "Next Action: " + currentPos.getPreviousAction().getId());
         }
         while(!currentPos.getId().contentEquals(id) && currentPos.getSubsequentAction() != null)
         {

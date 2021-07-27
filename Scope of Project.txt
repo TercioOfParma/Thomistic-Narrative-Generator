@@ -37,9 +37,9 @@ Structure:
 15th-22nd July:
 	- Look at the Contemporary Narrative Gen Literature X
 	- Redact down the variables from what they currently are X
-	- Implement the JSON loading classes for the classes <-- Began, converted over to SQLite 
+	- Implement the JSON loading classes for the classes <-- Began, converted over to SQLite X
 	- Integrate Scripture loading into the project
-	- Basic action list generation
+	- Basic action list generation X
 22nd July- 29th July: 
 	- Markov Chain Name Generator
 	- Read plot evaluation literature 
