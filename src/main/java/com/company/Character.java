@@ -35,7 +35,7 @@ public class Character
         listOfAllActions.getSubsequentAction().setPreviousAction(listOfAllActions);
         listOfAllActions = act;
     }
-    public void printStory(BibleLoader bible)
+    public void printStory(BibleLoader bible, NameGenerator generator)
     {
         System.out.println("Test");
         while(listOfAllActions.getPreviousAction() != null)
@@ -45,7 +45,7 @@ public class Character
         }
         while(listOfAllActions.getSubsequentAction() != null)
         {
-            System.out.println(listOfAllActions.getPostConditionsAccept().getOtherEffects().get("POSTCONDITIONS_ACCEPT_OUTPUT"));
+            System.out.println(listOfAllActions.getPostConditionsAccept().getOtherEffects().get("POSTCONDITIONS_ACCEPT_OUTPUT").replace("<1>", generator.getRandomName()).replace("<2>", generator.getRandomName()).replace("<3>", generator.getRandomName()));
             listOfAllActions = listOfAllActions.getSubsequentAction();
             if(listOfAllActions.getScriptures() != null)
             {

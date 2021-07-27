@@ -11,11 +11,13 @@ public class ActionLoader {
     private LinkedList<String> virtuesString, dbColumnNames, actionIDs;
     private HashMap<String, Object> Preconditions, Postconditionsaccept, Postconditionsreject, basicConditions;
     private static Connection conn = null;
+    private NameGenerator names;
     private BibleLoader bible;
-    public ActionLoader(String jsonFile, String virtuesFile, BibleLoader bible) {
+    public ActionLoader(String jsonFile, String virtuesFile, BibleLoader bible, NameGenerator Gens) {
         this.jsonFile = jsonFile;
         this.virtuesFile = virtuesFile;
         Map<String, String> tempMap;
+        names = Gens;
         actionIDs = new LinkedList<String>();
         dbColumnNames = new LinkedList<String>();
         Preconditions = new HashMap<String, Object>();
@@ -226,6 +228,6 @@ public class ActionLoader {
             }
         }
         System.out.println("Story Generated");
-        test.printStory(bible);
+        test.printStory(bible, names);
     }
 }

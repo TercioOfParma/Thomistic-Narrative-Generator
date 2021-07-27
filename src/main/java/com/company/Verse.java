@@ -78,12 +78,18 @@ public class Verse
         {
             if(searchPlace.getBookName().contentEquals(bookNameArg) && searchPlace.getChapterNumber() == initialChapter && searchPlace.getVerseNumber() == initialVerse)
             {
-                while(searchPlace.getChapterNumber() != finalChapter || searchPlace.getVerseNumber() != finalVerse + 1)
+                while(searchPlace.getChapterNumber() != finalChapter || searchPlace.getVerseNumber() != finalVerse + 1 )
                 {
                     toHold = toHold + " " + searchPlace.getVerseString();
                     System.out.println(bookNameArg + " " + searchPlace.getChapterNumber() + ":" + searchPlace.getVerseNumber() + " : " +  searchPlace.getVerseString());
                     searchPlace = searchPlace.getSubsequentVerse();
+                    //This is to handle terminating at the end of a chapter, which is a rare case
+                    if(searchPlace.getChapterNumber() == finalChapter + 1 && searchPlace.getVerseNumber() == 1)
+                    {
+                        break;
+                    }
                 }
+                System.out.println("Finished Passage!");
             }
             searchPlace = searchPlace.getSubsequentVerse();
         }
