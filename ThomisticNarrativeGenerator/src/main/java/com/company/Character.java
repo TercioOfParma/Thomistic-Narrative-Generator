@@ -125,7 +125,7 @@ public class Character
             if(currentVirtue.contentEquals("ANGER") || currentVirtue.contentEquals("DARING") || currentVirtue.contentEquals("PLEASURE")
                     || currentVirtue.contentEquals("HOPE") || currentVirtue.contentEquals("LOVE"))
             {
-                newValue = newValue + passionsAndRelationships.get(currentVirtue) + rand.nextInt(5);
+                newValue = newValue + passionsAndRelationships.get(currentVirtue) + rand.nextInt(7) - 3;
                 passionsAndRelationships.replace(currentVirtue,newValue);
             }
         }

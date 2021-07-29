@@ -25,12 +25,22 @@ Structure:
 		- Particular Story Events Triggered by it 
 - Take Suarez's view of growth in charity as it's easier to implement in the given time 
 
+EXCEEDING EXPECTATIONS:
+	- Was able to add Second person and third person postconditions despite thinking it was too complicated 
+
 PROBLEMS:
 - Strange problems with there being an infinite loop on self implemented Linked Lists 
 - Problems with JSON made it necessary to convert to CSV and then to SQLite 
 - Problems with this format has made it necessary to use Python 3 with Pandas to split into separate tables 
 - The way this python worked meant that names with spaces needed to have the _ removed to represent them 
+- Lots of hassle with Pandas and figuring out that I needed to approach with categorical differentiation on Postcons and Precons etc.
 
+
+- Make mention of Normal Forms in report 
+- Take note of controversy and of how uncommon the Thomistic view of virtues and passions actually are (definitely limit words) 
+- Critical analysis of the model in comparison to other psychological models 
+- Make more computing references (Ought to be a majority) 
+- COMPUTING IS EXTREMELY IMPORTANT, REMEMBER THAT 
 
 
 - MAKE CLEAR THE DIFFICULTIES IN THE PAPER EXPLICITLY
@@ -58,7 +68,11 @@ PROBLEMS:
 	- Implement random emotion variation algorithm X
 	- Implement will mechanic on the action list (Sorta) 
 29th July-5th August:
+	- If not done, finally finish the SQL stuff and fix the loading code
+	- Generate Characters with proper current stats, passions and relationships in the two hashmaps
+	- Finish Will Mechanic
 	- Adding additional actions 
+	- 1 Generation done 
 	- Multi Objective Algorithm Implementation
 5th August-12th August:
 	- Finish MOEA 

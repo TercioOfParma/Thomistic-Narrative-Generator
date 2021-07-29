@@ -1,0 +1,94 @@
+def handleColumns(self, data): #Ripped from Virtueholder class
+    print("This handles columns")
+    print(data)
+    columnDictionary = {}
+    i = 0
+
+    for col in data.columns:
+        print("Current Column: " + col)
+        position = 0
+        if "PRECONDITIONS" in col:
+            columnDictionary.update(
+                {"IS_PRECONDITION": True, "IS_POSTCONDITION_ACCEPT": False, "IS_POSTCONDITION_REJECT": False,
+                 "SECOND_PERSON": False, "THIRD_PERSON": False})
+            if "ABOVE" in col:
+                columnDictionary.update({"IS_ABOVE": True})
+            else:
+                position = position + 1  # Up to the first reject
+                columnDictionary.update({"IS_ABOVE": False})
+                priorSecond = False
+            if "SECOND_PERSON" in col:
+                priorSecond = True
+                position = position + 2
+                columnDictionary.update({"SECOND_PERSON": True})
+            if "THIRD_PERSON" in col:
+                if priorSecond:
+                    position = position + 2
+                else:
+                    position = position + 4
+                columnDictionary.update({"THIRD_PERSON": True})
+        elif "POSTCONDITION" in col:
+            position = position + 6  # Up to the first post con
+            print(str(position) + " " + col + " " + self.name)
+            if "ACCEPT" in col:
+                columnDictionary.update(
+                    {"IS_PRECONDITION": False, "IS_POSTCONDITION_ACCEPT": True, "IS_POSTCONDITION_REJECT": False,
+                     "SECOND_PERSON": False, "THIRD_PERSON": False})
+            else:
+                position = position + 3  # Up to the first post con reject
+                columnDictionary.update({"IS_PRECONDITION": False, "IS_POSTCONDITION_ACCEPT": False,
+                                         "IS_POSTCONDITION_REJECT": True, "SECOND_PERSON": False,
+                                         "THIRD_PERSON": False})
+            priorSecond = False
+            if "SECOND_PERSON" in col:
+                priorSecond = True
+                position = position + 1
+                columnDictionary.update({"SECOND_PERSON": True})
+            if "THIRD_PERSON" in col:
+                if priorSecond:
+                    position = position + 1
+                else:
+                    position = position + 2
+                columnDictionary.update({"THIRD_PERSON": True})
+        if self.name in col:
+            print(self.name)
+            print(col)
+            print("TABLE SORTED " + str(position))
+            temporaryDataFrame = pd.DataFrame()
+            j = 0
+            while j < len(self.tables[position]):
+                repeatedDataframe = pd.DataFrame(columnDictionary, index=[j])
+                temporaryDataFrame = pd.concat([temporaryDataFrame, repeatedDataframe])
+                j = j + 1
+            # print("Column Dictionary")
+            # print(temporaryDataFrame)
+            print(self.tables[position])
+            self.tables[position] = pd.concat([self.tables[position], temporaryDataFrame], axis=1)
+            self.sortColumn(self.tables[position], data, col)
+            # print(self.tables[position])
+        print("Column Number" + str(i))
+        i = i + 1
+
+
+def sortColumn(self, dictio, data, columnName):
+    print(self.name)
+    splitName = columnName.split("_")
+    searchStrings = ["SUBVIRTUE", "SUBVICE"]
+    newColumnName = ""
+    for search in searchStrings:
+        print(splitName)
+        searchStrings = ["SUBVIRTUE", "SUBVICE"]
+        if search in splitName:
+            newColumnName = search
+            try:
+                if (splitName[splitName.index(search) + 1] not in "SECOND" and splitName[
+                    splitName.index(search) + 1] not in "THIRD" and splitName[
+                    splitName.index(search) + 1] not in "ABOVE" and splitName[
+                    splitName.index(search) + 1] not in "BELOW"):
+                    newColumnName = search + "_" + (splitName[splitName.index(search) + 1])
+            except IndexError:
+                print("Simply the subvirtue or subvice")
+            print("New Column Name: " + newColumnName)
+            dictio[newColumnName] = data[columnName]
+            # print("Current Dictionary: ")
+            # print(dictio)

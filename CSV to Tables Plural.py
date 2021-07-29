@@ -4,7 +4,7 @@ import sqlite3
 import virtueHolder as vt
 
 #
-#   General Algorithm:
+#   General Algorithm Mark 1:
 #       1) Split column names based on the underscores
 #       2) Then, classify whether it's preconditions, postconditions,
 #           2.1) ids are added by default, as STORY_ACTION_ID
@@ -14,6 +14,15 @@ import virtueHolder as vt
 #       4) Choose column based on the SUBVIRTUE/SUBVIRTUE and name concatenated
 #       5) SECOND_PERSON and THIRD_PERSON define those as True under separate headings
 #       6) Same with ABOVE and BELOW
+
+
+'''
+    The above algorithm fails, here is mark 2:
+    1. Create 8 virtueHolder Objects
+    2. Generate them with the STORY_ACTION_ID column
+
+'''
+
 
 # What may be wise is to generate each of the columns as a dictionary, and then generate dataframes and then export
 def sortColumn(dictionary, data, columnName):
@@ -35,8 +44,8 @@ def sortColumn(dictionary, data, columnName):
 
 
 
-test = vt.virtueHolder()
-quit()
+
+
 isPrecondition = False
 isPostconditionaccept = False
 isPostconditionreject = False
@@ -61,9 +70,10 @@ BASICDATA = pd.DataFrame({"ID" : CSVData["id"],"TYPE" : CSVData["TYPE"], "QUOTES
 SCRIPTUREBANK = pd.DataFrame({"STORY_ACTION_ID" : CSVData["id"], "VersesList": CSVData["SCRIPTURE_BANKVERSES"]})
 currentTable = {}
 
-
+#test = vt.VirtueHolder(CSVData["id"])
 
 for col in CSVData:
+    print(col)
     isPrecondition = False
     isPostconditionaccept = False
     isPostconditionreject = False
