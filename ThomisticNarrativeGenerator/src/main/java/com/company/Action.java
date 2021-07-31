@@ -6,9 +6,9 @@ public abstract class Action
 {
     protected Action PreviousAction = null;
     protected Action SubsequentAction = null;
-    protected Conditions PreConditions;
-    protected Conditions PostConditionsAccept;
-    protected Conditions PostConditionsReject;
+    protected Conditions PreConditions = new Conditions();
+    protected Conditions PostConditionsAccept = new Conditions();;
+    protected Conditions PostConditionsReject = new Conditions();;
     protected String id;
     private LinkedList<String> scriptures;
     public Conditions getPreConditions() {

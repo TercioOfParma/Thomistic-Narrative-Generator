@@ -40,12 +40,22 @@ con = sqlite3.connect('ThomisticNarrativeDB.db')
 c = con.cursor()
 i = 0
 virtues = []
-names = ["PRUDENCE", "JUSTICE", "FORTITUDE", "TEMPERANCE", "FAITH", "HOPE", "CHARITY", "PASSIONS"]
-while i < 8:
-    #virtues.append(vt.VirtueHolder(CSVData["id"], names[i]))
-    #virtues[i].convertToDataFrames(CSVData)
-    #virtues[i].exportToCSV("ExportTestPythonAlgor")
-    #virtues[i].exportToSQL(con)
+basicInfo = pd.concat([CSVData["id"], CSVData["TYPE"], CSVData["POSTCONDITIONS_ACCEPT_OUTPUT"], CSVData["POSTCONDITIONS_REJECT_OUTPUT"], CSVData["SECOND_PERSON"] ,CSVData["THIRD_PERSON"], CSVData["QUOTES_SCRIPTURE"], CSVData["SCRIPTURE_BANK_VERSES"],
+                       CSVData["POSTCONDITIONS_ACCEPT_CONSEQUENTIAL_ACTIONS"], CSVData["POSTCONDITIONS_REJECT_CONSEQUENTIAL_ACTIONS"]],axis=1)
+basicInfo = basicInfo.replace(np.NaN, "")
+basicInfo.to_sql("BasicInfo", con, if_exists="replace", index=True)
+basicInfo.to_csv("BasicInfo.csv")
+names = ["PRUDENCE", "JUSTICE", "FORTITUDE", "TEMPERANCE", "FAITH", "HOPE", "CHARITY"]
+while i < 7:
+    virtues.append(vt.VirtueHolder(CSVData["id"], names[i]))
+    virtues[i].convertToDataFrames(CSVData)
+    virtues[i].exportToCSV("ExportTestPythonAlgor")
+    virtues[i].exportToSQL(con)
     i = i + 1
 
-virtues[0].tables[7].to_csv("Unambiguous Filename.csv")
+passions = vt.PassionHolder(CSVData["id"], "PASSIONS")
+passions.convertToDataFrames(CSVData)
+passions.exportToCSV("ExportTestPythonAlgor")
+passions.exportToSQL(con)
+
+#virtues[0].tables[7].to_csv("Unambiguous Filename.csv")

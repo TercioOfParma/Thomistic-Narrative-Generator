@@ -20,5 +20,6 @@ public class Main {
 
 		System.out.println(scripture.quotePassage("1 Corinthians",13,1, 13,13));
 
+		Test.loadAllActionsNew();
     }
 }

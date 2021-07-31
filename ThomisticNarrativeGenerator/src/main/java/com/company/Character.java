@@ -52,8 +52,20 @@ public class Character
         }
         while(listOfAllActions.getSubsequentAction() != null)
         {
-            System.out.println(listOfAllActions.getPostConditionsAccept().getOtherEffects().get("POSTCONDITIONS_ACCEPT_OUTPUT").replace("<1>", generator.getRandomName()).replace("<2>", generator.getRandomName()).replace("<3>", generator.getRandomName()));
-            listOfAllActions = listOfAllActions.getSubsequentAction();
+            String toPrint = "";
+            try {
+                Object output = listOfAllActions.getPostConditionsAccept().getOtherEffects().get("POSTCONDITIONS_ACCEPT_OUTPUT");
+                if(toPrint instanceof String) {
+                    toPrint = (String)output;
+                    System.out.println(toPrint.replace("<1>", generator.getRandomName()).replace("<2>", generator.getRandomName()).replace("<3>", generator.getRandomName()));
+                }
+                    listOfAllActions = listOfAllActions.getSubsequentAction();
+            }
+            catch(Exception e)
+            {
+                System.err.println(e);
+                System.exit(-1);
+            }
             if(listOfAllActions.getScriptures() != null)
             {
                 System.out.println(bible.getVerse(listOfAllActions.getScriptures().get(0)));
