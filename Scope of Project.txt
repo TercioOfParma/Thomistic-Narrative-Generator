@@ -34,6 +34,7 @@ PROBLEMS:
 - Problems with this format has made it necessary to use Python 3 with Pandas to split into separate tables 
 - The way this python worked meant that names with spaces needed to have the _ removed to represent them 
 - Lots of hassle with Pandas and figuring out that I needed to approach with categorical differentiation on Postcons and Precons etc.
+- Does the end or the plot define where the MOEA should be used, or some sort of layered approach with weights on a specific pattern (Poetics?)
 
 
 - Make mention of Normal Forms in report 
@@ -68,15 +69,14 @@ PROBLEMS:
 	- Implement random emotion variation algorithm X
 	- Implement will mechanic on the action list (Sorta) 
 29th July-5th August:
-	- If not done, finally finish the SQL stuff and fix the loading code
-	- Generate Characters with proper current stats, passions and relationships in the two hashmaps
-	- Finish Will Mechanic
+	- If not done, finally finish the SQL stuff and fix the loading code X
+	- Generate Characters with proper current stats, passions and relationships in the two hashmaps X
+	- Finish Will Mechanic X 
 	- Adding additional actions 
 	- 1 Generation done 
 	- Multi Objective Algorithm Implementation
 5th August-12th August:
 	- Finish MOEA 
-
 12th August-19th August:
 	- Draft questions for the study 
 19th August-26th August: 

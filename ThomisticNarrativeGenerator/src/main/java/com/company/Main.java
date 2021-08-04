@@ -1,12 +1,16 @@
 package com.company;
 
+import java.util.LinkedList;
+import java.util.Random;
+
 public class Main {
 
     public static void main(String[] args)
     {
-	    Character C = new Character(new ActualGrace());
-	    System.out.println(String.valueOf(C.getLengthOfActions()));
 
+		LinkedList<Character> characters = new LinkedList<>();
+
+		Random rand = new Random();
 	    BibleLoader bible = new BibleLoader("drb.tsv"); //Operates in the root before src and out
 	    Verse scripture = bible.getBibleList();
 	    scripture.searchForVerse("Genesis",1,1);
@@ -21,5 +25,24 @@ public class Main {
 		System.out.println(scripture.quotePassage("1 Corinthians",13,1, 13,13));
 
 		Test.loadAllActionsNew();
+		for(int i =0; i < 20; i++)
+		{
+			characters.add(new Character(Test.getActionList(), names.getRandomName(), Test.getAllVirtues(), Test.getAllPassions()));
+			System.out.println("Character Stats");
+			System.out.println(characters.get(i).getVirtuesAndVices());
+		}
+		for(int i = 0; i < 30; i++)
+		{
+			for(Character chara : characters)
+			{
+				chara.listOfAllActions.evaluateChoice(chara, characters.get(rand.nextInt(characters.size())), characters.get(rand.nextInt(characters.size())), Test.getActionList());
+			}
+		}
+		for(Character chara: characters)
+		{
+			System.out.println(chara.getStory());
+		}
+
+
     }
 }

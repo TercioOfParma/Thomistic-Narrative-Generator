@@ -11,6 +11,7 @@ public class ActionLoader {
     String jsonFile, virtuesFile, jsonContents;
     private LinkedList<String> virtuesString, dbColumnNames, actionIDs;
     private HashMap<String, Object> Preconditions, Postconditionsaccept, Postconditionsreject, basicConditions;
+    private HashMap<String, Integer> allVirtues, allPassions;
     private static Connection conn = null;
     private NameGenerator names;
     private BibleLoader bible;
@@ -26,6 +27,8 @@ public class ActionLoader {
         Postconditionsaccept = new HashMap<String, Object>();
         Postconditionsreject = new HashMap<String, Object>();
         basicConditions = new HashMap<String, Object>();
+        allVirtues = new HashMap<>();
+        allPassions = new HashMap<>();
         jsonContents = "";
         String line, key;
         virtuesString = new LinkedList<String>();
@@ -76,6 +79,30 @@ public class ActionLoader {
         loadActionList();
         System.out.println("Loaded! Proving it!");
         generateRandomStory();*/
+    }
+
+    public Action getActionList() {
+        return actionList;
+    }
+
+    public void setActionList(Action actionList) {
+        this.actionList = actionList;
+    }
+
+    public HashMap<String, Integer> getAllVirtues() {
+        return allVirtues;
+    }
+
+    public void setAllVirtues(HashMap<String, Integer> allVirtues) {
+        this.allVirtues = allVirtues;
+    }
+
+    public HashMap<String, Integer> getAllPassions() {
+        return allPassions;
+    }
+
+    public void setAllPassions(HashMap<String, Integer> allPassions) {
+        this.allPassions = allPassions;
     }
 
     public void loadAllActionsNew()
@@ -135,6 +162,20 @@ public class ActionLoader {
                     queryStat.setFetchSize(MAXIMUM_STATEMENTS);
                     queryStat.setFetchDirection(ResultSet.FETCH_UNKNOWN);
                     results = queryStat.executeQuery();
+                    if(!(table.contentEquals("PASSIONS") || table.contentEquals("BasicInfo")))
+                    {
+                        for(String column : columns)
+                        {
+                            allVirtues.put(column, 0);
+                        }
+                    }
+                    else if(table.contentEquals("PASSIONS") )
+                    {
+                        for(String column : columns)
+                        {
+                            allPassions.put(column, 0);
+                        }
+                    }
                     for(String column: columns)
                     {
                         System.out.println(column + " " + table.contentEquals("BasicInfo"));
@@ -202,11 +243,11 @@ public class ActionLoader {
                                     {
                                         suffix = "_THIRD_PERSON";
                                     }
-                                    if(results.getBoolean("IS_ABOVE"))
+                                    if(results.getBoolean("IS_ABOVE") && results.getBoolean("IS_PRECONDITION"))
                                     {
                                         suffix = suffix + "_ABOVE";
                                     }
-                                    else
+                                    else if(results.getBoolean("IS_PRECONDITION"))
                                     {
                                         suffix = suffix + "_BELOW";
                                     }
@@ -441,7 +482,7 @@ public class ActionLoader {
             //System.out.println(toPrint.getPostConditionsAccept().getOtherEffects().get("POSTCONDITIONS_ACCEPT_OUTPUT"));
             if (test == null) {
                 System.out.println("Story started!");
-                test = new Character(toPrint);
+                test = new Character(toPrint, "Test", allVirtues, allPassions);
             } else {
                 System.out.println("Story action added!");
                 test.addAction(toPrint);
