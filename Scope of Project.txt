@@ -35,6 +35,7 @@ PROBLEMS:
 - The way this python worked meant that names with spaces needed to have the _ removed to represent them 
 - Lots of hassle with Pandas and figuring out that I needed to approach with categorical differentiation on Postcons and Precons etc.
 - Does the end or the plot define where the MOEA should be used, or some sort of layered approach with weights on a specific pattern (Poetics?)
+- Decided to write my own LinkedLists, big mistake, wasted a couple of days 
 
 
 - Make mention of Normal Forms in report 
@@ -73,9 +74,11 @@ PROBLEMS:
 	- Generate Characters with proper current stats, passions and relationships in the two hashmaps X
 	- Finish Will Mechanic X 
 	- Adding additional actions 
-	- 1 Generation done 
+	- 1 Generation done X
 	- Multi Objective Algorithm Implementation
 5th August-12th August:
+	- Adding additional actions 
+	- Multi Objective Algorithm Implementation
 	- Finish MOEA 
 12th August-19th August:
 	- Draft questions for the study 

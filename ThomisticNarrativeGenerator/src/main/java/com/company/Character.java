@@ -1,9 +1,6 @@
 package com.company;
 
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.Random;
+import java.util.*;
 
 public class Character
 {
@@ -12,11 +9,11 @@ public class Character
     int age, mortalSinsRemaining, deathAge;
     String story;
     boolean stateOfGrace;
-    Action listOfAllActions;
+    LinkedList<Action> listOfAllActions, actionBank;
     private HashMap<String,Integer> virtuesAndVices;
     private HashMap<String,Integer> passions;
     private Relationship relationships;
-    public Character(Action act, String namen, HashMap<String,Integer> Virtus, HashMap<String,Integer> passion)
+    public Character(LinkedList<Action> act,  String namen, HashMap<String,Integer> Virtus, HashMap<String,Integer> passion)
     {
         this.stateOfGrace = true; //We'll presuppose they're baptised
         this.story = "";
@@ -25,7 +22,15 @@ public class Character
         this.passions = passion;
         this.age = rand.nextInt(70);
         this.deathAge = rand.nextInt(80) + 40;
-        listOfAllActions = act;
+        actionBank = (LinkedList<Action>) act.clone();
+        //Action test = act.copyAllContents(act);
+        /*while(test.getSubsequentAction() != null)
+        {
+            System.out.println("Does copy all contents work : " + act.copyAllContents(act));
+            test = test.getSubsequentAction();
+        }*/
+        listOfAllActions = new LinkedList<>();
+        listOfAllActions.add(actionBank.get(rand.nextInt(actionBank.size())));
     }
 
     public String getStory() {
@@ -35,18 +40,22 @@ public class Character
     public void setStory(String story) {
         this.story = story;
     }
-
     public int getLengthOfActions()
     {
+        Iterator<Action> iterate = listOfAllActions.iterator();
+        Action toCheck;
         int i = 0;
-        Action currentAction = listOfAllActions;
-        while(currentAction != null)
+        while(iterate.hasNext())
         {
-            currentAction = currentAction.getSubsequentAction();
-            i++;
+            toCheck = iterate.next();
+            i = i + 1;
         }
 
         return i;
+    }
+
+    public LinkedList<Action> getActionBank() {
+        return actionBank;
     }
 
     public Random getRand() {
@@ -108,7 +117,101 @@ public class Character
     public void setRelationships(Relationship relationships) {
         this.relationships = relationships;
     }
+    public Action searchActionBank(String id)
+    {
+        Iterator<Action> iterate = actionBank.iterator();
+        Action act;
+        while(iterate.hasNext())
+        {
+            act = iterate.next();
+            if(act.getId().contentEquals(id))
+            {
+                return act;
+            }
 
+        }
+
+        return null;
+    }
+    public Action getNextCharacterAction(Character C)
+    {
+        Collections.shuffle(actionBank);
+        Action nextAction = null;
+        Iterator<Action> allAct = actionBank.iterator();
+        boolean isFound = false;
+        HashMap<String,Integer> virtues, precons;
+        String temp;
+        int skip = 0;
+        while(allAct.hasNext() && !isFound)
+        {
+            nextAction = allAct.next(); //We do want to skip the template
+            virtues = C.getVirtuesAndVices();
+            isFound = true;
+            precons = nextAction.getPreConditions().getVirtueEffects();
+            try
+            {
+                System.out.println("Finding Subsequent Action " + nextAction.getId());
+            }
+            catch(Exception e)
+            {
+
+            }
+            for (String key : virtues.keySet()) {
+                temp = key + "_ABOVE";
+                try {
+                    if (!(precons.get(temp) <= virtues.get(key))) {
+                        isFound = false;
+                        break;
+                    }
+                    temp = key + "_BELOW";
+                    if (!(precons.get(temp) >= virtues.get(key))) {
+                        isFound = false;
+                        break;
+                    }
+                    if(nextAction.getId().contentEquals("TEMPLATE"))
+                    {
+                        isFound = false;
+                        break;
+                    }
+                }
+                catch (Exception e) {
+
+                }
+
+            }
+            skip = rand.nextInt(3);
+            if(skip <= 1)
+            {
+                isFound = false;
+            }
+            if(isFound)
+            {
+                break;
+            }
+        }
+        if(!isFound)
+        {
+            System.out.println("Finding Random Action");
+            nextAction = getRandomAction();
+        }
+        C.setAge(C.getAge() + 1);
+        return nextAction;
+    }
+    public Action getRandomAction()
+    {
+        Collections.shuffle(actionBank);
+        int randomAction;
+        randomAction = rand.nextInt(getListOfAllActions().size()) + 2;
+        Iterator<Action> act = actionBank.iterator();
+        Action nextAction = null;
+        for(int j = 0; j < randomAction; j++)
+        {
+            nextAction = act.next();
+        }
+
+        System.out.println("Random Action: " + nextAction.getId());
+        return nextAction;
+    }
     public void generateRelationships(LinkedList<Character> characters)
     {
         HashMap<String, Integer> newPassions = new HashMap<>();
@@ -126,48 +229,52 @@ public class Character
             }
         }
     }
-    public Action getListOfAllActions()
-    {
+
+    public LinkedList<Action> getListOfAllActions() {
         return listOfAllActions;
     }
 
-    public void setListOfAllActions(Action listOfAllActions) {
+    public void setListOfAllActions(LinkedList<Action> listOfAllActions) {
         this.listOfAllActions = listOfAllActions;
     }
-    public void addAction(Action act)
+
+    public void setActionBank(LinkedList<Action> actionBank) {
+        this.actionBank = actionBank;
+    }
+
+    public void addActionToActionBank(Action act)
     {
-        listOfAllActions.setSubsequentAction(act);
-        listOfAllActions.getSubsequentAction().setPreviousAction(listOfAllActions);
-        listOfAllActions = act;
+        actionBank.add(act);
+    }
+    public void addActionToListofAllActions(Action act)
+    {
+        listOfAllActions.add(act);
     }
     public void printStory(BibleLoader bible, NameGenerator generator)
     {
         System.out.println("Test");
-        while(listOfAllActions.getPreviousAction() != null)
+        Iterator<Action> listOfAll = listOfAllActions.iterator();
+        Action tempAct;
+        while(listOfAll.hasNext())
         {
-            System.out.println("PreviousActions!");
-            listOfAllActions = listOfAllActions.getPreviousAction();
-        }
-        while(listOfAllActions.getSubsequentAction() != null)
-        {
+            tempAct = listOfAll.next();
             String toPrint = "";
             try {
-                Object output = listOfAllActions.getPostConditionsAccept().getOtherEffects().get("POSTCONDITIONS_ACCEPT_OUTPUT");
+                Object output = tempAct.getPostConditionsAccept().getOtherEffects().get("POSTCONDITIONS_ACCEPT_OUTPUT");
                 if(toPrint instanceof String) {
                     toPrint = (String)output;
                     System.out.println(toPrint.replace("<1>", generator.getRandomName()).replace("<2>", generator.getRandomName()).replace("<3>", generator.getRandomName()));
-                    System.out.println(listOfAllActions.getPostConditionsAccept().getVirtueEffects());
+                    System.out.println(tempAct.getPostConditionsAccept().getVirtueEffects());
                 }
-                    listOfAllActions = listOfAllActions.getSubsequentAction();
             }
             catch(Exception e)
             {
                 System.err.println(e);
                 System.exit(-1);
             }
-            if(listOfAllActions.getScriptures() != null)
+            if(tempAct.getScriptures() != null)
             {
-                System.out.println(bible.getVerse(listOfAllActions.getScriptures().get(0)));
+                System.out.println(bible.getVerse(tempAct.getScriptures().get(0)));
             }
         }
     }
@@ -225,6 +332,7 @@ public class Character
         }
         return total;
     }
+
     public void emotionalDrift()
     {
         Iterator<String> goThrough = passions.keySet().iterator();
