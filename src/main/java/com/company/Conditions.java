@@ -6,23 +6,22 @@ import java.util.LinkedList;
 public class Conditions
 {
     private HashMap<String, Integer> virtueEffects;
-    private HashMap<String, String> otherEffects;
+    private HashMap<String, Object> otherEffects;
     private LinkedList<String> scriptures;
 
 
-    public Conditions(HashMap<String, Object> allObjects)
+    public Conditions()
     {
         virtueEffects = new HashMap<String, Integer>();
-        otherEffects = new HashMap<String,String>();
+        otherEffects = new HashMap<String,Object>();
         scriptures = new LinkedList<String>();
-        setVariables(allObjects);
     }
 
-    public HashMap<String, String> getOtherEffects() {
+    public HashMap<String, Object> getOtherEffects() {
         return otherEffects;
     }
 
-    public void setOtherEffects(HashMap<String, String> otherEffects) {
+    public void setOtherEffects(HashMap<String, Object> otherEffects) {
         this.otherEffects = otherEffects;
     }
 
@@ -42,13 +41,16 @@ public class Conditions
         while(keys.hasNext())
         {
             key = keys.next();
+            //System.out.println("Next key " + key);
             if(rawInfo.get(key) instanceof Integer)
             {
+                //System.out.println("Variable Set " + key);
                 virtueEffects.put(key, (int)rawInfo.get(key));
             }
-            else if(rawInfo.get(key) instanceof String)
+            else
             {
-                otherEffects.put(key,(String) rawInfo.get(key));
+                //System.out.println("Other Set " + key);
+                otherEffects.put(key, rawInfo.get(key));
             }
         }
     }
