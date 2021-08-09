@@ -44,7 +44,7 @@ public class Conditions
             //System.out.println("Next key " + key);
             if(rawInfo.get(key) instanceof Integer)
             {
-                //System.out.println("Variable Set " + key);
+                System.out.println("Variable Set " + key);
                 virtueEffects.put(key, (int)rawInfo.get(key));
             }
             else

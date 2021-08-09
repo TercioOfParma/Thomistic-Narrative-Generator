@@ -47,6 +47,8 @@ public class Temptation extends Action {
             doResistance(C, C2, C3);
         }
         C.emotionalDrift();
+        C.calmDown();
+        C.fallingOutOfTheHabit();
     }
 
     public void doSin(Character C, Character C2, Character C3)
@@ -56,6 +58,7 @@ public class Temptation extends Action {
 
         Iterator<String> toDo = effects.getVirtueEffects().keySet().iterator();
         HashMap<String, Integer> newStatus = C.getVirtuesAndVices();
+        //System.err.println("MEME: " + newStatus);
         String key, full;
         while(toDo.hasNext())
         {
@@ -63,9 +66,11 @@ public class Temptation extends Action {
             if(full.contains("ACCEPT")) {
                 System.err.println("RESISTANCE " + full);
             }
-            key = full.replace("POSTCONDITIONS_REJECT_","");
+            key = full.replace("POSTCONDITIONS_ACCEPT_","");
+            //System.err.println("VIRTUES BEFORE THE LOOPING : " + C.getVirtuesAndVices() + " 2: " + C2.getVirtuesAndVices() + " 3: " + C3.getVirtuesAndVices());
             updateACharacter(C, C2, C3, effects, key, full);
         }
+
 
         doApplicationOfAction(C,C2,C3,false);
 
@@ -94,6 +99,7 @@ public class Temptation extends Action {
 
         Iterator<String> toDo = effects.getVirtueEffects().keySet().iterator();
         HashMap<String, Integer> newStatus = C.getVirtuesAndVices();
+        //System.err.println("MEME: " + newStatus);
         String key, full;
         while(toDo.hasNext())
         {
@@ -102,6 +108,7 @@ public class Temptation extends Action {
                 System.err.println("RESISTANCE " + full);
             }
             key = full.replace("POSTCONDITIONS_ACCEPT_","");
+            //System.err.println("VIRTUES BEFORE THE LOOPING : " + C.getVirtuesAndVices() + " 2: " + C2.getVirtuesAndVices() + " 3: " + C3.getVirtuesAndVices());
             updateACharacter(C, C2, C3, effects, key, full);
         }
 

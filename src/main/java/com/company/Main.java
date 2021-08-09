@@ -43,7 +43,10 @@ public class Main {
 		Test.loadAllActionsNew();
 		System.err.println("Actionlist to be parsed to the characters: ");
 		Test.printAllActions();
-		for(int i =0; i < 20; i++)
+		System.err.println("All Virtues :" + Test.getAllVirtues());
+		int char1, char2;
+
+		for(int i =0; i < 200; i++)
 		{
 			characters.add(new Character(Test.getActionList(), Test.getStateList(), names.getRandomName(), Test.getAllVirtues(), Test.getAllPassions()));
 			System.out.println("Character Stats");
@@ -51,9 +54,12 @@ public class Main {
 		}
 		for(int i = 0; i < 300; i++)
 		{
+			char2 = rand.nextInt(characters.size());
 			for(Character chara : characters)
 			{
-				chara.listOfAllActions.getLast().evaluateChoice(chara, characters.get(rand.nextInt(characters.size())),characters.get(rand.nextInt(characters.size())));
+				char1 = rand.nextInt(characters.size());
+				chara.listOfAllActions.getLast().evaluateChoice(chara, characters.get(char1),characters.get(char2));
+				char2 = rand.nextInt(characters.size());
 			}
 		}
 		for(Character chara: characters)

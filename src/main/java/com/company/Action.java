@@ -203,7 +203,7 @@ public abstract class Action
                 }
                 else if(this.getPreConditions().getVirtueEffects().containsKey(oldThing))
                 {
-                    if((newThing.contains("VIRTUE") || newThing.contains("VICE")) && (!test.getId().contains("ANGER") && !test.getId().contains("HOPE")
+                    if((newThing.contains("VIRTUE") || newThing.contains("VICE")) && (!test.getId().contains("ANGER") 
                             && !test.getId().contains("DARING") && !test.getId().contains("PLEASURE") && !test.getId().contains("LOVE")))
                     {
                         try {
@@ -403,69 +403,114 @@ public abstract class Action
     }
 
     protected void updateACharacter(Character C, Character C2, Character C3, Conditions effects, String key, String full) {
-        HashMap<String, Integer> newStatus;
-        System.err.println(key + " " + full);
+        HashMap<String, Integer> newStatus = null;
+        //System.err.println(key + " " + full);
+        full = full.replace("_SECOND_PERSON","").replace("_THIRD_PERSON","");
         if(key.contains("SECOND_PERSON"))
         {
-            key = key.replace("_SECOND_PERSON", "");
-            if(((key.contains("VIRTUE") || key.contains("VICE")) && (!key.contains("ANGER") && !key.contains("HOPE")
-                    && !key.contains("DARING") && !key.contains("PLEASURE") && !key.contains("LOVE")))) {
-                System.err.println("In Virtues");
-                newStatus = C2.getVirtuesAndVices();
-            }
-            else
+            key = key.replace("_SECOND_PERSON", "").replace("_REJECT_","").replace("_ACCEPT_","").replace("POSTCONDITIONS","");
+            if(((key.contains("VIRTUE") || key.contains("VICE"))))
             {
-                System.err.println("In Passions");
+                //System.err.println("In Virtues");
+                //System.err.println(C2.getVirtuesAndVices());
+                newStatus = C2.getVirtuesAndVices();
+                //System.err.println(newStatus);
+            }
+            else if(key.contains("HOPE") || key.contains("ANGER")
+                    || key.contains("DARING") ||  key.contains("PLEASURE") || key.contains("LOVE"))
+            {
+                //System.err.println("In Passions");
                 newStatus = C2.getPassions();
             }
-            System.err.println(newStatus);
-            System.err.println(effects.getVirtueEffects());
-            System.err.println("1: " + newStatus.get(key));
-            System.err.println("2 : " + effects.getVirtueEffects().get(full));
+            //System.err.println("Key : " + key + " Full: " + full);
+            //System.err.println(effects.getVirtueEffects());
+            //System.err.println("1: " + newStatus.get(key));
+            //System.err.println("2 : " + effects.getVirtueEffects().get(full));
             newStatus.replace(key, newStatus.get(key) + effects.getVirtueEffects().get(full));
-            C2.setVirtuesAndVices(newStatus);
+            if((key.contains("VIRTUE") || key.contains("VICE"))){
+                //System.err.println("Updating Vices and Virtues " + newStatus + "\n" + "\n");
+                //System.err.println("Passions " + C2.getPassions() + "\n" + "\n");
+                C2.setVirtuesAndVices(newStatus);
+            }
+            else if(key.contains("ANGER")
+                    || key.contains("DARING") || key.contains("PLEASURE") || key.contains("LOVE") || key.contains("HOPE"))
+            {
+                //System.err.println("Updating Passions " + newStatus + "\n" + "\n");
+                //System.err.println("Vices and Virtues " + C2.getPassions() + "\n" + "\n");
+                C2.setPassions(newStatus);
+            }
 
         }
         else if(key.contains("THIRD_PERSON"))
         {
-            key = key.replace("_THIRD_PERSON", "");
-            if(((key.contains("VIRTUE") || key.contains("VICE")) && (!key.contains("ANGER") && !key.contains("HOPE")
-                    && !key.contains("DARING") && !key.contains("PLEASURE") && !key.contains("LOVE")))) {
-                System.err.println("In Virtues");
-                newStatus = C3.getVirtuesAndVices();
-            }
-            else
+            key = key.replace("_THIRD_PERSON", "").replace("_REJECT_","").replace("_ACCEPT_","").replace("POSTCONDITIONS","");
+
+            if(((key.contains("VIRTUE") || key.contains("VICE"))))
             {
-                System.err.println("In Passions");
+                //System.err.println("In Virtues");
+                //System.err.println(C3.getVirtuesAndVices());
+                newStatus = C3.getVirtuesAndVices();
+                //System.err.println(newStatus);
+            }
+            else if(key.contains("HOPE") || key.contains("ANGER")
+                    || key.contains("DARING") ||  key.contains("PLEASURE") || key.contains("LOVE"))
+            {
+                //System.err.println("In Passions");
                 newStatus = C3.getPassions();
             }
-
-            newStatus = C3.getVirtuesAndVices();
-            System.err.println(newStatus);
-            System.err.println(effects.getVirtueEffects());
-            System.err.println("1: " + newStatus.get(key));
-            System.err.println("2 : " + effects.getVirtueEffects().get(full));
+            //System.err.println("Key : " + key + " Full: " + full);
+            //System.err.println(newStatus);
+            //System.err.println(effects.getVirtueEffects());
+            //System.err.println("1: " + newStatus.get(key));
+            //System.err.println("2 : " + effects.getVirtueEffects().get(full));
             newStatus.replace(key, newStatus.get(key) + effects.getVirtueEffects().get(full));
-            C3.setVirtuesAndVices(newStatus);
+            if((key.contains("VIRTUE") || key.contains("VICE"))){
+                //System.err.println("Updating Vices and Virtues " + newStatus + "\n" + "\n");
+                //System.err.println("Passions " + C3.getPassions() + "\n" + "\n");
+                C3.setVirtuesAndVices(newStatus);
+            }
+            else if(key.contains("ANGER")
+                    || key.contains("DARING") || key.contains("PLEASURE") || key.contains("LOVE") || key.contains("HOPE"))
+            {
+                //System.err.println("Passions " + newStatus + "\n" + "\n");
+                //System.err.println("Virtues " + C3.getVirtuesAndVices() + "\n" + "\n");
+                C3.setPassions(newStatus);
+            }
         }
         else
         {
-            if(((key.contains("VIRTUE") || key.contains("VICE")) && (!key.contains("ANGER") && !key.contains("HOPE")
-                    && !key.contains("DARING") && !key.contains("PLEASURE") && !key.contains("LOVE")))) {
-                System.err.println("In Virtues");
-                newStatus = C.getVirtuesAndVices();
-            }
-            else
+            key = key.replace("_REJECT_","").replace("_ACCEPT_","").replace("POSTCONDITIONS","");
+            if(((key.contains("VIRTUE") || key.contains("VICE"))))
             {
-                System.err.println("In Passions");
+                //System.err.println("In Virtues");
+                //System.err.println(C.getVirtuesAndVices());
+                newStatus = C.getVirtuesAndVices();
+                //System.err.println(newStatus);
+            }
+            else if(key.contains("HOPE") || key.contains("ANGER")
+                    || key.contains("DARING") ||  key.contains("PLEASURE") || key.contains("LOVE"))
+            {
+                //System.err.println("In Passions");
                 newStatus = C.getPassions();
             }
+            /*System.err.println("Key : " + key + " Full: " + full);
             System.err.println(newStatus);
             System.err.println(effects.getVirtueEffects());
             System.err.println("1: " + newStatus.get(key));
             System.err.println("2 : " + effects.getVirtueEffects().get(full));
-            newStatus.replace(key, newStatus.get(key) + effects.getVirtueEffects().get(full));
-            C.setVirtuesAndVices(newStatus);
+            newStatus.replace(key, newStatus.get(key) + effects.getVirtueEffects().get(full));*/
+            if((key.contains("VIRTUE") || key.contains("VICE"))){
+                //System.err.println("Updating Vices and Virtues " + newStatus + "\n" + "\n");
+                //System.err.println("Passions " + C.getPassions() + "\n" + "\n");
+                C.setVirtuesAndVices(newStatus);
+            }
+            else if(key.contains("ANGER")
+                    || key.contains("DARING") || key.contains("PLEASURE") || key.contains("LOVE") || key.contains("HOPE"))
+            {
+                //System.err.println("Passions " + newStatus + "\n" + "\n");
+                //System.err.println("Virtues " + C.getVirtuesAndVices() + "\n" + "\n");
+                C.setPassions(newStatus);
+            }
         }
     }
 

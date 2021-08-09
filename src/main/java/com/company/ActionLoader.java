@@ -122,6 +122,7 @@ public class ActionLoader {
                     {
                         for(String column : columns)
                         {
+                            System.err.println("Virtue added : " + column);
                             allVirtues.put(column, 0);
                         }
                     }
@@ -129,6 +130,7 @@ public class ActionLoader {
                     {
                         for(String column : columns)
                         {
+                            System.err.println("Passion added : " + column);
                             allPassions.put(column, 0);
                         }
                     }

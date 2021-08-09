@@ -27,6 +27,8 @@ Structure:
 
 EXCEEDING EXPECTATIONS:
 	- Was able to add Second person and third person postconditions despite thinking it was too complicated 
+	- Added a calm down function and an emotional drift function 
+	- Added 900 emotional, relational and virtuous state indicators via a script 
 
 PROBLEMS:
 - Strange problems with there being an infinite loop on self implemented Linked Lists 
@@ -36,6 +38,7 @@ PROBLEMS:
 - Lots of hassle with Pandas and figuring out that I needed to approach with categorical differentiation on Postcons and Precons etc.
 - Does the end or the plot define where the MOEA should be used, or some sort of layered approach with weights on a specific pattern (Poetics?)
 - Decided to write my own LinkedLists, big mistake, wasted a couple of days 
+- Characters are Sociopaths 
 
 
 - Make mention of Normal Forms in report 

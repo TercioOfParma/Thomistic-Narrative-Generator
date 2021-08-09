@@ -21,10 +21,29 @@ for tables in tableNames:
     for row in tableInfo:
         threshold = 70
         i = 0
+        j = len(degreePrefixVirtues) - 1
+        inverseDegreeNames = degreeNames[::-1]
+        for degree in inverseDegreeNames:
+            name = row[1]
+            virtue = degreePrefixVirtues[j]
+            if "VICE" in name:
+                StoryActionID = degree + "_" + virtue
+                basicInsertQuery = "INSERT INTO BasicInfo (TYPE, id, POSTCONDITIONS_ACCEPT_OUTPUT) VALUES ('VIRTUE_STATE', '" + (degree + "_" + name + "',")
+                specificQuery = "INSERT INTO " + tables.replace("'","") + " (STORY_ACTION_ID, IS_ABOVE,IS_PRECONDITION, " + name + ") VALUES ("
+                virtueFeeling = virtue + name.replace("VIRTUE", "").replace("SUB", "").replace("VICE", "").replace("_", "").lower() + ","
+                basicInsertQuery = basicInsertQuery + "'" + virtueFeeling + "')"
+                specificQuery = specificQuery + "'" + (degree + "_" + name + "',") + "1,1," + str(threshold) + ")"
+                print(basicInsertQuery)
+                print(specificQuery)
+                cursor.execute(basicInsertQuery)
+                cursor.execute(specificQuery)
+            j = j - 1
+            threshold = threshold - 30
+        threshold = 70
         for degree in degreeNames:
             name = row[1]
             virtue = degreePrefixVirtues[i]
-            if "VIRTUE" in name or "VICE" in name:
+            if "VIRTUE" in name:
                 StoryActionID = degree + "_" + virtue
                 basicInsertQuery = "INSERT INTO BasicInfo (TYPE, id, POSTCONDITIONS_ACCEPT_OUTPUT) VALUES ('VIRTUE_STATE', '" + (degree + "_" + name + "',")
                 specificQuery = "INSERT INTO " + tables.replace("'","") + " (STORY_ACTION_ID, IS_ABOVE,IS_PRECONDITION, " + name + ") VALUES ("
@@ -59,4 +78,5 @@ for tables in tableNames:
             threshold = threshold - 30
             i = i + 1
 db.commit()
+db.close()
                                                                                 

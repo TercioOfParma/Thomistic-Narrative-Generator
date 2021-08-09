@@ -18,8 +18,10 @@ public class Character
         this.stateOfGrace = true; //We'll presuppose they're baptised
         this.story = "";
         this.name = namen;
+        //new Character(Test.getActionList(), Test.getStateList(), names.getRandomName(), Test.getAllVirtues(), Test.getAllPassions())
         this.virtuesAndVices = Virtus;
         this.passions = passion;
+        System.err.println("Character Stats: " + this.getVirtuesAndVices() + " " + this.getPassions());
         this.age = rand.nextInt(70);
         this.deathAge = rand.nextInt(80) + 40;
         actionBank = (LinkedList<Action>) act.clone();
@@ -59,7 +61,7 @@ public class Character
 
 
     public LinkedList<Action> getActionBank() {
-        return actionBank;
+        Collections.shuffle(this.actionBank);return actionBank;
     }
 
     public Random getRand() {
@@ -95,11 +97,11 @@ public class Character
     }
 
     public LinkedList<Action> getStateBank() {
-        return stateBank;
+        Collections.shuffle(this.stateBank); return stateBank;
     }
 
     public void setStateBank(LinkedList<Action> stateBank) {
-        this.stateBank = stateBank;
+         this.stateBank = stateBank;
     }
 
     public int getMortalSinsRemaining() {
@@ -119,7 +121,7 @@ public class Character
     }
 
     public HashMap<String, Integer> getPassions() {
-        return passions;
+         return passions;
     }
 
     public Relationship getRelationships() {
@@ -356,9 +358,51 @@ public class Character
             if(currentVirtue.contentEquals("ANGER") || currentVirtue.contentEquals("DARING") || currentVirtue.contentEquals("PLEASURE")
                     || currentVirtue.contentEquals("HOPE") || currentVirtue.contentEquals("LOVE"))
             {
-                newValue = newValue + passions.get(currentVirtue) + rand.nextInt(7) - 3;
+                newValue = newValue + passions.get(currentVirtue) + rand.nextInt(30) - 15;
                 passions.replace(currentVirtue,newValue);
             }
+        }
+    }
+    public void calmDown()
+    {
+        Iterator<String> passionIterate = getPassions().keySet().iterator();
+        HashMap<String, Integer> emotions;
+        String passion;
+        while(passionIterate.hasNext())
+        {
+            passion = passionIterate.next();
+            emotions = getPassions();
+            if(getPassions().get(passion) > 0) {
+                emotions.replace(passion, getPassions().get(passion) - 5);
+            }
+            else
+            {
+                emotions.replace(passion, getPassions().get(passion) + 5);
+            }
+            setPassions(emotions);
+        }
+    }
+    public void fallingOutOfTheHabit()
+    {
+        if(rand.nextInt(2) == 1)
+        {
+            return;
+        }
+        Iterator<String> passionIterate = getVirtuesAndVices().keySet().iterator();
+        HashMap<String, Integer> virtues;
+        String virtue;
+        while(passionIterate.hasNext())
+        {
+            virtue = passionIterate.next();
+            virtues = getVirtuesAndVices();
+            if(virtues.get(virtue) > 0) {
+                virtues.replace(virtue, virtues.get(virtue) - 1);
+            }
+            else
+            {
+                virtues.replace(virtue, virtues.get(virtue) + 1);
+            }
+            setVirtuesAndVices(virtues);
         }
     }
 }
