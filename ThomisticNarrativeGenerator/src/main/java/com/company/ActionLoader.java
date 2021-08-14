@@ -7,9 +7,9 @@ import java.util.*;
 
 
 public class ActionLoader {
-    private LinkedList<Action> actionList;
+    private LinkedList<Action> actionList, stateList;
     String jsonFile, virtuesFile, jsonContents;
-    private LinkedList<String> virtuesString, dbColumnNames, actionIDs;
+    private LinkedList<String> virtuesString, dbColumnNames, actionIDs, subvirtuesToTable;//Also for passions
     private HashMap<String, Object> Preconditions, Postconditionsaccept, Postconditionsreject, basicConditions;
     private HashMap<String, Integer> allVirtues, allPassions;
     private static Connection conn = null;
@@ -21,6 +21,8 @@ public class ActionLoader {
         this.virtuesFile = virtuesFile;
         Map<String, String> tempMap;
         names = Gens;
+        subvirtuesToTable = new LinkedList<>();
+        stateList = new LinkedList<>();
         actionList = new LinkedList<>();
         actionIDs = new LinkedList<String>();
         dbColumnNames = new LinkedList<String>();
@@ -33,53 +35,6 @@ public class ActionLoader {
         jsonContents = "";
         String line, key;
         virtuesString = new LinkedList<String>();
-        /*int columnLooper, columnlooperRear;
-        try {
-            File bibleFile = new File(virtuesFile);
-            Scanner scan = new Scanner(bibleFile);
-            System.out.println("Loading virtues...");
-            while (scan.hasNextLine()) {
-                virtuesString.add(scan.nextLine());
-
-            }
-        } catch (FileNotFoundException e) {
-            System.out.println(virtuesFile + " not found!");
-        }
-        try {
-            connect("ThomisticNarrativeDB.db");
-            for (columnLooper = 100; columnLooper < 1100; columnLooper = columnLooper + 100) {
-                columnlooperRear = columnLooper - 100;
-                System.out.println(columnlooperRear);
-                PreparedStatement queryColumn = conn.prepareStatement("SELECT * FROM PRAGMA_TABLE_INFO('ImportedCSV') WHERE cid >" + columnlooperRear + " AND cid < " + columnLooper);
-                ResultSet columns = queryColumn.executeQuery();
-                while (columns.next()) {
-                    dbColumnNames.add(columns.getString("name"));
-                    if (columns.getString("name").contains("PRECONDITIONS")) {
-                        testField(columns, Preconditions);
-                    } else if (columns.getString("name").contains("POSTCONDITIONS_ACCEPT")) {
-                        testField(columns, Postconditionsaccept);
-                    } else if (columns.getString("name").contains("POSTCONDITIONS_REJECT")) {
-                        testField(columns, Postconditionsreject);
-                    } else {
-                        testField(columns, basicConditions);
-                    }
-                }
-            }
-            loadActionIntoActionList("PRECONDITIONS_VIRTUE_PRUDENCE_SUBVIRTUE_MEMORY_ABOVE", "TEMPLATE");
-            System.out.println("Loading Story Actions...");
-            PreparedStatement queryStat = conn.prepareStatement("SELECT id FROM ImportedCSV");
-            ResultSet results = queryStat.executeQuery();
-            while (results.next()) {
-                actionIDs.add(results.getString("id"));
-            }
-            System.out.println(actionIDs.toString() + "\n ColumnNames: " + dbColumnNames.toString());
-            System.out.println(basicConditions.toString() + "\n" + Postconditionsaccept.toString() + "\n" + Postconditionsreject.toString() + "\n" + Preconditions.toString());
-        } catch (Exception e) {
-            System.err.println(e.getMessage() + " " + e.getStackTrace()[3].toString());
-        }
-        loadActionList();
-        System.out.println("Loaded! Proving it!");
-        generateRandomStory();*/
     }
 
     public LinkedList<Action> getActionList() {
@@ -106,6 +61,14 @@ public class ActionLoader {
         this.allPassions = allPassions;
     }
 
+    public LinkedList<String> getSubvirtuesToTable() {
+        return subvirtuesToTable;
+    }
+
+    public void setSubvirtuesToTable(LinkedList<String> subvirtuesToTable) {
+        this.subvirtuesToTable = subvirtuesToTable;
+    }
+
     public void loadAllActionsNew()
     {
         connect("ThomisticNarrativeDB.db");
@@ -120,6 +83,7 @@ public class ActionLoader {
         String suffix = "";
         String prefix = "";
         int limit = 0;
+        boolean isState = false;
         Action tempAction = null;
         Action oldAction = null;
         HashMap<String, Object> currentHash = new HashMap<>();
@@ -135,6 +99,7 @@ public class ActionLoader {
         {
             System.err.println(e);
         }
+
         for(String action : this.actionIDs)
         {
             tempAction = null;
@@ -167,14 +132,18 @@ public class ActionLoader {
                     {
                         for(String column : columns)
                         {
+                            System.err.println("Virtue added : " + column);
                             allVirtues.put(column, 0);
+                            subvirtuesToTable.add(table + "_" + column);
                         }
                     }
                     else if(table.contentEquals("PASSIONS") )
                     {
                         for(String column : columns)
                         {
+                            System.err.println("Passion added : " + column);
                             allPassions.put(column, 0);
+                            subvirtuesToTable.add(table + "_" + column);
                         }
                     }
                     for(String column: columns)
@@ -184,15 +153,36 @@ public class ActionLoader {
                         {
                             if(tempAction == null)
                             {
+                                isState = false;
                                 if(results.getString("TYPE").contentEquals("TEMPTATION"))
                                 {
                                     tempAction = new Temptation(this.getActionList());
                                     tempAction.setId(action);
+                                    isState = false;
                                 }
-                                else
+                                else if(results.getString("TYPE").contentEquals("ACTUAL_GRACE"))
                                 {
                                     tempAction = new ActualGrace(this.getActionList());
                                     tempAction.setId(action);
+                                    isState = false;
+                                }
+                                else if(results.getString("TYPE").contentEquals("VIRTUE_STATE"))
+                                {
+                                    tempAction = new VirtueState(this.getActionList());
+                                    tempAction.setId(action);
+                                    isState = true;
+                                }
+                                else if(results.getString("TYPE").contentEquals("RELATIONSHIP_STATE"))
+                                {
+                                    tempAction = new RelationshipState(this.getActionList());
+                                    tempAction.setId(action);
+                                    isState = true;
+                                }
+                                else if(results.getString("TYPE").contentEquals("PASSION_STATE"))
+                                {
+                                    tempAction = new RelationshipState(this.getActionList());
+                                    tempAction.setId(action);
+                                    isState = true;
                                 }
                             }
                             if(results.getString("POSTCONDITIONS_ACCEPT_OUTPUT") != null)
@@ -231,7 +221,7 @@ public class ActionLoader {
                                         prefix= "PRECONDITIONS_";
                                     }
                                     else if (results.getBoolean("IS_POSTCONDITION_ACCEPT")) {
-                                        System.out.println("Found Accepted Post Condition");
+                                        System.err.println("Found Accepted Post Condition");
                                         prefix = "POSTCONDITIONS_ACCEPT_";
                                     }
                                     else if (results.getBoolean("IS_POSTCONDITION_REJECT")) {
@@ -249,7 +239,7 @@ public class ActionLoader {
                                     {
                                         suffix = suffix + "_ABOVE";
                                     }
-                                    else if(results.getBoolean("IS_PRECONDITION"))
+                                    else if(results.getBoolean("IS_PRECONDITION") && !results.getBoolean("IS_ABOVE"))
                                     {
                                         suffix = suffix + "_BELOW";
                                     }
@@ -298,9 +288,15 @@ public class ActionLoader {
 
             System.out.println(tempAction.getId() + " Completed!");
             System.out.println("Virtue effects Preconditions: " + tempAction.getPreConditions().getVirtueEffects());
-            if(!tempAction.getId().contentEquals("TEMPLATE")) {
+            if(!tempAction.getId().contentEquals("TEMPLATE") && !isState) {
                 this.actionList.add(tempAction);
                 System.err.println("Loaded virtues : " + this.actionList.getLast().getId());
+            }
+            else if(isState)
+            {
+                this.stateList.add(tempAction);
+                System.err.println("State precons :" + tempAction.getPreConditions().getVirtueEffects());
+                System.err.println("Loaded States : " + this.stateList.getLast().getId());
             }
 
             }
@@ -308,7 +304,13 @@ public class ActionLoader {
         //generateRandomStory();
     }
 
+    public LinkedList<Action> getStateList() {
+        return stateList;
+    }
 
+    public void setStateList(LinkedList<Action> stateList) {
+        this.stateList = stateList;
+    }
 
     public void printAllActions()
     {

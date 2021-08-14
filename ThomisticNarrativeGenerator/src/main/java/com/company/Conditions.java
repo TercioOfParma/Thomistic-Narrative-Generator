@@ -41,7 +41,7 @@ public class Conditions
         while(keys.hasNext())
         {
             key = keys.next();
-            System.out.println("Next key " + key);
+            //System.out.println("Next key " + key);
             if(rawInfo.get(key) instanceof Integer)
             {
                 System.out.println("Variable Set " + key);
@@ -49,7 +49,7 @@ public class Conditions
             }
             else
             {
-                System.out.println("Other Set " + key);
+                //System.out.println("Other Set " + key);
                 otherEffects.put(key, rawInfo.get(key));
             }
         }

@@ -18,6 +18,7 @@ public class Main {
 			e.printStackTrace();
 		}
 		LinkedList<Character> characters = new LinkedList<>();
+		Character oldChar = null;
 		Action temp;
 		Random rand = new Random();
 	    BibleLoader bible = new BibleLoader("drb.tsv"); //Operates in the root before src and out
@@ -43,25 +44,37 @@ public class Main {
 		Test.loadAllActionsNew();
 		System.err.println("Actionlist to be parsed to the characters: ");
 		Test.printAllActions();
-		for(int i =0; i < 2000; i++)
+		System.err.println("All Virtues :" + Test.getAllVirtues());
+		int char1, char2;
+
+		for(int i =0; i < 200; i++)
 		{
-			characters.add(new Character(Test.getActionList(), names.getRandomName(), Test.getAllVirtues(), Test.getAllPassions()));
+			characters.add(new Character(Test.getActionList(), Test.getStateList(), names.getRandomName(), Test.getAllVirtues(), Test.getAllPassions(), Test.getSubvirtuesToTable()));
 			System.out.println("Character Stats");
 			System.out.println(characters.get(i).getVirtuesAndVices());
 		}
-		Action tempAction;
-		for(int i = 0; i < 3000; i++)
+		for(int i = 0; i < 300; i++)
 		{
+			char2 = rand.nextInt(characters.size());
 			for(Character chara : characters)
 			{
-				chara.listOfAllActions.getLast().evaluateChoice(chara, characters.get(rand.nextInt(characters.size())),characters.get(rand.nextInt(characters.size())));
+				rand.setSeed(rand.nextLong());
+				char1 = rand.nextInt(characters.size());
+				chara.listOfAllActions.getLast().evaluateChoice(chara, characters.get(char1),characters.get(char2));
+				rand.setSeed(rand.nextLong());
+				char2 = rand.nextInt(characters.size());
 			}
 		}
 		for(Character chara: characters)
 		{
 			try {
+				oldChar = chara;
+				System.err.println(chara.getName());
 				outputtedStores.write("New Story: "+"\n");
 				outputtedStores.write(chara.getStory() + "\n");
+				outputtedStores.write(chara.getVirtuesAndVices() + "\n");
+				outputtedStores.write(chara.getPassions() + "\n");
+				outputtedStores.write(chara.generateObjectivePoint().toString());
 			}
 			catch(IOException e)
 			{

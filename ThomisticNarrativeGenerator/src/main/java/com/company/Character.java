@@ -9,28 +9,43 @@ public class Character
     int age, mortalSinsRemaining, deathAge;
     String story;
     boolean stateOfGrace;
-    LinkedList<Action> listOfAllActions, actionBank;
+    LinkedList<Action> listOfAllActions, actionBank, stateBank;
     private HashMap<String,Integer> virtuesAndVices;
     private HashMap<String,Integer> passions;
     private Relationship relationships;
-    public Character(LinkedList<Action> act,  String namen, HashMap<String,Integer> Virtus, HashMap<String,Integer> passion)
+    private LinkedList<String> properVirtueAndPassionNames = new LinkedList<>();
+    public Character(LinkedList<Action> act, LinkedList<Action> state,  String namen, HashMap<String,Integer> Virtus, HashMap<String,Integer> passion, LinkedList<String> VirtueAndPassionNames)
     {
         this.stateOfGrace = true; //We'll presuppose they're baptised
         this.story = "";
         this.name = namen;
-        this.virtuesAndVices = Virtus;
-        this.passions = passion;
+        //new Character(Test.getActionList(), Test.getStateList(), names.getRandomName(), Test.getAllVirtues(), Test.getAllPassions())
+        this.virtuesAndVices = (HashMap<String,Integer>) Virtus.clone();
+        this.passions = (HashMap<String,Integer>)  passion.clone();
+        setProperVirtueAndPassionNames(VirtueAndPassionNames);
+        System.err.println("Character Stats: " + this.getVirtuesAndVices() + " " + this.getPassions());
         this.age = rand.nextInt(70);
         this.deathAge = rand.nextInt(80) + 40;
         actionBank = (LinkedList<Action>) act.clone();
+        stateBank = (LinkedList<Action>) state.clone();
+        System.err.println(stateBank.size());
+        System.err.println(actionBank.size());
         //Action test = act.copyAllContents(act);
         /*while(test.getSubsequentAction() != null)
         {
-            System.out.println("Does copy all contents work : " + act.copyAllContents(act));
+            //System.out.println("Does copy all contents work : " + act.copyAllContents(act));
             test = test.getSubsequentAction();
         }*/
         listOfAllActions = new LinkedList<>();
         listOfAllActions.add(actionBank.get(rand.nextInt(actionBank.size())));
+    }
+
+    public LinkedList<String> getProperVirtueAndPassionNames() {
+        return properVirtueAndPassionNames;
+    }
+
+    public void setProperVirtueAndPassionNames(LinkedList<String> properVirtueAndPassionNames) {
+        this.properVirtueAndPassionNames = properVirtueAndPassionNames;
     }
 
     public String getStory() {
@@ -54,8 +69,9 @@ public class Character
         return i;
     }
 
+
     public LinkedList<Action> getActionBank() {
-        return actionBank;
+        Collections.shuffle(this.actionBank);return actionBank;
     }
 
     public Random getRand() {
@@ -90,6 +106,14 @@ public class Character
         this.deathAge = deathAge;
     }
 
+    public LinkedList<Action> getStateBank() {
+        Collections.shuffle(this.stateBank); return stateBank;
+    }
+
+    public void setStateBank(LinkedList<Action> stateBank) {
+         this.stateBank = stateBank;
+    }
+
     public int getMortalSinsRemaining() {
         return mortalSinsRemaining;
     }
@@ -107,7 +131,7 @@ public class Character
     }
 
     public HashMap<String, Integer> getPassions() {
-        return passions;
+         return passions;
     }
 
     public Relationship getRelationships() {
@@ -150,7 +174,7 @@ public class Character
             precons = nextAction.getPreConditions().getVirtueEffects();
             try
             {
-                System.out.println("Finding Subsequent Action " + nextAction.getId());
+                //System.out.println("Finding Subsequent Action " + nextAction.getId());
             }
             catch(Exception e)
             {
@@ -191,7 +215,7 @@ public class Character
         }
         if(!isFound)
         {
-            System.out.println("Finding Random Action");
+            //System.out.println("Finding Random Action");
             nextAction = getRandomAction();
         }
         C.setAge(C.getAge() + 1);
@@ -209,7 +233,7 @@ public class Character
             nextAction = act.next();
         }
 
-        System.out.println("Random Action: " + nextAction.getId());
+        //System.out.println("Random Action: " + nextAction.getId());
         return nextAction;
     }
     public void generateRelationships(LinkedList<Character> characters)
@@ -252,7 +276,7 @@ public class Character
     }
     public void printStory(BibleLoader bible, NameGenerator generator)
     {
-        System.out.println("Test");
+        //System.out.println("Test");
         Iterator<Action> listOfAll = listOfAllActions.iterator();
         Action tempAct;
         while(listOfAll.hasNext())
@@ -263,8 +287,8 @@ public class Character
                 Object output = tempAct.getPostConditionsAccept().getOtherEffects().get("POSTCONDITIONS_ACCEPT_OUTPUT");
                 if(toPrint instanceof String) {
                     toPrint = (String)output;
-                    System.out.println(toPrint.replace("<1>", generator.getRandomName()).replace("<2>", generator.getRandomName()).replace("<3>", generator.getRandomName()));
-                    System.out.println(tempAct.getPostConditionsAccept().getVirtueEffects());
+                    //System.out.println(toPrint.replace("<1>", generator.getRandomName()).replace("<2>", generator.getRandomName()).replace("<3>", generator.getRandomName()));
+                    //System.out.println(tempAct.getPostConditionsAccept().getVirtueEffects());
                 }
             }
             catch(Exception e)
@@ -274,7 +298,7 @@ public class Character
             }
             if(tempAct.getScriptures() != null)
             {
-                System.out.println(bible.getVerse(tempAct.getScriptures().get(0)));
+                //System.out.println(bible.getVerse(tempAct.getScriptures().get(0)));
             }
         }
     }
@@ -344,9 +368,121 @@ public class Character
             if(currentVirtue.contentEquals("ANGER") || currentVirtue.contentEquals("DARING") || currentVirtue.contentEquals("PLEASURE")
                     || currentVirtue.contentEquals("HOPE") || currentVirtue.contentEquals("LOVE"))
             {
-                newValue = newValue + passions.get(currentVirtue) + rand.nextInt(7) - 3;
+                newValue = newValue + passions.get(currentVirtue) + rand.nextInt(30) - 15;
                 passions.replace(currentVirtue,newValue);
             }
         }
+    }
+    public void calmDown()
+    {
+        Iterator<String> passionIterate = getPassions().keySet().iterator();
+        HashMap<String, Integer> emotions;
+        String passion;
+        while(passionIterate.hasNext())
+        {
+            passion = passionIterate.next();
+            emotions = getPassions();
+            if(getPassions().get(passion) > 0) {
+                emotions.replace(passion, getPassions().get(passion) - 5);
+            }
+            else
+            {
+                emotions.replace(passion, getPassions().get(passion) + 5);
+            }
+            setPassions(emotions);
+        }
+    }
+    public void fallingOutOfTheHabit()
+    {
+        Iterator<String> passionIterate = getVirtuesAndVices().keySet().iterator();
+        HashMap<String, Integer> virtues;
+        String virtue;
+        while(passionIterate.hasNext())
+        {
+            virtue = passionIterate.next();
+            virtues = getVirtuesAndVices();
+            if(virtues.get(virtue) > 0) {
+                virtues.replace(virtue, virtues.get(virtue) - 1);
+            }
+            else
+            {
+                virtues.replace(virtue, virtues.get(virtue) + 1);
+            }
+            setVirtuesAndVices(virtues);
+        }
+    }
+
+    public graphNode generateObjectivePoint()
+    {
+        System.err.println(this.getName());
+        Iterator<String> throughNodes = properVirtueAndPassionNames.iterator();
+        Iterator<String> virtuesandVicesIt;
+        boolean hasNoVirtue;
+        LinkedList<String> visited = new LinkedList<>();
+        HashMap<String, Integer> values = new HashMap<>();
+        String current, toTest, toSet;
+        while(throughNodes.hasNext())
+        {
+            current = throughNodes.next();
+            //System.err.println(current);
+            hasNoVirtue = true;
+            virtuesandVicesIt = virtuesAndVices.keySet().iterator();
+            while(virtuesandVicesIt.hasNext())
+            {
+                toTest= virtuesandVicesIt.next();
+                if(!visited.contains(toTest) && current.contains(toTest) && !toTest.contains("index") && !toTest.contains("index") && !toTest.contains("IS_PRECOND") && !toTest.contains("IS_POSTCON") &&  !toTest.contains("_PERSON") && !toTest.contains("IS_ABOVE") && !toTest.contains("ACTION_ID"))
+                {
+                    hasNoVirtue = false;
+                    toSet = current.replace(toTest,"").replace("_","").replace("VIRTUE","");
+                    if(toSet.isEmpty())
+                    {
+                        if(current.contains("CHARITY"))
+                        {
+                            toSet = "CHARITY";
+                        }
+                        else if(current.contains("HOPE"))
+                        {
+                            toSet = "HOPE";
+                        }
+                    }
+                    //System.err.println("To Set: "+ toSet + "Test: " + toTest);
+                    if(!toSet.isEmpty() && !values.containsKey(toSet))
+                    {
+                        //System.err.println("Setting: " + virtuesAndVices.get(toTest));
+                        values.put(toSet, virtuesAndVices.get(toTest));
+                    }
+                    else if(!toSet.isEmpty() &&!toTest.contains("index") && !toTest.contains("index") && !toTest.contains("IS_PRECOND") && !toTest.contains("IS_POSTCON") &&  !toTest.contains("_PERSON") && !toTest.contains("IS_ABOVE") && !toTest.contains("ACTION_ID"))
+                    {
+                        //System.err.println(virtuesAndVices.get(toTest));
+                        values.replace(toSet, values.get(toSet) + virtuesAndVices.get(toTest));
+                    }
+                    visited.add(toTest);
+                    break;
+                }
+            }
+            virtuesandVicesIt = passions.keySet().iterator();
+            while(virtuesandVicesIt.hasNext() && hasNoVirtue && current.contains("PASSION") )
+            {
+                toTest= virtuesandVicesIt.next();
+                if(current.contains(toTest) && !visited.contains(toTest))
+                {
+                    toSet = current.replace(toTest,"").replace("_","");
+                    if(!toSet.isEmpty() && !values.containsKey(toSet) && !toTest.contains("index") && !toTest.contains("index") && !toTest.contains("IS_PRECOND") && !toTest.contains("IS_POSTCON") &&  !toTest.contains("_PERSON") && !toTest.contains("IS_ABOVE") && !toTest.contains("ACTION_ID"))
+                    {
+                        values.put(toSet, passions.get(toTest));
+                    }
+                    else if(!toSet.isEmpty() && !toTest.contains("index") && !toTest.contains("index") && !toTest.contains("IS_PRECOND") && !toTest.contains("IS_POSTCON") &&  !toTest.contains("_PERSON") && !toTest.contains("IS_ABOVE") && !toTest.contains("ACTION_ID"))
+                    {
+                        values.replace(toSet, values.get(toSet) + passions.get(toTest));
+                    }
+                    visited.add(toTest);
+                    break;
+                }
+            }
+
+        }
+        graphNode node = new graphNode(values);
+
+        return node;
     }
 }

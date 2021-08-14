@@ -76,14 +76,16 @@ PROBLEMS:
 	- If not done, finally finish the SQL stuff and fix the loading code X
 	- Generate Characters with proper current stats, passions and relationships in the two hashmaps X
 	- Finish Will Mechanic X 
-	- Adding additional actions 
+	- Adding additional actions X
 	- 1 Generation done X
 	- Multi Objective Algorithm Implementation
 5th August-12th August:
-	- Adding additional actions 
+	- Adding additional actions X
+	- MOEA understanding (Sorta) 
+12th August-19th August:
 	- Multi Objective Algorithm Implementation
 	- Finish MOEA 
-12th August-19th August:
+	- Add some venial actions and some neutral actions 
 	- Draft questions for the study 
 19th August-26th August: 
 	- Begin to gather people to read the stories and get information out of them 

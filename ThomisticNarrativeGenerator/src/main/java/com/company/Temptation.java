@@ -17,27 +17,60 @@ public class Temptation extends Action {
         randomChoice = randomChoice + C.getVirtuesAndVices().get("SUBVIRTUE_HUMILITY");
         randomChoice = randomChoice + C.evaluatePrudence();
         randomChoice = randomChoice + C.evaluatePassions();
-
-
+        int i = 0;
+        LinkedList<String> preconditions = new LinkedList<>();
+        LinkedList<String> allPrecons = new LinkedList<>();
         HashMap<String, Integer> preconEffects = this.PreConditions.getVirtueEffects();
+        for(String keys : preconEffects.keySet())
+        {
+            allPrecons.add(keys);
+        }
         for(int current : preconEffects.values())
         {
+            if(current != 0)
+            {
+                preconditions.add(allPrecons.get(i));
+            }
             randomChoice = randomChoice + (current * 4);
+            i++;
         }
+
+
         if(randomChoice < 60)
         {
+            printARelevantState(preconditions, C, C2, C3);
             doSin(C, C2, C3);
         }
         else
         {
+            printARelevantState(preconditions, C, C2, C3);
             doResistance(C, C2, C3);
         }
-
+        C.emotionalDrift();
+        C.calmDown();
+        C.fallingOutOfTheHabit();
     }
 
     public void doSin(Character C, Character C2, Character C3)
     {
         Conditions effects = this.getPostConditionsReject();
+
+
+        Iterator<String> toDo = effects.getVirtueEffects().keySet().iterator();
+        HashMap<String, Integer> newStatus = C.getVirtuesAndVices();
+        //System.err.println("MEME: " + newStatus);
+        String key, full;
+        while(toDo.hasNext())
+        {
+            full = toDo.next();
+            if(full.contains("ACCEPT")) {
+                System.err.println("RESISTANCE " + full);
+            }
+            key = full.replace("POSTCONDITIONS_ACCEPT_","");
+            //System.err.println("VIRTUES BEFORE THE LOOPING : " + C.getVirtuesAndVices() + " 2: " + C2.getVirtuesAndVices() + " 3: " + C3.getVirtuesAndVices());
+            updateACharacter(C, C2, C3, effects, key, full);
+        }
+
 
         doApplicationOfAction(C,C2,C3,false);
 
@@ -56,8 +89,28 @@ public class Temptation extends Action {
             C.addActionToListofAllActions(C.getNextCharacterAction(C));
         }
     }
+
+
     public void doResistance(Character C, Character C2, Character C3)
     {
+
+        Conditions effects = this.getPostConditionsAccept();
+
+
+        Iterator<String> toDo = effects.getVirtueEffects().keySet().iterator();
+        HashMap<String, Integer> newStatus = C.getVirtuesAndVices();
+        //System.err.println("MEME: " + newStatus);
+        String key, full;
+        while(toDo.hasNext())
+        {
+            full = toDo.next();
+            if(full.contains("ACCEPT")) {
+                System.err.println("RESISTANCE " + full);
+            }
+            key = full.replace("POSTCONDITIONS_ACCEPT_","");
+            //System.err.println("VIRTUES BEFORE THE LOOPING : " + C.getVirtuesAndVices() + " 2: " + C2.getVirtuesAndVices() + " 3: " + C3.getVirtuesAndVices());
+            updateACharacter(C, C2, C3, effects, key, full);
+        }
 
         doApplicationOfAction(C,C2,C3,true);
         if(PostConditionsAccept.getOtherEffects().get("POSTCONDITIONS_ACCEPT_CONSEQUENTIAL_ACTIONS") instanceof String)
