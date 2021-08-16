@@ -24,6 +24,7 @@ public class Character implements Comparable<Character>
         //new Character(Test.getActionList(), Test.getStateList(), names.getRandomName(), Test.getAllVirtues(), Test.getAllPassions())
         this.virtuesAndVices = (HashMap<String,Integer>) Virtus.clone();
         this.passions = (HashMap<String,Integer>)  passion.clone();
+        this.relationships = new HashMap<>();
         setProperVirtueAndPassionNames(VirtueAndPassionNames);
         System.err.println("Character Stats: " + this.getVirtuesAndVices() + " " + this.getPassions());
         this.age = rand.nextInt(70);
@@ -248,7 +249,7 @@ public class Character implements Comparable<Character>
 
         for(Character c : characters)
         {
-            if(c.getName() != c.getName())
+            if(!c.getName().contentEquals(this.getName()) || c.getAge() != this.getAge())
             {
                 relationships.put(c.getName(),new Relationship(c,newPassions));
             }

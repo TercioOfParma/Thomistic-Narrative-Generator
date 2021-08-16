@@ -10,7 +10,7 @@ public class Relationship
     public Relationship(Character A, HashMap<String, Integer> passionsMap)
     {
         characterA = A;
-        passions = passionsMap;
+        passions = (HashMap<String, Integer>)passionsMap.clone();
     }
 
     public Character getCharacterA()

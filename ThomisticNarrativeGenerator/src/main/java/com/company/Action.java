@@ -423,7 +423,7 @@ public abstract class Action
                 //System.err.println("In Passions");
                 newStatus = C2.getPassions();
                 newRelationshipStatus = C2.getRelationships().get(C.getName()).getPassions();
-                newRelationshipStatus.replace(key, newStatus.get(key) + effects.getVirtueEffects().get(full));
+                newRelationshipStatus.replace(key, newRelationshipStatus.get(key) + effects.getVirtueEffects().get(full));
             }
             //System.err.println("Key : " + key + " Full: " + full);
             //System.err.println(effects.getVirtueEffects());
@@ -462,7 +462,7 @@ public abstract class Action
                 //System.err.println("In Passions");
                 newStatus = C3.getPassions();
                 newRelationshipStatus = C3.getRelationships().get(C.getName()).getPassions();
-                newRelationshipStatus.replace(key, newStatus.get(key) + effects.getVirtueEffects().get(full));
+                newRelationshipStatus.replace(key, newRelationshipStatus.get(key) + effects.getVirtueEffects().get(full));
             }
             //System.err.println("Key : " + key + " Full: " + full);
             //System.err.println(newStatus);
@@ -518,9 +518,11 @@ public abstract class Action
                 //System.err.println("Virtues " + C.getVirtuesAndVices() + "\n" + "\n");
                 C.setPassions(newStatus);
                 newRelationshipStatus = C.getRelationships().get(C2.getName()).getPassions();
-                newRelationshipStatus.replace(key, newStatus.get(key) + effects.getVirtueEffects().get(full));
+                System.err.println();
+                System.err.println(key + newRelationshipStatus.get(key) + C3.getName() + " " + C.getName());
+                newRelationshipStatus.replace(key, newRelationshipStatus.get(key) + effects.getVirtueEffects().get(full));
                 newRelationshipStatus = C.getRelationships().get(C3.getName()).getPassions();
-                newRelationshipStatus.replace(key, newStatus.get(key) + effects.getVirtueEffects().get(full));
+                newRelationshipStatus.replace(key, newRelationshipStatus.get(key) + effects.getVirtueEffects().get(full));
             }
         }
     }

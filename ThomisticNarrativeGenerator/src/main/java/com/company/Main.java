@@ -58,6 +58,10 @@ public class Main {
 			System.out.println("Character Stats");
 			System.out.println(characters.get(i).getVirtuesAndVices());
 		}
+		for(int i =0; i < NUMBER_OF_CHARACTERS; i++)
+		{
+			characters.get(i).generateRelationships(characters);
+		}
 		//Initial
 		for(int i = 0; i < LENGTH_OF_STORY; i++)
 		{
@@ -66,9 +70,18 @@ public class Main {
 			{
 				rand.setSeed(rand.nextLong());
 				char1 = rand.nextInt(characters.size());
+				while(characters.get(char1).getName() == chara.getName())
+				{
+					char1 = rand.nextInt(characters.size());
+				}
+				char2 = rand.nextInt(characters.size());
+				while(characters.get(char2).getName() == chara.getName())
+				{
+					char2 = rand.nextInt(characters.size());
+				}
 				chara.listOfAllActions.getLast().evaluateChoice(chara, characters.get(char1),characters.get(char2));
 				rand.setSeed(rand.nextLong());
-				char2 = rand.nextInt(characters.size());
+
 			}
 		}
 		//Generations
