@@ -4,12 +4,16 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintStream;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Random;
 
 public class Main {
 
+	public static final int NUMBER_OF_CHARACTERS = 2000;
+	public static final int LENGTH_OF_STORY = 300;
+	public static final int NUMBER_OF_GENERATIONS = 300;
     public static void main(String[] args)
     {
 		try {
@@ -18,7 +22,9 @@ public class Main {
 			e.printStackTrace();
 		}
 		LinkedList<Character> characters = new LinkedList<>();
-		Character oldChar = null;
+		LinkedList<Character> tempChars = new LinkedList<>();
+		LinkedList<Character> selectedChars = new LinkedList<>();
+		Character oldChar, temporaryChar;
 		Action temp;
 		Random rand = new Random();
 	    BibleLoader bible = new BibleLoader("drb.tsv"); //Operates in the root before src and out
@@ -37,7 +43,6 @@ public class Main {
 		String [] nameFiles = {"ArabicNames.txt","BabylonianNames.txt","CopticNames.txt","GermanicNames.txt","GreekNames.txt","HebrewNames.txt", "RomanNames.txt"};
 		NameGenerator names = new NameGenerator(nameFiles);
 	    ActionLoader Test = new ActionLoader("story_actions.json", "List Of All Virtues.txt", bible, names);
-		Iterator<Action> finalActions;
 
 		System.out.println(scripture.quotePassage("1 Corinthians",13,1, 13,13));
 
@@ -47,13 +52,14 @@ public class Main {
 		System.err.println("All Virtues :" + Test.getAllVirtues());
 		int char1, char2;
 
-		for(int i =0; i < 200; i++)
+		for(int i =0; i < NUMBER_OF_CHARACTERS; i++)
 		{
 			characters.add(new Character(Test.getActionList(), Test.getStateList(), names.getRandomName(), Test.getAllVirtues(), Test.getAllPassions(), Test.getSubvirtuesToTable()));
 			System.out.println("Character Stats");
 			System.out.println(characters.get(i).getVirtuesAndVices());
 		}
-		for(int i = 0; i < 300; i++)
+		//Initial
+		for(int i = 0; i < LENGTH_OF_STORY; i++)
 		{
 			char2 = rand.nextInt(characters.size());
 			for(Character chara : characters)
@@ -64,6 +70,24 @@ public class Main {
 				rand.setSeed(rand.nextLong());
 				char2 = rand.nextInt(characters.size());
 			}
+		}
+		//Generations
+		for(int i = 0; i < NUMBER_OF_GENERATIONS; i++)
+		{
+			Collections.sort(characters);//Sorts based on comparable, I hope
+			selectedChars = new LinkedList<>();
+			for(int j = 0; j < NUMBER_OF_CHARACTERS / 4; j++)
+			{
+				selectedChars.add(characters.get(j));
+			}
+			//crossover
+			tempChars = new LinkedList<>();
+			for(int j = 0; j < NUMBER_OF_CHARACTERS; j++) {
+				temporaryChar = new Character(Test.getActionList(), Test.getStateList(), names.getRandomName(), Test.getAllVirtues(), Test.getAllPassions(), Test.getSubvirtuesToTable());
+				temporaryChar.setListOfAllActions(temporaryChar.fullCrossover(selectedChars, LENGTH_OF_STORY));
+				tempChars.add(temporaryChar);
+			}
+			characters = tempChars;
 		}
 		for(Character chara: characters)
 		{

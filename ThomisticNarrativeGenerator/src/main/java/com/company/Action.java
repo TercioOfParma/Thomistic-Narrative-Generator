@@ -404,6 +404,7 @@ public abstract class Action
 
     protected void updateACharacter(Character C, Character C2, Character C3, Conditions effects, String key, String full) {
         HashMap<String, Integer> newStatus = null;
+        HashMap<String, Integer> newRelationshipStatus = null;
         //System.err.println(key + " " + full);
         full = full.replace("_SECOND_PERSON","").replace("_THIRD_PERSON","");
         if(key.contains("SECOND_PERSON"))
@@ -421,6 +422,8 @@ public abstract class Action
             {
                 //System.err.println("In Passions");
                 newStatus = C2.getPassions();
+                newRelationshipStatus = C2.getRelationships().get(C.getName()).getPassions();
+                newRelationshipStatus.replace(key, newStatus.get(key) + effects.getVirtueEffects().get(full));
             }
             //System.err.println("Key : " + key + " Full: " + full);
             //System.err.println(effects.getVirtueEffects());
@@ -438,6 +441,7 @@ public abstract class Action
                 //System.err.println("Updating Passions " + newStatus + "\n" + "\n");
                 //System.err.println("Vices and Virtues " + C2.getPassions() + "\n" + "\n");
                 C2.setPassions(newStatus);
+                C2.getRelationships().get(C.getName()).setPassions(newRelationshipStatus);
             }
 
         }
@@ -457,6 +461,8 @@ public abstract class Action
             {
                 //System.err.println("In Passions");
                 newStatus = C3.getPassions();
+                newRelationshipStatus = C3.getRelationships().get(C.getName()).getPassions();
+                newRelationshipStatus.replace(key, newStatus.get(key) + effects.getVirtueEffects().get(full));
             }
             //System.err.println("Key : " + key + " Full: " + full);
             //System.err.println(newStatus);
@@ -475,6 +481,7 @@ public abstract class Action
                 //System.err.println("Passions " + newStatus + "\n" + "\n");
                 //System.err.println("Virtues " + C3.getVirtuesAndVices() + "\n" + "\n");
                 C3.setPassions(newStatus);
+                C3.getRelationships().get(C.getName()).setPassions(newRelationshipStatus);
             }
         }
         else
@@ -510,6 +517,10 @@ public abstract class Action
                 //System.err.println("Passions " + newStatus + "\n" + "\n");
                 //System.err.println("Virtues " + C.getVirtuesAndVices() + "\n" + "\n");
                 C.setPassions(newStatus);
+                newRelationshipStatus = C.getRelationships().get(C2.getName()).getPassions();
+                newRelationshipStatus.replace(key, newStatus.get(key) + effects.getVirtueEffects().get(full));
+                newRelationshipStatus = C.getRelationships().get(C3.getName()).getPassions();
+                newRelationshipStatus.replace(key, newStatus.get(key) + effects.getVirtueEffects().get(full));
             }
         }
     }

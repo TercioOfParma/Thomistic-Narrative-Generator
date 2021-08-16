@@ -1,8 +1,10 @@
 package com.company;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.*;
 
-public class Character
+public class Character implements Comparable<Character>
 {
     Random rand = new Random();
     String name;
@@ -12,7 +14,7 @@ public class Character
     LinkedList<Action> listOfAllActions, actionBank, stateBank;
     private HashMap<String,Integer> virtuesAndVices;
     private HashMap<String,Integer> passions;
-    private Relationship relationships;
+    private HashMap<String,Relationship> relationships;
     private LinkedList<String> properVirtueAndPassionNames = new LinkedList<>();
     public Character(LinkedList<Action> act, LinkedList<Action> state,  String namen, HashMap<String,Integer> Virtus, HashMap<String,Integer> passion, LinkedList<String> VirtueAndPassionNames)
     {
@@ -40,6 +42,14 @@ public class Character
         listOfAllActions.add(actionBank.get(rand.nextInt(actionBank.size())));
     }
 
+    @Override
+    public int compareTo(@NotNull Character o)
+    {
+        Integer thisFitness = this.returnFitness(this.getLengthOfActions());
+        return thisFitness.compareTo(o.returnFitness(o.getLengthOfActions()));
+    }
+
+
     public LinkedList<String> getProperVirtueAndPassionNames() {
         return properVirtueAndPassionNames;
     }
@@ -57,16 +67,7 @@ public class Character
     }
     public int getLengthOfActions()
     {
-        Iterator<Action> iterate = listOfAllActions.iterator();
-        Action toCheck;
-        int i = 0;
-        while(iterate.hasNext())
-        {
-            toCheck = iterate.next();
-            i = i + 1;
-        }
-
-        return i;
+        return listOfAllActions.size();
     }
 
 
@@ -134,11 +135,11 @@ public class Character
          return passions;
     }
 
-    public Relationship getRelationships() {
+    public HashMap<String,Relationship>  getRelationships() {
         return relationships;
     }
 
-    public void setRelationships(Relationship relationships) {
+    public void setRelationships(HashMap<String,Relationship> relationships) {
         this.relationships = relationships;
     }
     public Action searchActionBank(String id)
@@ -247,9 +248,9 @@ public class Character
 
         for(Character c : characters)
         {
-            if(c.getName() != this.getName())
+            if(c.getName() != c.getName())
             {
-                relationships.setSubsequentRelationship(new Relationship(this, c, newPassions));
+                relationships.put(c.getName(),new Relationship(c,newPassions));
             }
         }
     }
@@ -484,5 +485,37 @@ public class Character
         graphNode node = new graphNode(values);
 
         return node;
+    }
+
+    public int returnFitness(int positionInActions)
+    {
+        return 0;
+    }
+    public LinkedList<Action> fullCrossover(LinkedList<Character> savedList, int lifeLength)
+    {
+        LinkedList<Action> newLife = new LinkedList<>();
+        int numberOfPoints = 10;
+        int position = 0;
+        int crossoverIncrement = lifeLength / numberOfPoints;
+        Character newChar = savedList.get(rand.nextInt(savedList.size()));
+        for(int i = 0; i < numberOfPoints; i++)
+        {
+            newLife.addAll(crossover(savedList.get(rand.nextInt(savedList.size())),position, i * crossoverIncrement));
+            rand.setSeed(rand.nextLong());
+            position = i * crossoverIncrement;
+        }
+
+        return newLife;
+    }
+    public LinkedList<Action> crossover(Character toCrossover,int start, int point)
+    {
+        LinkedList<Action> newLife = new LinkedList<>();
+        LinkedList<Action> lifeOne, lifeTwo;
+        lifeOne = toCrossover.getListOfAllActions();
+        for(int i = start; i < point; i++)
+        {
+            newLife.add(lifeOne.get(i));
+        }
+        return newLife;
     }
 }
