@@ -451,12 +451,25 @@ public class Character implements Comparable<Character>
                     if(!toSet.isEmpty() && !values.containsKey(toSet))
                     {
                         //System.err.println("Setting: " + virtuesAndVices.get(toTest));
-                        values.put(toSet, virtuesAndVices.get(toTest));
+                        if(toTest.contains("VIRTUE")) {
+                            values.put(toSet, virtuesAndVices.get(toTest));
+                        }
+                        else if(toTest.contains("VICE"))
+                        {
+                            values.put(toSet, 0 - virtuesAndVices.get(toTest));
+                        }
                     }
                     else if(!toSet.isEmpty() &&!toTest.contains("index") && !toTest.contains("index") && !toTest.contains("IS_PRECOND") && !toTest.contains("IS_POSTCON") &&  !toTest.contains("_PERSON") && !toTest.contains("IS_ABOVE") && !toTest.contains("ACTION_ID"))
                     {
                         //System.err.println(virtuesAndVices.get(toTest));
-                        values.replace(toSet, values.get(toSet) + virtuesAndVices.get(toTest));
+                        //Subvirtues and subvices must be taken account of correctly
+                        if(toTest.contains("VIRTUE")) {
+                            values.replace(toSet, values.get(toSet) + virtuesAndVices.get(toTest));
+                        }
+                        else if(toTest.contains("VICE"))
+                        {
+                            values.replace(toSet, values.get(toSet) - virtuesAndVices.get(toTest));
+                        }
                     }
                     visited.add(toTest);
                     break;

@@ -1,12 +1,21 @@
 package com.company;
 
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.LinkedList;
 
 public class graphNode
 {
-    private int prudence,faith,hope,charity,justice,fortitude,temperance, passions;
+    private double prudence,faith,hope,charity,justice,fortitude,temperance, passions;
 
+    private double MAX_VARIABLE;
+    private double MIN_VARIABLE;
 
+    /*
+
+    Normalisation function = x - min / max - min
+     */
+    //Make it clear I'm making something very uncomputational computational
     public graphNode(HashMap<String, Integer> values)
     {
         setCharity(values.get("CHARITY"));
@@ -17,70 +26,114 @@ public class graphNode
         setFortitude(values.get("FORTITUDE"));
         setPrudence(values.get("PRUDENCE"));
         setPassions(values.get("PASSIONS"));
+        normalise();
     }
 
-    public int getPassions() {
-        return passions;
-    }
+    public void normalise()
+    {
+        LinkedList<Double> allValues = new LinkedList<>();
 
-    public void setPassions(int passions) {
-        this.passions = passions;
-    }
+        allValues.add(getFortitude());
+        allValues.add(getHope());
+        allValues.add(getJustice());
+        allValues.add(getPrudence());
+        allValues.add(getFaith());
+        allValues.add(getCharity());
+        allValues.add(getTemperance());
+        Collections.sort(allValues);
+        setMAX_VARIABLE(allValues.getFirst());
+        setMIN_VARIABLE(allValues.getLast());
+        setPrudence(getPrudence());
+        setCharity(getCharity());
+        setFaith(getFaith());
+        setJustice(getJustice());
+        setHope(getHope());
+        setTemperance(getTemperance());
+        setFortitude(getFortitude());
 
-    public int getTemperance() {
-        return temperance;
     }
-
-    public void setTemperance(int temperance) {
-        this.temperance = temperance;
+    public double normaliseValue(double toNormalise)
+    {
+        return toNormalise - getMIN_VARIABLE() / getMAX_VARIABLE() - getMIN_VARIABLE();
     }
-
-    public int getPrudence() {
+    public double getPrudence() {
         return prudence;
     }
 
-    public void setPrudence(int prudence) {
+    public void setPrudence(double prudence) {
         this.prudence = prudence;
     }
 
-    public int getFaith() {
+    public double getFaith() {
         return faith;
     }
 
-    public void setFaith(int faith) {
+    public void setFaith(double faith) {
         this.faith = faith;
     }
 
-    public int getHope() {
+    public double getHope() {
         return hope;
     }
 
-    public void setHope(int hope) {
+    public void setHope(double hope) {
         this.hope = hope;
     }
 
-    public int getCharity() {
+    public double getCharity() {
         return charity;
     }
 
-    public void setCharity(int charity) {
+    public void setCharity(double charity) {
         this.charity = charity;
     }
 
-    public int getJustice() {
+    public double getJustice() {
         return justice;
     }
 
-    public void setJustice(int justice) {
+    public void setJustice(double justice) {
         this.justice = justice;
     }
 
-    public int getFortitude() {
+    public double getFortitude() {
         return fortitude;
     }
 
-    public void setFortitude(int fortitude) {
+    public void setFortitude(double fortitude) {
         this.fortitude = fortitude;
+    }
+
+    public double getTemperance() {
+        return temperance;
+    }
+
+    public void setTemperance(double temperance) {
+        this.temperance = temperance;
+    }
+
+    public double getPassions() {
+        return passions;
+    }
+
+    public void setPassions(double passions) {
+        this.passions = passions;
+    }
+
+    public double getMAX_VARIABLE() {
+        return MAX_VARIABLE;
+    }
+
+    public void setMAX_VARIABLE(double MAX_VARIABLE) {
+        this.MAX_VARIABLE = MAX_VARIABLE;
+    }
+
+    public double getMIN_VARIABLE() {
+        return MIN_VARIABLE;
+    }
+
+    public void setMIN_VARIABLE(double MIN_VARIABLE) {
+        this.MIN_VARIABLE = MIN_VARIABLE;
     }
 
     @Override
