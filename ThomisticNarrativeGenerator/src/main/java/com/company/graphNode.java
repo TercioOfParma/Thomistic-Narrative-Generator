@@ -6,147 +6,89 @@ import java.util.LinkedList;
 
 public class graphNode
 {
-    private double prudence,faith,hope,charity,justice,fortitude,temperance, passions;
-
-    private double MAX_VARIABLE;
-    private double MIN_VARIABLE;
-
+    private HashMap<String,Double> values = new HashMap<>();
+    private final int MAXIMUM = 100000;
+    private final int MINIMUM = -100000;
+    private final int NORMALISED_MAX = 10;
+    private final int NORMALISED_MIN = -10;
     /*
 
     Normalisation function = x - min / max - min
      */
     //Make it clear I'm making something very uncomputational computational
-    public graphNode(HashMap<String, Integer> values)
+    public graphNode(HashMap<String, Double> values)
     {
-        setCharity(values.get("CHARITY"));
-        setFaith(values.get("FAITH"));
-        setHope(values.get("HOPE"));
-        setJustice(values.get("JUSTICE"));
-        setTemperance(values.get("TEMPERANCE"));
-        setFortitude(values.get("FORTITUDE"));
-        setPrudence(values.get("PRUDENCE"));
-        setPassions(values.get("PASSIONS"));
-        normalise();
+        this.values = (HashMap<String, Double>) values.clone();
     }
 
-    public void normalise()
+    public LinkedList<graphNode> normalise(LinkedList<graphNode> nodes)
     {
-        LinkedList<Double> allValues = new LinkedList<>();
-
-        allValues.add(getFortitude());
-        allValues.add(getHope());
-        allValues.add(getJustice());
-        allValues.add(getPrudence());
-        allValues.add(getFaith());
-        allValues.add(getCharity());
-        allValues.add(getTemperance());
-        Collections.sort(allValues);
-        setMAX_VARIABLE(allValues.getFirst());
-        setMIN_VARIABLE(allValues.getLast());
-        setPrudence(getPrudence());
-        setCharity(getCharity());
-        setFaith(getFaith());
-        setJustice(getJustice());
-        setHope(getHope());
-        setTemperance(getTemperance());
-        setFortitude(getFortitude());
+        String [] dimensions = {"FAITH", "HOPE", "CHARITY", "PRUDENCE", "JUSTICE", "TEMPERANCE", "FORTITUDE", "PASSIONS"};
+        double maximum, minimum, toTest;
+        LinkedList<graphNode> nodes2 = new LinkedList<>();
+        for(String toResolve : dimensions)
+        {
+            System.err.println(toResolve);
+            maximum = MINIMUM;
+            minimum = MAXIMUM;
+            for(graphNode toGrab : nodes)
+            {
+                toTest = toGrab.getValues().get(toResolve);
+                if(Double.compare(toTest,maximum) > 0)
+                {
+                    maximum = toTest;
+                }
+                if(Double.compare(toTest,minimum) < 0)
+                {
+                    minimum = toTest;
+                }
+            }
+            if(Double.compare(MAXIMUM,minimum) == 0)
+            {
+                minimum = 0;
+            }
+            if(Double.compare(MINIMUM,maximum) == 0)
+            {
+                maximum = 0;
+            }
+            for(graphNode toNormalise : nodes)
+            {
+                toNormalise.getValues().replace(toResolve, normaliseValue(toNormalise.getValues().get(toResolve), minimum, maximum) );
+            }
+        }
+        nodes2.addAll(nodes);
+        return nodes2;
 
     }
-    public double normaliseValue(double toNormalise)
+
+    public HashMap<String, Double> getValues() {
+        return values;
+    }
+
+    public void setValues(HashMap<String, Double> values) {
+        this.values = values;
+    }
+
+    public double normaliseValue(double toNormalise, double min, double max)
     {
-        return toNormalise - getMIN_VARIABLE() / getMAX_VARIABLE() - getMIN_VARIABLE();
-    }
-    public double getPrudence() {
-        return prudence;
-    }
+        double normalise =  (NORMALISED_MAX - NORMALISED_MIN) * ((toNormalise - min) / (max - min)) + NORMALISED_MIN;
+        System.err.println(normalise + " To normalise : " + toNormalise + " Minimum: " + min + " Maximum: " + max);
+        if(normalise == Double.POSITIVE_INFINITY)
+        {
+            normalise = 1;
+        }
+        else if (normalise == Double.NEGATIVE_INFINITY)
+        {
+            normalise = -1;
+        }
 
-    public void setPrudence(double prudence) {
-        this.prudence = prudence;
-    }
-
-    public double getFaith() {
-        return faith;
-    }
-
-    public void setFaith(double faith) {
-        this.faith = faith;
-    }
-
-    public double getHope() {
-        return hope;
-    }
-
-    public void setHope(double hope) {
-        this.hope = hope;
-    }
-
-    public double getCharity() {
-        return charity;
-    }
-
-    public void setCharity(double charity) {
-        this.charity = charity;
-    }
-
-    public double getJustice() {
-        return justice;
-    }
-
-    public void setJustice(double justice) {
-        this.justice = justice;
-    }
-
-    public double getFortitude() {
-        return fortitude;
-    }
-
-    public void setFortitude(double fortitude) {
-        this.fortitude = fortitude;
-    }
-
-    public double getTemperance() {
-        return temperance;
-    }
-
-    public void setTemperance(double temperance) {
-        this.temperance = temperance;
-    }
-
-    public double getPassions() {
-        return passions;
-    }
-
-    public void setPassions(double passions) {
-        this.passions = passions;
-    }
-
-    public double getMAX_VARIABLE() {
-        return MAX_VARIABLE;
-    }
-
-    public void setMAX_VARIABLE(double MAX_VARIABLE) {
-        this.MAX_VARIABLE = MAX_VARIABLE;
-    }
-
-    public double getMIN_VARIABLE() {
-        return MIN_VARIABLE;
-    }
-
-    public void setMIN_VARIABLE(double MIN_VARIABLE) {
-        this.MIN_VARIABLE = MIN_VARIABLE;
+        return normalise;
     }
 
     @Override
     public String toString() {
         return "graphNode{" +
-                "prudence=" + prudence +
-                ", faith=" + faith +
-                ", hope=" + hope +
-                ", charity=" + charity +
-                ", justice=" + justice +
-                ", fortitude=" + fortitude +
-                ", temperance=" + temperance +
-                ", passions=" + passions +
+                "values=" + values +
                 '}';
     }
 }

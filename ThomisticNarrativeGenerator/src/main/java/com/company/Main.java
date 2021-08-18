@@ -1,5 +1,6 @@
 package com.company;
 
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -11,9 +12,11 @@ import java.util.Random;
 
 public class Main {
 
-	public static final int NUMBER_OF_CHARACTERS = 2000;
-	public static final int LENGTH_OF_STORY = 300;
-	public static final int NUMBER_OF_GENERATIONS = 300;
+	public static final int NUMBER_OF_CHARACTERS = 100;
+	public static final int LENGTH_OF_STORY = 3000;
+	public static final int NUMBER_OF_GENERATIONS = 5;
+	public static final int NUMBER_OF_POINTS = 10;
+	public static final int GRAPH_INTERVAL = LENGTH_OF_STORY / NUMBER_OF_POINTS;
     public static void main(String[] args)
     {
 		try {
@@ -24,6 +27,8 @@ public class Main {
 		LinkedList<Character> characters = new LinkedList<>();
 		LinkedList<Character> tempChars = new LinkedList<>();
 		LinkedList<Character> selectedChars = new LinkedList<>();
+		LinkedList<Action> lifeToExecute = new LinkedList<>();
+		LinkedList<graphNode> toAddToFile = new LinkedList<>();
 		Character oldChar, temporaryChar;
 		Action temp;
 		Random rand = new Random();
@@ -54,7 +59,7 @@ public class Main {
 
 		for(int i =0; i < NUMBER_OF_CHARACTERS; i++)
 		{
-			characters.add(new Character(Test.getActionList(), Test.getStateList(), names.getRandomName(), Test.getAllVirtues(), Test.getAllPassions(), Test.getSubvirtuesToTable()));
+			characters.add(new Character(Test.getActionList(), Test.getStateList(), names.getRandomName(), Test.getAllVirtues(), Test.getAllPassions(), Test.getSubvirtueToVirtue(), GRAPH_INTERVAL));
 			System.out.println("Character Stats");
 			System.out.println(characters.get(i).getVirtuesAndVices());
 		}
@@ -84,9 +89,17 @@ public class Main {
 
 			}
 		}
+		for(Character chara: characters)
+		{
+			chara.setCrucialPoints(chara.getCrucialPoints().get(1).normalise(chara.getCrucialPoints()));
+		}
+
+
 		//Generations
+
 		for(int i = 0; i < NUMBER_OF_GENERATIONS; i++)
 		{
+			System.err.println("Generation: " + (i + 1));
 			Collections.sort(characters);//Sorts based on comparable, I hope
 			selectedChars = new LinkedList<>();
 			for(int j = 0; j < NUMBER_OF_CHARACTERS / 4; j++)
@@ -95,23 +108,61 @@ public class Main {
 			}
 			//crossover
 			tempChars = new LinkedList<>();
+			// Crossover
 			for(int j = 0; j < NUMBER_OF_CHARACTERS; j++) {
-				temporaryChar = new Character(Test.getActionList(), Test.getStateList(), names.getRandomName(), Test.getAllVirtues(), Test.getAllPassions(), Test.getSubvirtuesToTable());
+				temporaryChar = new Character(Test.getActionList(), Test.getStateList(), names.getRandomName(), Test.getAllVirtues(), Test.getAllPassions(), Test.getSubvirtueToVirtue(), GRAPH_INTERVAL);
 				temporaryChar.setListOfAllActions(temporaryChar.fullCrossover(selectedChars, LENGTH_OF_STORY));
 				tempChars.add(temporaryChar);
 			}
+
 			characters = tempChars;
+			//Make up their relationships
+			for(int j = 0; j < NUMBER_OF_CHARACTERS; j++)
+			{
+				characters.get(j).generateRelationships(characters);
+			}
+			//Run the new lives
+			for(Character chara : characters)
+			{
+				lifeToExecute = chara.getListOfAllActions();
+				for(Action toExecute : lifeToExecute)
+				{
+					rand.setSeed(rand.nextLong());
+					char1 = rand.nextInt(characters.size());
+					while(characters.get(char1).getName() == chara.getName())
+					{
+						char1 = rand.nextInt(characters.size());
+					}
+					char2 = rand.nextInt(characters.size());
+					while(characters.get(char2).getName() == chara.getName())
+					{
+						char2 = rand.nextInt(characters.size());
+					}
+					toExecute.executeActionInSubsequentGenerations(chara, characters.get(char1),characters.get(char2));
+					rand.setSeed(rand.nextLong());
+				}
+			}
+			for(Character chara: characters)
+			{
+				chara.setCrucialPoints(chara.getCrucialPoints().get(1).normalise(chara.getCrucialPoints()));
+			}
+
 		}
 		for(Character chara: characters)
 		{
+			System.err.println("PRINTING FILE");
 			try {
 				oldChar = chara;
-				System.err.println(chara.getName());
+				System.err.println("Current Char : " + chara.getName());
 				outputtedStores.write("New Story: "+"\n");
 				outputtedStores.write(chara.getStory() + "\n");
 				outputtedStores.write(chara.getVirtuesAndVices() + "\n");
 				outputtedStores.write(chara.getPassions() + "\n");
-				outputtedStores.write(chara.generateObjectivePoint().toString());
+				toAddToFile = chara.getCrucialPoints();
+				for(graphNode test : toAddToFile)
+				{
+					outputtedStores.write(test.toString() + "\n");
+				}
 			}
 			catch(IOException e)
 			{
@@ -119,6 +170,7 @@ public class Main {
 			}
 
 		}
+
 
 
     }

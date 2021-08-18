@@ -27,9 +27,9 @@ Structure:
 
 EXCEEDING EXPECTATIONS:
 	- Was able to add Second person and third person postconditions despite thinking it was too complicated 
-	- Added a calm down function and an emotional drift function 
+	- Added a calm down function and an emotional drift function and a function for virtue slackening
 	- Added 900 emotional, relational and virtuous state indicators via a script 
-
+	- Unexpected benefit of having a loose critical point based system : I can potentially compare lives of different lengths on similar terms provided they're in the same order
 PROBLEMS:
 - Strange problems with there being an infinite loop on self implemented Linked Lists 
 - Problems with JSON made it necessary to convert to CSV and then to SQLite 

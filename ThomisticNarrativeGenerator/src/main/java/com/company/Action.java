@@ -2,7 +2,7 @@ package com.company;
 
 import java.util.*;
 
-public abstract class Action
+public abstract class Action implements Cloneable
 {
     protected LinkedList<Action> allActions;
     protected Conditions PreConditions = new Conditions();
@@ -10,6 +10,7 @@ public abstract class Action
     protected Conditions PostConditionsReject = new Conditions();;
     protected String id;
     private Random rand = new Random();
+    private boolean isAccepted;
     private LinkedList<String> scriptures;
 
     public LinkedList<Action> getAllActions() {
@@ -45,6 +46,15 @@ public abstract class Action
 
         return tempt;
     }
+
+    public boolean getAccepted() {
+        return isAccepted;
+    }
+
+    public void setAccepted(boolean accepted) {
+        isAccepted = accepted;
+    }
+
     public void printAllActions(Action A)
     {
         Action tempIterate = A;
@@ -55,6 +65,20 @@ public abstract class Action
             tempIterate = iterate.next();
             System.err.println(tempIterate.getId());
 
+        }
+    }
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
+    public Action returnClone()
+    {
+        try {
+            return (Action) clone();
+        }
+        catch(Exception e)
+        {
+            return null;
         }
     }
     public LinkedList<Action> copyAllContents(Action actionList)
@@ -242,7 +266,7 @@ public abstract class Action
             }
         }
         if(!newThing.contains("_")) {
-            System.err.println("To add to the Story " + newThing);
+            //System.err.println("To add to the Story " + newThing);
             C.setStory(C.getStory() + newThing);
         }
 
@@ -397,14 +421,79 @@ public abstract class Action
         toAddToStory =  toAddToStory.replace("<3>", C2.getName());
         //System.out.println("To Add: " + toAddToStory);
         C.setStory(C.getStory() + toAddToStory);
+        C.setCurrentActions(C.getCurrentActions() + 1);
+        if(C.getCurrentActions() % C.getNodeInterval() == 0)
+        {
+            System.err.println("Generating Objective Point : " + C.getCurrentActions() + " For: " + C.getName());
+            C.addCrucialPoint(C.generateObjectivePoint());
+            System.err.println(C.getCrucialPoints());
+        }
         //System.out.println("Updated Story : " + C.getStory());
         //System.out.println("Done!");
 
     }
+    protected void executeActionInSubsequentGenerations(Character C, Character C2, Character C3)
+    {
+        int i = 0;
+        LinkedList<String> preconditions = new LinkedList<>();
+        LinkedList<String> allPrecons = new LinkedList<>();
+        HashMap<String, Integer> preconEffects = this.PreConditions.getVirtueEffects();
+        for(String keys : preconEffects.keySet())
+        {
+            allPrecons.add(keys);
+        }
+        for(int current : preconEffects.values())
+        {
+            if(current != 0)
+            {
+                preconditions.add(allPrecons.get(i));
+            }
+            i++;
+        }
 
+        printARelevantState(preconditions, C, C2, C3);
+        doAction(C, C2, C3);
+        C.emotionalDrift();
+        C.calmDown();
+        C.fallingOutOfTheHabit();
+
+    }
+
+    // This does an action in isolation, important for subsequent generations
+    public void doAction(Character C, Character C2, Character C3)
+    {
+        Conditions effects;
+        if(this.getAccepted())
+        {
+            effects = this.getPostConditionsAccept();
+        }
+        else
+        {
+            effects = this.getPostConditionsReject();
+        }
+
+        if(this instanceof ActualGrace && !this.getAccepted())
+        {
+            return;
+        }
+        Iterator<String> toDo = effects.getVirtueEffects().keySet().iterator();
+        HashMap<String, Integer> newStatus = C.getVirtuesAndVices();
+        //System.err.println("MEME: " + newStatus);
+        String key, full;
+        while(toDo.hasNext())
+        {
+            full = toDo.next();
+            key = full.replace("POSTCONDITIONS_ACCEPT_","");
+            //System.err.println("VIRTUES BEFORE THE LOOPING : " + C.getVirtuesAndVices() + " 2: " + C2.getVirtuesAndVices() + " 3: " + C3.getVirtuesAndVices());
+            updateACharacter(C, C2, C3, effects, key, full);
+        }
+
+        doApplicationOfAction(C,C2,C3,true);
+    }
     protected void updateACharacter(Character C, Character C2, Character C3, Conditions effects, String key, String full) {
         HashMap<String, Integer> newStatus = null;
         HashMap<String, Integer> newRelationshipStatus = null;
+
         //System.err.println(key + " " + full);
         full = full.replace("_SECOND_PERSON","").replace("_THIRD_PERSON","");
         if(key.contains("SECOND_PERSON"))
@@ -422,8 +511,14 @@ public abstract class Action
             {
                 //System.err.println("In Passions");
                 newStatus = C2.getPassions();
-                newRelationshipStatus = C2.getRelationships().get(C.getName()).getPassions();
-                newRelationshipStatus.replace(key, newRelationshipStatus.get(key) + effects.getVirtueEffects().get(full));
+                try {
+                    newRelationshipStatus = C2.getRelationships().get(C.getName()).getPassions();
+                    newRelationshipStatus.replace(key, newRelationshipStatus.get(key) + effects.getVirtueEffects().get(full));
+                }
+                catch(Exception e)
+                {
+
+                }
             }
             //System.err.println("Key : " + key + " Full: " + full);
             //System.err.println(effects.getVirtueEffects());
@@ -441,7 +536,13 @@ public abstract class Action
                 //System.err.println("Updating Passions " + newStatus + "\n" + "\n");
                 //System.err.println("Vices and Virtues " + C2.getPassions() + "\n" + "\n");
                 C2.setPassions(newStatus);
-                C2.getRelationships().get(C.getName()).setPassions(newRelationshipStatus);
+                try {
+                    C2.getRelationships().get(C.getName()).setPassions(newRelationshipStatus);
+                }
+                catch(Exception e)
+                {
+
+                }
             }
 
         }
@@ -461,8 +562,14 @@ public abstract class Action
             {
                 //System.err.println("In Passions");
                 newStatus = C3.getPassions();
-                newRelationshipStatus = C3.getRelationships().get(C.getName()).getPassions();
-                newRelationshipStatus.replace(key, newRelationshipStatus.get(key) + effects.getVirtueEffects().get(full));
+                try {
+                    newRelationshipStatus = C3.getRelationships().get(C.getName()).getPassions();
+                    newRelationshipStatus.replace(key, newRelationshipStatus.get(key) + effects.getVirtueEffects().get(full));
+                }
+                catch(Exception e)
+                {
+
+                }
             }
             //System.err.println("Key : " + key + " Full: " + full);
             //System.err.println(newStatus);
@@ -481,7 +588,13 @@ public abstract class Action
                 //System.err.println("Passions " + newStatus + "\n" + "\n");
                 //System.err.println("Virtues " + C3.getVirtuesAndVices() + "\n" + "\n");
                 C3.setPassions(newStatus);
-                C3.getRelationships().get(C.getName()).setPassions(newRelationshipStatus);
+                try {
+                    C3.getRelationships().get(C.getName()).setPassions(newRelationshipStatus);
+                }
+                catch(Exception e)
+                {
+
+                }
             }
         }
         else
@@ -517,12 +630,18 @@ public abstract class Action
                 //System.err.println("Passions " + newStatus + "\n" + "\n");
                 //System.err.println("Virtues " + C.getVirtuesAndVices() + "\n" + "\n");
                 C.setPassions(newStatus);
-                newRelationshipStatus = C.getRelationships().get(C2.getName()).getPassions();
-                System.err.println();
-                System.err.println(key + newRelationshipStatus.get(key) + C3.getName() + " " + C.getName());
-                newRelationshipStatus.replace(key, newRelationshipStatus.get(key) + effects.getVirtueEffects().get(full));
-                newRelationshipStatus = C.getRelationships().get(C3.getName()).getPassions();
-                newRelationshipStatus.replace(key, newRelationshipStatus.get(key) + effects.getVirtueEffects().get(full));
+                try {
+                    newRelationshipStatus = C.getRelationships().get(C2.getName()).getPassions();
+                    //System.err.println();
+                    //System.err.println(key + newRelationshipStatus.get(key) + C3.getName() + " " + C.getName());
+                    newRelationshipStatus.replace(key, newRelationshipStatus.get(key) + effects.getVirtueEffects().get(full));
+                    newRelationshipStatus = C.getRelationships().get(C3.getName()).getPassions();
+                    newRelationshipStatus.replace(key, newRelationshipStatus.get(key) + effects.getVirtueEffects().get(full));
+                }
+                catch(Exception e)
+                {
+                    System.err.println(e);
+                }
             }
         }
     }

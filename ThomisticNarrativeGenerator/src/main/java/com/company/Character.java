@@ -8,24 +8,28 @@ public class Character implements Comparable<Character>
 {
     Random rand = new Random();
     String name;
-    int age, mortalSinsRemaining, deathAge;
+    private int age, mortalSinsRemaining, deathAge, nodeInterval;
+    private int currentActions = 0;
     String story;
     boolean stateOfGrace;
     LinkedList<Action> listOfAllActions, actionBank, stateBank;
+    LinkedList<graphNode> crucialPoints;
     private HashMap<String,Integer> virtuesAndVices;
     private HashMap<String,Integer> passions;
     private HashMap<String,Relationship> relationships;
-    private LinkedList<String> properVirtueAndPassionNames = new LinkedList<>();
-    public Character(LinkedList<Action> act, LinkedList<Action> state,  String namen, HashMap<String,Integer> Virtus, HashMap<String,Integer> passion, LinkedList<String> VirtueAndPassionNames)
+    private HashMap<String, String> subvirtueandviceindex;
+    public Character(LinkedList<Action> act, LinkedList<Action> state,  String namen, HashMap<String,Integer> Virtus, HashMap<String,Integer> passion, HashMap<String, String> SubvirtueToVirtue, int nodeInterval)
     {
         this.stateOfGrace = true; //We'll presuppose they're baptised
         this.story = "";
         this.name = namen;
+        this.nodeInterval = nodeInterval;
         //new Character(Test.getActionList(), Test.getStateList(), names.getRandomName(), Test.getAllVirtues(), Test.getAllPassions())
         this.virtuesAndVices = (HashMap<String,Integer>) Virtus.clone();
         this.passions = (HashMap<String,Integer>)  passion.clone();
         this.relationships = new HashMap<>();
-        setProperVirtueAndPassionNames(VirtueAndPassionNames);
+        crucialPoints = new LinkedList<>();
+        setSubvirtueandviceindex(SubvirtueToVirtue);
         System.err.println("Character Stats: " + this.getVirtuesAndVices() + " " + this.getPassions());
         this.age = rand.nextInt(70);
         this.deathAge = rand.nextInt(80) + 40;
@@ -43,6 +47,42 @@ public class Character implements Comparable<Character>
         listOfAllActions.add(actionBank.get(rand.nextInt(actionBank.size())));
     }
 
+    public LinkedList<graphNode> getCrucialPoints() {
+        return crucialPoints;
+    }
+
+    public void setCrucialPoints(LinkedList<graphNode> crucialPoints) {
+        this.crucialPoints = crucialPoints;
+    }
+    public void addCrucialPoint(graphNode crucialPoint)
+    {
+        this.crucialPoints.add(crucialPoint);
+    }
+
+    public HashMap<String, String> getSubvirtueandviceindex() {
+        return subvirtueandviceindex;
+    }
+
+    public void setSubvirtueandviceindex(HashMap<String, String> subvirtueandviceindex) {
+        this.subvirtueandviceindex = subvirtueandviceindex;
+    }
+
+    public int getNodeInterval() {
+        return nodeInterval;
+    }
+
+    public void setNodeInterval(int nodeInterval) {
+        this.nodeInterval = nodeInterval;
+    }
+
+    public int getCurrentActions() {
+        return currentActions;
+    }
+
+    public void setCurrentActions(int currentActions) {
+        this.currentActions = currentActions;
+    }
+
     @Override
     public int compareTo(@NotNull Character o)
     {
@@ -50,14 +90,6 @@ public class Character implements Comparable<Character>
         return thisFitness.compareTo(o.returnFitness(o.getLengthOfActions()));
     }
 
-
-    public LinkedList<String> getProperVirtueAndPassionNames() {
-        return properVirtueAndPassionNames;
-    }
-
-    public void setProperVirtueAndPassionNames(LinkedList<String> properVirtueAndPassionNames) {
-        this.properVirtueAndPassionNames = properVirtueAndPassionNames;
-    }
 
     public String getStory() {
         return story;
@@ -272,10 +304,13 @@ public class Character implements Comparable<Character>
     {
         actionBank.add(act);
     }
+    // I need the action to be cloned, because if it isn't I'll be making modifications to a pre existing action when I say it's true/false
     public void addActionToListofAllActions(Action act)
     {
-        listOfAllActions.add(act);
+        Action toAdd = act.returnClone();
+        listOfAllActions.add(toAdd);
     }
+
     public void printStory(BibleLoader bible, NameGenerator generator)
     {
         //System.out.println("Test");
@@ -417,87 +452,56 @@ public class Character implements Comparable<Character>
     public graphNode generateObjectivePoint()
     {
         System.err.println(this.getName());
-        Iterator<String> throughNodes = properVirtueAndPassionNames.iterator();
-        Iterator<String> virtuesandVicesIt;
-        boolean hasNoVirtue;
-        LinkedList<String> visited = new LinkedList<>();
-        HashMap<String, Integer> values = new HashMap<>();
-        String current, toTest, toSet;
+        Iterator<String> throughNodes = subvirtueandviceindex.keySet().iterator();
+        String current, virtueLogName, tableName;
+        double toAdd;
+        HashMap<String, Double> values = new HashMap<>();
         while(throughNodes.hasNext())
         {
             current = throughNodes.next();
             //System.err.println(current);
-            hasNoVirtue = true;
-            virtuesandVicesIt = virtuesAndVices.keySet().iterator();
-            while(virtuesandVicesIt.hasNext())
+            if(current.contains("index") || current.contains("IS_PRECOND") || current.contains("IS_POSTCON") || current.contains("_PERSON") || current.contains("IS_ABOVE") || current.contains("ACTION_ID"))
             {
-                toTest= virtuesandVicesIt.next();
-                if(!visited.contains(toTest) && current.contains(toTest) && !toTest.contains("index") && !toTest.contains("index") && !toTest.contains("IS_PRECOND") && !toTest.contains("IS_POSTCON") &&  !toTest.contains("_PERSON") && !toTest.contains("IS_ABOVE") && !toTest.contains("ACTION_ID"))
+                //System.err.println("Not valid");
+            }
+            else if(subvirtueandviceindex.get(current).contains("PASSIONS"))
+            {
+                toAdd = Math.abs(passions.get(current));//We want anger to show up as well
+                //System.err.println(toAdd);
+                //System.err.println(values);
+                if(values.containsKey("PASSIONS"))
                 {
-                    hasNoVirtue = false;
-                    toSet = current.replace(toTest,"").replace("_","").replace("VIRTUE","");
-                    if(toSet.isEmpty())
-                    {
-                        if(current.contains("CHARITY"))
-                        {
-                            toSet = "CHARITY";
-                        }
-                        else if(current.contains("HOPE"))
-                        {
-                            toSet = "HOPE";
-                        }
-                    }
-                    //System.err.println("To Set: "+ toSet + "Test: " + toTest);
-                    if(!toSet.isEmpty() && !values.containsKey(toSet))
-                    {
-                        //System.err.println("Setting: " + virtuesAndVices.get(toTest));
-                        if(toTest.contains("VIRTUE")) {
-                            values.put(toSet, virtuesAndVices.get(toTest));
-                        }
-                        else if(toTest.contains("VICE"))
-                        {
-                            values.put(toSet, 0 - virtuesAndVices.get(toTest));
-                        }
-                    }
-                    else if(!toSet.isEmpty() &&!toTest.contains("index") && !toTest.contains("index") && !toTest.contains("IS_PRECOND") && !toTest.contains("IS_POSTCON") &&  !toTest.contains("_PERSON") && !toTest.contains("IS_ABOVE") && !toTest.contains("ACTION_ID"))
-                    {
-                        //System.err.println(virtuesAndVices.get(toTest));
-                        //Subvirtues and subvices must be taken account of correctly
-                        if(toTest.contains("VIRTUE")) {
-                            values.replace(toSet, values.get(toSet) + virtuesAndVices.get(toTest));
-                        }
-                        else if(toTest.contains("VICE"))
-                        {
-                            values.replace(toSet, values.get(toSet) - virtuesAndVices.get(toTest));
-                        }
-                    }
-                    visited.add(toTest);
-                    break;
+                    values.replace("PASSIONS", values.get("PASSIONS") + toAdd);
+                }
+                else
+                {
+                    values.put("PASSIONS", toAdd);
                 }
             }
-            virtuesandVicesIt = passions.keySet().iterator();
-            while(virtuesandVicesIt.hasNext() && hasNoVirtue && current.contains("PASSION") )
+            else if(subvirtueandviceindex.get(current).contains("VIRTUE"))
             {
-                toTest= virtuesandVicesIt.next();
-                if(current.contains(toTest) && !visited.contains(toTest))
+                toAdd = virtuesAndVices.get(current);
+                //System.err.println(virtuesAndVices.get(current));
+                virtueLogName = subvirtueandviceindex.get(current).replace("VIRTUE_", "");
+                if(current.contains("SUBVICE"))
                 {
-                    toSet = current.replace(toTest,"").replace("_","");
-                    if(!toSet.isEmpty() && !values.containsKey(toSet) && !toTest.contains("index") && !toTest.contains("index") && !toTest.contains("IS_PRECOND") && !toTest.contains("IS_POSTCON") &&  !toTest.contains("_PERSON") && !toTest.contains("IS_ABOVE") && !toTest.contains("ACTION_ID"))
-                    {
-                        values.put(toSet, passions.get(toTest));
-                    }
-                    else if(!toSet.isEmpty() && !toTest.contains("index") && !toTest.contains("index") && !toTest.contains("IS_PRECOND") && !toTest.contains("IS_POSTCON") &&  !toTest.contains("_PERSON") && !toTest.contains("IS_ABOVE") && !toTest.contains("ACTION_ID"))
-                    {
-                        values.replace(toSet, values.get(toSet) + passions.get(toTest));
-                    }
-                    visited.add(toTest);
-                    break;
+                    toAdd = toAdd * -1;
+                }
+                if(values.containsKey(virtueLogName))
+                {
+                    values.replace(virtueLogName, values.get(virtueLogName) + toAdd);
+                }
+                else
+                {
+                    values.put(virtueLogName, toAdd);
                 }
             }
+
 
         }
         graphNode node = new graphNode(values);
-
+        System.err.println("New Point");
+        System.err.println(node);
         return node;
     }
 

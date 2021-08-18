@@ -14,6 +14,7 @@ public class ActualGrace extends Action
     Random rand = new Random();
     public void evaluateChoice(Character C, Character C2, Character C3)
     {
+
         int i = 0;
         int randomChoice = rand.nextInt(100);
         randomChoice = randomChoice + C.getVirtuesAndVices().get("SUBVIRTUE_HUMILITY");
@@ -55,12 +56,13 @@ public class ActualGrace extends Action
         C.emotionalDrift();
         C.calmDown();
         C.fallingOutOfTheHabit();
+
     }
     public void concomitantAction(Character C, Character C2, Character C3)
     {
         Conditions effects = this.getPostConditionsAccept();
 
-
+        this.setAccepted(true);
         Iterator<String> toDo = effects.getVirtueEffects().keySet().iterator();
         HashMap<String, Integer> newStatus = C.getVirtuesAndVices();
         //System.err.println("MEME: " + newStatus);
@@ -68,9 +70,6 @@ public class ActualGrace extends Action
         while(toDo.hasNext())
         {
             full = toDo.next();
-            if(full.contains("ACCEPT")) {
-                System.err.println("RESISTANCE " + full);
-            }
             key = full.replace("POSTCONDITIONS_ACCEPT_","");
             //System.err.println("VIRTUES BEFORE THE LOOPING : " + C.getVirtuesAndVices() + " 2: " + C2.getVirtuesAndVices() + " 3: " + C3.getVirtuesAndVices());
             updateACharacter(C, C2, C3, effects, key, full);
@@ -96,6 +95,7 @@ public class ActualGrace extends Action
     }
     public void nothingHappens(Character C)
     {
+        this.setAccepted(false);
         C.addActionToListofAllActions(C.getNextCharacterAction(C));
     }
 }

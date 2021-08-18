@@ -9,8 +9,9 @@ import java.util.*;
 public class ActionLoader {
     private LinkedList<Action> actionList, stateList;
     String jsonFile, virtuesFile, jsonContents;
-    private LinkedList<String> virtuesString, dbColumnNames, actionIDs, subvirtuesToTable;//Also for passions
+    private LinkedList<String> virtuesString, dbColumnNames, actionIDs;//Also for passions
     private HashMap<String, Object> Preconditions, Postconditionsaccept, Postconditionsreject, basicConditions;
+    private HashMap<String, String> subvirtueToVirtue;
     private HashMap<String, Integer> allVirtues, allPassions;
     private static Connection conn = null;
     private NameGenerator names;
@@ -20,8 +21,8 @@ public class ActionLoader {
         this.jsonFile = jsonFile;
         this.virtuesFile = virtuesFile;
         Map<String, String> tempMap;
+        subvirtueToVirtue = new HashMap<>();
         names = Gens;
-        subvirtuesToTable = new LinkedList<>();
         stateList = new LinkedList<>();
         actionList = new LinkedList<>();
         actionIDs = new LinkedList<String>();
@@ -61,12 +62,12 @@ public class ActionLoader {
         this.allPassions = allPassions;
     }
 
-    public LinkedList<String> getSubvirtuesToTable() {
-        return subvirtuesToTable;
+    public HashMap<String, String> getSubvirtueToVirtue() {
+        return subvirtueToVirtue;
     }
 
-    public void setSubvirtuesToTable(LinkedList<String> subvirtuesToTable) {
-        this.subvirtuesToTable = subvirtuesToTable;
+    public void setSubvirtueToVirtue(HashMap<String, String> subvirtueToVirtue) {
+        this.subvirtueToVirtue = subvirtueToVirtue;
     }
 
     public void loadAllActionsNew()
@@ -134,7 +135,7 @@ public class ActionLoader {
                         {
                             System.err.println("Virtue added : " + column);
                             allVirtues.put(column, 0);
-                            subvirtuesToTable.add(table + "_" + column);
+                            subvirtueToVirtue.put(column,table);
                         }
                     }
                     else if(table.contentEquals("PASSIONS") )
@@ -143,7 +144,7 @@ public class ActionLoader {
                         {
                             System.err.println("Passion added : " + column);
                             allPassions.put(column, 0);
-                            subvirtuesToTable.add(table + "_" + column);
+                            subvirtueToVirtue.put(column,table);
                         }
                     }
                     for(String column: columns)
