@@ -15,7 +15,7 @@ public class Main {
 	public static final int NUMBER_OF_CHARACTERS = 3000;
 	public static final int LENGTH_OF_STORY = 300;
 	public static final int NUMBER_OF_GENERATIONS = 150;
-	public static final int DIVISION = 10;
+	public static final int DIVISION = 100;
 	public static final int NUMBER_OF_POINTS = 10;
 	public static final int GRAPH_INTERVAL = LENGTH_OF_STORY / NUMBER_OF_POINTS;
     public static void main(String[] args)
@@ -110,7 +110,7 @@ public class Main {
 				selectedChars.add(characters.get(j));
 			}*/
 			//Tournament Selection
-			for(int j = 0; j < 10; j++)
+			for(int j = 0; j < DIVISION; j++)
 			{
 				System.out.println("FITNESS: " + characters.get(j).returnFitness());
 				selectedChars.add(characters.get(j));
