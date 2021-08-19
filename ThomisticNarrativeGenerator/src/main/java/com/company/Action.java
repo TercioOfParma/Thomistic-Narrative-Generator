@@ -271,7 +271,7 @@ public abstract class Action implements Cloneable
         }
 
     }
-    public void doApplicationOfAction(Character C, Character C2, Character C3, boolean isAccept)
+    public void doApplicationOfAction(Character C, Character C2, Character C3, boolean isAccept, Verse scriptural)
     {
         Conditions effects = this.getPostConditionsReject();
         String newStoryAction = C.getStory();
@@ -420,8 +420,19 @@ public abstract class Action implements Cloneable
         //System.out.println("To Add: " + toAddToStory);
         toAddToStory =  toAddToStory.replace("<3>", C2.getName());
         //System.out.println("To Add: " + toAddToStory);
-        C.setStory(C.getStory() + toAddToStory);
+        try {
+            if (this.getPostConditionsAccept().getVirtueEffects().get("QUOTES_SCRIPTURE") == 1) {
+                try {
+                    toAddToStory = toAddToStory + " " + scriptural.randomVerse();
+                } catch (Exception e) {
 
+                }
+            }
+        }
+        catch (Exception e) {
+
+        }
+        C.setStory(C.getStory() + toAddToStory);
         if(C.getCurrentActions() % C.getNodeInterval() == 0)
         {
             System.err.println("Generating Objective Point : " + C.getCurrentActions() + " For: " + C.getName());
@@ -433,7 +444,7 @@ public abstract class Action implements Cloneable
         //System.out.println("Done!");
 
     }
-    protected void executeActionInSubsequentGenerations(Character C, Character C2, Character C3)
+    protected void executeActionInSubsequentGenerations(Character C, Character C2, Character C3, Verse scr)
     {
         int i = 0;
         LinkedList<String> preconditions = new LinkedList<>();
@@ -453,7 +464,7 @@ public abstract class Action implements Cloneable
         }
 
         printARelevantState(preconditions, C, C2, C3);
-        doAction(C, C2, C3);
+        doAction(C, C2, C3, scr);
         C.emotionalDrift();
         C.calmDown();
         C.fallingOutOfTheHabit();
@@ -461,7 +472,7 @@ public abstract class Action implements Cloneable
     }
 
     // This does an action in isolation, important for subsequent generations
-    public void doAction(Character C, Character C2, Character C3)
+    public void doAction(Character C, Character C2, Character C3, Verse scr)
     {
         Conditions effects;
         if(this.getAccepted())
@@ -489,7 +500,7 @@ public abstract class Action implements Cloneable
             updateACharacter(C, C2, C3, effects, key, full);
         }
 
-        doApplicationOfAction(C,C2,C3,true);
+        doApplicationOfAction(C,C2,C3,true, scr);
     }
     protected void updateACharacter(Character C, Character C2, Character C3, Conditions effects, String key, String full) {
         HashMap<String, Integer> newStatus = null;
@@ -649,5 +660,5 @@ public abstract class Action implements Cloneable
 
 
 
-    abstract public void evaluateChoice(Character C, Character C2, Character C3);
+    abstract public void evaluateChoice(Character C, Character C2, Character C3, Verse scr);
 }

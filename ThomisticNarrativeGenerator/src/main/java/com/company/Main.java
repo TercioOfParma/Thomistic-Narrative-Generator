@@ -14,7 +14,7 @@ public class Main {
 
 	public static final int NUMBER_OF_CHARACTERS = 3000;
 	public static final int LENGTH_OF_STORY = 300;
-	public static final int NUMBER_OF_GENERATIONS = 150;
+	public static final int NUMBER_OF_GENERATIONS = 10;
 	public static final int DIVISION = 100;
 	public static final int NUMBER_OF_POINTS = 10;
 	public static final int GRAPH_INTERVAL = LENGTH_OF_STORY / NUMBER_OF_POINTS;
@@ -85,7 +85,7 @@ public class Main {
 				{
 					char2 = rand.nextInt(characters.size());
 				}
-				chara.listOfAllActions.getLast().evaluateChoice(chara, characters.get(char1),characters.get(char2));
+				chara.listOfAllActions.getLast().evaluateChoice(chara, characters.get(char1),characters.get(char2), scripture);
 				rand.setSeed(rand.nextLong());
 
 			}
@@ -148,7 +148,7 @@ public class Main {
 					{
 						char2 = rand.nextInt(characters.size());
 					}
-					toExecute.executeActionInSubsequentGenerations(chara, characters.get(char1),characters.get(char2));
+					toExecute.executeActionInSubsequentGenerations(chara, characters.get(char1),characters.get(char2), scripture);
 					rand.setSeed(rand.nextLong());
 				}
 			}

@@ -5,6 +5,7 @@ import java.util.Scanner; // Import the Scanner class to read text files
 public class BibleLoader
 {
     private String fn;
+    private int noLines;
     private Verse bibleList = null;
     public BibleLoader(String filename)
     {
@@ -13,9 +14,11 @@ public class BibleLoader
             String line;
             File bibleFile = new File(fn);
             Scanner scan = new Scanner(bibleFile);
+            noLines = 0;
             System.out.println("Loading Bible...");
             while(scan.hasNextLine())
             {
+                noLines++;
                 line = scan.nextLine();
                 if(bibleList == null)
                 {
@@ -36,6 +39,7 @@ public class BibleLoader
             bibleList.getPriorVerse().printVerseInfo();
             bibleList.getPriorVerse().getPriorVerse().printVerseInfo();
             bibleList.getPriorVerse().getSubsequentVerse().printVerseInfo();
+            setAllNoLines(bibleList);
         }
         catch(FileNotFoundException e)
         {
@@ -43,6 +47,29 @@ public class BibleLoader
         }
 
     }
+
+    public int getNoLines() {
+        return noLines;
+    }
+
+    public void setAllNoLines(Verse bibleList)
+    {
+
+        while(bibleList.getPriorVerse() != null)
+        {
+            bibleList = bibleList.getPriorVerse();
+        }
+        bibleList.setNoLines(noLines);
+        while(bibleList.getSubsequentVerse() != null)
+        {
+            bibleList = bibleList.getSubsequentVerse();
+            bibleList.setNoLines(noLines);
+        }
+    }
+    public void setNoLines(int noLines) {
+        this.noLines = noLines;
+    }
+
     public Verse getBibleList(){
         return bibleList;
     }

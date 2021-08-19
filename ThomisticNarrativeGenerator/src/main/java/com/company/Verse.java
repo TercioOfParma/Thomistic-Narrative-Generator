@@ -1,16 +1,19 @@
 package com.company;
 
+import java.util.Random;
+
 public class Verse
 {
     private Verse priorVerse;
     private Verse subsequentVerse;
     private String bookName, bookCode;
     private String verseString;
-    private int bookNumber,chapterNumber, verseNumber;
+    private int bookNumber,chapterNumber, verseNumber, noLines;
+    Random rand = new Random();
     public Verse(String verseContent)
     {
         String [] contents = verseContent.split("\t");
-
+        noLines = 100000;
         try {
             bookName = contents[0];
             bookCode = contents[1];
@@ -25,6 +28,15 @@ public class Verse
         }
 
     }
+
+    public int getNoLines() {
+        return noLines;
+    }
+
+    public void setNoLines(int noLines) {
+        this.noLines = noLines;
+    }
+
     public int getBookNumber()
     {
         return bookNumber;
@@ -60,6 +72,24 @@ public class Verse
         }
         System.out.println("Verse not found!");
         return null;
+    }
+    public String randomVerse()
+    {
+        Verse searchPlace = this;
+        String toHold = "";
+        int toGet = rand.nextInt(noLines);
+        while(searchPlace.getPriorVerse() != null)
+        {
+            searchPlace = searchPlace.getPriorVerse();
+        }
+        return toHold;
+    }
+    public void rewind(Verse search)
+    {
+        while(search.getPriorVerse() != null)
+        {
+            search = search.getPriorVerse();
+        }
     }
     public String quotePassage(String bookNameArg, int initialChapter,int initialVerse, int finalChapter, int finalVerse)
     {

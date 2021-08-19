@@ -10,8 +10,8 @@ public class graphNode
     private HashMap<String,Double> values = new HashMap<>();
     private final int MAXIMUM = 100000;
     private final int MINIMUM = -100000;
-    private final int NORMALISED_MAX = 10;
-    private final int NORMALISED_MIN = -10;
+    private final int NORMALISED_MAX = 100;
+    private final int NORMALISED_MIN = 0;
     /*
 
     Normalisation function = x - min / max - min
@@ -95,13 +95,15 @@ public class graphNode
         double distance = 0;
         String name;
         Iterator<String> dimensionIterate = toCompare.getValues().keySet().iterator();
+        double total = 0;
         while(dimensionIterate.hasNext())
         {
             name = dimensionIterate.next();
             distance = (ideal.getValues().get(name) - toCompare.getValues().get(name));
             distance = distance * distance;
+            total = total + distance;
         }
-        distance = Math.sqrt(distance);
+        distance = Math.sqrt(total);
         return distance;
     }
     @Override

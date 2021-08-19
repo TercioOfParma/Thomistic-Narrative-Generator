@@ -10,7 +10,7 @@ public class VirtueState extends Action{
     }
     Random rand = new Random();
     @Override
-    public void evaluateChoice(Character C, Character C2, Character C3) {
+    public void evaluateChoice(Character C, Character C2, Character C3, Verse scr) {
         actoutState(C);
     }
 }

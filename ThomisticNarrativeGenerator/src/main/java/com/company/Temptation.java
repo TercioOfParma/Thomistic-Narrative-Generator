@@ -11,7 +11,7 @@ public class Temptation extends Action {
     {
         this.allActions= actionList;
     }
-    public void evaluateChoice(Character C, Character C2, Character C3)
+    public void evaluateChoice(Character C, Character C2, Character C3, Verse scr)
     {
 
         int randomChoice = rand.nextInt(100);
@@ -40,12 +40,12 @@ public class Temptation extends Action {
         if(randomChoice < 60)
         {
             printARelevantState(preconditions, C, C2, C3);
-            doSin(C, C2, C3);
+            doSin(C, C2, C3, scr);
         }
         else
         {
             printARelevantState(preconditions, C, C2, C3);
-            doResistance(C, C2, C3);
+            doResistance(C, C2, C3, scr);
         }
         C.emotionalDrift();
         C.calmDown();
@@ -53,7 +53,7 @@ public class Temptation extends Action {
 
     }
 
-    public void doSin(Character C, Character C2, Character C3)
+    public void doSin(Character C, Character C2, Character C3, Verse scriptural)
     {
         Conditions effects = this.getPostConditionsReject();
         this.setAccepted(false);
@@ -72,7 +72,7 @@ public class Temptation extends Action {
         }
 
 
-        doApplicationOfAction(C,C2,C3,false);
+        doApplicationOfAction(C,C2,C3,true, scriptural);
 
         if(PostConditionsReject.getOtherEffects().get("POSTCONDITIONS_REJECT_CONSEQUENTIAL_ACTIONS") instanceof String)
         {
@@ -91,7 +91,7 @@ public class Temptation extends Action {
     }
 
 
-    public void doResistance(Character C, Character C2, Character C3)
+    public void doResistance(Character C, Character C2, Character C3, Verse scriptural)
     {
 
         Conditions effects = this.getPostConditionsAccept();
@@ -109,7 +109,7 @@ public class Temptation extends Action {
             updateACharacter(C, C2, C3, effects, key, full);
         }
 
-        doApplicationOfAction(C,C2,C3,true);
+        doApplicationOfAction(C,C2,C3,true, scriptural);
         if(PostConditionsAccept.getOtherEffects().get("POSTCONDITIONS_ACCEPT_CONSEQUENTIAL_ACTIONS") instanceof String)
         {
             String text = (String) PostConditionsAccept.getOtherEffects().get("POSTCONDITIONS_ACCEPT_CONSEQUENTIAL_ACTIONS");

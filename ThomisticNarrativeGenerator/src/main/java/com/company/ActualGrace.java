@@ -12,7 +12,7 @@ public class ActualGrace extends Action
         this.allActions= actionList;
     }
     Random rand = new Random();
-    public void evaluateChoice(Character C, Character C2, Character C3)
+    public void evaluateChoice(Character C, Character C2, Character C3, Verse scr)
     {
 
         int i = 0;
@@ -47,7 +47,7 @@ public class ActualGrace extends Action
         if(randomChoice < 60)
         {
             printARelevantState(preconditions, C, C2, C3);
-            concomitantAction(C, C2, C3);
+            concomitantAction(C, C2, C3, scr);
         }
         else
         {
@@ -58,7 +58,7 @@ public class ActualGrace extends Action
         C.fallingOutOfTheHabit();
 
     }
-    public void concomitantAction(Character C, Character C2, Character C3)
+    public void concomitantAction(Character C, Character C2, Character C3, Verse scriptural)
     {
         Conditions effects = this.getPostConditionsAccept();
 
@@ -76,7 +76,7 @@ public class ActualGrace extends Action
         }
 
 
-        doApplicationOfAction(C,C2,C3,true);
+        doApplicationOfAction(C,C2,C3,true, scriptural);
         if(PostConditionsAccept.getOtherEffects().get("POSTCONDITIONS_ACCEPT_CONSEQUENTIAL_ACTIONS") instanceof String)
         {
             String text = (String) PostConditionsAccept.getOtherEffects().get("POSTCONDITIONS_ACCEPT_CONSEQUENTIAL_ACTIONS");;
