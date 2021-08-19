@@ -86,8 +86,8 @@ public class Character implements Comparable<Character>
     @Override
     public int compareTo(@NotNull Character o)
     {
-        Integer thisFitness = this.returnFitness(this.getLengthOfActions());
-        return thisFitness.compareTo(o.returnFitness(o.getLengthOfActions()));
+        Double thisFitness = this.returnFitness();
+        return thisFitness.compareTo(o.returnFitness());
     }
 
 
@@ -505,9 +505,12 @@ public class Character implements Comparable<Character>
         return node;
     }
 
-    public int returnFitness(int positionInActions)
+    public double returnFitness()
     {
-        return 0;
+        double score = 0;
+        LinkedList<graphNode> idealPoints = getCrucialPoints().get(1).generateIdealPoints();
+        score = getCrucialPoints().get(1).scoreList(idealPoints,this.getCrucialPoints());
+        return score;
     }
     public LinkedList<Action> fullCrossover(LinkedList<Character> savedList, int lifeLength)
     {
@@ -516,10 +519,11 @@ public class Character implements Comparable<Character>
         int position = 0;
         int crossoverIncrement = lifeLength / numberOfPoints;
         Character newChar = savedList.get(rand.nextInt(savedList.size()));
-        for(int i = 0; i < numberOfPoints; i++)
+        for(int i = 0; i <= numberOfPoints; i++)
         {
-            newLife.addAll(crossover(savedList.get(rand.nextInt(savedList.size())),position, i * crossoverIncrement));
+            newLife.addAll(crossover(newChar,position, i * crossoverIncrement));
             rand.setSeed(rand.nextLong());
+            newChar = savedList.get(rand.nextInt(savedList.size()));
             position = i * crossoverIncrement;
         }
 

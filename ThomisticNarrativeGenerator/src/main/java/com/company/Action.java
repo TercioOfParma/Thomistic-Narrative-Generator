@@ -421,13 +421,14 @@ public abstract class Action implements Cloneable
         toAddToStory =  toAddToStory.replace("<3>", C2.getName());
         //System.out.println("To Add: " + toAddToStory);
         C.setStory(C.getStory() + toAddToStory);
-        C.setCurrentActions(C.getCurrentActions() + 1);
+
         if(C.getCurrentActions() % C.getNodeInterval() == 0)
         {
             System.err.println("Generating Objective Point : " + C.getCurrentActions() + " For: " + C.getName());
             C.addCrucialPoint(C.generateObjectivePoint());
             System.err.println(C.getCrucialPoints());
         }
+        C.setCurrentActions(C.getCurrentActions() + 1);
         //System.out.println("Updated Story : " + C.getStory());
         //System.out.println("Done!");
 

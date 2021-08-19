@@ -12,9 +12,10 @@ import java.util.Random;
 
 public class Main {
 
-	public static final int NUMBER_OF_CHARACTERS = 100;
-	public static final int LENGTH_OF_STORY = 3000;
-	public static final int NUMBER_OF_GENERATIONS = 5;
+	public static final int NUMBER_OF_CHARACTERS = 3000;
+	public static final int LENGTH_OF_STORY = 300;
+	public static final int NUMBER_OF_GENERATIONS = 150;
+	public static final int DIVISION = 10;
 	public static final int NUMBER_OF_POINTS = 10;
 	public static final int GRAPH_INTERVAL = LENGTH_OF_STORY / NUMBER_OF_POINTS;
     public static void main(String[] args)
@@ -99,18 +100,26 @@ public class Main {
 
 		for(int i = 0; i < NUMBER_OF_GENERATIONS; i++)
 		{
-			System.err.println("Generation: " + (i + 1));
+			System.out.println("Generation: " + (i + 1));
 			Collections.sort(characters);//Sorts based on comparable, I hope
+			//Collections.reverse(characters);//Inverse order
 			selectedChars = new LinkedList<>();
-			for(int j = 0; j < NUMBER_OF_CHARACTERS / 4; j++)
+			/*for(int j = 0; j < NUMBER_OF_CHARACTERS / DIVISION; j++)
 			{
+				System.out.println("FITNESS: " + characters.get(j).returnFitness());
+				selectedChars.add(characters.get(j));
+			}*/
+			//Tournament Selection
+			for(int j = 0; j < 10; j++)
+			{
+				System.out.println("FITNESS: " + characters.get(j).returnFitness());
 				selectedChars.add(characters.get(j));
 			}
-			//crossover
 			tempChars = new LinkedList<>();
 			// Crossover
 			for(int j = 0; j < NUMBER_OF_CHARACTERS; j++) {
 				temporaryChar = new Character(Test.getActionList(), Test.getStateList(), names.getRandomName(), Test.getAllVirtues(), Test.getAllPassions(), Test.getSubvirtueToVirtue(), GRAPH_INTERVAL);
+				Collections.shuffle(selectedChars);
 				temporaryChar.setListOfAllActions(temporaryChar.fullCrossover(selectedChars, LENGTH_OF_STORY));
 				tempChars.add(temporaryChar);
 			}
@@ -125,6 +134,7 @@ public class Main {
 			for(Character chara : characters)
 			{
 				lifeToExecute = chara.getListOfAllActions();
+				System.out.println("NUMBER OF ACTIONS: " + lifeToExecute.size());
 				for(Action toExecute : lifeToExecute)
 				{
 					rand.setSeed(rand.nextLong());
