@@ -8,7 +8,7 @@ public class Character implements Comparable<Character>
 {
     Random rand = new Random();
     String name;
-    private int age, mortalSinsRemaining, deathAge, nodeInterval;
+    private int nodeInterval;
     private int currentActions = 0;
     String story;
     boolean stateOfGrace;
@@ -31,8 +31,6 @@ public class Character implements Comparable<Character>
         crucialPoints = new LinkedList<>();
         setSubvirtueandviceindex(SubvirtueToVirtue);
         System.err.println("Character Stats: " + this.getVirtuesAndVices() + " " + this.getPassions());
-        this.age = rand.nextInt(70);
-        this.deathAge = rand.nextInt(80) + 40;
         actionBank = (LinkedList<Action>) act.clone();
         stateBank = (LinkedList<Action>) state.clone();
         System.err.println(stateBank.size());
@@ -124,21 +122,6 @@ public class Character implements Comparable<Character>
         this.name = name;
     }
 
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public int getDeathAge() {
-        return deathAge;
-    }
-
-    public void setDeathAge(int deathAge) {
-        this.deathAge = deathAge;
-    }
 
     public LinkedList<Action> getStateBank() {
         Collections.shuffle(this.stateBank); return stateBank;
@@ -148,13 +131,7 @@ public class Character implements Comparable<Character>
          this.stateBank = stateBank;
     }
 
-    public int getMortalSinsRemaining() {
-        return mortalSinsRemaining;
-    }
 
-    public void setMortalSinsRemaining(int mortalSinsRemaining) {
-        this.mortalSinsRemaining = mortalSinsRemaining;
-    }
 
     public boolean isStateOfGrace() {
         return stateOfGrace;
@@ -252,7 +229,7 @@ public class Character implements Comparable<Character>
             //System.out.println("Finding Random Action");
             nextAction = getRandomAction();
         }
-        C.setAge(C.getAge() + 1);
+       
         return nextAction;
     }
     public Action getRandomAction()
@@ -270,6 +247,7 @@ public class Character implements Comparable<Character>
         //System.out.println("Random Action: " + nextAction.getId());
         return nextAction;
     }
+    
     public void generateRelationships(LinkedList<Character> characters)
     {
         HashMap<String, Integer> newPassions = new HashMap<>();
@@ -281,7 +259,7 @@ public class Character implements Comparable<Character>
 
         for(Character c : characters)
         {
-            if(!c.getName().contentEquals(this.getName()) || c.getAge() != this.getAge())
+            if(!c.getName().contentEquals(this.getName()))
             {
                 relationships.put(c.getName(),new Relationship(c,newPassions));
             }
