@@ -43,7 +43,10 @@ public class ActualGrace extends Action
             i++;
         }
 
-
+        if(C.stateOfGrace)
+        {
+        	randomChoice = randomChoice + 15;
+        }
         if(randomChoice < 60)
         {
             printARelevantState(preconditions, C, C2, C3);

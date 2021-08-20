@@ -35,7 +35,10 @@ public class Temptation extends Action {
             randomChoice = randomChoice + (current * 4);
             i++;
         }
-
+        if(C.stateOfGrace)
+        {
+        	randomChoice = randomChoice + 15;
+        }
 
         if(randomChoice < 60)
         {

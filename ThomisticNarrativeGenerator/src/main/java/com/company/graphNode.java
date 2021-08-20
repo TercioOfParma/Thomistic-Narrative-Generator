@@ -10,7 +10,7 @@ public class graphNode
     private HashMap<String,Double> values = new HashMap<>();
     private final int MAXIMUM = 100000;
     private final int MINIMUM = -100000;
-    private final int NORMALISED_MAX = 100;
+    private final int NORMALISED_MAX = 10;
     private final int NORMALISED_MIN = 0;
     /*
 
