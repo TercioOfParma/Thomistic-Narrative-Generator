@@ -1,0 +1,18 @@
+Papers to be cited:
+- MEXICA paper 
+- Three Layers Evaluation Perez y Perez 
+- Indicator Based Evolutionary Algorithm with Hypervolume Approximation by Achievement Scalarizing Functions (For dismissing Pareto Dominance Solutions)
+- Plot Induction and Evolutionary Search For Story Generation (For the Superiority of GA) 
+- Integrating Plot, Character and Natural Language Processing in the Interactive Drama Facade (For goal based reasoning) 
+- Automatic Story Generation: A Survey of Approaches (This is important)
+- Quality Signals in Generated Stories (This'll explain why I put coherence down) 
+- SPECS
+- MOEA/D: A Multiobjective Evolutionary Algorithm Based on Decomposition
+- Survey on Multi-Objective Evolutionary Algorithms Wenlan Huang1, a, Yu Zhang1, 2, b and Lan Li1
+- Planning author and character goals for story generation On Planning Graph and Linguistic Variation
+
+Spiritual Theology to be cited:
+- Lagrange Three Ages 
+- Summa Theologiae
+- Dark Night of the Soul?
+- See what comes up mentally 

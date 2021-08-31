@@ -1,0 +1,160 @@
+\documentclass[11pt]{article}
+\usepackage{hyperref}
+\usepackage{notoccite}
+\usepackage[backend=biber, sorting=none, style=ieee]{biblatex}
+\author{Elliot Lake}
+\title{Multiple Objective Evolutionary Algorithms For Narratives Through the Lens of Spiritual Theology}
+
+\addbibresource{bigbib.bib}
+
+\begin{document}
+\maketitle
+
+\section{Abstract}
+
+\section{Introduction}
+
+\section{Literature Review}
+As narrative theory and generation are broad fields with a great deal of literature in each, it is necessary that we break down and elaborate upon relevant research in each area so that subsequent explanation of approaches and implementation are intelligible.
+
+\subsection{Current Use of Narrative Theory in Narrative Generation}
+There have been narratives since the beginning of man, but narrative theory is a much newer beast. This was began in 4th Century BC by Aristotle in his Poetics, and carried forth by others up until its current form, which is often used.  For instance, Freytag's Pyramid is used in at least one Narrative Generation paper, \cite{questgeneration}, which is a narrative theory created during the 19th Century by Playwright Gustav Freytag. Likewise, more implicit traditions of folk story telling have been very influential. For example, \cite{MEXICA} is a story generation system which is based on the Narrative Tradition of the Mexica people. Additionally, and more prominently, the famous Propp Grammar which seems to be almost omnipresent in Narrative Generation literature. This is based on a collection of aspects of Russian Folk Tales \cite{propp1975morphology}. There have even been efforts to imitate this directly by computerising the grammar directly\cite{Gervs2013ProppsMO}. \\
+
+\subsection{Virtue Ethics, Human Nature and Spiritual Theology}
+However, an overwhelming amount of emphasis is placed in all of these narrative theories on Plot over Characters. In many of these Story Grammars and Traditions, characters often lack the nuances of human behaviour. However, there is an immense wealth of theoretical work, wherein the aim is to articulate human behaviour. Beginning somewhere between the 15th and 13th Centuries BC, the Abrahamic Tradition, especially in dialogue with the Greek Philosophical Tradition, has generated a dizzying array of texts investigating the nature of man, what man ought to do, what he ought not to do, and on his development. This provides us with a great theoretical toolset for articulating characters. \\
+
+Besides the Old and New Testaments themselves, the Nicomachean Ethics \cite{340BCEthicsAristotleNicomachean} is one of the first systematic treatments of Human Virtue\footnote{In this case referring to the proper function of human functions, when aimed towards an objective good which fits this}. A few hundred years later, the Catholic Spiritual and Moral Tradition emerged. Beginning in earnest in the 3rd Century AD with Origen\cite{bergsma2018catholic}, and being further clarified by various patristic authors such as Gregory the Great and Maximus the Confessor, the two traditions began dialogue in the 8th Century under the pen of John Damascene. This became particularly pronounced in the Scholastic Tradition, which began in the late 11th Century with Anselm of Canterbury, and continues to this day in the hands authors such as Fr Reginald Garrigou-Lagrange, who's towering character as a theologian is best known through his Magnum Opus in Spiritual Theology \: \textit{Three Ages of the Interior Life} \cite{garrigou2013three}. \\
+
+In comparison to earlier unsystematised spiritual writings, such as those compiled in the Philokalia\cite{1983philokalia}, the rigid systematisation of this synthesis of the Catholic Spiritual Tradition and Greek Philosophy eventually lead to the production highly precise theological manuals, which among other things, articulated clearly and in great depth the various faculties of Man. A particularly important example of this would be the Summa Theologiae of Thomas Aquinas, which provides an overwhelmingly large summary of Moral Teaching \cite{aquinas2014summa}, which Spiritual Theology relies on.
+
+Up until this point, I am unaware of any attempts in Narrative Generation to replicate a Scholastic, or even broadly Aristotelian, view of man to articulate characters.
+
+
+\subsection{Computational Character Generation}
+This same absence of research is felt in relation to Characters generally in Narrative Generation research. However, there is not a complete absence. As is noted in a survey on Automatic Story Generation \cite{AutomaticStoryGeneration2021}, the emphasis is placed much more on plot generation techniques rather than characters, and even in character based surveys there is exactly one generation system which gives free reign to characters \cite{Riedl2003CharacterfocusedNP}. However, projects such as MEXICA\cite{MEXICA} give a some emphasis to characters while remaining plot dominated.\\
+
+In MEXICA, character actions are generally determined on the basis of emotional bonds between them. Positive and Negative emotions are placed on a spectrum between very negative and very positive, and this determines the thrust of the story initially. Subsequently, there is another process, utilising insights from studies into human cognition when employed in story making, which structures these initial stories into something more palatable to an audience. Additionally, in Planning author and character goals for story generation \cite{authorandcharactergoals}, while characters are not defined in a strict manner, they are defined in terms of their goals, in this case being in relation to children's stories. This motivation drives the plot, which forms the stories. However, one project which defines stories mostly based on characters is Talespin \cite{Meehan1977TALESPINAI}. Talespin operates by taking the aspects of the lives of characters and allows that to produce the stories, with the aid of an inference engine.\\  
+\subsection{General Approaches to Narrative Generation}
+Despite the conspicuous lack of character focused story telling, there are a wide array of different methods which have been used for the generation of narratives. These are generally set into 5 general categories \cite{KybartasGenerationTechniques} \: Plot Grammars (as mentioned earlier, and are collections of structures and elements in stories), Planning Based (Which selects goals and builds to them), Interactive, Case Based (Which incorporates pre defined aspects into the generation which must be there) and Genetic Algorithms. Additionally, there are also Neural Network approaches. 
+
+The first three make intuitive sense when there is an approach which involves a plot first form of generation. After all, we want the thread of the story to make more sense than each individual character. This is why these methods have been popular in Narrative Generation. As Narrative Generation in the wild shows \cite{van-stegeren-theune-2019-narrative}, around a quarter of 61 projects used some form of hard narrative planning, and others used means amenable to the aforementioned methods (Markov Chains for Plot Graphs, Templating etc.). Deep Learning, in contrast, had only 3 projects, and simulations such as those which may be utilised with a Genetic Algorithm, only 5. However, due to the nature of these projects as operating with an entire story in mind, they will not be as effective for characters, as the quality of a character is shown through the coherence of personality, not of a story arc. Neural Network based approaches tend to work well with simplistic approaches, such as is demonstrated here \cite{NeuralNetworkOne}. However, this approach isn't always effective due to the propensity to produce incoherent stories, which is shown to be an important aspect of generating stories of high quality \cite{sagarkar-etal-2018-quality}. \\
+
+Genetic Algorithm based approaches have been shown to be very effective \cite{mcintyre-lapata-2010-plot}, even to the point of slightly exceeding plot grammar (called graph in the paper) and rank based implementations. Genetic algorithms, by their nature, are extremely broadly applicable, and this is shown in this area of study. For instance, Genetic Algorithms are used in the Generation of Video Game Quests \cite{questgeneration}, and this is done almost to the level of quality of professionals. Also, there have been uses of Genetic Algorithms in relation to observing the effectiveness of certain actions in a narrative context, such as was done in Live, Die, Evaluate, Repeat with Lying \cite{Riegl2018LiveDE}. This has been shown, despite reliance on exterior data, to be a very workable means to narrative generation. Finally, this approach has even been used in the context of character generation \cite{charactergeneration}, which demonstrated that this can be used effectively produce character with varying states. Although less typical in Narrative Generation, there have also been utilisations of Multiple Objective Evolutionary Algorithms (MOEAs) in Narrations before\cite{MOEANarrative}, and have been shown to be effective.   
+\subsection{MOEAs}
+MOEAs have been around for almost as long as Narrative Generation Systems. Multiple Objective problems usually exist because engineers cannot come up with a way to abstract out other aspects into singular variables, and therefore they tend to be more difficult to solve. In a single objective GA, it is very straightforward to discern which results are best based on a single dimensional score. In cases where results for a Multiple Objective problem are objectively inferior to others, they are referred to as Pareto Dominated solutions. However, this is rarely the case, which makes these inferior to other, more modern approaches to the problem\cite{AchievementScalarazingIndicatorBased}. This necessitated reading into more modern methods. To my surprise, there have been no generation defining changes in MOEA research since around 2003 \cite{MOEASurvey1}, but despite this there have been improvements to these algorithms. MOEA/D, which decomposes Multi-Objective problems down into single objective subproblems \cite{MOEAD} was released in 2007, and has been built on significantly since that initially release. Additionally, there have been innovations in Indicator Based MOEAs, which operate by producing an indicator score of each potential Pareto Non Dominated Solutions(which refers to those solutions which are not objectively inferior to other results). From my research, these three categories predominate current MOEA research, and therefore any approaches to balancing Character traits will flow from an algorithm of one of these three types.
+
+
+\section{Problem Description}
+We find ourselves with a complicated problem to solve. Owing to the focus in Narrative Generation research on Plot over Characters, the consequence has been a sacrifice in the humanity and realism of the characters present in some publications. Although these stories may be, on paper, sensible and fit narrative arcs which have be described since Aristotle, this does not mean that the characters are realistic. Likewise, there is an absence in detailed examination of what a human person is, and hence a lack of awareness in the field as to how an object with deep qualities such as a human being can be represented quantitatively by a computer. 
+
+\section{Possible Approaches}
+This therefore leaves us to contemplate the approaches to not only represent realistic human characters, but also implementing this in a way which makes this operate within existing technological bounds.
+
+\subsection{Patristic Method}
+
+\subsection{Scholastic Method}
+\section{Design and Methodology}
+
+\section{Implementation}
+To test our proposed solution, we must implement computational representations of the theory. 
+
+\subsection{Handling Narrative Events}
+Key to every story, and to every expression of a character are events. These things describe the fundamental structure of any narrative, and therefore the proper management of these is crucial to generating any story, whether aimed at the proper expression of Characters or simply being entertaining. 
+
+\subsection{Quantifying Virtues, Vices and Passions}
+However, to handle this first we must decide how to handle the aspects of the person. Human beings, in terms of skill abstractly speaking, are impossible to quantify numerically. Although we could generate an indicative number through certain tasks, this will always be effected by innumerable factors and therefore this number will never be absolute. However, for the sake of keeping our systems simple, there must be a straightforward way to determining whether or not (And to what degree) a character has a trait. \\
+
+Under a Thomistic Framework for quantifying human characteristics, there are these virtues and vices, and these are quantified in terms of sub virtues and sub vices, which are each represented by a single integer. These are parts which reflect more discrete sub tasks which are under a certain virtue. For example, Epiekieia is a subvirtue of Prudence which denotes knowing the mind of the lawmaker, with Prudence controlling proper action in a given circumstance.
+
+Passions are much more straightforward. They are controlled by a single integer, which where negative is a negative emotion, and otherwise is positive.
+
+\subsubsection{A Description of the Structure of an Event}
+Borrowing very heavily from MEXICA \cite{MEXICA}, we have decided to follow a model wherein events are determined based on their pre and post conditions. Up to a maximum of three characters, each precondition refers to a passion, subvirtue or subvice, and whether or not it should be greater or lower than the assigned value. As for post conditions, there are two variations dependent on whether or not the action is chosen or resisted. These numbers are added to the passions, subvices or subvirtues if these are chosen by the will. 
+
+\subsubsection{Storage and Loading of Events} 
+Initially, I believed that the most effective way of handling these events would be via JSON. As it was stored in a text format it would be fairly easy to retrieve. However, it soon became clear that this would cause some problems for loading. First of all, JSON tends to be loaded into classes directly, and generating classes from the JSON lead to huge classes with hundreds of variables, which would be labourious to manage. In addition, due to the fact that this would be hand typed, there were occasionally spelling mistakes in names, which meant that data wouldn't be loaded properly.\\
+
+After some reflection, it became apparent that a database solution would be much more effective, as loading would be as simple as connecting and querying the various tables, and because the headings would be standardised. I settled on SQLite for the table because SQLite doesn't require a server task running concurrently with the program to operate.\\
+
+Then, the program loads each and every event into an Action class instance. These are split into various state indicators, which indicate to the reader the emotional state or the state of the virtue which the character performing them is in, or Actual Grace or Temptation, which will be covered further down. Their various sub vices, virtues and other information are loaded into HashMaps to make them more easily and cleanly accessible than if all information were hardcoded. 
+
+\subsection{Event and Outcome choice}
+As we covered, Events always have a volitional component, but not one which is without precondition. Therefore, handling the processing of events in line with the teaching of Lagrange and others is key to being able to computationally represent their philosophy. \\
+\subsubsection{Actual Grace and Temptation}
+We see in the Three Ages \cite{garrigou2013three} that good actions are initiated by God by means of a prevenient grace, or a grace which comes prior to choice. This grace sustains a choice in a person, which if accepted, then has a concomitant grace which sustains that action being made manifest in the world. With Temptations, these emerge from the World, the Flesh and the Devil and do not involve grace. However, God always offers the grace to escape from the sinful result of these actions. To mirror this in the implementation, actions are distinguished into inheriting classes which model the respective kinds of situation, and have different response functions as I described earlier. \\
+
+\subsubsection{Human Will Algorithm Simulation}
+However, being human beings with physical conditions and previous habituation, actions have to take account of conditions. The algorithm that handles this for both actual graces and temptations follows\:
+
+\begin{enumerate}
+	\item Generate a random integer 0 and 100
+	\item Add Humility 
+	\item Add the summation of prudence (Subvirtues - Subvices) 
+	\item If it's against another person, add the passions of the relationship together
+	\item Do the same with general passions
+	item Add the passions again if they're mentioned in the PRE\_CONDITIONS
+	\item Add the sub virtues in the PRE\_CONDITIONS multiplied by 4
+	\item Subtract the sub vices in the PRE\_CONDITIONS multiplied by 4
+	\item Add 15 for a state of grace
+	\item If this is lower than 60, the grace is rejected.
+\end{enumerate}
+
+Due to the deterministic nature of computers and the indeterminate nature of the human will, a random number is generated to abstract this away. Then, as is the unilateral voice of the Catholic Spiritual Tradition, humility is the universal regulator to all behaviour and all thought. Therefore, it is factored into calculations. On top of this, as the Thomisitic Tradition which Lagrange affirms holds, Prudence is the seat of judgement in all actions. Henceforth, it also contributes to the determination of decisions. This then takes into account the emotions between characters, the relevant vices and virtues, and then the state of grace, which Lagrange states hold together all virtues including natural virtues. Finally, acknowledging Man's inclination to evil actions as is taught under the doctrine of Original Sin, a character must pass 60 to avoid sin or inaction. \\
+\subsubsection{Passion and Virtue Variation} 
+As our lives are not always discrete actions, these must be acknowledged by some means. Be this falling out of the habit, or the emotional fluctuations caused by circadian rhythms or diet, they will touch the story. Therefore, some simple algorithms to randomly vary these passions and to taper them down have been added.\\
+
+Likewise, it makes very little sense for characters to become habitually irreconcilably angry or in a state of pleasure. Therefore, there is a function which calms down the character. \\
+\subsection{Markov Chain Name Generation}
+To add a little bit of flavour to the text, I decided that variations in names may make the text more interesting. Additionally, rather than use a bank of names which would simply be randomly selected, I opted to use a simple Name Generator. This used an implementation written by PavlikPolivka.
+
+\subsubsection{Gathering of Names}
+Names are split into various cultural groups which pertain to the ancient natures of the text (Including Babylonian, Hebrew and Greek). These are kept together to preserve the unique grammatical aspects of each culture's language, and therefore generate culturally reminiscent names. 
+
+\subsection{Evolutionary Aspects}
+Although a great deal of research in Narrative Generation has been penned in relation to the generation of Good plots (largely based on Aristotle's recognition in the \textit{Poetics} that each narrative ultimately relies on a plot), as our approach is aimed at representing the humanity of the characters, this has been set aside and is instead aimed at producing the most realistic human characters. 
+
+\subsubsection{Summary of the MOEA Algorithm}
+This is how generations are generated and mutated\:
+\begin{enumerate}
+	\item Do a Generation and generate 10 points at fixed intervals in the life of each character
+	\item Consolidate all of the values into the 7 virtues and 1 passion, subtracting the vices but taking the absolute values of the passions (This is because the model is structured on emotional intensity)
+	\item Normalise all of these values to fit within the same graph space
+	\item Find the Euclidean Distance between the ideal point at the correct state and the actual point
+	\item Use tournament selection to select the Top 10 lives
+	\item Generate the new Generation based on Crossover
+\end{enumerate}
+
+\subsubsection{How do we measure realism?}
+Given the paradigm which this research aims to investigate, expectations ought to be from that perspective. Luckily, the title of the major basis for this work has this in the title. The three ages which the title signifies indicate three phases in the spiritual life, and consequently two transitional periods which the character moves through. The Three Ages are known as the Purgative, Illuminative and Unitive ways. The two periods are known as the Dark Night of the Senses and the Dark Night of the Spirit. \\
+The aforementioned events in the life of many form peaks of growing virtue, which grow at different rates given times, as well as representing intermittent levels of the passions. The nights not only represent growths in virtue, but also times of particularly powerful emotions.\\
+
+With this, a model life can be constructed out of a set of points in 8 dimensions, 7 for the virtues and 1 for the passions, each point representing a certain part of the ideal life. We can measure characters against this by generating from each character this same set of points at the same intervals as the ideal life. \\
+
+\subsubsection{Multiple Objective Fitness Function}
+On initial research into the problem it became very clear that, while there are different aspects to human virtue which can exist without on another, these are all connected by the fact that they subside in the same human person. Therefore, any solution to this problem must be able to handle both the unity of these variables while simultaneously handling that one may subsist in a person without any others. This necessitated a Multiple Objective Approach. \\
+
+There were three investigated approaches \: Pareto Dominance, Decomposition and Indicator Functions. Pareto Dominance is a method which selects based on judging whether a solution is better (I.E. dominates) across all dimensions. This was dismissed very quickly after it became clear that this method alone is ineffective above 3 dimensions \cite{AchievementScalarazingIndicatorBased}, as we have 8. It was more difficult to deal with Decomposition and Indicator Function based solutions.\\
+
+Decomposition breaks down the problem into a selection of single dimensional subproblems \cite{MOEAD}. It provides weights for each dimension, and then varies these across the subproblems, and then sums these to find the best solution. While this was a very attractive solution due to the simplicity of the algorithm. However, the problem with this method is that the treatment of subproblems implies that the dimensions are independent. As this isn't strictly the case, it would not accurately represent the reality of each solution. 
+
+This leaves us with Indicator based Algorithms, which generate indicators in quality of the good solutions, and ranks them based on these. A Hypervolume indicator operates by taking the amount of area which is dominated by the solution set given a reference point and then ranks them based on this \cite{AchievementScalarazingIndicatorBased}. This would not work in our case because, as we have just stated, we are trying to fit to a graph. Initially, I considered doing the exact opposite, and instead generating an nth dimensional derivative to indicate whether or not the point was corresponding to the derivative of the ideal graph. However, this would fail because we are attempting to generate stories which generally fit a realistic curve, and these curves can be greater or lower in magnitude. St Francis of Assisi and an Old Woman at Church can fit the Three Ages just as much as one an other. However, the magnitude with which the virtues and passions will vary a great deal. Henceforth, this would impact the derivative's magnitude, and therefore it would not work. There is also the problem that derivative cannot simply be summed together as a matter of magnitude, as derivative indicates direction in some way. Therefore, it becomes difficult to produce a single indicator score.  \\
+
+The solution which I ultimately settled on was to normalise each character's graph to within an interval provided for all characters, and then simply take the Euclidean Distance between each character point and its corresponding ideal point. This would mean that the issue of magnitude would be irrelevant as each character would be normalised given the minimum and maximum value of each respective dimension, and so would be directly comparable to the ideal graph which is normalised in the same way. Additionally, the euclidean distances can be added together across all of the points and this will give an accurate indication of how closely the graph is fit, as distance is always a magnitude. 
+
+\subsubsection{Selection method}
+As we wish to select those solutions which are closest to the ideal, we shall minimise the values of the generated characters. Then, tournament selection was carried out on the set of generated characters, producing 10 results. This was chosen over selecting from a larger sample because it was discovered in early testing that the highest characters generally had much lower values and that the difference tapered off over time. 
+
+\subsubsection{Mutation Method}
+After this selection, the question of generating the next generation came about. Due to some events having compulsory consequent actions, as well as breaking coherence of the stories generated with the will algorithms, random mutation was not selected. However, crossover was engaged in across the number of key points in the lives. The algorithm takes the events between these key points and then inserts them into the new lives of the character. This varies in size dependent on how large the lives of the character are desired to be. 
+
+
+\section{Results and Analysis}
+
+\section{Conclusion}
+
+
+\printbibliography
+
+\section{Appendix}
+
+\end{document}

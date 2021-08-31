@@ -1,0 +1,33 @@
+\BOOKMARK [1][-]{section.1}{Abstract}{}% 1
+\BOOKMARK [1][-]{section.2}{Introduction}{}% 2
+\BOOKMARK [1][-]{section.3}{Literature Review}{}% 3
+\BOOKMARK [2][-]{subsection.3.1}{Current Use of Narrative Theory in Narrative Generation}{section.3}% 4
+\BOOKMARK [2][-]{subsection.3.2}{Virtue Ethics, Human Nature and Spiritual Theology}{section.3}% 5
+\BOOKMARK [2][-]{subsection.3.3}{Computational Character Generation}{section.3}% 6
+\BOOKMARK [2][-]{subsection.3.4}{General Approaches to Narrative Generation}{section.3}% 7
+\BOOKMARK [2][-]{subsection.3.5}{MOEAs}{section.3}% 8
+\BOOKMARK [1][-]{section.4}{Problem Description}{}% 9
+\BOOKMARK [1][-]{section.5}{Possible Approaches}{}% 10
+\BOOKMARK [2][-]{subsection.5.1}{Patristic Method}{section.5}% 11
+\BOOKMARK [2][-]{subsection.5.2}{Scholastic Method}{section.5}% 12
+\BOOKMARK [1][-]{section.6}{Design and Methodology}{}% 13
+\BOOKMARK [1][-]{section.7}{Implementation}{}% 14
+\BOOKMARK [2][-]{subsection.7.1}{Handling Narrative Events}{section.7}% 15
+\BOOKMARK [2][-]{subsection.7.2}{Quantifying Virtues, Vices and Passions}{section.7}% 16
+\BOOKMARK [3][-]{subsubsection.7.2.1}{A Description of the Structure of an Event}{subsection.7.2}% 17
+\BOOKMARK [3][-]{subsubsection.7.2.2}{Storage and Loading of Events}{subsection.7.2}% 18
+\BOOKMARK [2][-]{subsection.7.3}{Event and Outcome choice}{section.7}% 19
+\BOOKMARK [3][-]{subsubsection.7.3.1}{Actual Grace and Temptation}{subsection.7.3}% 20
+\BOOKMARK [3][-]{subsubsection.7.3.2}{Human Will Algorithm Simulation}{subsection.7.3}% 21
+\BOOKMARK [3][-]{subsubsection.7.3.3}{Passion and Virtue Variation}{subsection.7.3}% 22
+\BOOKMARK [2][-]{subsection.7.4}{Markov Chain Name Generation}{section.7}% 23
+\BOOKMARK [3][-]{subsubsection.7.4.1}{Gathering of Names}{subsection.7.4}% 24
+\BOOKMARK [2][-]{subsection.7.5}{Evolutionary Aspects}{section.7}% 25
+\BOOKMARK [3][-]{subsubsection.7.5.1}{Summary of the MOEA Algorithm}{subsection.7.5}% 26
+\BOOKMARK [3][-]{subsubsection.7.5.2}{How do we measure realism?}{subsection.7.5}% 27
+\BOOKMARK [3][-]{subsubsection.7.5.3}{Multiple Objective Fitness Function}{subsection.7.5}% 28
+\BOOKMARK [3][-]{subsubsection.7.5.4}{Selection method}{subsection.7.5}% 29
+\BOOKMARK [3][-]{subsubsection.7.5.5}{Mutation Method}{subsection.7.5}% 30
+\BOOKMARK [1][-]{section.8}{Results and Analysis}{}% 31
+\BOOKMARK [1][-]{section.9}{Conclusion}{}% 32
+\BOOKMARK [1][-]{section.10}{Appendix}{}% 33

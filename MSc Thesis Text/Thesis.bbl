@@ -1,0 +1,903 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{questgeneration}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=756329be6d67532dc872505d3650d254}{%
+           family={Edirlei\bibnamedelimb Soares\bibnamedelimb de\bibnamedelima Lima},
+           familyi={E\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim L\bibinitperiod},
+           given={Antonio\bibnamedelimb L.\bibnamedelimi Furtado},
+           giveni={A\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim F\bibinitperiod},
+           suffix={Bruno\bibnamedelima Feijó},
+           suffixi={B\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+      }
+      \strng{namehash}{756329be6d67532dc872505d3650d254}
+      \strng{fullhash}{756329be6d67532dc872505d3650d254}
+      \strng{bibnamehash}{756329be6d67532dc872505d3650d254}
+      \strng{authorbibnamehash}{756329be6d67532dc872505d3650d254}
+      \strng{authornamehash}{756329be6d67532dc872505d3650d254}
+      \strng{authorfullhash}{756329be6d67532dc872505d3650d254}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of SBGames 2019}
+      \field{title}{Procedural Generation of Quests for Games Using Genetic Algorithms and Automated Planning}
+      \field{year}{2019}
+      \field{pages}{495\bibrangedash 504}
+      \range{pages}{10}
+    \endentry
+    \entry{MEXICA}{article}{}
+      \name{author}{2}{}{%
+        {{hash=fe404769f3b9ec6f3bc748df1c26e090}{%
+           family={Pérez\bibnamedelimb y\bibnamedelima Pérez},
+           familyi={P\bibinitperiod\bibinitdelim y\bibinitperiod\bibinitdelim P\bibinitperiod},
+           given={Rafael},
+           giveni={R\bibinitperiod}}}%
+        {{hash=7a437be86720cf08d211d8b313799a2a}{%
+           family={Sharples},
+           familyi={S\bibinitperiod},
+           given={Mike},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{94900c04b1b35e9e1b5284279830fb6b}
+      \strng{fullhash}{94900c04b1b35e9e1b5284279830fb6b}
+      \strng{bibnamehash}{94900c04b1b35e9e1b5284279830fb6b}
+      \strng{authorbibnamehash}{94900c04b1b35e9e1b5284279830fb6b}
+      \strng{authornamehash}{94900c04b1b35e9e1b5284279830fb6b}
+      \strng{authorfullhash}{94900c04b1b35e9e1b5284279830fb6b}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{J. Exp. Theor. Artif. Intell.}
+      \field{month}{04}
+      \field{title}{MEXICA: A computer model of a cognitive account of creative writing}
+      \field{volume}{13}
+      \field{year}{2001}
+      \field{pages}{119\bibrangedash 139}
+      \range{pages}{21}
+      \verb{doi}
+      \verb 10.1080/09528130010029820
+      \endverb
+    \endentry
+    \entry{propp1975morphology}{book}{}
+      \name{author}{3}{}{%
+        {{hash=88a081d9cf1d5fdf39684df4ed55c5d8}{%
+           family={Propp},
+           familyi={P\bibinitperiod},
+           given={V.},
+           giveni={V\bibinitperiod}}}%
+        {{hash=07b7760714a0fed508f28f59d2c52c1f}{%
+           family={Scott},
+           familyi={S\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+        {{hash=431871969146413dafe3cc0d6da95d4c}{%
+           family={Wagner},
+           familyi={W\bibinitperiod},
+           given={L.A.},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {University of Texas Press}%
+      }
+      \strng{namehash}{b5079cffef88b2f6f80efcd608576359}
+      \strng{fullhash}{b5079cffef88b2f6f80efcd608576359}
+      \strng{bibnamehash}{b5079cffef88b2f6f80efcd608576359}
+      \strng{authorbibnamehash}{b5079cffef88b2f6f80efcd608576359}
+      \strng{authornamehash}{b5079cffef88b2f6f80efcd608576359}
+      \strng{authorfullhash}{b5079cffef88b2f6f80efcd608576359}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780292783911}
+      \field{series}{American Folklore Society Bibliographical and Special Series}
+      \field{title}{Morphology of the Folktale: Second Edition}
+      \field{year}{1975}
+      \verb{urlraw}
+      \verb https://books.google.co.uk/books?id=cyc7AQAAIAAJ
+      \endverb
+      \verb{url}
+      \verb https://books.google.co.uk/books?id=cyc7AQAAIAAJ
+      \endverb
+    \endentry
+    \entry{Gervs2013ProppsMO}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=ce54b617b6a83dc53bfd6817c0425c30}{%
+           family={Gervás},
+           familyi={G\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{ce54b617b6a83dc53bfd6817c0425c30}
+      \strng{fullhash}{ce54b617b6a83dc53bfd6817c0425c30}
+      \strng{bibnamehash}{ce54b617b6a83dc53bfd6817c0425c30}
+      \strng{authorbibnamehash}{ce54b617b6a83dc53bfd6817c0425c30}
+      \strng{authornamehash}{ce54b617b6a83dc53bfd6817c0425c30}
+      \strng{authorfullhash}{ce54b617b6a83dc53bfd6817c0425c30}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{CMN}
+      \field{title}{Propp's Morphology of the Folk Tale as a Grammar for Generation}
+      \field{year}{2013}
+    \endentry
+    \entry{340BCEthicsAristotleNicomachean}{book}{}
+      \name{author}{1}{}{%
+        {{hash=798a01f212a8e620a6940400717a56d9}{%
+           family={Aristotle},
+           familyi={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Penguin Classics}%
+      }
+      \strng{namehash}{798a01f212a8e620a6940400717a56d9}
+      \strng{fullhash}{798a01f212a8e620a6940400717a56d9}
+      \strng{bibnamehash}{798a01f212a8e620a6940400717a56d9}
+      \strng{authorbibnamehash}{798a01f212a8e620a6940400717a56d9}
+      \strng{authornamehash}{798a01f212a8e620a6940400717a56d9}
+      \strng{authorfullhash}{798a01f212a8e620a6940400717a56d9}
+      \field{sortinit}{5}
+      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{140449493}
+      \field{title}{The Nicomachean Ethics}
+      \field{year}{340}
+      \field{pages}{329}
+      \range{pages}{1}
+    \endentry
+    \entry{bergsma2018catholic}{book}{}
+      \name{author}{2}{}{%
+        {{hash=1d5dbb557a7f262fc000d9a0581231ca}{%
+           family={Bergsma},
+           familyi={B\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=8b5477e4f892d6b370c94d383d75ad4d}{%
+           family={Pitre},
+           familyi={P\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Ignatius Press}%
+      }
+      \strng{namehash}{893776da5731e5e0d44b6dff69ccd0a3}
+      \strng{fullhash}{893776da5731e5e0d44b6dff69ccd0a3}
+      \strng{bibnamehash}{893776da5731e5e0d44b6dff69ccd0a3}
+      \strng{authorbibnamehash}{893776da5731e5e0d44b6dff69ccd0a3}
+      \strng{authornamehash}{893776da5731e5e0d44b6dff69ccd0a3}
+      \strng{authorfullhash}{893776da5731e5e0d44b6dff69ccd0a3}
+      \field{sortinit}{6}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9781642290486}
+      \field{title}{A Catholic Introduction to the Bible Old Testament}
+      \field{year}{2018}
+      \field{pages}{661}
+      \range{pages}{1}
+      \verb{urlraw}
+      \verb https://books.google.co.uk/books?id=px5tDwAAQBAJ
+      \endverb
+      \verb{url}
+      \verb https://books.google.co.uk/books?id=px5tDwAAQBAJ
+      \endverb
+    \endentry
+    \entry{garrigou2013three}{book}{}
+      \name{author}{1}{}{%
+        {{hash=db289d06ac4e704e3a33addf721b1caf}{%
+           family={Garrigou-Lagrange},
+           familyi={G\bibinithyphendelim L\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Createspace Independent Pub}%
+      }
+      \strng{namehash}{db289d06ac4e704e3a33addf721b1caf}
+      \strng{fullhash}{db289d06ac4e704e3a33addf721b1caf}
+      \strng{bibnamehash}{db289d06ac4e704e3a33addf721b1caf}
+      \strng{authorbibnamehash}{db289d06ac4e704e3a33addf721b1caf}
+      \strng{authornamehash}{db289d06ac4e704e3a33addf721b1caf}
+      \strng{authorfullhash}{db289d06ac4e704e3a33addf721b1caf}
+      \field{sortinit}{7}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9781492390978}
+      \field{title}{The Three Ages of the Interior Life}
+      \field{year}{2013}
+      \verb{urlraw}
+      \verb https://books.google.co.uk/books?id=4qWEngEACAAJ
+      \endverb
+      \verb{url}
+      \verb https://books.google.co.uk/books?id=4qWEngEACAAJ
+      \endverb
+    \endentry
+    \entry{1983philokalia}{book}{}
+      \name{author}{2}{}{%
+        {{hash=2feef15e24988ba8f51fea08c9c11845}{%
+           family={Palmer},
+           familyi={P\bibinitperiod},
+           given={G.E.H.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=a46b5fa51e2ff97bf698a33cb7eccf1d}{%
+           family={Sherrard},
+           familyi={S\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{2}{%
+        {Farrar, Straus}%
+        {Giroux}%
+      }
+      \strng{namehash}{257fda589fd28b5e2895c7b1e56a90e5}
+      \strng{fullhash}{257fda589fd28b5e2895c7b1e56a90e5}
+      \strng{bibnamehash}{257fda589fd28b5e2895c7b1e56a90e5}
+      \strng{authorbibnamehash}{257fda589fd28b5e2895c7b1e56a90e5}
+      \strng{authornamehash}{257fda589fd28b5e2895c7b1e56a90e5}
+      \strng{authorfullhash}{257fda589fd28b5e2895c7b1e56a90e5}
+      \field{sortinit}{8}
+      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780571130139}
+      \field{series}{Philokalia Vol. I}
+      \field{title}{The Philokalia, Volume 1: The Complete Text; Compiled by St. Nikodimos of the Holy Mountain \& St. Markarios of Corinth}
+      \field{year}{1983}
+    \endentry
+    \entry{aquinas2014summa}{book}{}
+      \name{author}{3}{}{%
+        {{hash=4ec8b92e7094803d7bd54fb787d7ec51}{%
+           family={Aquinas},
+           familyi={A\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+        {{hash=1544c2fdcdd388cd3811c775e432ae8e}{%
+           family={Province},
+           familyi={P\bibinitperiod},
+           given={T.F.E.D.},
+           giveni={T\bibinitperiod}}}%
+        {{hash=e51bd675a8c8f0434e26c68112c3c6b3}{%
+           family={Publishing},
+           familyi={P\bibinitperiod},
+           given={C.W.},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Catholic Way Publishing}%
+      }
+      \strng{namehash}{9bf1e41e049570a321661c53963d03b9}
+      \strng{fullhash}{9bf1e41e049570a321661c53963d03b9}
+      \strng{bibnamehash}{9bf1e41e049570a321661c53963d03b9}
+      \strng{authorbibnamehash}{9bf1e41e049570a321661c53963d03b9}
+      \strng{authornamehash}{9bf1e41e049570a321661c53963d03b9}
+      \strng{authorfullhash}{9bf1e41e049570a321661c53963d03b9}
+      \field{sortinit}{9}
+      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9781783793143}
+      \field{title}{The Summa Theologica: Complete Edition}
+      \field{year}{2014}
+      \verb{urlraw}
+      \verb https://books.google.co.uk/books?id=Ee0HBAAAQBAJ
+      \endverb
+      \verb{url}
+      \verb https://books.google.co.uk/books?id=Ee0HBAAAQBAJ
+      \endverb
+    \endentry
+    \entry{AutomaticStoryGeneration2021}{article}{}
+      \name{author}{2}{}{%
+        {{hash=0ac42a501fb4a828977c33c6b8e4d68a}{%
+           family={Alhussain},
+           familyi={A\bibinitperiod},
+           given={Arwa},
+           giveni={A\bibinitperiod}}}%
+        {{hash=973c841c9710842cbd903db77ba28f16}{%
+           family={Azmi},
+           familyi={A\bibinitperiod},
+           given={Aqil},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{19d0a65cb98e0bcfa859e8e4042b909d}
+      \strng{fullhash}{19d0a65cb98e0bcfa859e8e4042b909d}
+      \strng{bibnamehash}{19d0a65cb98e0bcfa859e8e4042b909d}
+      \strng{authorbibnamehash}{19d0a65cb98e0bcfa859e8e4042b909d}
+      \strng{authornamehash}{19d0a65cb98e0bcfa859e8e4042b909d}
+      \strng{authorfullhash}{19d0a65cb98e0bcfa859e8e4042b909d}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{ACM Computing Surveys}
+      \field{month}{05}
+      \field{title}{Automatic Story Generation: A Survey of Approaches}
+      \field{volume}{54}
+      \field{year}{2021}
+      \field{pages}{1\bibrangedash 38}
+      \range{pages}{38}
+      \verb{doi}
+      \verb 10.1145/3453156
+      \endverb
+    \endentry
+    \entry{Riedl2003CharacterfocusedNP}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=7eef92b664f9451b2122835df9eba519}{%
+           family={Riedl},
+           familyi={R\bibinitperiod},
+           given={Mark\bibnamedelima O.},
+           giveni={M\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+        {{hash=e69874e64b38b89beec54c749107bd11}{%
+           family={Young},
+           familyi={Y\bibinitperiod},
+           given={R.\bibnamedelimi M.},
+           giveni={R\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{8b95310f8ae4c6b5b3ca0ff0e20edcc9}
+      \strng{fullhash}{8b95310f8ae4c6b5b3ca0ff0e20edcc9}
+      \strng{bibnamehash}{8b95310f8ae4c6b5b3ca0ff0e20edcc9}
+      \strng{authorbibnamehash}{8b95310f8ae4c6b5b3ca0ff0e20edcc9}
+      \strng{authornamehash}{8b95310f8ae4c6b5b3ca0ff0e20edcc9}
+      \strng{authorfullhash}{8b95310f8ae4c6b5b3ca0ff0e20edcc9}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Character-focused Narrative Planning}
+      \field{year}{2003}
+    \endentry
+    \entry{authorandcharactergoals}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=29ef52358ed7ceb6accc08887c7a9f50}{%
+           family={Solis},
+           familyi={S\bibinitperiod},
+           given={Candice},
+           giveni={C\bibinitperiod}}}%
+        {{hash=8e1d2ca01ce1eeba5a2e5db8b1988d1f}{%
+           family={Siy},
+           familyi={S\bibinitperiod},
+           given={Joan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=aadf2a113a4af3f7104dd1449b527c54}{%
+           family={Tabirao},
+           familyi={T\bibinitperiod},
+           given={Emerald},
+           giveni={E\bibinitperiod}}}%
+        {{hash=161e0311fec95ee95c4f62225aaf5cad}{%
+           family={Ong},
+           familyi={O\bibinitperiod},
+           given={Ethel},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{c9e52c935a2ebb7f6f2501175b0ebf0f}
+      \strng{fullhash}{76e5e4202313272aaa92005669507bb6}
+      \strng{bibnamehash}{76e5e4202313272aaa92005669507bb6}
+      \strng{authorbibnamehash}{76e5e4202313272aaa92005669507bb6}
+      \strng{authornamehash}{c9e52c935a2ebb7f6f2501175b0ebf0f}
+      \strng{authorfullhash}{76e5e4202313272aaa92005669507bb6}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-1-932432-36-7}
+      \field{month}{06}
+      \field{title}{Planning author and character goals for story generation}
+      \field{year}{2009}
+      \field{pages}{63\bibrangedash 70}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.3115/1642011.1642020
+      \endverb
+    \endentry
+    \entry{Meehan1977TALESPINAI}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=81e2979ef4c0c17a297aeef138f6b86c}{%
+           family={Meehan},
+           familyi={M\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{81e2979ef4c0c17a297aeef138f6b86c}
+      \strng{fullhash}{81e2979ef4c0c17a297aeef138f6b86c}
+      \strng{bibnamehash}{81e2979ef4c0c17a297aeef138f6b86c}
+      \strng{authorbibnamehash}{81e2979ef4c0c17a297aeef138f6b86c}
+      \strng{authornamehash}{81e2979ef4c0c17a297aeef138f6b86c}
+      \strng{authorfullhash}{81e2979ef4c0c17a297aeef138f6b86c}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{IJCAI}
+      \field{title}{TALE-SPIN, An Interactive Program that Writes Stories}
+      \field{year}{1977}
+    \endentry
+    \entry{KybartasGenerationTechniques}{article}{}
+      \name{author}{2}{}{%
+        {{hash=0e59973758661bdc114bca4035d86d7e}{%
+           family={Kybartas},
+           familyi={K\bibinitperiod},
+           given={Ben},
+           giveni={B\bibinitperiod}}}%
+        {{hash=1d3f4766060649d522cb73a599ad27c5}{%
+           family={Bidarra},
+           familyi={B\bibinitperiod},
+           given={Rafael},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{8098252c15e8577a7318ec94cbbde262}
+      \strng{fullhash}{8098252c15e8577a7318ec94cbbde262}
+      \strng{bibnamehash}{8098252c15e8577a7318ec94cbbde262}
+      \strng{authorbibnamehash}{8098252c15e8577a7318ec94cbbde262}
+      \strng{authornamehash}{8098252c15e8577a7318ec94cbbde262}
+      \strng{authorfullhash}{8098252c15e8577a7318ec94cbbde262}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Computational Intelligence and AI in Games}
+      \field{number}{3}
+      \field{title}{A Survey on Story Generation Techniques for Authoring Computational Narratives}
+      \field{volume}{9}
+      \field{year}{2017}
+      \field{pages}{239\bibrangedash 253}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1109/TCIAIG.2016.2546063
+      \endverb
+    \endentry
+    \entry{van-stegeren-theune-2019-narrative}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=075ef3d6b88cfbcb7e3b4e2faca14ae5}{%
+           family={Stegeren},
+           familyi={S\bibinitperiod},
+           given={Judith},
+           giveni={J\bibinitperiod},
+           prefix={van},
+           prefixi={v\bibinitperiod}}}%
+        {{hash=d9b5e5613eca95c11ce0eeecc626fc4c}{%
+           family={Theune},
+           familyi={T\bibinitperiod},
+           given={Mariët},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Florence, Italy}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computational Linguistics}%
+      }
+      \strng{namehash}{cb17cc0e135e496b692f9c749e6438cc}
+      \strng{fullhash}{cb17cc0e135e496b692f9c749e6438cc}
+      \strng{bibnamehash}{cb17cc0e135e496b692f9c749e6438cc}
+      \strng{authorbibnamehash}{cb17cc0e135e496b692f9c749e6438cc}
+      \strng{authornamehash}{cb17cc0e135e496b692f9c749e6438cc}
+      \strng{authorfullhash}{cb17cc0e135e496b692f9c749e6438cc}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the Second Workshop on Storytelling}
+      \field{month}{8}
+      \field{title}{{N}arrative {G}eneration in the {W}ild: {M}ethods from {N}a{N}o{G}en{M}o}
+      \field{year}{2019}
+      \field{pages}{65\bibrangedash 74}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.18653/v1/W19-3407
+      \endverb
+      \verb{urlraw}
+      \verb https://aclanthology.org/W19-3407
+      \endverb
+      \verb{url}
+      \verb https://aclanthology.org/W19-3407
+      \endverb
+    \endentry
+    \entry{NeuralNetworkOne}{article}{}
+      \name{author}{6}{}{%
+        {{hash=d6407d24ad5d186a7a635236390003a4}{%
+           family={Martin},
+           familyi={M\bibinitperiod},
+           given={Lara\bibnamedelima J.},
+           giveni={L\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=ea1aad329c9f0aa8783d50913ce037ea}{%
+           family={Ammanabrolu},
+           familyi={A\bibinitperiod},
+           given={Prithviraj},
+           giveni={P\bibinitperiod}}}%
+        {{hash=05385562fcfd2eb24e3d116c36710111}{%
+           family={Hancock},
+           familyi={H\bibinitperiod},
+           given={William},
+           giveni={W\bibinitperiod}}}%
+        {{hash=deed3c984a090838024fd13f6ea943fb}{%
+           family={Singh},
+           familyi={S\bibinitperiod},
+           given={Shruti},
+           giveni={S\bibinitperiod}}}%
+        {{hash=758345a57fc17c37eb1a6f13d728c09b}{%
+           family={Harrison},
+           familyi={H\bibinitperiod},
+           given={Brent},
+           giveni={B\bibinitperiod}}}%
+        {{hash=7eef92b664f9451b2122835df9eba519}{%
+           family={Riedl},
+           familyi={R\bibinitperiod},
+           given={Mark\bibnamedelima O.},
+           giveni={M\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+      }
+      \strng{namehash}{e409e3661088ac015d1bf5cf70933832}
+      \strng{fullhash}{9ef3594d14470c75884a47468f9c2117}
+      \strng{bibnamehash}{9ef3594d14470c75884a47468f9c2117}
+      \strng{authorbibnamehash}{9ef3594d14470c75884a47468f9c2117}
+      \strng{authornamehash}{e409e3661088ac015d1bf5cf70933832}
+      \strng{authorfullhash}{9ef3594d14470c75884a47468f9c2117}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{CoRR}
+      \field{title}{Event Representations for Automated Story Generation with Deep Neural Nets}
+      \field{volume}{abs/1706.01331}
+      \field{year}{2017}
+      \verb{eprint}
+      \verb 1706.01331
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1706.01331
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1706.01331
+      \endverb
+    \endentry
+    \entry{sagarkar-etal-2018-quality}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=539cbe6d165ca7cd9359ecf4f8185fd1}{%
+           family={Sagarkar},
+           familyi={S\bibinitperiod},
+           given={Manasvi},
+           giveni={M\bibinitperiod}}}%
+        {{hash=b13b7b70e251f63e6d5152c29c33ec4a}{%
+           family={Wieting},
+           familyi={W\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+        {{hash=57f0a5cfce34f45b2acdbdeb67b0a842}{%
+           family={Tu},
+           familyi={T\bibinitperiod},
+           given={Lifu},
+           giveni={L\bibinitperiod}}}%
+        {{hash=6bc70be3492f0800ecee6926d290244f}{%
+           family={Gimpel},
+           familyi={G\bibinitperiod},
+           given={Kevin},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New Orleans, Louisiana}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computational Linguistics}%
+      }
+      \strng{namehash}{493dc7aae18f38d3712292d974b363da}
+      \strng{fullhash}{f7054074befa357bf8d16828fe6effab}
+      \strng{bibnamehash}{f7054074befa357bf8d16828fe6effab}
+      \strng{authorbibnamehash}{f7054074befa357bf8d16828fe6effab}
+      \strng{authornamehash}{493dc7aae18f38d3712292d974b363da}
+      \strng{authorfullhash}{f7054074befa357bf8d16828fe6effab}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the Seventh Joint Conference on Lexical and Computational Semantics}
+      \field{month}{6}
+      \field{title}{Quality Signals in Generated Stories}
+      \field{year}{2018}
+      \field{pages}{192\bibrangedash 202}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.18653/v1/S18-2024
+      \endverb
+      \verb{urlraw}
+      \verb https://aclanthology.org/S18-2024
+      \endverb
+      \verb{url}
+      \verb https://aclanthology.org/S18-2024
+      \endverb
+    \endentry
+    \entry{mcintyre-lapata-2010-plot}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=792ef58f9c5438e09c58a0a118a74e00}{%
+           family={McIntyre},
+           familyi={M\bibinitperiod},
+           given={Neil},
+           giveni={N\bibinitperiod}}}%
+        {{hash=35b5bc53ec3fa2640225354af6ca0e1d}{%
+           family={Lapata},
+           familyi={L\bibinitperiod},
+           given={Mirella},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Uppsala, Sweden}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computational Linguistics}%
+      }
+      \strng{namehash}{f69ffaf2f7ee5e61f024e0f842fdf4d3}
+      \strng{fullhash}{f69ffaf2f7ee5e61f024e0f842fdf4d3}
+      \strng{bibnamehash}{f69ffaf2f7ee5e61f024e0f842fdf4d3}
+      \strng{authorbibnamehash}{f69ffaf2f7ee5e61f024e0f842fdf4d3}
+      \strng{authornamehash}{f69ffaf2f7ee5e61f024e0f842fdf4d3}
+      \strng{authorfullhash}{f69ffaf2f7ee5e61f024e0f842fdf4d3}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 48th Annual Meeting of the Association for Computational Linguistics}
+      \field{month}{7}
+      \field{title}{Plot Induction and Evolutionary Search for Story Generation}
+      \field{year}{2010}
+      \field{pages}{1562\bibrangedash 1572}
+      \range{pages}{11}
+      \verb{urlraw}
+      \verb https://aclanthology.org/P10-1158
+      \endverb
+      \verb{url}
+      \verb https://aclanthology.org/P10-1158
+      \endverb
+    \endentry
+    \entry{Riegl2018LiveDE}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=7768d0bd07660a4d0786e593dff20808}{%
+           family={Riegl},
+           familyi={R\bibinitperiod},
+           given={Stefan},
+           giveni={S\bibinitperiod}}}%
+        {{hash=1acf630ed1fa258d3bfd5b137200a02f}{%
+           family={Veale},
+           familyi={V\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{9753b0d85627c0f405d11786e7fdd0cd}
+      \strng{fullhash}{9753b0d85627c0f405d11786e7fdd0cd}
+      \strng{bibnamehash}{9753b0d85627c0f405d11786e7fdd0cd}
+      \strng{authorbibnamehash}{9753b0d85627c0f405d11786e7fdd0cd}
+      \strng{authornamehash}{9753b0d85627c0f405d11786e7fdd0cd}
+      \strng{authorfullhash}{9753b0d85627c0f405d11786e7fdd0cd}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{ICCC}
+      \field{title}{Live, Die, Evaluate, Repeat: Do-Over Simulation in the Generation of Coherent Episodic Stories}
+      \field{year}{2018}
+    \endentry
+    \entry{charactergeneration}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=c9afc0204ab13fb3c3c8c058db361ad0}{%
+           family={Malik\bibnamedelima Nairat},
+           familyi={M\bibinitperiod\bibinitdelim N\bibinitperiod},
+           given={Mats\bibnamedelimb G.\bibnamedelimi Nordahl},
+           giveni={M\bibinitperiod\bibinitdelim G\bibinitperiod\bibinitdelim N\bibinitperiod},
+           suffix={Palle\bibnamedelima Dahlstedt},
+           suffixi={P\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \strng{namehash}{c9afc0204ab13fb3c3c8c058db361ad0}
+      \strng{fullhash}{c9afc0204ab13fb3c3c8c058db361ad0}
+      \strng{bibnamehash}{c9afc0204ab13fb3c3c8c058db361ad0}
+      \strng{authorbibnamehash}{c9afc0204ab13fb3c3c8c058db361ad0}
+      \strng{authornamehash}{c9afc0204ab13fb3c3c8c058db361ad0}
+      \strng{authorfullhash}{c9afc0204ab13fb3c3c8c058db361ad0}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the IEEE Congress on Evolutionary Computation, CEC 2011, New Orleans, LA, USA, 5-8 June, 2011}
+      \field{title}{Character Evolution Approach to Generative Storytelling}
+      \field{year}{2011}
+      \field{pages}{1258\bibrangedash 1263}
+      \range{pages}{6}
+    \endentry
+    \entry{MOEANarrative}{article}{}
+      \name{author}{4}{}{%
+        {{hash=e792ce49deb975512f7f60a7a75cfa66}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Kun},
+           giveni={K\bibinitperiod}}}%
+        {{hash=62f94180a8a1f0c0b09a634e60d1011d}{%
+           family={Bui},
+           familyi={B\bibinitperiod},
+           given={Vinh},
+           giveni={V\bibinitperiod}}}%
+        {{hash=56e04715fd06916f8b519fe8c878ed95}{%
+           family={Petraki},
+           familyi={P\bibinitperiod},
+           given={Eleni},
+           giveni={E\bibinitperiod}}}%
+        {{hash=050898ffa4bfee6ade7e0dff269326d1}{%
+           family={Abbass},
+           familyi={A\bibinitperiod},
+           given={Hussein\bibnamedelima A.},
+           giveni={H\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{f01cdaf92a4177353dcce2d6c58a4b32}
+      \strng{fullhash}{8b7e2f639f5ed1d82fb6aefb5ba6707d}
+      \strng{bibnamehash}{8b7e2f639f5ed1d82fb6aefb5ba6707d}
+      \strng{authorbibnamehash}{8b7e2f639f5ed1d82fb6aefb5ba6707d}
+      \strng{authornamehash}{f01cdaf92a4177353dcce2d6c58a4b32}
+      \strng{authorfullhash}{8b7e2f639f5ed1d82fb6aefb5ba6707d}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Access}
+      \field{title}{Human-Guided Evolutionary Story Narration}
+      \field{volume}{6}
+      \field{year}{2018}
+      \field{pages}{13783\bibrangedash 13802}
+      \range{pages}{20}
+      \verb{doi}
+      \verb 10.1109/ACCESS.2018.2797879
+      \endverb
+    \endentry
+    \entry{AchievementScalarazingIndicatorBased}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=09df1268a0bb72d12f5cb70e54cc604f}{%
+           family={Ishibuchi},
+           familyi={I\bibinitperiod},
+           given={Hisao},
+           giveni={H\bibinitperiod}}}%
+        {{hash=649577ff67a948e6b89b748ba2baddcd}{%
+           family={Tsukamoto},
+           familyi={T\bibinitperiod},
+           given={Noritaka},
+           giveni={N\bibinitperiod}}}%
+        {{hash=e21ec18a5758bc9da67a29e8764f6260}{%
+           family={Sakane},
+           familyi={S\bibinitperiod},
+           given={Yuji},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=d4e542ab464d023c8375748fb9d62d26}{%
+           family={Nojima},
+           familyi={N\bibinitperiod},
+           given={Yusuke},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Portland, Oregon, USA}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{304382665154f9bb2d1a057248496028}
+      \strng{fullhash}{f076111dd1fe8bc147e2b365fa990a54}
+      \strng{bibnamehash}{f076111dd1fe8bc147e2b365fa990a54}
+      \strng{authorbibnamehash}{f076111dd1fe8bc147e2b365fa990a54}
+      \strng{authornamehash}{304382665154f9bb2d1a057248496028}
+      \strng{authorfullhash}{f076111dd1fe8bc147e2b365fa990a54}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 12th Annual Conference on Genetic and Evolutionary Computation}
+      \field{isbn}{9781450300728}
+      \field{series}{GECCO '10}
+      \field{title}{Indicator-Based Evolutionary Algorithm with Hypervolume Approximation by Achievement Scalarizing Functions}
+      \field{year}{2010}
+      \field{pages}{527\bibrangedash 534}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1145/1830483.1830578
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/1830483.1830578
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/1830483.1830578
+      \endverb
+      \keyw{evolutionary multiobjective optimization (emo),many objectives,indicator-based evolutionary algorithm (ibea),hypervolume}
+    \endentry
+    \entry{MOEASurvey1}{article}{}
+      \name{author}{3}{}{%
+        {{hash=521dfd6d7e2bff874c1187331de7672c}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Wenlan},
+           giveni={W\bibinitperiod}}}%
+        {{hash=9a4f4a1ff661cd600eb26523a5ba8bb4}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Yu},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=4eadda2f2fa485d0fa4fcb1cd63ba67c}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Lan},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{3122459e9303038b34a5064bf13d65cf}
+      \strng{fullhash}{3122459e9303038b34a5064bf13d65cf}
+      \strng{bibnamehash}{3122459e9303038b34a5064bf13d65cf}
+      \strng{authorbibnamehash}{3122459e9303038b34a5064bf13d65cf}
+      \strng{authornamehash}{3122459e9303038b34a5064bf13d65cf}
+      \strng{authorfullhash}{3122459e9303038b34a5064bf13d65cf}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Physics: Conference Series}
+      \field{month}{08}
+      \field{title}{Survey on Multi-Objective Evolutionary Algorithms}
+      \field{volume}{1288}
+      \field{year}{2019}
+      \field{pages}{012057}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1088/1742-6596/1288/1/012057
+      \endverb
+    \endentry
+    \entry{MOEAD}{article}{}
+      \name{author}{2}{}{%
+        {{hash=602a29bc69d6755cee5ce57fb171886f}{%
+           family={{Zhang}},
+           familyi={Z\bibinitperiod},
+           given={Q.},
+           giveni={Q\bibinitperiod}}}%
+        {{hash=e2e65bc31792929cfaa15cecf7f23965}{%
+           family={{Li}},
+           familyi={L\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{96d81b78115eaf20369fe621473fe81e}
+      \strng{fullhash}{96d81b78115eaf20369fe621473fe81e}
+      \strng{bibnamehash}{96d81b78115eaf20369fe621473fe81e}
+      \strng{authorbibnamehash}{96d81b78115eaf20369fe621473fe81e}
+      \strng{authornamehash}{96d81b78115eaf20369fe621473fe81e}
+      \strng{authorfullhash}{96d81b78115eaf20369fe621473fe81e}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Evolutionary Computation}
+      \field{number}{6}
+      \field{title}{MOEA/D: A Multiobjective Evolutionary Algorithm Based on Decomposition}
+      \field{volume}{11}
+      \field{year}{2007}
+      \field{pages}{712\bibrangedash 731}
+      \range{pages}{20}
+      \verb{doi}
+      \verb 10.1109/TEVC.2007.892759
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
