@@ -121,6 +121,54 @@
       \verb https://books.google.co.uk/books?id=cyc7AQAAIAAJ
       \endverb
     \endentry
+    \entry{WestAfricanGeneration}{article}{}
+      \name{author}{3}{}{%
+        {{hash=4508fad46afa2f6255a6e04d40d6602f}{%
+           family={Lô},
+           familyi={L\bibinitperiod},
+           given={Gossa},
+           giveni={G\bibinitperiod}}}%
+        {{hash=f23fff9754f4c1483e46dd8e38ac2e7c}{%
+           family={Boer},
+           familyi={B\bibinitperiod},
+           given={Victor},
+           giveni={V\bibinitperiod},
+           prefix={de},
+           prefixi={d\bibinitperiod}}}%
+        {{hash=6e0a2a2ebadd6dce4d806f8fa7ee0284}{%
+           family={Aart},
+           familyi={A\bibinitperiod},
+           given={Chris\bibnamedelima J.},
+           giveni={C\bibinitperiod\bibinitdelim J\bibinitperiod},
+           prefix={van},
+           prefixi={v\bibinitperiod}}}%
+      }
+      \strng{namehash}{a126134cbbb07cb0c06ffbddc30a64b3}
+      \strng{fullhash}{a126134cbbb07cb0c06ffbddc30a64b3}
+      \strng{bibnamehash}{a126134cbbb07cb0c06ffbddc30a64b3}
+      \strng{authorbibnamehash}{a126134cbbb07cb0c06ffbddc30a64b3}
+      \strng{authornamehash}{a126134cbbb07cb0c06ffbddc30a64b3}
+      \strng{authorfullhash}{a126134cbbb07cb0c06ffbddc30a64b3}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2078-2489}
+      \field{journaltitle}{Information}
+      \field{number}{5}
+      \field{title}{Exploring West African Folk Narrative Texts Using Machine Learning}
+      \field{volume}{11}
+      \field{year}{2020}
+      \verb{doi}
+      \verb 10.3390/info11050236
+      \endverb
+      \verb{urlraw}
+      \verb https://www.mdpi.com/2078-2489/11/5/236
+      \endverb
+      \verb{url}
+      \verb https://www.mdpi.com/2078-2489/11/5/236
+      \endverb
+    \endentry
     \entry{Gervs2013ProppsMO}{inproceedings}{}
       \name{author}{1}{}{%
         {{hash=ce54b617b6a83dc53bfd6817c0425c30}{%
@@ -135,8 +183,8 @@
       \strng{authorbibnamehash}{ce54b617b6a83dc53bfd6817c0425c30}
       \strng{authornamehash}{ce54b617b6a83dc53bfd6817c0425c30}
       \strng{authorfullhash}{ce54b617b6a83dc53bfd6817c0425c30}
-      \field{sortinit}{4}
-      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{sortinit}{5}
+      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{CMN}
@@ -158,8 +206,8 @@
       \strng{authorbibnamehash}{798a01f212a8e620a6940400717a56d9}
       \strng{authornamehash}{798a01f212a8e620a6940400717a56d9}
       \strng{authorfullhash}{798a01f212a8e620a6940400717a56d9}
-      \field{sortinit}{5}
-      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
+      \field{sortinit}{6}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{140449493}
@@ -190,8 +238,8 @@
       \strng{authorbibnamehash}{893776da5731e5e0d44b6dff69ccd0a3}
       \strng{authornamehash}{893776da5731e5e0d44b6dff69ccd0a3}
       \strng{authorfullhash}{893776da5731e5e0d44b6dff69ccd0a3}
-      \field{sortinit}{6}
-      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
+      \field{sortinit}{7}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{9781642290486}
@@ -223,8 +271,8 @@
       \strng{authorbibnamehash}{db289d06ac4e704e3a33addf721b1caf}
       \strng{authornamehash}{db289d06ac4e704e3a33addf721b1caf}
       \strng{authorfullhash}{db289d06ac4e704e3a33addf721b1caf}
-      \field{sortinit}{7}
-      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{sortinit}{8}
+      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{9781492390978}
@@ -260,8 +308,8 @@
       \strng{authorbibnamehash}{257fda589fd28b5e2895c7b1e56a90e5}
       \strng{authornamehash}{257fda589fd28b5e2895c7b1e56a90e5}
       \strng{authorfullhash}{257fda589fd28b5e2895c7b1e56a90e5}
-      \field{sortinit}{8}
-      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
+      \field{sortinit}{9}
+      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{9780571130139}
@@ -296,8 +344,8 @@
       \strng{authorbibnamehash}{9bf1e41e049570a321661c53963d03b9}
       \strng{authornamehash}{9bf1e41e049570a321661c53963d03b9}
       \strng{authorfullhash}{9bf1e41e049570a321661c53963d03b9}
-      \field{sortinit}{9}
-      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{9781783793143}
@@ -654,8 +702,8 @@
       \strng{authorbibnamehash}{f69ffaf2f7ee5e61f024e0f842fdf4d3}
       \strng{authornamehash}{f69ffaf2f7ee5e61f024e0f842fdf4d3}
       \strng{authorfullhash}{f69ffaf2f7ee5e61f024e0f842fdf4d3}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the 48th Annual Meeting of the Association for Computational Linguistics}
@@ -897,6 +945,30 @@
       \verb 10.1109/TEVC.2007.892759
       \endverb
     \endentry
+    \entry{ThomasAq85:online}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=36abc6d98046449ff16c432759b3fcd6}{%
+           family={Johnson},
+           familyi={J\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{36abc6d98046449ff16c432759b3fcd6}
+      \strng{fullhash}{36abc6d98046449ff16c432759b3fcd6}
+      \strng{bibnamehash}{36abc6d98046449ff16c432759b3fcd6}
+      \strng{authorbibnamehash}{36abc6d98046449ff16c432759b3fcd6}
+      \strng{authornamehash}{36abc6d98046449ff16c432759b3fcd6}
+      \strng{authorfullhash}{36abc6d98046449ff16c432759b3fcd6}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://thomistica.net/news/2009/9/21/thomas-aquinas-on-the-passions.html}}
+      \field{month}{9}
+      \field{note}{(Accessed on 09/01/2021)}
+      \field{title}{Thomas Aquinas on the Passions — thomistica}
+      \field{year}{2009}
+    \endentry
     \entry{CompareML}{misc}{}
       \name{author}{1}{}{%
         {{hash=bd0ca9ed8a20751f8918254d413c2822}{%
@@ -911,8 +983,8 @@
       \strng{authorbibnamehash}{bd0ca9ed8a20751f8918254d413c2822}
       \strng{authornamehash}{bd0ca9ed8a20751f8918254d413c2822}
       \strng{authorfullhash}{bd0ca9ed8a20751f8918254d413c2822}
-      \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://towardsdatascience.com/comparative-study-on-classic-machine-learning-algorithms-24f9ff6ab222}}

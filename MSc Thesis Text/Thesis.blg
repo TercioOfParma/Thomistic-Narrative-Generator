@@ -1,21 +1,22 @@
 [0] Config.pm:312> INFO - This is Biber 2.15 (beta)
 [0] Config.pm:315> INFO - Logfile is 'Thesis.blg'
-[89] biber-MSWIN64:330> INFO - === 
-[106] Biber.pm:415> INFO - Reading 'Thesis.bcf'
-[201] Biber.pm:952> INFO - Found 25 citekeys in bib section 0
-[215] Biber.pm:4334> INFO - Processing section 0
-[228] Biber.pm:4523> INFO - Looking for bibtex format file 'bigbib.bib' for section 0
-[241] bibtex.pm:1682> INFO - LaTeX decoding ...
-[558] bibtex.pm:1494> INFO - Found BibTeX data source 'bigbib.bib'
-[624] Utils.pm:395> WARN - year field '-340' in entry '340BCEthicsAristotleNicomachean' is not an integer - this will probably not sort properly.
-[624] Utils.pm:395> WARN - ISBN '140449493' in entry '340BCEthicsAristotleNicomachean' is invalid - run biber with '--validate_datamodel' for details.
-[701] Utils.pm:395> WARN - month field 'Dec' in entry 'CompareML' is not an integer - this will probably not sort properly.
-[707] Utils.pm:395> WARN - BibTeX subsystem: C:\Users\ellio\AppData\Local\Temp\biber_tmp_250W\93d348829a0ad5330b047cfda272c377_1116.utf8, line 177, warning: 39 characters of junk seen at toplevel
-[707] Utils.pm:395> WARN - BibTeX subsystem: C:\Users\ellio\AppData\Local\Temp\biber_tmp_250W\93d348829a0ad5330b047cfda272c377_1116.utf8, line 2189, warning: 39 characters of junk seen at toplevel
-[731] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[731] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[732] Biber.pm:4162> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
-[732] Biber.pm:4168> INFO - No sort tailoring available for locale 'en-US'
-[756] bbl.pm:651> INFO - Writing 'Thesis.bbl' with encoding 'UTF-8'
-[769] bbl.pm:754> INFO - Output to Thesis.bbl
-[769] Biber.pm:128> INFO - WARNINGS: 5
+[86] biber-MSWIN64:330> INFO - === 
+[103] Biber.pm:415> INFO - Reading 'Thesis.bcf'
+[195] Biber.pm:952> INFO - Found 27 citekeys in bib section 0
+[209] Biber.pm:4334> INFO - Processing section 0
+[222] Biber.pm:4523> INFO - Looking for bibtex format file 'bigbib.bib' for section 0
+[240] bibtex.pm:1682> INFO - LaTeX decoding ...
+[550] bibtex.pm:1494> INFO - Found BibTeX data source 'bigbib.bib'
+[615] Utils.pm:395> WARN - year field '-340' in entry '340BCEthicsAristotleNicomachean' is not an integer - this will probably not sort properly.
+[615] Utils.pm:395> WARN - ISBN '140449493' in entry '340BCEthicsAristotleNicomachean' is invalid - run biber with '--validate_datamodel' for details.
+[689] Utils.pm:395> WARN - month field 'September' in entry 'ThomasAq85:online' is not an integer - this will probably not sort properly.
+[691] Utils.pm:395> WARN - month field 'Dec' in entry 'CompareML' is not an integer - this will probably not sort properly.
+[697] Utils.pm:395> WARN - BibTeX subsystem: C:\Users\ellio\AppData\Local\Temp\biber_tmp_yTLD\93d348829a0ad5330b047cfda272c377_8384.utf8, line 177, warning: 39 characters of junk seen at toplevel
+[697] Utils.pm:395> WARN - BibTeX subsystem: C:\Users\ellio\AppData\Local\Temp\biber_tmp_yTLD\93d348829a0ad5330b047cfda272c377_8384.utf8, line 2189, warning: 39 characters of junk seen at toplevel
+[722] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[722] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[722] Biber.pm:4162> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[723] Biber.pm:4168> INFO - No sort tailoring available for locale 'en-US'
+[744] bbl.pm:651> INFO - Writing 'Thesis.bbl' with encoding 'UTF-8'
+[756] bbl.pm:754> INFO - Output to Thesis.bbl
+[757] Biber.pm:128> INFO - WARNINGS: 6
