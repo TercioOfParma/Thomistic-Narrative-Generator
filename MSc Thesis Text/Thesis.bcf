@@ -2387,10 +2387,16 @@
     <bcf:citekey order="31">AchievementScalarazingIndicatorBased</bcf:citekey>
     <bcf:citekey order="32">MOEAD</bcf:citekey>
     <bcf:citekey order="33">CompareML</bcf:citekey>
-    <bcf:citekey order="34">garrigou2013three</bcf:citekey>
-    <bcf:citekey order="35">MEXICA</bcf:citekey>
+    <bcf:citekey order="34">questgeneration</bcf:citekey>
+    <bcf:citekey order="35">sagarkar-etal-2018-quality</bcf:citekey>
     <bcf:citekey order="36">garrigou2013three</bcf:citekey>
-    <bcf:citekey order="37">AchievementScalarazingIndicatorBased</bcf:citekey>
+    <bcf:citekey order="37">MEXICA</bcf:citekey>
+    <bcf:citekey order="38">garrigou2013three</bcf:citekey>
+    <bcf:citekey order="39">AchievementScalarazingIndicatorBased</bcf:citekey>
+    <bcf:citekey order="40">questgeneration</bcf:citekey>
+    <bcf:citekey order="41">garrigou2013three</bcf:citekey>
+    <bcf:citekey order="42">allegri2000padre</bcf:citekey>
+    <bcf:citekey order="43">loyola2009autobiography</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

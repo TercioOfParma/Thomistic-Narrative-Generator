@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.3)  1 SEP 2021 18:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.3)  2 SEP 2021 14:51
 entering extended mode
 **./Thesis.tex
 (Thesis.tex
@@ -6,8 +6,8 @@ LaTeX2e <2020-10-01> patch level 2
 L3 programming layer <2020-10-27> xparse <2020-03-03>
 (C:\Users\ellio\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
 Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
-(C:\Users\ellio\AppData\Local\Programs\MiKTeX\tex/latex/base\size11.clo
-File: size11.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
+(C:\Users\ellio\AppData\Local\Programs\MiKTeX\tex/latex/base\size12.clo
+File: size12.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
 )
 \c@part=\count175
 \c@section=\count176
@@ -433,29 +433,71 @@ Package biblatex Info: ... file 'biblatex.cfg' found.
 
 (C:\Users\ellio\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.cfg
 File: biblatex.cfg 
-))
-\@quotelevel=\count390
-\@quotereset=\count391
+)) (C:\Users\ellio\AppData\Local\Programs\MiKTeX\tex/latex/graphics\lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+
+(C:\Users\ellio\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\ellio\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(C:\Users\ellio\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
+fg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+
+(C:\Users\ellio\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+)))
+(C:\Users\ellio\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
+\Gin@req@height=\dimen143
+\Gin@req@width=\dimen144
+)
+(C:\Users\ellio\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(C:\Users\ellio\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count390
+\Gm@cntv=\count391
+\c@Gm@tempcnt=\count392
+\Gm@bindingoffset=\dimen145
+\Gm@wd@mp=\dimen146
+\Gm@odd@mp=\dimen147
+\Gm@even@mp=\dimen148
+\Gm@layoutwidth=\dimen149
+\Gm@layoutheight=\dimen150
+\Gm@layouthoffset=\dimen151
+\Gm@layoutvoffset=\dimen152
+\Gm@dimlist=\toks16
+
+(C:\Users\ellio\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
+\@quotelevel=\count393
+\@quotereset=\count394
 (Thesis.aux)
 \openout1 = `Thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-Package hyperref Info: Link coloring OFF on input line 10.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+Package hyperref Info: Link coloring OFF on input line 15.
 
 (C:\Users\ellio\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -467,11 +509,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 lestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count392
+\c@section@level=\count395
 )
-LaTeX Info: Redefining \ref on input line 10.
-LaTeX Info: Redefining \pageref on input line 10.
-LaTeX Info: Redefining \nameref on input line 10.
+LaTeX Info: Redefining \ref on input line 15.
+LaTeX Info: Redefining \pageref on input line 15.
+LaTeX Info: Redefining \nameref on input line 15.
  (Thesis.out) (Thesis.out)
 \@outlinefile=\write4
 \openout4 = `Thesis.out'.
@@ -491,203 +533,296 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'Thesis.bbl' found.
  (Thesis.bbl)
-Package biblatex Info: Reference section=0 on input line 10.
-Package biblatex Info: Reference segment=0 on input line 10.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 12.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 12.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 12.
+Package biblatex Info: Reference section=0 on input line 15.
+Package biblatex Info: Reference segment=0 on input line 15.
 
-Underfull \hbox (badness 10000) in paragraph at lines 21--22
+(C:\Users\ellio\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
+ii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count396
+\scratchdimen=\dimen153
+\scratchbox=\box48
+\nofMPsegments=\count397
+\nofMParguments=\count398
+\everyMPshowfont=\toks17
+\MPscratchCnt=\count399
+\MPscratchDim=\dimen154
+\MPnumerator=\count400
+\makeMPintoPDFobject=\count401
+\everyMPtoPDFconversion=\toks18
+)
+(C:\Users\ellio\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
+ase.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(92.14519pt, 430.00462pt, 92.14519pt)
+* v-part:(T,H,B)=(95.39737pt, 556.47656pt, 143.09605pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=430.00462pt
+* \textheight=556.47656pt
+* \oddsidemargin=19.8752pt
+* \evensidemargin=19.8752pt
+* \topmargin=-13.87262pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=44.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <14.4> on input line 17.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 17.
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--27
 
  []
 
 [1
 
 {C:/Users/ellio/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 24--25
+Underfull \hbox (badness 10000) in paragraph at lines 29--30
 
  []
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 26.
+(Font)              <12> on input line 31.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 26.
+(Font)              <8> on input line 31.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 26.
+(Font)              <6> on input line 31.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 31.
 
-Overfull \hbox (2.89871pt too wide) in paragraph at lines 26--27
-[]\OT1/cmr/m/n/10.95 Besides the Old and New Tes-ta-ments them-selves, the Nico
--machean Ethics
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 26--27
+Underfull \hbox (badness 10000) in paragraph at lines 31--32
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--29
+Underfull \hbox (badness 10000) in paragraph at lines 33--34
 
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 32--33
+Underfull \hbox (badness 10000) in paragraph at lines 37--38
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 34--35
+Underfull \hbox (badness 10000) in paragraph at lines 39--40
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36--37
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 40--41
+Underfull \hbox (badness 10000) in paragraph at lines 45--46
 
  []
 
 [4] [5]
-Underfull \hbox (badness 10000) in paragraph at lines 54--55
+Underfull \hbox (badness 10000) in paragraph at lines 59--60
 
  []
 
-[6] [7]
-Underfull \hbox (badness 10000) in paragraph at lines 60--61
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 62--63
-
- []
-
-[8]
+[6]
 Underfull \hbox (badness 10000) in paragraph at lines 65--66
 
  []
 
-[9]
-Underfull \hbox (badness 10000) in paragraph at lines 72--73
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 67--68
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 74--75
+Underfull \hbox (badness 10000) in paragraph at lines 70--71
+
+ []
+
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 77--78
+
+ []
+
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 79--80
 
  []
 
 [10] [11]
-Underfull \hbox (badness 10000) in paragraph at lines 96--97
+Underfull \hbox (badness 10000) in paragraph at lines 104--105
 
  []
 
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 100--101
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 106--107
-
- []
-
-[13]
 Underfull \hbox (badness 10000) in paragraph at lines 108--109
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 113--114
+Underfull \hbox (badness 10000) in paragraph at lines 114--115
+
+ []
+
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 116--117
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 115--116
+Underfull \hbox (badness 10000) in paragraph at lines 121--122
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 123--124
 
  []
 
 [14]
-Underfull \hbox (badness 10000) in paragraph at lines 133--134
+Underfull \hbox (badness 10000) in paragraph at lines 141--142
 
  []
 
-[15]
-Underfull \hbox (badness 10000) in paragraph at lines 135--136
+
+Underfull \hbox (badness 10000) in paragraph at lines 143--144
 
  []
 
-[16]
-Underfull \hbox (badness 10000) in paragraph at lines 157--159
+[15] [16]
+Underfull \hbox (badness 10000) in paragraph at lines 165--167
 
  []
 
-[17]
-Underfull \hbox (badness 10000) in paragraph at lines 161--162
+
+Underfull \hbox (badness 10000) in paragraph at lines 169--170
 
  []
 
-[18] [19]
-Overfull \hbox (6.84042pt too wide) in paragraph at lines 178--178
-\OT1/cmr/m/it/10.95 Com-plete Edi-tion\OT1/cmr/m/n/10.95 . Catholic Way Pub-lis
-h-ing, 2014, \OT1/cmr/m/sc/10.95 isbn\OT1/cmr/m/n/10.95 : 9781783793143.
+[17] [18]
+Underfull \hbox (badness 10000) in paragraph at lines 191--192
+
+ []
+
+[19]
+Underfull \hbox (badness 10000) in paragraph at lines 195--196
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 197--198
+
  []
 
 [20]
-Overfull \hbox (2.74066pt too wide) in paragraph at lines 178--178
-[]$\OT1/cmtt/m/n/10.95 10 . 18653 / v1 / S18 -[] 2024$[]\OT1/cmr/m/n/10.95 . [O
-n-line]. Avail-able: []$\OT1/cmtt/m/n/10.95 https : / / aclanthology .
+Overfull \hbox (16.52875pt too wide) in paragraph at lines 201--201
+[]\OT1/cmr/m/n/12 Aristotle, \OT1/cmr/m/it/12 The Nico-machean Ethics\OT1/cmr/m
+/n/12 . Pen-guin Clas-sics, 340, p. 329, \OT1/cmr/m/sc/12 isbn\OT1/cmr/m/n/12 :
+ 140449493. 
+ []
+
+[21] [22]
+Overfull \hbox (19.35556pt too wide) in paragraph at lines 201--201
+[]\OT1/cmr/m/n/12 M. John-son, \OT1/cmr/m/it/12 Thomas aquinas on the pas-sions
+ | thomistica\OT1/cmr/m/n/12 , []$\OT1/cmtt/m/n/12 https : / / thomistica .
  []
 
 
-Overfull \hbox (18.8705pt too wide) in paragraph at lines 178--178
-\OT1/cmr/m/n/10.95 based evo-lu-tion-ary al-go-rithm with hy-per-vol-ume ap-pro
-x-i-ma-tion by achieve-
+Overfull \hbox (4.83386pt too wide) in paragraph at lines 201--201
+[]\OT1/cmr/m/n/12 R. Al-le-gri, \OT1/cmr/m/it/12 Padre Pio: A Man of Hope\OT1/c
+mr/m/n/12 . Charis Books, 2000, \OT1/cmr/m/sc/12 isbn\OT1/cmr/m/n/12 : 97815695
+51387.
  []
 
-[21]
-Overfull \hbox (15.40463pt too wide) in paragraph at lines 178--178
-\OT1/cmtt/m/n/10.95 towardsdatascience . com / comparative -[] study -[] on -[]
- classic -[] machine -[]
- []
+[23]
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(56.9055pt, 465.24431pt, 92.14519pt)
+* v-part:(T,H,B)=(95.39737pt, 696.72717pt, 2.84544pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=465.24431pt
+* \textheight=696.72717pt
+* \oddsidemargin=-15.36449pt
+* \evensidemargin=-15.36449pt
+* \topmargin=-13.87262pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=44.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-[22] (Thesis.aux)
+ [24
+
+] [25] [26] [27] (Thesis.aux)
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
-(rerunfilecheck)             Checksum: A37264E8603C39C3F476AA7DEB1D647B;3390.
+(rerunfilecheck)             Checksum: 2E583E762020AE0EE09393FFBB864669;4684.
 Package logreq Info: Writing requests to 'Thesis.run.xml'.
 \openout1 = `Thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 11904 strings out of 479799
- 220820 string characters out of 2869723
- 931676 words of memory out of 3000000
- 28666 multiletter control sequences out of 15000+200000
- 541986 words of font info for 52 fonts, out of 3000000 for 9000
+ 13199 strings out of 479799
+ 239968 string characters out of 2869723
+ 961900 words of memory out of 3000000
+ 29894 multiletter control sequences out of 15000+200000
+ 541073 words of font info for 49 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 66i,8n,73p,1895b,1319s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 66i,14n,73p,1895b,1323s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/ellio/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
-cmbx10.pfb><C:/Users/ellio/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
-fonts/cm/cmbx12.pfb><C:/Users/ellio/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/amsfonts/cm/cmcsc10.pfb><C:/Users/ellio/AppData/Local/Programs/MiKTeX/fon
-ts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/ellio/AppData/Local/Programs/Mi
-KTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/ellio/AppData/Local/Pro
-grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/ellio/AppData/L
-ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/ellio/Ap
-pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/e
-llio/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/
-Users/ellio/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10
-.pfb><C:/Users/ellio/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/
-cm/cmtt10.pfb>
-Output written on Thesis.pdf (22 pages, 261085 bytes).
+cmbx12.pfb><C:/Users/ellio/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
+fonts/cm/cmcsc10.pfb><C:/Users/ellio/AppData/Local/Programs/MiKTeX/fonts/type1/
+public/amsfonts/cm/cmr10.pfb><C:/Users/ellio/AppData/Local/Programs/MiKTeX/font
+s/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/ellio/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/ellio/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/ellio/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/ellio/AppD
+ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/e
+llio/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on Thesis.pdf (27 pages, 244101 bytes).
 PDF statistics:
- 463 PDF objects out of 1000 (max. 8388607)
- 113 named destinations out of 1000 (max. 500000)
- 361 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 574 PDF objects out of 1000 (max. 8388607)
+ 146 named destinations out of 1000 (max. 500000)
+ 489 words of extra memory for PDF output out of 10000 (max. 10000000)
 

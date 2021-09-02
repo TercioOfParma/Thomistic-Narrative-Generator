@@ -993,6 +993,73 @@
       \field{title}{Comparative Study on Classic Machine learning Algorithms | by Danny Varghese | Towards Data Science}
       \field{year}{2018}
     \endentry
+    \entry{allegri2000padre}{book}{}
+      \name{author}{1}{}{%
+        {{hash=06bd91279e794c40325aaff573d34e69}{%
+           family={Allegri},
+           familyi={A\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Charis Books}%
+      }
+      \strng{namehash}{06bd91279e794c40325aaff573d34e69}
+      \strng{fullhash}{06bd91279e794c40325aaff573d34e69}
+      \strng{bibnamehash}{06bd91279e794c40325aaff573d34e69}
+      \strng{authorbibnamehash}{06bd91279e794c40325aaff573d34e69}
+      \strng{authornamehash}{06bd91279e794c40325aaff573d34e69}
+      \strng{authorfullhash}{06bd91279e794c40325aaff573d34e69}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9781569551387}
+      \field{title}{Padre Pio: A Man of Hope}
+      \field{year}{2000}
+      \verb{urlraw}
+      \verb https://books.google.co.uk/books?id=Bau9AAAACAAJ
+      \endverb
+      \verb{url}
+      \verb https://books.google.co.uk/books?id=Bau9AAAACAAJ
+      \endverb
+    \endentry
+    \entry{loyola2009autobiography}{book}{}
+      \name{author}{2}{}{%
+        {{hash=1de57c35f13ef2647ffcc7d57d7000f1}{%
+           family={Loyola},
+           familyi={L\bibinitperiod},
+           given={I.},
+           giveni={I\bibinitperiod}}}%
+        {{hash=bc0b90a75bcaf9cb328fa4aac23a73e8}{%
+           family={O'Conor},
+           familyi={O\bibinitperiod},
+           given={J.F.X.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Echo Library}%
+      }
+      \strng{namehash}{d3e3d7f0111aa4b16ff522465c7824aa}
+      \strng{fullhash}{d3e3d7f0111aa4b16ff522465c7824aa}
+      \strng{bibnamehash}{d3e3d7f0111aa4b16ff522465c7824aa}
+      \strng{authorbibnamehash}{d3e3d7f0111aa4b16ff522465c7824aa}
+      \strng{authornamehash}{d3e3d7f0111aa4b16ff522465c7824aa}
+      \strng{authorfullhash}{d3e3d7f0111aa4b16ff522465c7824aa}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9781406853124}
+      \field{title}{The Autobiography of St. Ignatius}
+      \field{year}{2009}
+      \verb{urlraw}
+      \verb https://books.google.co.uk/books?id=339ic-1DcO4C
+      \endverb
+      \verb{url}
+      \verb https://books.google.co.uk/books?id=339ic-1DcO4C
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
