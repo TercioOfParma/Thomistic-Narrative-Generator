@@ -1,22 +1,25 @@
-[0] Config.pm:312> INFO - This is Biber 2.15 (beta)
-[0] Config.pm:315> INFO - Logfile is 'Thesis.blg'
-[93] biber-MSWIN64:330> INFO - === 
-[112] Biber.pm:415> INFO - Reading 'Thesis.bcf'
-[211] Biber.pm:952> INFO - Found 29 citekeys in bib section 0
-[226] Biber.pm:4334> INFO - Processing section 0
-[240] Biber.pm:4523> INFO - Looking for bibtex format file 'bigbib.bib' for section 0
-[253] bibtex.pm:1682> INFO - LaTeX decoding ...
-[567] bibtex.pm:1494> INFO - Found BibTeX data source 'bigbib.bib'
-[633] Utils.pm:395> WARN - year field '-340' in entry '340BCEthicsAristotleNicomachean' is not an integer - this will probably not sort properly.
-[634] Utils.pm:395> WARN - ISBN '140449493' in entry '340BCEthicsAristotleNicomachean' is invalid - run biber with '--validate_datamodel' for details.
-[709] Utils.pm:395> WARN - month field 'September' in entry 'ThomasAq85:online' is not an integer - this will probably not sort properly.
-[711] Utils.pm:395> WARN - month field 'Dec' in entry 'CompareML' is not an integer - this will probably not sort properly.
-[721] Utils.pm:395> WARN - BibTeX subsystem: C:\Users\ellio\AppData\Local\Temp\biber_tmp_8IXb\93d348829a0ad5330b047cfda272c377_10620.utf8, line 177, warning: 39 characters of junk seen at toplevel
-[722] Utils.pm:395> WARN - BibTeX subsystem: C:\Users\ellio\AppData\Local\Temp\biber_tmp_8IXb\93d348829a0ad5330b047cfda272c377_10620.utf8, line 2189, warning: 39 characters of junk seen at toplevel
-[748] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[748] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[748] Biber.pm:4162> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
-[749] Biber.pm:4168> INFO - No sort tailoring available for locale 'en-US'
-[771] bbl.pm:651> INFO - Writing 'Thesis.bbl' with encoding 'UTF-8'
-[785] bbl.pm:754> INFO - Output to Thesis.bbl
-[785] Biber.pm:128> INFO - WARNINGS: 6
+[0] Config.pm:311> INFO - This is Biber 2.16
+[0] Config.pm:314> INFO - Logfile is 'Thesis.blg'
+[120] biber-MSWIN64:340> INFO - === 
+[160] Biber.pm:415> INFO - Reading 'Thesis.bcf'
+[286] Biber.pm:952> INFO - Found 35 citekeys in bib section 0
+[302] Biber.pm:4340> INFO - Processing section 0
+[315] Biber.pm:4531> INFO - Looking for bibtex format file 'bigbib.bib' for section 0
+[378] bibtex.pm:1689> INFO - LaTeX decoding ...
+[733] bibtex.pm:1494> INFO - Found BibTeX data source 'bigbib.bib'
+[818] Utils.pm:395> WARN - legacy year field '-340' in entry '340BCEthicsAristotleNicomachean' is not an integer - this will probably not sort properly.
+[819] Utils.pm:395> WARN - ISBN '140449493' in entry '340BCEthicsAristotleNicomachean' is invalid - run biber with '--validate_datamodel' for details.
+[900] Utils.pm:395> WARN - legacy month field 'September' in entry 'ThomasAq85:online' is not an integer - this will probably not sort properly.
+[902] Utils.pm:395> WARN - legacy month field 'Dec' in entry 'CompareML' is not an integer - this will probably not sort properly.
+[905] Utils.pm:395> WARN - legacy month field 'Jul' in entry 'TULIPorT24:online' is not an integer - this will probably not sort properly.
+[918] Utils.pm:395> WARN - legacy month field '2021/09/04/' in entry 'Haseldine1994' is not an integer - this will probably not sort properly.
+[920] Utils.pm:395> WARN - legacy month field '2021/09/04/' in entry 'Krueger2004' is not an integer - this will probably not sort properly.
+[931] Utils.pm:395> WARN - BibTeX subsystem: C:\Users\ellio\AppData\Local\Temp\biber_tmp__UL5\93d348829a0ad5330b047cfda272c377_15712.utf8, line 177, warning: 39 characters of junk seen at toplevel
+[932] Utils.pm:395> WARN - BibTeX subsystem: C:\Users\ellio\AppData\Local\Temp\biber_tmp__UL5\93d348829a0ad5330b047cfda272c377_15712.utf8, line 2189, warning: 39 characters of junk seen at toplevel
+[965] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[965] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[966] Biber.pm:4168> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[969] Biber.pm:4174> INFO - No sort tailoring available for locale 'en-US'
+[999] bbl.pm:654> INFO - Writing 'Thesis.bbl' with encoding 'UTF-8'
+[1016] bbl.pm:757> INFO - Output to Thesis.bbl
+[1016] Biber.pm:128> INFO - WARNINGS: 9

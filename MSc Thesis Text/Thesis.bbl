@@ -36,7 +36,7 @@
       \strng{authornamehash}{756329be6d67532dc872505d3650d254}
       \strng{authorfullhash}{756329be6d67532dc872505d3650d254}
       \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of SBGames 2019}
@@ -65,7 +65,7 @@
       \strng{authornamehash}{94900c04b1b35e9e1b5284279830fb6b}
       \strng{authorfullhash}{94900c04b1b35e9e1b5284279830fb6b}
       \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{J. Exp. Theor. Artif. Intell.}
@@ -107,7 +107,7 @@
       \strng{authornamehash}{b5079cffef88b2f6f80efcd608576359}
       \strng{authorfullhash}{b5079cffef88b2f6f80efcd608576359}
       \field{sortinit}{3}
-      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{9780292783911}
@@ -150,7 +150,7 @@
       \strng{authornamehash}{a126134cbbb07cb0c06ffbddc30a64b3}
       \strng{authorfullhash}{a126134cbbb07cb0c06ffbddc30a64b3}
       \field{sortinit}{4}
-      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{2078-2489}
@@ -184,7 +184,7 @@
       \strng{authornamehash}{ce54b617b6a83dc53bfd6817c0425c30}
       \strng{authorfullhash}{ce54b617b6a83dc53bfd6817c0425c30}
       \field{sortinit}{5}
-      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{CMN}
@@ -207,7 +207,7 @@
       \strng{authornamehash}{798a01f212a8e620a6940400717a56d9}
       \strng{authorfullhash}{798a01f212a8e620a6940400717a56d9}
       \field{sortinit}{6}
-      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{140449493}
@@ -239,7 +239,7 @@
       \strng{authornamehash}{893776da5731e5e0d44b6dff69ccd0a3}
       \strng{authorfullhash}{893776da5731e5e0d44b6dff69ccd0a3}
       \field{sortinit}{7}
-      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{9781642290486}
@@ -272,7 +272,7 @@
       \strng{authornamehash}{db289d06ac4e704e3a33addf721b1caf}
       \strng{authorfullhash}{db289d06ac4e704e3a33addf721b1caf}
       \field{sortinit}{8}
-      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{9781492390978}
@@ -309,7 +309,7 @@
       \strng{authornamehash}{257fda589fd28b5e2895c7b1e56a90e5}
       \strng{authorfullhash}{257fda589fd28b5e2895c7b1e56a90e5}
       \field{sortinit}{9}
-      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{9780571130139}
@@ -345,7 +345,7 @@
       \strng{authornamehash}{9bf1e41e049570a321661c53963d03b9}
       \strng{authorfullhash}{9bf1e41e049570a321661c53963d03b9}
       \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{9781783793143}
@@ -378,7 +378,7 @@
       \strng{authornamehash}{19d0a65cb98e0bcfa859e8e4042b909d}
       \strng{authorfullhash}{19d0a65cb98e0bcfa859e8e4042b909d}
       \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{ACM Computing Surveys}
@@ -412,7 +412,7 @@
       \strng{authornamehash}{8b95310f8ae4c6b5b3ca0ff0e20edcc9}
       \strng{authorfullhash}{8b95310f8ae4c6b5b3ca0ff0e20edcc9}
       \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Character-focused Narrative Planning}
@@ -448,7 +448,7 @@
       \strng{authornamehash}{c9e52c935a2ebb7f6f2501175b0ebf0f}
       \strng{authorfullhash}{76e5e4202313272aaa92005669507bb6}
       \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{978-1-932432-36-7}
@@ -476,7 +476,7 @@
       \strng{authornamehash}{81e2979ef4c0c17a297aeef138f6b86c}
       \strng{authorfullhash}{81e2979ef4c0c17a297aeef138f6b86c}
       \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{IJCAI}
@@ -503,7 +503,7 @@
       \strng{authornamehash}{8098252c15e8577a7318ec94cbbde262}
       \strng{authorfullhash}{8098252c15e8577a7318ec94cbbde262}
       \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Transactions on Computational Intelligence and AI in Games}
@@ -545,7 +545,7 @@
       \strng{authornamehash}{cb17cc0e135e496b692f9c749e6438cc}
       \strng{authorfullhash}{cb17cc0e135e496b692f9c749e6438cc}
       \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the Second Workshop on Storytelling}
@@ -604,7 +604,7 @@
       \strng{authornamehash}{e409e3661088ac015d1bf5cf70933832}
       \strng{authorfullhash}{9ef3594d14470c75884a47468f9c2117}
       \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprinttype}{arXiv}
@@ -658,7 +658,7 @@
       \strng{authornamehash}{493dc7aae18f38d3712292d974b363da}
       \strng{authorfullhash}{f7054074befa357bf8d16828fe6effab}
       \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the Seventh Joint Conference on Lexical and Computational Semantics}
@@ -703,7 +703,7 @@
       \strng{authornamehash}{f69ffaf2f7ee5e61f024e0f842fdf4d3}
       \strng{authorfullhash}{f69ffaf2f7ee5e61f024e0f842fdf4d3}
       \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the 48th Annual Meeting of the Association for Computational Linguistics}
@@ -739,7 +739,7 @@
       \strng{authornamehash}{9753b0d85627c0f405d11786e7fdd0cd}
       \strng{authorfullhash}{9753b0d85627c0f405d11786e7fdd0cd}
       \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{ICCC}
@@ -763,7 +763,7 @@
       \strng{authornamehash}{c9afc0204ab13fb3c3c8c058db361ad0}
       \strng{authorfullhash}{c9afc0204ab13fb3c3c8c058db361ad0}
       \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the IEEE Congress on Evolutionary Computation, CEC 2011, New Orleans, LA, USA, 5-8 June, 2011}
@@ -802,7 +802,7 @@
       \strng{authornamehash}{f01cdaf92a4177353dcce2d6c58a4b32}
       \strng{authorfullhash}{8b7e2f639f5ed1d82fb6aefb5ba6707d}
       \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Access}
@@ -851,7 +851,7 @@
       \strng{authornamehash}{304382665154f9bb2d1a057248496028}
       \strng{authorfullhash}{f076111dd1fe8bc147e2b365fa990a54}
       \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the 12th Annual Conference on Genetic and Evolutionary Computation}
@@ -897,7 +897,7 @@
       \strng{authornamehash}{3122459e9303038b34a5064bf13d65cf}
       \strng{authorfullhash}{3122459e9303038b34a5064bf13d65cf}
       \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Journal of Physics: Conference Series}
@@ -931,7 +931,7 @@
       \strng{authornamehash}{96d81b78115eaf20369fe621473fe81e}
       \strng{authorfullhash}{96d81b78115eaf20369fe621473fe81e}
       \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Transactions on Evolutionary Computation}
@@ -960,7 +960,7 @@
       \strng{authornamehash}{36abc6d98046449ff16c432759b3fcd6}
       \strng{authorfullhash}{36abc6d98046449ff16c432759b3fcd6}
       \field{sortinit}{3}
-      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://thomistica.net/news/2009/9/21/thomas-aquinas-on-the-passions.html}}
@@ -984,7 +984,7 @@
       \strng{authornamehash}{bd0ca9ed8a20751f8918254d413c2822}
       \strng{authorfullhash}{bd0ca9ed8a20751f8918254d413c2822}
       \field{sortinit}{3}
-      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://towardsdatascience.com/comparative-study-on-classic-machine-learning-algorithms-24f9ff6ab222}}
@@ -992,6 +992,60 @@
       \field{note}{(Accessed on 09/01/2021)}
       \field{title}{Comparative Study on Classic Machine learning Algorithms | by Danny Varghese | Towards Data Science}
       \field{year}{2018}
+    \endentry
+    \entry{TULIPorT24:online}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=46640ead26ac651b082dbbd46273ae9c}{%
+           family={Gritters},
+           familyi={G\bibinitperiod},
+           given={Rev.\bibnamedelimi Barry},
+           giveni={R\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \strng{namehash}{46640ead26ac651b082dbbd46273ae9c}
+      \strng{fullhash}{46640ead26ac651b082dbbd46273ae9c}
+      \strng{bibnamehash}{46640ead26ac651b082dbbd46273ae9c}
+      \strng{authorbibnamehash}{46640ead26ac651b082dbbd46273ae9c}
+      \strng{authornamehash}{46640ead26ac651b082dbbd46273ae9c}
+      \strng{authorfullhash}{46640ead26ac651b082dbbd46273ae9c}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{http://www.prca.org/pamphlets/pamphlet_41.html}}
+      \field{month}{7}
+      \field{note}{(Accessed on 09/04/2021)}
+      \field{title}{T.U.L.I.P. or, The Five Points of Calvinism}
+      \field{year}{2000}
+    \endentry
+    \entry{OperaOmniaStJohnOfTheCross}{book}{}
+      \name{author}{2}{}{%
+        {{hash=138df7bac91f9fb4aa18f27875d40ecc}{%
+           family={Cross},
+           familyi={C\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=74dfec5428cf9547781fc615ccb22c38}{%
+           family={Lewis},
+           familyi={L\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Longman, Green, Longman, Roberts, \& Green}%
+      }
+      \strng{namehash}{692e08ae25608d7898ace18a7735a3fa}
+      \strng{fullhash}{692e08ae25608d7898ace18a7735a3fa}
+      \strng{bibnamehash}{692e08ae25608d7898ace18a7735a3fa}
+      \strng{authorbibnamehash}{692e08ae25608d7898ace18a7735a3fa}
+      \strng{authornamehash}{692e08ae25608d7898ace18a7735a3fa}
+      \strng{authorfullhash}{692e08ae25608d7898ace18a7735a3fa}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{series}{The Complete Works of Saint John of the Cross, of the Order of Our Lady of Mount Carmel}
+      \field{title}{The Complete Works of Saint John of the Cross of the Order of Our Lady of Mount Carmel}
+      \field{year}{1864}
     \endentry
     \entry{allegri2000padre}{book}{}
       \name{author}{1}{}{%
@@ -1011,7 +1065,7 @@
       \strng{authornamehash}{06bd91279e794c40325aaff573d34e69}
       \strng{authorfullhash}{06bd91279e794c40325aaff573d34e69}
       \field{sortinit}{4}
-      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{9781569551387}
@@ -1047,7 +1101,7 @@
       \strng{authornamehash}{d3e3d7f0111aa4b16ff522465c7824aa}
       \strng{authorfullhash}{d3e3d7f0111aa4b16ff522465c7824aa}
       \field{sortinit}{4}
-      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{9781406853124}
@@ -1058,6 +1112,146 @@
       \endverb
       \verb{url}
       \verb https://books.google.co.uk/books?id=339ic-1DcO4C
+      \endverb
+    \endentry
+    \entry{Haseldine1994}{article}{}
+      \name{author}{1}{}{%
+        {{hash=abddacae7579aada6b576b3b36ed4b16}{%
+           family={Haseldine},
+           familyi={H\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley}%
+      }
+      \strng{namehash}{abddacae7579aada6b576b3b36ed4b16}
+      \strng{fullhash}{abddacae7579aada6b576b3b36ed4b16}
+      \strng{bibnamehash}{abddacae7579aada6b576b3b36ed4b16}
+      \strng{authorbibnamehash}{abddacae7579aada6b576b3b36ed4b16}
+      \strng{authornamehash}{abddacae7579aada6b576b3b36ed4b16}
+      \strng{authorfullhash}{abddacae7579aada6b576b3b36ed4b16}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{New Blackfriars}
+      \field{month}{2021/09/04/}
+      \field{note}{Full publication date: September 1994}
+      \field{number}{885}
+      \field{title}{Early Dominican Hagiography}
+      \field{volume}{75}
+      \field{year}{1994}
+      \field{pages}{400\bibrangedash 414}
+      \range{pages}{15}
+      \verb{urlraw}
+      \verb http://www.jstor.org/stable/43249634
+      \endverb
+      \verb{url}
+      \verb http://www.jstor.org/stable/43249634
+      \endverb
+    \endentry
+    \entry{Krueger2004}{inbook}{}
+      \name{author}{1}{}{%
+        {{hash=d999fa6b2b9b41f4628e349e5712242e}{%
+           family={Krueger},
+           familyi={K\bibinitperiod},
+           given={Derek},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {University of Pennsylvania Press}%
+      }
+      \strng{namehash}{d999fa6b2b9b41f4628e349e5712242e}
+      \strng{fullhash}{d999fa6b2b9b41f4628e349e5712242e}
+      \strng{bibnamehash}{d999fa6b2b9b41f4628e349e5712242e}
+      \strng{authorbibnamehash}{d999fa6b2b9b41f4628e349e5712242e}
+      \strng{authornamehash}{d999fa6b2b9b41f4628e349e5712242e}
+      \strng{authorfullhash}{d999fa6b2b9b41f4628e349e5712242e}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780812221473}
+      \field{month}{2021/09/04/}
+      \field{series}{The Practice of Authorship in the Early Christian East}
+      \field{title}{Typology and Hagiography:}
+      \field{year}{2004}
+      \field{pages}{15\bibrangedash 32}
+      \range{pages}{18}
+      \verb{urlraw}
+      \verb http://www.jstor.org/stable/j.ctt3fj06d.4
+      \endverb
+      \verb{url}
+      \verb http://www.jstor.org/stable/j.ctt3fj06d.4
+      \endverb
+    \endentry
+    \entry{helen1992way}{book}{}
+      \name{author}{1}{}{%
+        {{hash=25aeb356a98067e999a8c2afa6be8473}{%
+           family={Bacovcin},
+           familyi={B\bibinitperiod},
+           given={Helen},
+           giveni={H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Image Books}%
+      }
+      \strng{namehash}{25aeb356a98067e999a8c2afa6be8473}
+      \strng{fullhash}{25aeb356a98067e999a8c2afa6be8473}
+      \strng{bibnamehash}{25aeb356a98067e999a8c2afa6be8473}
+      \strng{authorbibnamehash}{25aeb356a98067e999a8c2afa6be8473}
+      \strng{authornamehash}{25aeb356a98067e999a8c2afa6be8473}
+      \strng{authorfullhash}{25aeb356a98067e999a8c2afa6be8473}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780385468145}
+      \field{series}{Image Books}
+      \field{title}{The Way of a Pilgrim}
+      \field{year}{1992}
+      \verb{urlraw}
+      \verb https://books.google.co.uk/books?id=Pbk0AXTkGCIC
+      \endverb
+      \verb{url}
+      \verb https://books.google.co.uk/books?id=Pbk0AXTkGCIC
+      \endverb
+    \endentry
+    \entry{sarov2015acquisition}{book}{}
+      \name{author}{2}{}{%
+        {{hash=dffb083fed1b592a9c202436b8e87dd5}{%
+           family={Sarov},
+           familyi={S\bibinitperiod},
+           given={S.S.S.S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=1b67677208015644ff58ce7f9b755479}{%
+           family={Nilus},
+           familyi={N\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {CreateSpace Independent Publishing Platform}%
+      }
+      \strng{namehash}{8fc43c196bf178ababf47f82fd2d78f3}
+      \strng{fullhash}{8fc43c196bf178ababf47f82fd2d78f3}
+      \strng{bibnamehash}{8fc43c196bf178ababf47f82fd2d78f3}
+      \strng{authorbibnamehash}{8fc43c196bf178ababf47f82fd2d78f3}
+      \strng{authornamehash}{8fc43c196bf178ababf47f82fd2d78f3}
+      \strng{authorfullhash}{8fc43c196bf178ababf47f82fd2d78f3}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9781519714565}
+      \field{title}{On Acquisition of the Holy Spirit}
+      \field{year}{2015}
+      \verb{urlraw}
+      \verb https://books.google.co.uk/books?id=tlE8jwEACAAJ
+      \endverb
+      \verb{url}
+      \verb https://books.google.co.uk/books?id=tlE8jwEACAAJ
       \endverb
     \endentry
   \enddatalist

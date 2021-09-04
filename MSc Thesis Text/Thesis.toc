@@ -1,0 +1,155 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1}Abstract}{2}{section.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2}Acknowledgements}{2}{section.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3}Introduction}{5}{section.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4}Literature Review}{6}{section.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.1}Current Use of Narrative Theory in Narrative Generation}{6}{subsection.4.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2}Virtue Ethics, Human Nature and Spiritual Theology}{7}{subsection.4.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.3}Computational Character Generation}{8}{subsection.4.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.4}General Approaches to Narrative Generation}{9}{subsection.4.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.5}MOEAs}{10}{subsection.4.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5}Problem Description}{10}{section.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6}Possible Approaches}{11}{section.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.1}Approaches to Character Structure}{11}{subsection.6.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {6.1.1}Patristic Approach}{11}{subsubsection.6.1.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {6.1.2}Scholastic Approach}{12}{subsubsection.6.1.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.2}Approaches to Output and General Narrative Structure}{12}{subsection.6.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {6.2.1}MOEAs for Narrative Events}{13}{subsubsection.6.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {6.2.2}MOEAs for Character Stats}{13}{subsubsection.6.2.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {6.2.3}MOEAs for Events and Stats}{14}{subsubsection.6.2.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.3}Approaches to MOEAs in Context}{14}{subsection.6.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {6.3.1}Pareto Dominance}{14}{subsubsection.6.3.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {6.3.2}Decomposition}{15}{subsubsection.6.3.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {6.3.3}Indicator Based}{15}{subsubsection.6.3.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7}Design and Methodology}{15}{section.7}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.1}Methodology}{16}{subsection.7.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.2}Log Book, Notes and Backups}{16}{subsection.7.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.3}Verifying the Effectiveness of Chosen Approaches}{16}{subsection.7.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8}Implementation}{17}{section.8}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.1}Choices of Approach}{17}{subsection.8.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.2}Handling Narrative Events}{18}{subsection.8.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.3}Quantifying Virtues, Vices and Passions}{18}{subsection.8.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {8.3.1}A Description of the Structure of an Event}{18}{subsubsection.8.3.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {8.3.2}Storage and Loading of Events}{19}{subsubsection.8.3.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.4}Action and Outcome choice}{19}{subsection.8.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {8.4.1}Actual Grace and Temptation}{20}{subsubsection.8.4.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {8.4.2}Human Will Algorithm Simulation}{20}{subsubsection.8.4.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {8.4.3}Passion and Virtue Variation}{21}{subsubsection.8.4.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.5}Markov Chain Name Generation}{21}{subsection.8.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {8.5.1}Gathering of Names}{21}{subsubsection.8.5.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.6}Evolutionary Aspects}{22}{subsection.8.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {8.6.1}Summary of the MOEA Algorithm}{22}{subsubsection.8.6.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {8.6.2}How do we measure realism?}{22}{subsubsection.8.6.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {8.6.3}Multiple Objective Fitness Function}{23}{subsubsection.8.6.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {8.6.4}Selection method}{24}{subsubsection.8.6.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {8.6.5}Mutation Method}{24}{subsubsection.8.6.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {9}Results and Analysis}{24}{section.9}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.1}Basic Analysis}{24}{subsection.9.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.2}Observed Correlations in Graphs}{25}{subsection.9.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.3}Machine Learning Analysis}{26}{subsection.9.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {9.3.1}Decision Trees}{26}{subsubsection.9.3.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {9.3.2}Clustering}{26}{subsubsection.9.3.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.4}Qualitative Analysis from Comments}{26}{subsection.9.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {10}Evaluation}{27}{section.10}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {11}Further Research}{28}{section.11}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {11.1}Subsequent application of MOEAs}{28}{subsection.11.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {11.2}Improvements to Realism and to Informativeness}{29}{subsection.11.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {11.3}Additional Aspects of Spiritual Theology}{29}{subsection.11.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {12}Subsequent Approaches}{30}{section.12}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {12.1}Hagiographies}{30}{subsection.12.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {12.2}Monastic and Patristic Approach}{30}{subsection.12.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {12.3}Protestant, Islamic or Jewish Traditions?}{31}{subsection.12.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {13}Conclusion}{31}{section.13}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {14}Bibliography}{32}{section.14}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {15}Appendix}{36}{section.15}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {15.1}Form Results}{36}{subsection.15.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {15.1.1}General Statistics for Whole Dataset}{36}{subsubsection.15.1.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {15.1.2}Story 1 Results}{36}{subsubsection.15.1.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {15.1.3}Story 1 Other Comments}{36}{subsubsection.15.1.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {15.1.4}Story 2 Results}{36}{subsubsection.15.1.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {15.1.5}Story 2 Other Comments}{37}{subsubsection.15.1.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {15.1.6}Story 3 Results}{37}{subsubsection.15.1.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {15.1.7}Story 3 Other Comments}{37}{subsubsection.15.1.7}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {15.1.8}Story 4 Results}{38}{subsubsection.15.1.8}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {15.1.9}Story 4 Other Comments}{38}{subsubsection.15.1.9}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {15.1.10}Story 5 Results}{38}{subsubsection.15.1.10}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {15.1.11}Story 5 Other Comments}{39}{subsubsection.15.1.11}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {15.2}Graphs}{40}{subsection.15.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {15.3}Decision Trees}{42}{subsection.15.3}%
